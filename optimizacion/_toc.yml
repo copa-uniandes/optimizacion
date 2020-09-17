@@ -1,5 +1,6 @@
 - file: intro
-- file: content
-  sections:
-    - file: markdown
-    - file: notebooks
+
+- part: Talleres
+  chapters:
+  - file: PlaneacionMenus
+  - file: OptiJuice

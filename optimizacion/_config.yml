@@ -1,8 +1,15 @@
 # Book settings
-title: My sample book
-author: The Jupyter Book Community
-logo: logo.png
+title: Repositorio Principios de Optimización
+author: Equipo Principios de Optimización
+logo: logo-uniandes.png
 
 latex:
   latex_documents:
     targetname: book.tex
+
+html:
+  favicon: icon.png
+  home_page_in_navbar: false
+
+parse:
+  myst_extended_syntax: true
