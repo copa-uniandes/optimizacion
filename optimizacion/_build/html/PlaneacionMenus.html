@@ -39,8 +39,8 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="OptiJuice" href="OptiJuice.html" />
-    <link rel="prev" title="Bienvenidos al repositorio de Principios de Optimización" href="intro.html" />
+    <link rel="next" title="Transporte" href="Transporte.html" />
+    <link rel="prev" title="OptiJuice" href="OptiJuice.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -79,14 +79,34 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Asignaci%C3%B3n.html">
+   Asignación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ExtraccionMinera.html">
+   Extracción minera
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inventarios.html">
+   Inventarios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OptiJuice.html">
+   OptiJuice
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Planeación de menús
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="OptiJuice.html">
-   OptiJuice
+  <a class="reference internal" href="Transporte.html">
+   Transporte
   </a>
  </li>
 </ul>
@@ -203,12 +223,17 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variables-de-decision">
-     Variables de Decisión
+     Variables de decisión
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulacion-matematica">
-     Formulación Matemática
+    <a class="reference internal nav-link" href="#funcion-objetivo">
+     Función Objetivo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restricciones">
+     Restricciones
     </a>
    </li>
   </ul>
@@ -216,11 +241,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementacion">
    Implementación
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#interpretacion">
-   Interpretación
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -382,21 +402,21 @@ miligramos (mg), de vitaminas que contienen 100 g de dichos alimentos.</p>
 </tr>
 </tbody>
 </table>
-<div style="text-align:justify">
-El menú del almuerzo debe contener una cantidad mínima de cada uno de los cuatro
+<p>El menú del almuerzo debe contener una cantidad mínima de cada uno de los cuatro
 macronutrientes mostrados en la tabla. Estas cantidades mínimas son: 100 mg de vitaminas, 25 g de carbohidratos, 17 g de proteínas y 5 g de grasas. El equipo técnico del hospital desea incluir un
-modelo de optimización en el sistema para planear el menú del almuerzo al menor costo posible.
-</div>
+modelo de optimización en el sistema para planear el menú del almuerzo al menor costo posible.</p>
 </div>
 <div class="section" id="formulacion">
 <h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
 <p><strong>a.</strong> Formule matemáticamente un modelo de optimización de forma general que represente la
-situación anterior. Defina clara y rigurosamente:<br />
-- Conjuntos
-- Parámetros
-- Variables de decisión
-- Función objetivo
-- Restricciones</p>
+situación anterior. Defina clara y rigurosamente:</p>
+<ul class="simple">
+<li><p>Conjuntos</p></li>
+<li><p>Parámetros</p></li>
+<li><p>Variables de decisión</p></li>
+<li><p>Función objetivo</p></li>
+<li><p>Restricciones</p></li>
+</ul>
 <div class="section" id="conjuntos">
 <h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -410,33 +430,33 @@ situación anterior. Defina clara y rigurosamente:<br />
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(l_n\)</span>: contenido mínimo  del aspecto nutriconal <span class="math notranslate nohighlight">\(n\in N\)</span> que debe tener el menú</p></li>
 <li><p><span class="math notranslate nohighlight">\(k_{an}\)</span>: cantidad del aspecto nutricional <span class="math notranslate nohighlight">\(n\in N\)</span> que contiene el alimento <span class="math notranslate nohighlight">\(a\in A\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(c_a\)</span>: costo por porción del alimento <span class="math notranslate nohighlight">\(a\in A\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p_{at}: 
-\begin{cases}
-1&amp;\text{, si el alimento } a\in A \text{ pertenece al tipo de alimento }t\in T; \\
-0 &amp; \text{, d.l.c.}  
-\end{cases}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c_a\)</span>: costo por porción (100g) del alimento <span class="math notranslate nohighlight">\(a\in A\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p_{at}: \begin{cases}1&amp;\text{, si el alimento }a\in A\text{ pertenece al tipo de alimento }t\in T\text{;} \\ 0 &amp; \text{, d.l.c.}  \end{cases}\)</span></p></li>
 </ul>
 </div>
 <div class="section" id="variables-de-decision">
-<h3>Variables de Decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
+<h3>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x_a\)</span>: cantidad de porciones del alimento <span class="math notranslate nohighlight">\(a\in A\)</span> incluidas en el menú</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_a\)</span>: cantidad de porciones (100g) del alimento <span class="math notranslate nohighlight">\(a\in A\)</span> incluidas en el menú</p></li>
 </ul>
 </div>
-<div class="section" id="formulacion-matematica">
-<h3>Formulación Matemática<a class="headerlink" href="#formulacion-matematica" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="funcion-objetivo">
+<h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[
-\text{minimizar}  \sum_{a\in A}c_a\cdot x_a
+\text{minimizar}  \sum_{a\in A}c_a\cdot x_a \text{  (1)}
 \]</div>
+</div>
+<div class="section" id="restricciones">
+<h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p>Sujeto a,</p>
-<div class="math notranslate nohighlight">
-\[\sum_{a\in A|p_{at}=1}x_a=1, \forall T\in T;\]</div>
-<div class="math notranslate nohighlight">
-\[\sum_{a\in A}k_{an}\cdot x_a\ge l_n, \forall n\in N;\]</div>
-<div class="math notranslate nohighlight">
-\[ x_a\ge 0,\forall a\in A.\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{a\in A|p_{at}=1}x_a&amp;=1, &amp;&amp;\forall T\in T;   &amp;(2)\\ 
+\sum_{a\in A}k_{an}\cdot x_a&amp;\ge l_n, &amp;&amp;\forall n\in N;   &amp;(3)\\
+ x_a&amp;\ge 0,&amp;&amp;\forall a\in A;   &amp;(4)
+\end{align*}\]</div>
+<p>La función objetivo (1) minimiza los costos totales. La restricción (2) garantiza que el menú tenga una porción (100g) de cada tipo de alimento <span class="math notranslate nohighlight">\(t \in T\)</span>. La restricción (3) garantiza que haya un mínimo <span class="math notranslate nohighlight">\(l_n\)</span> de cada aspecto nutricional <span class="math notranslate nohighlight">\(n\in N\)</span> en el menú. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_a\)</span></p>
 </div>
 </div>
 <div class="section" id="implementacion">
@@ -539,7 +559,7 @@ situación anterior. Defina clara y rigurosamente:<br />
    <span class="p">(</span><span class="s1">&#39;Cerdo&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteína&#39;</span><span class="p">):</span> <span class="mi">16</span><span class="p">,</span>
    <span class="p">(</span><span class="s1">&#39;Cerdo&#39;</span><span class="p">,</span> <span class="s1">&#39;Grasas&#39;</span><span class="p">):</span> <span class="mi">27</span><span class="p">}</span>
 
-<span class="c1">#Costo por porción de alimento a</span>
+<span class="c1">#Costo por porción (100g) de alimento a</span>
 <span class="n">c</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Naranja&#39;</span><span class="p">:</span> <span class="mi">570</span><span class="p">,</span>
    <span class="s1">&#39;Manzana&#39;</span><span class="p">:</span> <span class="mi">650</span><span class="p">,</span>
    <span class="s1">&#39;Banano&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -677,10 +697,6 @@ Carnes
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="interpretacion">
-<h2>Interpretación<a class="headerlink" href="#interpretacion" title="Permalink to this headline">¶</a></h2>
-<br>
 <div style="text-align:justify"><strong>c.</strong> Varios aspectos prácticos no fueron tenidos en cuenta en el modelo planteado
 anteriormente. Algunos de estos aspectos son: la inclusión de alimentos de los otros cuatro
 grupos alimenticios, la planeación de menús para desayunos, almuerzos y cenas; la
@@ -724,8 +740,8 @@ Fecha: 08/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Bienvenidos al repositorio de Principios de Optimización</a>
-    <a class='right-next' id="next-link" href="OptiJuice.html" title="next page">OptiJuice</a>
+    <a class='left-prev' id="prev-link" href="OptiJuice.html" title="previous page">OptiJuice</a>
+    <a class='right-next' id="next-link" href="Transporte.html" title="next page">Transporte</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

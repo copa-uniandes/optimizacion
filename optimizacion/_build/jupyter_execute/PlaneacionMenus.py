@@ -28,24 +28,22 @@ miligramos (mg), de vitaminas que contienen 100 g de dichos alimentos.
 ||Res|31.00|2.00|18.00|20.00|4,800.00|
 ||Cerdo|2.00|1.50|16.00|27.00|2,900.00|
 
-<div style="text-align:justify">
+
 El menú del almuerzo debe contener una cantidad mínima de cada uno de los cuatro
 macronutrientes mostrados en la tabla. Estas cantidades mínimas son: 100 mg de vitaminas, 25 g de carbohidratos, 17 g de proteínas y 5 g de grasas. El equipo técnico del hospital desea incluir un
 modelo de optimización en el sistema para planear el menú del almuerzo al menor costo posible.
-</div>
 
 ## Formulación
-
 **a.** Formule matemáticamente un modelo de optimización de forma general que represente la
 situación anterior. Defina clara y rigurosamente:  
-    - Conjuntos
-    - Parámetros
-    - Variables de decisión
-    - Función objetivo
-    - Restricciones
+- Conjuntos
+- Parámetros
+- Variables de decisión
+- Función objetivo
+- Restricciones
 
 
-### Conjuntos
+### Conjuntos 
 - $T$: conjunto de tipos de alimentos
 - $A$: conjunto de alimentos
 - $N$: conjunto de aspectos nutricionales
@@ -53,33 +51,29 @@ situación anterior. Defina clara y rigurosamente:
 ### Parámetros 
 - $l_n$: contenido mínimo  del aspecto nutriconal $n\in N$ que debe tener el menú
 - $k_{an}$: cantidad del aspecto nutricional $n\in N$ que contiene el alimento $a\in A$
-- $c_a$: costo por porción del alimento $a\in A$
-- $p_{at}: 
-\begin{cases}
-1&\text{, si el alimento } a\in A \text{ pertenece al tipo de alimento }t\in T; \\
-0 & \text{, d.l.c.}  
-\end{cases}$ 
+- $c_a$: costo por porción (100g) del alimento $a\in A$
+- $p_{at}: \begin{cases}1&\text{, si el alimento }a\in A\text{ pertenece al tipo de alimento }t\in T\text{;} \\ 0 & \text{, d.l.c.}  \end{cases}$ 
 
 
-### Variables de Decisión
+### Variables de decisión 
+- $x_a$: cantidad de porciones (100g) del alimento $a\in A$ incluidas en el menú
 
-- $x_a$: cantidad de porciones del alimento $a\in A$ incluidas en el menú
-
-### Formulación Matemática
-
+### Función Objetivo
 $$
-\text{minimizar}  \sum_{a\in A}c_a\cdot x_a
+\text{minimizar}  \sum_{a\in A}c_a\cdot x_a \text{  (1)}
 $$
-
+### Restricciones
 Sujeto a,
+\begin{align*}
+\sum_{a\in A|p_{at}=1}x_a&=1, &&\forall T\in T;   &(2)\\ 
+\sum_{a\in A}k_{an}\cdot x_a&\ge l_n, &&\forall n\in N;   &(3)\\
+ x_a&\ge 0,&&\forall a\in A;   &(4)
+\end{align*}
 
-$$\sum_{a\in A|p_{at}=1}x_a=1, \forall T\in T;$$
-
-$$\sum_{a\in A}k_{an}\cdot x_a\ge l_n, \forall n\in N;$$
-
-$$ x_a\ge 0,\forall a\in A.$$
+La función objetivo (1) minimiza los costos totales. La restricción (2) garantiza que el menú tenga una porción (100g) de cada tipo de alimento $t \in T$. La restricción (3) garantiza que haya un mínimo $l_n$ de cada aspecto nutricional $n\in N$ en el menú. La restricción (4) describe la naturaleza de la variable $x_a$
 
 ## Implementación
+
 **b.** Resuelva el modelo planteado utilizando la librería de PuLP en Python. ¿Cuál es la solución
 óptima del problema? 
 
@@ -177,7 +171,7 @@ k={('Naranja', 'Vitaminas'): 50,
    ('Cerdo', 'Proteína'): 16,
    ('Cerdo', 'Grasas'): 27}
 
-#Costo por porción de alimento a
+#Costo por porción (100g) de alimento a
 c={'Naranja': 570,
    'Manzana': 650,
    'Banano': 200,
@@ -288,8 +282,6 @@ for t in T:
         if p[a,t]==1:
             print("\t",a,":",round(x[a].value()*100,1),"gramos")
 
-## Interpretación
-<br>
 <div style="text-align:justify"><strong>c.</strong> Varios aspectos prácticos no fueron tenidos en cuenta en el modelo planteado
 anteriormente. Algunos de estos aspectos son: la inclusión de alimentos de los otros cuatro
 grupos alimenticios, la planeación de menús para desayunos, almuerzos y cenas; la

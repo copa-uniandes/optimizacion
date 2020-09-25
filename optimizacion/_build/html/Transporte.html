@@ -1,0 +1,718 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transporte &#8212; Repositorio Principios de Optimización</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/icon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Planeación de menús" href="PlaneacionMenus.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo-uniandes.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Talleres
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Asignaci%C3%B3n.html">
+   Asignación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ExtraccionMinera.html">
+   Extracción minera
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inventarios.html">
+   Inventarios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OptiJuice.html">
+   OptiJuice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PlaneacionMenus.html">
+   Planeación de menús
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Transporte
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Transporte.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Transporte.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Transporte.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion">
+   Formulación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conjuntos">
+     Conjuntos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametros">
+     Parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-de-decision">
+     Variables de decisión
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restricciones">
+     Restricciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcion-objetivo">
+     Función Objetivo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion-matematica-completa">
+   Formulación matemática completa
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizacion-de-resultados">
+   Visualización de resultados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="transporte">
+<h1>Transporte<a class="headerlink" href="#transporte" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
+<p>La Lechita Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1500, 1200, 1400, y 1000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor.</p>
+<p><em>Tabla 1:</em></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:right head"><p><strong>Dist. 1</strong></p></th>
+<th class="text-align:right head"><p>Dist. 2</p></th>
+<th class="text-align:right head"><p>Dist. 3</p></th>
+<th class="text-align:right head"><p>Dist. 4</p></th>
+<th class="text-align:right head"><p>Dist. 5</p></th>
+<th class="text-align:right head"><p>Dist. 6</p></th>
+<th class="text-align:right head"><p>Dist. 7</p></th>
+<th class="text-align:right head"><p>Dist. 8</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>Planta 1</strong></p></td>
+<td class="text-align:right"><p>650</p></td>
+<td class="text-align:right"><p>125</p></td>
+<td class="text-align:right"><p>1200</p></td>
+<td class="text-align:right"><p>340</p></td>
+<td class="text-align:right"><p>150</p></td>
+<td class="text-align:right"><p>260</p></td>
+<td class="text-align:right"><p>350</p></td>
+<td class="text-align:right"><p>800</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Planta 2</strong></p></td>
+<td class="text-align:right"><p>250</p></td>
+<td class="text-align:right"><p>200</p></td>
+<td class="text-align:right"><p>250</p></td>
+<td class="text-align:right"><p>600</p></td>
+<td class="text-align:right"><p>150</p></td>
+<td class="text-align:right"><p>950</p></td>
+<td class="text-align:right"><p>1050</p></td>
+<td class="text-align:right"><p>1000</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>Planta 3</strong></p></td>
+<td class="text-align:right"><p>600</p></td>
+<td class="text-align:right"><p>350</p></td>
+<td class="text-align:right"><p>400</p></td>
+<td class="text-align:right"><p>260</p></td>
+<td class="text-align:right"><p>150</p></td>
+<td class="text-align:right"><p>300</p></td>
+<td class="text-align:right"><p>450</p></td>
+<td class="text-align:right"><p>600</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Planta 4</strong></p></td>
+<td class="text-align:right"><p>450</p></td>
+<td class="text-align:right"><p>800</p></td>
+<td class="text-align:right"><p>650</p></td>
+<td class="text-align:right"><p>250</p></td>
+<td class="text-align:right"><p>340</p></td>
+<td class="text-align:right"><p>700</p></td>
+<td class="text-align:right"><p>600</p></td>
+<td class="text-align:right"><p>620</p></td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:justify">
+Formule un modelo general de optimización lineal que le permita a La Lechita Ramírez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: </div>
+<div class="section" id="formulacion">
+<h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
+<p><strong>1.</strong> Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.</p>
+<div class="section" id="conjuntos">
+<h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span>: Plantas</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span>: Distribuidores</p></li>
+</ul>
+</div>
+<div class="section" id="parametros">
+<h3>Parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(b_i\)</span>: oferta de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t_j\)</span>: demanda de leche del distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c_{ij}\)</span>: costo de envío de un litro de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="variables-de-decision">
+<h3>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{ij}\)</span>: cantidad (en litros) de leche que van de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="restricciones">
+<h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
+<p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1c674faf-9105-4039-8470-4976ec64d8f1">
+<span class="eqno">(8)<a class="headerlink" href="#equation-1c674faf-9105-4039-8470-4976ec64d8f1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
+\end{align}\]</div>
+<p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2c6e6191-cf08-4647-bcd7-c92fa4f87c37">
+<span class="eqno">(9)<a class="headerlink" href="#equation-2c6e6191-cf08-4647-bcd7-c92fa4f87c37" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
+\end{align}\]</div>
+<p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ad2f39b4-4fe5-4caf-8ca4-75f5fcdbac0d">
+<span class="eqno">(10)<a class="headerlink" href="#equation-ad2f39b4-4fe5-4caf-8ca4-75f5fcdbac0d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
+\end{align}\]</div>
+</div>
+<div class="section" id="funcion-objetivo">
+<h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
+<p><strong>5.</strong> Escriba la función objetivo.</p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in P}\sum_{j\in D}x_{ij}c_{ij}
+\]</div>
+</div>
+</div>
+<div class="section" id="formulacion-matematica-completa">
+<h2>Formulación matemática completa<a class="headerlink" href="#formulacion-matematica-completa" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conjuntos:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span>: Plantas</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span>: Distribuidores</p></li>
+</ul>
+<p><strong>Parámetros:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(b_i\)</span>: oferta de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t_j\)</span>: demanda de leche del distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c_{ij}\)</span>: costo de envío de un litro de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+<p><strong>Variables de decisión:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{ij}\)</span>: cantidad (en litros) de leche que van de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+<p><strong>Modelo:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in P}\sum_{j\in D}x_{ij}c_{ij} \text{ (1)} 
+\]</div>
+<p>Sujeto a,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P; &amp;(2)\\
+\sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D; &amp;(3)\\
+x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
+\end{align*}\]</div>
+<p>La función objetivo (1) minimiza los costos totales. Las restricción (2) describe que se debe respetar la oferta de las plantas. La restricción (3) describe que se debe satisfacer la demanda de los distribuidores. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ij}\)</span>.</p>
+</div>
+<div class="section" id="implementacion">
+<h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
+<p><strong>g.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+óptima del problema?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<span class="kn">from</span> <span class="nn">pulp</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Conjuntos</span>
+<span class="c1">#-----------------</span>
+<span class="c1">#Plantas</span>
+<span class="n">P</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 4&quot;</span><span class="p">]</span>
+
+<span class="c1">#Distribuidores</span>
+<span class="n">D</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">]</span>
+
+<span class="c1"># Conjunto con todas las duplas (planta, distribuidor)</span>
+<span class="n">P_x_D</span> <span class="o">=</span> <span class="p">[(</span><span class="n">planta</span><span class="p">,</span> <span class="n">distribuidor</span><span class="p">)</span> <span class="k">for</span> <span class="n">planta</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">distribuidor</span> <span class="ow">in</span> <span class="n">D</span><span class="p">]</span> 
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Parámetros</span>
+<span class="c1">#-----------------</span>
+<span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="c1">#planta: oferta de la planta i</span>
+   <span class="s2">&quot;Planta 1&quot;</span><span class="p">:</span><span class="mi">1500</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 2&quot;</span><span class="p">:</span><span class="mi">1200</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 3&quot;</span><span class="p">:</span><span class="mi">1400</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 4&quot;</span><span class="p">:</span><span class="mi">1000</span><span class="p">}</span> 
+
+<span class="n">t</span><span class="o">=</span><span class="p">{</span><span class="c1">#distribuidor: demanda del distribuidor j</span>
+   <span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">:</span><span class="mi">930</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">:</span><span class="mi">600</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">:</span><span class="mi">460</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">:</span><span class="mi">610</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">:</span><span class="mi">830</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">:</span><span class="mi">460</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">:</span><span class="mi">640</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">:</span><span class="mi">240</span><span class="p">}</span> 
+
+<span class="n">c</span><span class="o">=</span><span class="p">{</span><span class="c1">#(planta, distribuidor): costo de envio de un litro de leche desde la planta i al distribuidor j</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">650</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">125</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">1200</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">340</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">150</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">260</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">350</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">800</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">250</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">200</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">250</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">150</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">950</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">1050</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">1000</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">350</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">400</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">260</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">150</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">300</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">450</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">450</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">800</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">650</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">250</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">340</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">700</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">620</span><span class="p">}</span> 
+
+<span class="c1">#-------------------------------------</span>
+<span class="c1"># Creación del objeto problema en PuLP</span>
+<span class="c1">#-------------------------------------</span>
+<span class="c1">#Crea el problema para cargarlo con la instancia </span>
+<span class="n">problema</span><span class="o">=</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Transporte&quot;</span><span class="p">,</span><span class="n">LpMinimize</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Variables de Decisión</span>
+<span class="c1">#-----------------------------</span>
+<span class="n">x</span><span class="o">=</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">P_x_D</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Función objetivo</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Crea la expresión de minimizacion de costos</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">),</span> <span class="s2">&quot;Costos Totales&quot;</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Restricciones</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#sum(j in D)x_ij &lt;= b_i forall i in P</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;Oferta de la planta &quot;</span><span class="o">+</span><span class="n">i</span>   <span class="c1">#se respeta la oferta de cada planta </span>
+
+<span class="c1">#sum(i in P)x_ij &gt;= t_j forall j in D</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="s2">&quot;Demanda del distribuidor &quot;</span><span class="o">+</span><span class="n">j</span> <span class="c1">#se satisface la demanda de cada distribuidor </span>
+    
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Imprimir formato LP</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Escribe el problema en un archivo con formato LP </span>
+<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">&quot;Transporte.lp&quot;</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Invocar el optimizador</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Optimizar el modelo con CBC (default de PuLP)</span>
+<span class="n">problema</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1">#    Imprimir resultados</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Imprimir estado final del optimizador</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#Valor óptimo del portafolio de Petroco    </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transporte - Costos totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using license file C:\Users\57350.000\gurobi.lic
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Academic license - for non-commercial use only
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No parameters matching &#39;_test&#39; found
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
+
+Transporte - Costos totales = $ 1224800.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualizacion-de-resultados">
+<h2>Visualización de resultados<a class="headerlink" href="#visualizacion-de-resultados" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Coordenadas de las plantas</span>
+<span class="n">coordenadasPlantas</span><span class="o">=</span><span class="p">{</span><span class="c1">#planta: (x, y)</span>
+   <span class="s2">&quot;Planta 1&quot;</span><span class="p">:(</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span>
+   <span class="s2">&quot;Planta 2&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
+   <span class="s2">&quot;Planta 3&quot;</span><span class="p">:(</span><span class="mi">5</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span>
+   <span class="s2">&quot;Planta 4&quot;</span><span class="p">:(</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">10.5</span><span class="p">)}</span>
+
+<span class="c1">#Coordenadas de los distribuidores</span>
+<span class="n">coordenadasDistribuidores</span><span class="o">=</span><span class="p">{</span><span class="c1">#distribuidor: (x, y)</span>
+                           <span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">:(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">:(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">:(</span><span class="mf">7.5</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">17</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">:(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)}</span>
+<span class="c1">#Se guarda la solución en un vector</span>
+<span class="n">xSol</span><span class="o">=</span><span class="p">{(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria que utilizará para la visualización</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#función para pintar las plantas</span>
+<span class="k">def</span> <span class="nf">pintarPlantas</span><span class="p">(</span><span class="n">pPlantas</span><span class="p">,</span><span class="n">pAx</span><span class="p">):</span>
+    <span class="n">xP</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pPlantas</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+    <span class="n">yP</span><span class="o">=</span><span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pPlantas</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+    <span class="n">pAx</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xP</span><span class="p">,</span><span class="n">yP</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pAx</span>
+
+<span class="c1">#función para pintar los distribuidores</span>
+<span class="k">def</span> <span class="nf">pintarDistribuidores</span><span class="p">(</span><span class="n">pDistribuidores</span><span class="p">,</span><span class="n">pAx</span><span class="p">):</span>
+    <span class="n">xD</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pDistribuidores</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+    <span class="n">yD</span><span class="o">=</span><span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pDistribuidores</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+    <span class="n">pAx</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xD</span><span class="p">,</span><span class="n">yD</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pAx</span>
+
+<span class="c1">#función para pintar la solución</span>
+<span class="k">def</span> <span class="nf">pintarSolución</span><span class="p">(</span><span class="n">pSolucion</span><span class="p">,</span><span class="n">pPlantas</span><span class="p">,</span><span class="n">pDistribuidores</span><span class="p">,</span><span class="n">pAx</span><span class="p">):</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">),</span><span class="n">val</span> <span class="ow">in</span> <span class="n">pSolucion</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">val</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">pAx</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">pPlantas</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">pDistribuidores</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]],[</span><span class="n">pPlantas</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">pDistribuidores</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]],</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pAx</span>
+
+<span class="c1">#función para pintar los numeros de cada planta</span>
+<span class="k">def</span> <span class="nf">pintarNumPlantas</span><span class="p">(</span><span class="n">pPlantas</span><span class="p">,</span><span class="n">pAx</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">pos</span> <span class="ow">in</span> <span class="n">pPlantas</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">pAx</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">0.08</span><span class="p">,</span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mf">0.12</span><span class="p">,</span><span class="n">i</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ax</span>
+
+<span class="c1">#función para pintar los numeros de cada distribuidor</span>
+<span class="k">def</span> <span class="nf">pintarNumDistribuidores</span><span class="p">(</span><span class="n">pDistribuidores</span><span class="p">,</span><span class="n">pAx</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">pos</span> <span class="ow">in</span> <span class="n">pDistribuidores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">pAx</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mf">0.12</span><span class="p">,</span><span class="n">i</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pAx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1">#se definen la dimensión de los ejes y se borran los labels de los ejes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">pintarSolución</span><span class="p">(</span><span class="n">xSol</span><span class="p">,</span><span class="n">coordenadasPlantas</span><span class="p">,</span><span class="n">coordenadasDistribuidores</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">pintarDistribuidores</span><span class="p">(</span><span class="n">coordenadasDistribuidores</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">pintarNumDistribuidores</span><span class="p">(</span><span class="n">coordenadasDistribuidores</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">pintarPlantas</span><span class="p">(</span><span class="n">coordenadasPlantas</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">pintarNumPlantas</span><span class="p">(</span><span class="n">coordenadasPlantas</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Transporte_17_0.png" src="_images/Transporte_17_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="creditos">
+<h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
+<p>Desarrollo: Juan Felipe Rengifo M<br>
+Fecha: 20/09/2020</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="PlaneacionMenus.html" title="previous page">Planeación de menús</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Equipo Principios de Optimización<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

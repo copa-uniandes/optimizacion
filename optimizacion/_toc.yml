@@ -2,5 +2,13 @@
 
 - part: Talleres
   chapters:
-  - file: PlaneacionMenus
+  - file: Asignación
+  - file: ExtraccionMinera
+  - file: Inventarios
   - file: OptiJuice
+  - file: PlaneacionMenus
+  - file: Transporte
+
+
+
+

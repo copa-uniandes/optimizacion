@@ -262,7 +262,7 @@ for k in K:
 
 
 
-### Créditos
+## Créditos
 
 Desarrollo: Juan Felipe Rengifo M<br>
 Fecha: 05/09/2020
