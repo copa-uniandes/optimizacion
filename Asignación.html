@@ -2,10 +2,9 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asignación Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
@@ -15,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/jquery.js"></script>
@@ -25,10 +24,12 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -39,8 +40,8 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Extracción minera" href="ExtraccionMinera%20Enunciado.html" />
-    <link rel="prev" title="Asignación" href="Asignaci%C3%B3n%20Enunciado.html" />
+    <link rel="next" title="Transporte" href="Transporte Enunciado.html" />
+    <link rel="prev" title="Asignación" href="Asignación Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -75,12 +76,32 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <p class="caption">
  <span class="caption-text">
-  Talleres
+  Prácticas de formulación
  </span>
 </p>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PlaneacionMenus Enunciado.html">
+   Planeación de menús
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OptiJuice Enunciado.html">
+   OptiJuice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inventarios Enunciado.html">
+   Inventarios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ExtraccionMinera Enunciado.html">
+   Extracción minera
+  </a>
+ </li>
  <li class="toctree-l1 current active">
-  <a class="reference internal" href="Asignaci%C3%B3n%20Enunciado.html">
+  <a class="reference internal" href="Asignación Enunciado.html">
    Asignación
   </a>
   <ul class="current">
@@ -92,27 +113,7 @@
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ExtraccionMinera%20Enunciado.html">
-   Extracción minera
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Inventarios%20Enunciado.html">
-   Inventarios
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="OptiJuice%20Enunciado.html">
-   OptiJuice
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="PlaneacionMenus%20Enunciado.html">
-   Planeación de menús
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Transporte%20Enunciado.html">
+  <a class="reference internal" href="Transporte Enunciado.html">
    Transporte
   </a>
  </li>
@@ -121,10 +122,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -176,28 +173,6 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Asignación.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Asignación.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
 
     </div>
 
@@ -548,13 +523,12 @@ El equipo de Principios de Optimización le ha pedido a usted que plantee y resu
 <p><strong>Modelo:</strong></p>
 <div class="math notranslate nohighlight">
 \[\text{maximizar}  \sum_{i\in I}\sum_{r\in R}p_{ir}\cdot x_{ir}\]</div>
-<p>Sujeto a,</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\sum_{i\in I}x_{ir}&amp;=1, &amp;&amp;\forall r\in R; &amp;(2)\\
-\sum_{r\in R}t_{ir}x_{ir} &amp;\le d_i, &amp;&amp;\forall i\in I; &amp;(3)\\
-x_{ir}&amp;\in\{0,1\},&amp;&amp;\forall i\in I, r\in R. &amp;(4)
-\end{align*}\]</div>
+<p>Sujeto a,
+\begin{align*}
+\sum_{i\in I}x_{ir}&amp;=1, &amp;&amp;\forall r\in R; &amp;(2)\
+\sum_{r\in R}t_{ir}x_{ir} &amp;\le d_i, &amp;&amp;\forall i\in I; &amp;(3)\
+x_{ir}&amp;\in{0,1},&amp;&amp;\forall i\in I, r\in R. &amp;(4)
+\end{align*}</p>
 <p>La función objetivo (1) maximiza la satisfacción total. La restricción (2) describe que cada responsabilidad se debe asignar a una persona. La restricción (3) describe que se debe respetar la limitación de tiempo de cada integrante. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ir}\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -562,7 +536,7 @@ x_{ir}&amp;\in\{0,1\},&amp;&amp;\forall i\in I, r\in R. &amp;(4)
 <p><strong>f.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. Reporte sus resultados de una manera amigable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
 <span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
@@ -718,26 +692,26 @@ x_{ir}&amp;\in\{0,1\},&amp;&amp;\forall i\in I, r\in R. &amp;(4)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
 
-Asignación - <span class=" -Color -Color-Bold"> Satisfacción total </span> =  24.0
+Asignación - [1m Satisfacción total [0m =  24.0
 
 
-Asignación de responsabilidades
+[4mAsignación de responsabilidades[0m
 
-<span class=" -Color -Color-Bold">1:</span>
+[1m1:[0m
 Diseño parciales
 Diseño tareas
 Diseño talleres magistrales
 
-<span class=" -Color -Color-Bold">2:</span>
+[1m2:[0m
 Diseño talleres trabajo asistido
 
-<span class=" -Color -Color-Bold">3:</span>
+[1m3:[0m
 Diseño y grabación videos magistrales
 Grabación videos trabajo asistido
 
-<span class=" -Color -Color-Bold">4:</span>
+[1m4:[0m
 Edición videos trabajo asistido
 Edición videos PuLP
 </pre></div>
@@ -780,8 +754,8 @@ Fecha: 20/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Asignaci%C3%B3n%20Enunciado.html" title="previous page">Asignación</a>
-    <a class='right-next' id="next-link" href="ExtraccionMinera%20Enunciado.html" title="next page">Extracción minera</a>
+    <a class='left-prev' id="prev-link" href="Asignación Enunciado.html" title="previous page">Asignación</a>
+    <a class='right-next' id="next-link" href="Transporte Enunciado.html" title="next page">Transporte</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
