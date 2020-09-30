@@ -1,22 +1,22 @@
 - file: intro
 
-- part: Talleres
+- part: Prácticas de formulación
   chapters:
-  - file: Asignación Enunciado
-    sections:
-      - file: Asignación
-  - file: ExtraccionMinera Enunciado
-    sections:
-      - file: ExtraccionMinera
-  - file: Inventarios Enunciado
-    sections:
-      - file: Inventarios
-  - file: OptiJuice Enunciado
-    sections:
-      - file: OptiJuice
   - file: PlaneacionMenus Enunciado
     sections:
       - file: PlaneacionMenus
+  - file: OptiJuice Enunciado
+    sections:
+      - file: OptiJuice
+  - file: Inventarios Enunciado
+    sections:
+      - file: Inventarios
+  - file: ExtraccionMinera Enunciado
+    sections:
+      - file: ExtraccionMinera
+  - file: Asignación Enunciado
+    sections:
+      - file: Asignación
   - file: Transporte Enunciado
     sections:
       - file: Transporte
