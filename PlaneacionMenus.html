@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planeación de menús &#8212; Repositorio Principios de Optimización</title>
+    <title>Planeación de menús Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -39,8 +39,8 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Transporte" href="Transporte.html" />
-    <link rel="prev" title="OptiJuice" href="OptiJuice.html" />
+    <link rel="next" title="Transporte" href="Transporte%20Enunciado.html" />
+    <link rel="prev" title="Planeación de menús" href="PlaneacionMenus%20Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -80,32 +80,39 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="Asignaci%C3%B3n.html">
+  <a class="reference internal" href="Asignaci%C3%B3n%20Enunciado.html">
    Asignación
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ExtraccionMinera.html">
+  <a class="reference internal" href="ExtraccionMinera%20Enunciado.html">
    Extracción minera
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Inventarios.html">
+  <a class="reference internal" href="Inventarios%20Enunciado.html">
    Inventarios
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="OptiJuice.html">
+  <a class="reference internal" href="OptiJuice%20Enunciado.html">
    OptiJuice
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="PlaneacionMenus%20Enunciado.html">
    Planeación de menús
   </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Planeación de menús Solución
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Transporte.html">
+  <a class="reference internal" href="Transporte%20Enunciado.html">
    Transporte
   </a>
  </li>
@@ -258,8 +265,8 @@
         
               <div>
                 
-  <div class="section" id="planeacion-de-menus">
-<h1>Planeación de menús<a class="headerlink" href="#planeacion-de-menus" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="planeacion-de-menus-solucion">
+<h1>Planeación de menús Solución<a class="headerlink" href="#planeacion-de-menus-solucion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>El personal técnico de un hospital quiere desarrollar un sistema computarizado de planificación de
@@ -466,7 +473,7 @@ situación anterior. Defina clara y rigurosamente:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%% se importa la libreria de PulP </span>
-<span class="kn">from</span> <span class="nn">pulp</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
 <span class="c1"># Conjuntos</span>
@@ -616,29 +623,29 @@ situación anterior. Defina clara y rigurosamente:</p>
 <span class="c1"># Creación del objeto problema en PuLP</span>
 <span class="c1">#-------------------------------------</span>
 <span class="c1">#Crea el problema para cargarlo con la instancia </span>
-<span class="n">problema</span><span class="o">=</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;PlaneaciónMenús&quot;</span><span class="p">,</span><span class="n">LpMinimize</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;PlaneaciónMenús&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Variables de Decisión</span>
 <span class="c1">#-----------------------------</span>
-<span class="n">x</span><span class="o">=</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#Cantidad de porciones del alimento a incluidas en el menú</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#Cantidad de porciones del alimento a incluidas en el menú</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Función objetivo</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Crea la expresión de minimización de costos</span>
-<span class="n">problema</span><span class="o">+=</span><span class="n">lpSum</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Restricciones</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Se garantizan 100 gramos por cada tipo de alimento</span>
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">t</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;100 gramos del tipo de alimento &quot;</span> <span class="o">+</span> <span class="n">t</span>
+    <span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">t</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;100 gramos del tipo de alimento &quot;</span> <span class="o">+</span> <span class="n">t</span>
     
 <span class="c1">#Se garantiza el requerimiento mínimo de cada aspecto nutricional</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">N</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span><span class="n">lpSum</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">n</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="s2">&quot;Mínimo aspecto nutricional &quot;</span> <span class="o">+</span> <span class="n">n</span>
+    <span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">n</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="s2">&quot;Mínimo aspecto nutricional &quot;</span> <span class="o">+</span> <span class="n">n</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Invocar el optimizador</span>
@@ -657,10 +664,10 @@ situación anterior. Defina clara y rigurosamente:</p>
 <span class="c1">#    Imprimir resultados</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Imprimir estado final del optimizador</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="c1">#Valor óptimo del costo del menú  </span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Planeación Menús - Costos Totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Planeación Menús - Costos Totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="c1">#Imprimir variables de decisión</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables de decisión</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -740,8 +747,8 @@ Fecha: 08/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="OptiJuice.html" title="previous page">OptiJuice</a>
-    <a class='right-next' id="next-link" href="Transporte.html" title="next page">Transporte</a>
+    <a class='left-prev' id="prev-link" href="PlaneacionMenus%20Enunciado.html" title="previous page">Planeación de menús</a>
+    <a class='right-next' id="next-link" href="Transporte%20Enunciado.html" title="next page">Transporte</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

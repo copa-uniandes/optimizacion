@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content with notebooks &#8212; Repositorio Principios de Optimización</title>
+    <title>Inventarios &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -39,6 +39,8 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Inventarios Solución" href="Inventarios.html" />
+    <link rel="prev" title="Extracción minera Solución" href="ExtraccionMinera.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -76,7 +78,7 @@
   Talleres
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="Asignaci%C3%B3n%20Enunciado.html">
    Asignación
@@ -87,10 +89,17 @@
    Extracción minera
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Inventarios%20Enunciado.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Inventarios
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Inventarios.html">
+     Inventarios Solución
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="OptiJuice%20Enunciado.html">
@@ -149,7 +158,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/notebooks.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Inventarios Enunciado.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -173,7 +182,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Inventarios Enunciado.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -181,7 +190,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/notebooks.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Inventarios Enunciado.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -200,18 +209,23 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-notebooks">
-   Markdown + notebooks
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#myst-markdown">
-   MyST markdown
+  <a class="reference internal nav-link" href="#formulacion">
+   Formulación
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   Code blocks and outputs
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
   </a>
  </li>
 </ul>
@@ -224,78 +238,116 @@
         
               <div>
                 
-  <div class="section" id="content-with-notebooks">
-<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this headline">¶</a></h1>
-<p>You can also create content with Jupyter Notebooks. This means that you can include
-code blocks and their outputs in your book.</p>
-<div class="section" id="markdown-notebooks">
-<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">¶</a></h2>
-<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
-<p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo.png" /></p>
-<p>You an also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
-<div class="math notranslate nohighlight">
-\[
-math^{blocks}
-\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mbox{mean} la_{tex} \\ \\
-math blocks
-\end{aligned}
-\end{split}\]</div>
-<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
+  <div class="section" id="inventarios">
+<h1>Inventarios<a class="headerlink" href="#inventarios" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
+<p>Artos S.A. es una empresa dedicada a la producción de cemento que cuenta con una única planta en la ciudad de Barranquilla. La empresa debe determinar la cantidad de toneladas de cemento a producir en cada una de las siguientes 12 semanas. Los costos de producción, costos de almacenamiento, así como la demanda y el precio por tonelada de cemento, varían semana a semana y se presentan en la siguiente tabla.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Semana</p></th>
+<th class="text-align:center head"><p>Costo de producción [Miles de COP/ton]</p></th>
+<th class="text-align:center head"><p>Costo de almacenamiento [Miles de COP/ton]</p></th>
+<th class="text-align:center head"><p>Demanda [ton]</p></th>
+<th class="text-align:center head"><p>Precio [Miles de COP/ton]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>172.8</p></td>
+<td class="text-align:center"><p>6.9</p></td>
+<td class="text-align:center"><p>95,000</p></td>
+<td class="text-align:center"><p>432.0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>178.7</p></td>
+<td class="text-align:center"><p>7.2</p></td>
+<td class="text-align:center"><p>99,750</p></td>
+<td class="text-align:center"><p>440.6</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>174.6</p></td>
+<td class="text-align:center"><p>8.0</p></td>
+<td class="text-align:center"><p>104,738</p></td>
+<td class="text-align:center"><p>449.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>181.4</p></td>
+<td class="text-align:center"><p>8.9</p></td>
+<td class="text-align:center"><p>109,974</p></td>
+<td class="text-align:center"><p>458.4</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>183.0</p></td>
+<td class="text-align:center"><p>9.0</p></td>
+<td class="text-align:center"><p>109,974</p></td>
+<td class="text-align:center"><p>467.6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>177.7</p></td>
+<td class="text-align:center"><p>7.8</p></td>
+<td class="text-align:center"><p>109,974</p></td>
+<td class="text-align:center"><p>477.0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>7</p></td>
+<td class="text-align:center"><p>182.8</p></td>
+<td class="text-align:center"><p>6.7</p></td>
+<td class="text-align:center"><p>120,972</p></td>
+<td class="text-align:center"><p>486.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>186.8</p></td>
+<td class="text-align:center"><p>7.3</p></td>
+<td class="text-align:center"><p>120,972</p></td>
+<td class="text-align:center"><p>496.2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>181.8</p></td>
+<td class="text-align:center"><p>7.8</p></td>
+<td class="text-align:center"><p>108,875</p></td>
+<td class="text-align:center"><p>506.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>178.3</p></td>
+<td class="text-align:center"><p>8.8</p></td>
+<td class="text-align:center"><p>97,987</p></td>
+<td class="text-align:center"><p>516.3</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>11</p></td>
+<td class="text-align:center"><p>173.4</p></td>
+<td class="text-align:center"><p>9.2</p></td>
+<td class="text-align:center"><p>78,390</p></td>
+<td class="text-align:center"><p>526.6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>12</p></td>
+<td class="text-align:center"><p>168.8</p></td>
+<td class="text-align:center"><p>8.4</p></td>
+<td class="text-align:center"><p>94,068</p></td>
+<td class="text-align:center"><p>537.1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Tenga en cuenta que, al inicio de la planeación, se cuenta con 12,000 toneladas de cemento y que, por especificaciones de la maquinaria, no se puede producir más de 110,000 toneladas ni menos de 85,000 toneladas en una semana cualquiera.</p>
 </div>
-<div class="section" id="myst-markdown">
-<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">¶</a></h2>
-<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
-or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
+<div class="section" id="formulacion">
+<h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
+<p><strong>1.</strong> Formule el problema de optimización lineal con el fin de determinar la producción semanal de Artos y lograr la mayor utilidad posible. Para esto usted debe seguir los siguientes pasos: <br></p>
+<p><strong>a.</strong> Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.</p>
+<p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se deben respetar los límites de producción</p>
+<p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que contabiliza(n) el inventario de cada semana</p>
+<p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo</p>
+<p><strong>e.</strong> Escriba la función objetivo</p>
 </div>
-<div class="section" id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">¶</a></h2>
-<p>Jupyter Book will also embed your code blocks and output in your book.
-For example, here’s some sample Matplotlib code:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</pre></div>
+<div class="section" id="implementacion">
+<h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
+<p><strong>2.</strong> Resuelva su modelo. Reporte sus resultados de una manera amigable</p>
 </div>
+<div class="section" id="creditos">
+<h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
+<p>Desarrollador: Camilo Aguilar León<br>
+Fecha: 25/09/2020</p>
+<div class="toctree-wrapper compound">
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
-
-
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/notebooks_2_0.png" src="_images/notebooks_2_0.png" />
-</div>
-</div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
 </div>
 </div>
 
@@ -327,6 +379,8 @@ with your book. For more information about this, see <a class="reference externa
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="ExtraccionMinera.html" title="previous page">Extracción minera Solución</a>
+    <a class='right-next' id="next-link" href="Inventarios.html" title="next page">Inventarios Solución</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
