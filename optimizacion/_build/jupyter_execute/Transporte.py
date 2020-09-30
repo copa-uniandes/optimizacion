@@ -1,4 +1,4 @@
-# Transporte
+# Transporte Solución
 
 ## Enunciado
 La Lechita Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1500, 1200, 1400, y 1000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor. 
@@ -91,7 +91,7 @@ La función objetivo (1) minimiza los costos totales. Las restricción (2) descr
 óptima del problema? 
 
 #se importa la libreria de PulP
-from pulp import *
+import pulp as lp
 
 #-----------------
 # Conjuntos
@@ -172,29 +172,29 @@ c={#(planta, distribuidor): costo de envio de un litro de leche desde la planta 
 # Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=LpProblem("Transporte",LpMinimize)
+problema=lp.LpProblem("Transporte",lp.LpMinimize)
 
 #-----------------------------
 # Variables de Decisión
 #-----------------------------
-x=LpVariable.dicts('x',P_x_D,lowBound=0,cat='Continuous') #litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables
+x=lp.LpVariable.dicts('x',P_x_D,lowBound=0,cat='Continuous') #litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables
 
 #-----------------------------
 # Función objetivo
 #-----------------------------
 #Crea la expresión de minimizacion de costos
-problema+=lpSum(x[i,j]*c[i,j] for i in P for j in D), "Costos Totales"
+problema+=lp.lpSum(x[i,j]*c[i,j] for i in P for j in D), "Costos Totales"
 
 #-----------------------------
 # Restricciones
 #-----------------------------
 #sum(j in D)x_ij <= b_i forall i in P
 for i in P:
-    problema+= lpSum(x[i,j] for j in D) <= b[i], "Oferta de la planta "+i   #se respeta la oferta de cada planta 
+    problema+= lp.lpSum(x[i,j] for j in D) <= b[i], "Oferta de la planta "+i   #se respeta la oferta de cada planta 
 
 #sum(i in P)x_ij >= t_j forall j in D
 for j in D:
-    problema+= lpSum(x[i,j] for i in P) >= t[j], "Demanda del distribuidor "+j #se satisface la demanda de cada distribuidor 
+    problema+= lp.lpSum(x[i,j] for i in P) >= t[j], "Demanda del distribuidor "+j #se satisface la demanda de cada distribuidor 
     
 #-----------------------------
 # Imprimir formato LP
@@ -212,10 +212,10 @@ problema.solve()
 #    Imprimir resultados
 #-----------------------------
 #Imprimir estado final del optimizador
-print("Estado (optimizador):", LpStatus[problema.status],end='\n')
+print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
 #Valor óptimo del portafolio de Petroco    
-print("\nTransporte - Costos totales = $", round(value(problema.objective),2))
+print("\nTransporte - Costos totales = $", round(lp.value(problema.objective),2))
 print()
 
 

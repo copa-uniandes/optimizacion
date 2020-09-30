@@ -1,4 +1,4 @@
-# Extracción minera
+# Extracción minera Solución
 
 ## Punto 1
 
@@ -147,7 +147,7 @@ La función objetivo (1) minimiza los costos totales. La restricción (2) descri
 óptima del problema? 
 
 #se importa la libreria de PulP
-from pulp import *
+import pulp as lp
 
 #-----------------
 # Conjuntos
@@ -351,7 +351,7 @@ datosZonas={#zona: [costo por cada tonelada de carbón extraída en la zona i, c
             (36):[8,114]}  
 
 #parámetros indexados en las zonas
-(c, n)=splitDict(datosZonas)
+(c, n)=lp.splitDict(datosZonas)
 
 
 b={#mínimo de toneladas a explotar del tipo de carbón j
@@ -364,25 +364,25 @@ b={#mínimo de toneladas a explotar del tipo de carbón j
 # Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=LpProblem("Extracción Minera",LpMinimize)
+problema=lp.LpProblem("Extracción Minera",lp.LpMinimize)
 
 #-----------------------------
 # Variables de Decisión
 #-----------------------------
-x=LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carbón extraído de la zona i; aca se añade de una vez la naturaleza de las variables
+x=lp.LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carbón extraído de la zona i; aca se añade de una vez la naturaleza de las variables
 
 #-----------------------------
 # Función objetivo
 #-----------------------------
 #Crea la expresión de minimización de costos
-problema+=lpSum(x[i]*c[i] for i in M), "Costos Totales"
+problema+=lp.lpSum(x[i]*c[i] for i in M), "Costos Totales"
 
 #-----------------------------
 # Restricciones
 #-----------------------------
 #sum(i in M)a_ij*x_i >= b_j forall j in K
 for j in K:
-    problema+= lpSum(a[i,j]*x[i] for i in M) >= b[j], "Mínimo toneladas de extracción del tipo de carbón "+j #se garantiza el mínimo de toneladas extraidas del tipo de carbón j
+    problema+= lp.lpSum(a[i,j]*x[i] for i in M) >= b[j], "Mínimo toneladas de extracción del tipo de carbón "+j #se garantiza el mínimo de toneladas extraidas del tipo de carbón j
 
 #x_i <= n_i*y_i forall i in M
 for i in M:
@@ -404,10 +404,10 @@ problema.solve()
 #    Imprimir resultados
 #-----------------------------
 #Imprimir estado final del optimizador
-print("Estado (optimizador):", LpStatus[problema.status],end='\n')
+print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
 #Valor óptimo del portafolio de Petroco    
-print("\nExtracción Minera - \033[1m Costos totales \033[0m = $", round(value(problema.objective),2))
+print("\nExtracción Minera - \033[1m Costos totales \033[0m = $", round(lp.value(problema.objective),2))
 print()
 
 #Imprimir variables de decisión
@@ -494,7 +494,7 @@ La función objetivo (1) minimiza los costos totales. La restricción (2) descri
 óptima del problema? 
 
 #se importa la libreria de PulP
-from pulp import *
+import pulp as lp
 
 #-----------------
 # Conjuntos
@@ -698,7 +698,7 @@ datosZonas={#zona: [costo fijo si se decide extraer carbón de la zona i, costo 
         (36):[215,8,114]} 
 
 #parámetros indexados en las zonas
-(q, c, n)=splitDict(datosZonas)
+(q, c, n)=lp.splitDict(datosZonas)
 
 b={#mínimo de toneladas a explotar del tipo de carbón j
     ("Antracita"):862,
@@ -710,26 +710,26 @@ b={#mínimo de toneladas a explotar del tipo de carbón j
 # Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=LpProblem("Extracción Minera",LpMinimize)
+problema=lp.LpProblem("Extracción Minera",lp.LpMinimize)
 
 #-----------------------------
 # Variables de Decisión
 #-----------------------------
-x=LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carbón extraído de la zona i; aca se añade de una vez la naturaleza de las variables
-y=LpVariable.dicts('y',M,cat='Binary') #1 si se decide explotar la zona i, 0 d.l.c. ; aca se añade de una vez la naturaleza 
+x=lp.LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carbón extraído de la zona i; aca se añade de una vez la naturaleza de las variables
+y=lp.LpVariable.dicts('y',M,cat='Binary') #1 si se decide explotar la zona i, 0 d.l.c. ; aca se añade de una vez la naturaleza 
 
 #-----------------------------
 # Función objetivo
 #-----------------------------
 #Crea la expresión de minimización de costos
-problema+=lpSum(x[i]*c[i]+y[i]*q[i] for i in M), "Costos Totales"
+problema+=lp.lpSum(x[i]*c[i]+y[i]*q[i] for i in M), "Costos Totales"
 
 #-----------------------------
 # Restricciones
 #-----------------------------
 #sum(i in M |a_ij=1)x_i >= b_j forall j in K
 for j in K:
-    problema+= lpSum(x[i] for i in M if a[i,j]==1) >= b[j], "Mínimo toneladas de extracción del tipo de carbón "+j #se garantiza el mínimo de toneladas extraidas del tipo de carbón j
+    problema+= lp.lpSum(x[i] for i in M if a[i,j]==1) >= b[j], "Mínimo toneladas de extracción del tipo de carbón "+j #se garantiza el mínimo de toneladas extraidas del tipo de carbón j
 
 #x_i <= n_i*y_i forall i in M
 for i in M:
@@ -751,10 +751,10 @@ problema.solve()
 #    Imprimir resultados
 #-----------------------------
 #Imprimir estado final del optimizador
-print("Estado (optimizador):", LpStatus[problema.status],end='\n')
+print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
 #Valor óptimo del portafolio de Petroco    
-print("\nExtracción Minera - \033[1m Costos totales \033[0m = $", round(value(problema.objective),2))
+print("\nExtracción Minera - \033[1m Costos totales \033[0m = $", round(lp.value(problema.objective),2))
 print()
 
 #Imprimir variables de decisión

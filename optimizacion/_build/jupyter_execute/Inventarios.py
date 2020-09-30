@@ -1,4 +1,4 @@
-# Inventarios
+# Inventarios Solución
 
 ## Enunciado
 Artos S.A. es una empresa dedicada a la producción de cemento que cuenta con una única planta en la ciudad de Barranquilla. La empresa debe determinar la cantidad de toneladas de cemento a producir en cada una de las siguientes 12 semanas. Los costos de producción, costos de almacenamiento, así como la demanda y el precio por tonelada de cemento, varían semana a semana y se presentan en la siguiente tabla. 
@@ -110,7 +110,7 @@ La función objetivo (1) maximiza las utilidades totales. Las restricciones (2) 
 **2.** Resuelva su modelo. Reporte sus resultados de una manera amigable
 
 #%%se importa la libreria de PulP
-from pulp import *
+import pulp as lp
 
 #-----------------
 # Conjuntos
@@ -158,19 +158,19 @@ I0=12000
 # Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=LpProblem("Inventarios",LpMaximize)
+problema=lp.LpProblem("Inventarios",lp.LpMaximize)
 
 #-----------------------------
 # Variables de Decisión
 #-----------------------------
-x=LpVariable.dicts('x',S,lowBound=0,cat='Continuous') #toneladas de cemento a producir en cada semana
-I=LpVariable.dicts('I',S,lowBound=0,cat='Continuous') #toneladas de cemento en inventario en cada semana
+x=lp.LpVariable.dicts('x',S,lowBound=0,cat='Continuous') #toneladas de cemento a producir en cada semana
+I=lp.LpVariable.dicts('I',S,lowBound=0,cat='Continuous') #toneladas de cemento en inventario en cada semana
 
 #-----------------------------
 # Función objetivo
 #-----------------------------
 #Crea la expresión de maximización de utilidades
-problema+=lpSum(d[i]*p[i]-x[i]*c[i]-I[i]*h[i] for i in S), "Utilidades Totales"
+problema+=lp.lpSum(d[i]*p[i]-x[i]*c[i]-I[i]*h[i] for i in S), "Utilidades Totales"
 
 #-----------------------------
 # Restricciones
@@ -206,10 +206,10 @@ problema.writeLP("Inventarios.lp")
 #    Imprimir resultados
 #-----------------------------
 #Imprimir estado final del optimizador
-print("Estado (optimizador):", LpStatus[problema.status],end='\n')
+print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
 #Valor óptimo del portafolio de Petroco    
-print("\nInventarios - Utilidades totales = $", round(value(problema.objective),2)*1000)
+print("\nInventarios - Utilidades totales = $", round(lp.value(problema.objective),2)*1000)
 print()
 
 #Imprimir variables de decisión

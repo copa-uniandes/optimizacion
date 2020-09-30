@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OptiJuice &#8212; Repositorio Principios de Optimización</title>
+    <title>OptiJuice Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -39,8 +39,8 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Planeación de menús" href="PlaneacionMenus.html" />
-    <link rel="prev" title="Inventarios" href="Inventarios.html" />
+    <link rel="next" title="Planeación de menús" href="PlaneacionMenus%20Enunciado.html" />
+    <link rel="prev" title="OptiJuice" href="OptiJuice%20Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -80,32 +80,39 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="Asignaci%C3%B3n.html">
+  <a class="reference internal" href="Asignaci%C3%B3n%20Enunciado.html">
    Asignación
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ExtraccionMinera.html">
+  <a class="reference internal" href="ExtraccionMinera%20Enunciado.html">
    Extracción minera
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Inventarios.html">
+  <a class="reference internal" href="Inventarios%20Enunciado.html">
    Inventarios
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="OptiJuice%20Enunciado.html">
    OptiJuice
   </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     OptiJuice Solución
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="PlaneacionMenus.html">
+  <a class="reference internal" href="PlaneacionMenus%20Enunciado.html">
    Planeación de menús
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Transporte.html">
+  <a class="reference internal" href="Transporte%20Enunciado.html">
    Transporte
   </a>
  </li>
@@ -258,8 +265,8 @@
         
               <div>
                 
-  <div class="section" id="optijuice">
-<h1>OptiJuice<a class="headerlink" href="#optijuice" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="optijuice-solucion">
+<h1>OptiJuice Solución<a class="headerlink" href="#optijuice-solucion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo conjunto de jugos autóctonos (<span class="math notranslate nohighlight">\(K\)</span>). Los jugos son una mezcla de diferentes frutas tropicales (<span class="math notranslate nohighlight">\(R\)</span>) dentro de las que se encuentran la piña, la guayaba, el níspero y el zapote. Cada uno de los tipos de jugo se diferencia de los demás en la cantidad de litros de zumo que tiene de las distintas frutas. Es por esto que, para garantizar la calidad de los jugos es necesario que el jugo del tipo <span class="math notranslate nohighlight">\(k \in K\)</span> contenga entre un <span class="math notranslate nohighlight">\(l_{ki}\)</span>% y un <span class="math notranslate nohighlight">\(u_{ki}\)</span>% de litros de zumo de la fruta <span class="math notranslate nohighlight">\(i \in R\)</span>. Para la producción de jugos, OptiJuice tiene disponibles <span class="math notranslate nohighlight">\(b_i\)</span> litros de zumo de la fruta <span class="math notranslate nohighlight">\(i \in R\)</span>. La compañía espera una demanda mínima de <span class="math notranslate nohighlight">\(d_k\)</span> litros y desea vender cada litro de jugo del tipo <span class="math notranslate nohighlight">\(k \in K\)</span> a <span class="math notranslate nohighlight">\(p_k\)</span> pesos.</p>
@@ -353,7 +360,7 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
-<span class="kn">from</span> <span class="nn">pulp</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
 <span class="c1"># Conjuntos</span>
@@ -456,18 +463,18 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <span class="c1"># Creación del objeto problema en PuLP</span>
 <span class="c1">#-------------------------------------</span>
 <span class="c1">#Crea el problema para cargarlo con la instancia </span>
-<span class="n">problema</span><span class="o">=</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;OptiJuice&quot;</span><span class="p">,</span><span class="n">LpMaximize</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;OptiJuice&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMaximize</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Variables de Decisión</span>
 <span class="c1">#-----------------------------</span>
-<span class="n">x</span><span class="o">=</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">K_x_R</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de la fruta i para producir el jugo k, aca se añade de una vez la naturaleza de las variables</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">K_x_R</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de la fruta i para producir el jugo k, aca se añade de una vez la naturaleza de las variables</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Función objetivo</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Crea la expresión de maximización de ingresos</span>
-<span class="n">problema</span><span class="o">+=</span><span class="n">lpSum</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Ingresos Totales&quot;</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Ingresos Totales&quot;</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Restricciones</span>
@@ -475,18 +482,18 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">:</span>
         <span class="c1">#x_ki &gt;= l_ki*sum(j in R)x_kj forall k in K, i in R</span>
-        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Mínimo fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">&quot; -jugo &quot;</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el mínimo de fruta i en el jugo k</span>
+        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Mínimo fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">&quot; -jugo &quot;</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el mínimo de fruta i en el jugo k</span>
         
         <span class="c1">#x_ki &lt;= u_ki*sum(j in R)x_kj forall k in K, i in R</span>
-        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">u</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Máximo fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">&quot; -jugo &quot;</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el máximo de fruta i en el jugo k</span>
+        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">u</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Máximo fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">&quot; -jugo &quot;</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el máximo de fruta i en el jugo k</span>
 
 <span class="c1">#sum(k in K)x_ki &lt;= b_i forall i in R</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span> <span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;límite fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="c1">#se garantiza que no se utilice más fruta de la que hay disponible</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;límite fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="c1">#se garantiza que no se utilice más fruta de la que hay disponible</span>
 
 <span class="c1">#sum(i in R)x_ki &lt;= d_k forall k in K</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span> <span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="s2">&quot;Demanda mínima jugo &quot;</span><span class="o">+</span><span class="n">k</span> <span class="c1">#se satisface la demanda</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="s2">&quot;Demanda mínima jugo &quot;</span><span class="o">+</span><span class="n">k</span> <span class="c1">#se satisface la demanda</span>
     
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Imprimir formato LP</span>
@@ -504,10 +511,10 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <span class="c1">#    Imprimir resultados</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Imprimir estado final del optimizador</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="c1">#Valor óptimo del portafolio de Petroco    </span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">OptiJuice - Ingresos totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">OptiJuice - Ingresos totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="c1">#Imprimir variables de decisión</span>
@@ -571,8 +578,8 @@ Fecha: 05/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Inventarios.html" title="previous page">Inventarios</a>
-    <a class='right-next' id="next-link" href="PlaneacionMenus.html" title="next page">Planeación de menús</a>
+    <a class='left-prev' id="prev-link" href="OptiJuice%20Enunciado.html" title="previous page">OptiJuice</a>
+    <a class='right-next' id="next-link" href="PlaneacionMenus%20Enunciado.html" title="next page">Planeación de menús</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,4 +1,4 @@
-# Asignación
+# Asignación Solución
 
 ## Enunciado
 El equipo de Principios de Optimización se encuentra realizando un rediseño estructural del curso. Dado el largo trabajo que este rediseño implica, los integrantes del equipo han definido diez responsabilidades que deben ser ejecutadas. Para esto, el equipo debe decidir cuál es la mejor asignación de responsabilidades a los diferentes integrantes del equipo para el periodo intersemestral. 
@@ -309,7 +309,7 @@ La función objetivo (1) maximiza la satisfacción total. La restricción (2) de
 **f.** Resuelva el modelo planteado utilizando la librería de PulP en Python. Reporte sus resultados de una manera amigable.
 
 #se importa la libreria de PulP
-from pulp import *
+import pulp as lp
 
 #-----------------
 # Conjuntos
@@ -397,35 +397,35 @@ d={#integrante: disponibilidad de tiempo del integrante i
     5:75}  
 
 #parámetros indexados en los integrantes y las responsabilidades
-(t, p)=splitDict(datosIxR)
+(t, p)=lp.splitDict(datosIxR)
 
 #-------------------------------------
 # Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=LpProblem("Asignación",LpMaximize)
+problema=lp.LpProblem("Asignación",lp.LpMaximize)
 
 #-----------------------------
 # Variables de Decisión
 #-----------------------------
-x=LpVariable.dicts('x',I_x_R,cat='Binary') #1 si el integrante i realiza la responsabilidad r, 0 de lo contrario
+x=lp.LpVariable.dicts('x',I_x_R,cat='Binary') #1 si el integrante i realiza la responsabilidad r, 0 de lo contrario
 
 #-----------------------------
 # Función objetivo
 #-----------------------------
 #Crea la expresión de maximización de satisfacción
-problema+=lpSum(x[i,r]*p[i,r] for i in I for r in R), "Satisfacción Total"
+problema+=lp.lpSum(x[i,r]*p[i,r] for i in I for r in R), "Satisfacción Total"
 
 #-----------------------------
 # Restricciones
 #-----------------------------
 #sum(i in I)x_ir = 1 forall r in R
 for r in R:
-    problema+= lpSum(x[i,r] for i in I) == 1, "Asignación de la responsabilidad "+r   #se asigna cada tarea a una persona
+    problema+= lp.lpSum(x[i,r] for i in I) == 1, "Asignación de la responsabilidad "+r   #se asigna cada tarea a una persona
 
 #sum(r in R)x_ir*t_ir <= d_i forall i in I
 for i in I:
-    problema+= lpSum(x[i,r]*t[i,r] for r in R) <= d[i], "Disponibilidad del integrante "+str(i)  #se respeta la disponibilidad de horas que tiene cada integrante
+    problema+= lp.lpSum(x[i,r]*t[i,r] for r in R) <= d[i], "Disponibilidad del integrante "+str(i)  #se respeta la disponibilidad de horas que tiene cada integrante
     
 #-----------------------------
 # Imprimir formato LP
@@ -443,10 +443,10 @@ problema.solve()
 #    Imprimir resultados
 #-----------------------------
 #Imprimir estado final del optimizador
-print("Estado (optimizador):", LpStatus[problema.status],end='\n')
+print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
 #Valor óptimo del portafolio de Petroco    
-print("\nAsignación - \033[1m Satisfacción total \033[0m = ", round(value(problema.objective),2))
+print("\nAsignación - \033[1m Satisfacción total \033[0m = ", round(lp.value(problema.objective),2))
 print()
 
 #Asignación de tareas   

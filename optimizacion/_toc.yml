@@ -2,13 +2,21 @@
 
 - part: Talleres
   chapters:
-  - file: Asignación
-  - file: ExtraccionMinera
-  - file: Inventarios
-  - file: OptiJuice
-  - file: PlaneacionMenus
-  - file: Transporte
-
-
-
-
+  - file: Asignación Enunciado
+    sections:
+      - file: Asignación
+  - file: ExtraccionMinera Enunciado
+    sections:
+      - file: ExtraccionMinera
+  - file: Inventarios Enunciado
+    sections:
+      - file: Inventarios
+  - file: OptiJuice Enunciado
+    sections:
+      - file: OptiJuice
+  - file: PlaneacionMenus Enunciado
+    sections:
+      - file: PlaneacionMenus
+  - file: Transporte Enunciado
+    sections:
+      - file: Transporte

@@ -1,4 +1,4 @@
-# OptiJuice
+# OptiJuice Solución
 
 ## Enunciado
 
@@ -94,7 +94,7 @@ La función objetivo (1) maximiza los ingresos totales. Las restricciones (2) y 
 óptima del problema? 
 
 #se importa la libreria de PulP
-from pulp import *
+import pulp as lp
 
 #-----------------
 # Conjuntos
@@ -197,18 +197,18 @@ p={#jugo: precio del jugo k
 # Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=LpProblem("OptiJuice",LpMaximize)
+problema=lp.LpProblem("OptiJuice",lp.LpMaximize)
 
 #-----------------------------
 # Variables de Decisión
 #-----------------------------
-x=LpVariable.dicts('x',K_x_R,lowBound=0,cat='Continuous') #litros de la fruta i para producir el jugo k, aca se añade de una vez la naturaleza de las variables
+x=lp.LpVariable.dicts('x',K_x_R,lowBound=0,cat='Continuous') #litros de la fruta i para producir el jugo k, aca se añade de una vez la naturaleza de las variables
 
 #-----------------------------
 # Función objetivo
 #-----------------------------
 #Crea la expresión de maximización de ingresos
-problema+=lpSum(p[k]*x[k,i] for k in K for i in R), "Ingresos Totales"
+problema+=lp.lpSum(p[k]*x[k,i] for k in K for i in R), "Ingresos Totales"
 
 #-----------------------------
 # Restricciones
@@ -216,18 +216,18 @@ problema+=lpSum(p[k]*x[k,i] for k in K for i in R), "Ingresos Totales"
 for k in K:
     for i in R:
         #x_ki >= l_ki*sum(j in R)x_kj forall k in K, i in R
-        problema+= x[k,i] >= l[k,i]*lpSum(x[k,j] for j in R), "Mínimo fruta "+i +" -jugo "+k  #se garantiza el mínimo de fruta i en el jugo k
+        problema+= x[k,i] >= l[k,i]*lp.lpSum(x[k,j] for j in R), "Mínimo fruta "+i +" -jugo "+k  #se garantiza el mínimo de fruta i en el jugo k
         
         #x_ki <= u_ki*sum(j in R)x_kj forall k in K, i in R
-        problema+= x[k,i] <= u[k,i]*lpSum(x[k,j] for j in R), "Máximo fruta "+i +" -jugo "+k  #se garantiza el máximo de fruta i en el jugo k
+        problema+= x[k,i] <= u[k,i]*lp.lpSum(x[k,j] for j in R), "Máximo fruta "+i +" -jugo "+k  #se garantiza el máximo de fruta i en el jugo k
 
 #sum(k in K)x_ki <= b_i forall i in R
 for i in R:
-    problema+= lpSum(x[k,i] for k in K) <= b[i], "límite fruta "+i #se garantiza que no se utilice más fruta de la que hay disponible
+    problema+= lp.lpSum(x[k,i] for k in K) <= b[i], "límite fruta "+i #se garantiza que no se utilice más fruta de la que hay disponible
 
 #sum(i in R)x_ki <= d_k forall k in K
 for k in K:
-    problema+= lpSum(x[k,i] for i in R) <= d[k], "Demanda mínima jugo "+k #se satisface la demanda
+    problema+= lp.lpSum(x[k,i] for i in R) <= d[k], "Demanda mínima jugo "+k #se satisface la demanda
     
 #-----------------------------
 # Imprimir formato LP
@@ -245,10 +245,10 @@ problema.solve()
 #    Imprimir resultados
 #-----------------------------
 #Imprimir estado final del optimizador
-print("Estado (optimizador):", LpStatus[problema.status],end='\n')
+print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
 #Valor óptimo del portafolio de Petroco    
-print("\nOptiJuice - Ingresos totales = $", round(value(problema.objective),2))
+print("\nOptiJuice - Ingresos totales = $", round(lp.value(problema.objective),2))
 print()
 
 #Imprimir variables de decisión

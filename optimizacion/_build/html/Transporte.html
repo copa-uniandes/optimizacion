@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transporte &#8212; Repositorio Principios de Optimización</title>
+    <title>Transporte Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -39,7 +39,7 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Planeación de menús" href="PlaneacionMenus.html" />
+    <link rel="prev" title="Transporte" href="Transporte%20Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -79,34 +79,41 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="Asignaci%C3%B3n.html">
+  <a class="reference internal" href="Asignaci%C3%B3n%20Enunciado.html">
    Asignación
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ExtraccionMinera.html">
+  <a class="reference internal" href="ExtraccionMinera%20Enunciado.html">
    Extracción minera
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Inventarios.html">
+  <a class="reference internal" href="Inventarios%20Enunciado.html">
    Inventarios
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="OptiJuice.html">
+  <a class="reference internal" href="OptiJuice%20Enunciado.html">
    OptiJuice
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="PlaneacionMenus.html">
+  <a class="reference internal" href="PlaneacionMenus%20Enunciado.html">
    Planeación de menús
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="Transporte%20Enunciado.html">
    Transporte
   </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Transporte Solución
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -267,8 +274,8 @@
         
               <div>
                 
-  <div class="section" id="transporte">
-<h1>Transporte<a class="headerlink" href="#transporte" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="transporte-solucion">
+<h1>Transporte Solución<a class="headerlink" href="#transporte-solucion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>La Lechita Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1500, 1200, 1400, y 1000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor.</p>
@@ -358,18 +365,18 @@ Formule un modelo general de optimización lineal que le permita a La Lechita Ra
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1c674faf-9105-4039-8470-4976ec64d8f1">
-<span class="eqno">(8)<a class="headerlink" href="#equation-1c674faf-9105-4039-8470-4976ec64d8f1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7d62b9f5-1494-4b62-8699-994ef9e40f71">
+<span class="eqno">(8)<a class="headerlink" href="#equation-7d62b9f5-1494-4b62-8699-994ef9e40f71" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
 \end{align}\]</div>
 <p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c6e6191-cf08-4647-bcd7-c92fa4f87c37">
-<span class="eqno">(9)<a class="headerlink" href="#equation-2c6e6191-cf08-4647-bcd7-c92fa4f87c37" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-44e8ef96-be6a-4084-95b9-10817997e739">
+<span class="eqno">(9)<a class="headerlink" href="#equation-44e8ef96-be6a-4084-95b9-10817997e739" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
 \end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ad2f39b4-4fe5-4caf-8ca4-75f5fcdbac0d">
-<span class="eqno">(10)<a class="headerlink" href="#equation-ad2f39b4-4fe5-4caf-8ca4-75f5fcdbac0d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-60454e22-af97-4cd6-bb2a-336401bdc546">
+<span class="eqno">(10)<a class="headerlink" href="#equation-60454e22-af97-4cd6-bb2a-336401bdc546" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \end{align}\]</div>
 </div>
@@ -420,7 +427,7 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
-<span class="kn">from</span> <span class="nn">pulp</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
 <span class="c1"># Conjuntos</span>
@@ -501,29 +508,29 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 <span class="c1"># Creación del objeto problema en PuLP</span>
 <span class="c1">#-------------------------------------</span>
 <span class="c1">#Crea el problema para cargarlo con la instancia </span>
-<span class="n">problema</span><span class="o">=</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Transporte&quot;</span><span class="p">,</span><span class="n">LpMinimize</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Transporte&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Variables de Decisión</span>
 <span class="c1">#-----------------------------</span>
-<span class="n">x</span><span class="o">=</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">P_x_D</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">P_x_D</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Función objetivo</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Crea la expresión de minimizacion de costos</span>
-<span class="n">problema</span><span class="o">+=</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">),</span> <span class="s2">&quot;Costos Totales&quot;</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">),</span> <span class="s2">&quot;Costos Totales&quot;</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Restricciones</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#sum(j in D)x_ij &lt;= b_i forall i in P</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span> <span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;Oferta de la planta &quot;</span><span class="o">+</span><span class="n">i</span>   <span class="c1">#se respeta la oferta de cada planta </span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;Oferta de la planta &quot;</span><span class="o">+</span><span class="n">i</span>   <span class="c1">#se respeta la oferta de cada planta </span>
 
 <span class="c1">#sum(i in P)x_ij &gt;= t_j forall j in D</span>
 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span> <span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="s2">&quot;Demanda del distribuidor &quot;</span><span class="o">+</span><span class="n">j</span> <span class="c1">#se satisface la demanda de cada distribuidor </span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="s2">&quot;Demanda del distribuidor &quot;</span><span class="o">+</span><span class="n">j</span> <span class="c1">#se satisface la demanda de cada distribuidor </span>
     
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Imprimir formato LP</span>
@@ -541,10 +548,10 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 <span class="c1">#    Imprimir resultados</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Imprimir estado final del optimizador</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="c1">#Valor óptimo del portafolio de Petroco    </span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transporte - Costos totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transporte - Costos totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -693,7 +700,7 @@ Fecha: 20/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="PlaneacionMenus.html" title="previous page">Planeación de menús</a>
+    <a class='left-prev' id="prev-link" href="Transporte%20Enunciado.html" title="previous page">Transporte</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

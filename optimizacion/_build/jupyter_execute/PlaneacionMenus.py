@@ -1,4 +1,4 @@
-# Planeación de menús
+# Planeación de menús Solución
 
 ## Enunciado
 
@@ -78,7 +78,7 @@ La función objetivo (1) minimiza los costos totales. La restricción (2) garant
 óptima del problema? 
 
 #%% se importa la libreria de PulP 
-from pulp import *
+import pulp as lp
 
 #-----------------
 # Conjuntos
@@ -228,29 +228,29 @@ p={('Naranja', 'Frutas'): 1,
 # Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=LpProblem("PlaneaciónMenús",LpMinimize)
+problema=lp.LpProblem("PlaneaciónMenús",lp.LpMinimize)
 
 #-----------------------------
 # Variables de Decisión
 #-----------------------------
-x=LpVariable.dicts('x',A,lowBound=0,cat='Continuous') #Cantidad de porciones del alimento a incluidas en el menú
+x=lp.LpVariable.dicts('x',A,lowBound=0,cat='Continuous') #Cantidad de porciones del alimento a incluidas en el menú
 
 #-----------------------------
 # Función objetivo
 #-----------------------------
 #Crea la expresión de minimización de costos
-problema+=lpSum(c[a]*x[a] for a in A)
+problema+=lp.lpSum(c[a]*x[a] for a in A)
 
 #-----------------------------
 # Restricciones
 #-----------------------------
 #Se garantizan 100 gramos por cada tipo de alimento
 for t in T:
-    problema+=lpSum(x[a] for a in A if p[a,t]==1)==1, "100 gramos del tipo de alimento " + t
+    problema+=lp.lpSum(x[a] for a in A if p[a,t]==1)==1, "100 gramos del tipo de alimento " + t
     
 #Se garantiza el requerimiento mínimo de cada aspecto nutricional
 for n in N:
-    problema+=lpSum(k[a,n]*x[a] for a in A)>=l[n], "Mínimo aspecto nutricional " + n
+    problema+=lp.lpSum(k[a,n]*x[a] for a in A)>=l[n], "Mínimo aspecto nutricional " + n
 
 #-----------------------------
 # Invocar el optimizador
@@ -269,10 +269,10 @@ problema.writeLP("PlaneaciónMenús.lp")
 #    Imprimir resultados
 #-----------------------------
 #Imprimir estado final del optimizador
-print("Estado (optimizador):", LpStatus[problema.status],end='\n')
+print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
 #Valor óptimo del costo del menú  
-print("\nPlaneación Menús - Costos Totales = $", round(value(problema.objective),2))
+print("\nPlaneación Menús - Costos Totales = $", round(lp.value(problema.objective),2))
 
 #Imprimir variables de decisión
 print("Variables de decisión\n")
