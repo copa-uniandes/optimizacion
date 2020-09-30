@@ -2,10 +2,9 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventarios Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
@@ -15,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/jquery.js"></script>
@@ -25,10 +24,12 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -39,8 +40,8 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="OptiJuice" href="OptiJuice%20Enunciado.html" />
-    <link rel="prev" title="Inventarios" href="Inventarios%20Enunciado.html" />
+    <link rel="next" title="Extracción minera" href="ExtraccionMinera Enunciado.html" />
+    <link rel="prev" title="Inventarios" href="Inventarios Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -75,22 +76,22 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <p class="caption">
  <span class="caption-text">
-  Talleres
+  Prácticas de formulación
  </span>
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="Asignaci%C3%B3n%20Enunciado.html">
-   Asignación
+  <a class="reference internal" href="PlaneacionMenus Enunciado.html">
+   Planeación de menús
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ExtraccionMinera%20Enunciado.html">
-   Extracción minera
+  <a class="reference internal" href="OptiJuice Enunciado.html">
+   OptiJuice
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="reference internal" href="Inventarios%20Enunciado.html">
+  <a class="reference internal" href="Inventarios Enunciado.html">
    Inventarios
   </a>
   <ul class="current">
@@ -102,17 +103,17 @@
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="OptiJuice%20Enunciado.html">
-   OptiJuice
+  <a class="reference internal" href="ExtraccionMinera Enunciado.html">
+   Extracción minera
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="PlaneacionMenus%20Enunciado.html">
-   Planeación de menús
+  <a class="reference internal" href="Asignación Enunciado.html">
+   Asignación
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Transporte%20Enunciado.html">
+  <a class="reference internal" href="Transporte Enunciado.html">
    Transporte
   </a>
  </li>
@@ -121,10 +122,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -176,28 +173,6 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Inventarios.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Inventarios.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
 
     </div>
 
@@ -396,34 +371,30 @@
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se deben respetar los límites de producción</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x_i&amp;\leq 110000, &amp;&amp;\forall i \in S\\
-x_i&amp;\geq 85000, &amp;&amp;\forall i \in S\\
-\end{align*}\]</div>
+<p>\begin{align*}
+x_i&amp;\leq 110000, &amp;&amp;\forall i \in S\
+x_i&amp;\geq 85000, &amp;&amp;\forall i \in S\
+\end{align*}</p>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que contabiliza(n) el inventario de cada semana</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-I_1&amp;=I_0+x_1-d_1\\
+<p>\begin{align*}
+I_1&amp;=I_0+x_1-d_1\
 I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1
-\end{align*}\]</div>
+\end{align*}</p>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h3>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h3>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x_i&amp;\geq 0,&amp;&amp;\forall i \in S\\
+<p>\begin{align*}
+x_i&amp;\geq 0,&amp;&amp;\forall i \in S\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S
-\end{align*}\]</div>
+\end{align*}</p>
 </div>
 <div class="section" id="funcion-objetivo">
 <h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
 <p><strong>e.</strong> Escriba la función objetivo</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
-\end{equation*}\]</div>
+<p>\begin{equation*}
+max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
+\end{equation*}</p>
 </div>
 </div>
 <div class="section" id="formulacion-matematica-completa">
@@ -445,19 +416,17 @@ I_i&amp;\geq 0,&amp;&amp;\forall i \in S
 <li><p><span class="math notranslate nohighlight">\(x_{i}\)</span>: toneladas de cemento a producir en la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(I_i\)</span>: toneladas de cemento que se tienen en inventario al final de la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i\text{ (1)}
-\end{equation*}\]</div>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x_i&amp;\leq 110000, &amp;&amp;\forall i \in S; &amp;(2)\\
-x_i&amp;\geq 85000, &amp;&amp;\forall i \in S; &amp;(3)\\
-I_1&amp;=I_0+x_1-d_1,&amp;&amp; &amp;(4)\\
-I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1;  &amp;(5)\\
-x_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(6)\\
+<p>\begin{equation*}
+max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i\text{ (1)}
+\end{equation*}</p>
+<p>\begin{align*}
+x_i&amp;\leq 110000, &amp;&amp;\forall i \in S; &amp;(2)\
+x_i&amp;\geq 85000, &amp;&amp;\forall i \in S; &amp;(3)\
+I_1&amp;=I_0+x_1-d_1,&amp;&amp; &amp;(4)\
+I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1;  &amp;(5)\
+x_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(6)\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
-\end{align*}\]</div>
+\end{align*}</p>
 <p>La función objetivo (1) maximiza las utilidades totales. Las restricciones (2) y (3) garantizan que para cada semana <span class="math notranslate nohighlight">\(i\in S\)</span> la producción <span class="math notranslate nohighlight">\(x_i\)</span> respete los límites de producción. Las restricciones (4) y (5) contabilizan los inventarios para cada semana <span class="math notranslate nohighlight">\(i \in S\)</span>. Las restricciones (6) y (7) describen la naturaleza de las variables <span class="math notranslate nohighlight">\(x_i\)</span> y <span class="math notranslate nohighlight">\(I_i\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -465,7 +434,7 @@ I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
 <p><strong>2.</strong> Resuelva su modelo. Reporte sus resultados de una manera amigable</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%%se importa la libreria de PulP</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#%%se importa la libreria de PulP</span>
 <span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
@@ -577,7 +546,7 @@ I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
 
 Inventarios - Utilidades totales = $ 380356850800.0
 
@@ -635,8 +604,8 @@ Fecha: 25/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Inventarios%20Enunciado.html" title="previous page">Inventarios</a>
-    <a class='right-next' id="next-link" href="OptiJuice%20Enunciado.html" title="next page">OptiJuice</a>
+    <a class='left-prev' id="prev-link" href="Inventarios Enunciado.html" title="previous page">Inventarios</a>
+    <a class='right-next' id="next-link" href="ExtraccionMinera Enunciado.html" title="next page">Extracción minera</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
