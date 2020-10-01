@@ -2,9 +2,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transporte de productos lácteos Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
@@ -14,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -24,12 +25,10 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -40,6 +39,8 @@
     <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transporte de productos lácteos Visualización" href="Transporte-vis.html" />
+    <link rel="prev" title="Transporte de productos lácteos" href="../Enunciados/Transporte%20Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -72,10 +73,68 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
+  <p class="caption">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
+   Chocolatería
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">
+   Planeación de menús
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">
+   Producción de jugos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Transporte de productos lácteos Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Transporte-vis.html">
+     Transporte de productos lácteos Visualización
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">
+   Producción de cemento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">
+   Extracción minera
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -127,6 +186,28 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Soluciones/Transporte.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Soluciones/Transporte.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -290,17 +371,20 @@ Formule un modelo general de optimización lineal que le permita a La Lechera Ra
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4053c3ba-b4b9-453d-83d8-3a4a98abbc20">
+<span class="eqno">(1)<a class="headerlink" href="#equation-4053c3ba-b4b9-453d-83d8-3a4a98abbc20" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
-\end{align}</p>
+\end{align}\]</div>
 <p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d7bfcc0f-9927-4119-b902-dd4672a5417e">
+<span class="eqno">(2)<a class="headerlink" href="#equation-d7bfcc0f-9927-4119-b902-dd4672a5417e" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
-\end{align}</p>
+\end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-49bb0263-8b61-4871-b03e-76959f37bba9">
+<span class="eqno">(3)<a class="headerlink" href="#equation-49bb0263-8b61-4871-b03e-76959f37bba9" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
-\end{align}</p>
+\end{align}\]</div>
 </div>
 <div class="section" id="funcion-objetivo">
 <h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
@@ -333,12 +417,13 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \[
 \text{minimizar }  \sum_{i\in P}\sum_{j\in D}x_{ij}c_{ij} \text{ (1)} 
 \]</div>
-<p>Sujeto a,
-\begin{align*}
-\sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P; &amp;(2)\
-\sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D; &amp;(3)\
+<p>Sujeto a,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P; &amp;(2)\\
+\sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D; &amp;(3)\\
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
-\end{align*}</p>
+\end{align*}\]</div>
 <p>La función objetivo (1) minimiza los costos totales. Las restricción (2) describe que se debe respetar la oferta de las plantas. La restricción (3) describe que se debe satisfacer la demanda de los distribuidores. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ij}\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -347,7 +432,7 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 óptima del problema?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
 <span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
@@ -487,7 +572,7 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Welcome to the CBC MILP Solver 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to the CBC MILP Solver 
 Version: 2.9.0 
 Build Date: Feb 12 2015 
 
@@ -565,6 +650,8 @@ Fecha: 20/09/2020</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../Enunciados/Transporte%20Enunciado.html" title="previous page">Transporte de productos lácteos</a>
+    <a class='right-next' id="next-link" href="Transporte-vis.html" title="next page">Transporte de productos lácteos Visualización</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,9 +1,9 @@
-# Transporte de productos l·cteos SoluciÛn
+# Transporte de productos l√°cteos Soluci√≥n
 
 ## Enunciado
-La Lechera RamÌrez S.A. es una empresa que produce productos l·cteos y cuenta con cuatro plantas de producciÛn en Colombia cuyas capacidades de producciÛn mensuales de leche son 1,500, 1,200, 1,400, y 1,000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compaÒÌa al enviar un litro de leche desde cada planta hacia cada distribuidor. 
+La Lechera Ram√≠rez S.A. es una empresa que produce productos l√°cteos y cuenta con cuatro plantas de producci√≥n en Colombia cuyas capacidades de producci√≥n mensuales de leche son 1,500, 1,200, 1,400, y 1,000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compa√±√≠a al enviar un litro de leche desde cada planta hacia cada distribuidor. 
 
-<p style="text-align: center;"><b>Tabla 1. Costos de distribuciÛn</b></p>
+<p style="text-align: center;"><b>Tabla 1. Costos de distribuci√≥n</b></p>
 
 |            |**Dist. 1**|Dist. 2|Dist. 3|Dist. 4|Dist. 5|Dist. 6|Dist. 7|Dist. 8|
 |:----------:|----------:|------:|------:|------:|------:|------:|------:|------:|
@@ -13,62 +13,62 @@ La Lechera RamÌrez S.A. es una empresa que produce productos l·cteos y cuenta co
 |**Planta 4**|450        |800    |650    |250    |340    |700    |600    |620    |
 
 <div style="text-align:justify">
-Formule un modelo general de optimizaciÛn lineal que le permita a La Lechera RamÌrez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: 
+Formule un modelo general de optimizaci√≥n lineal que le permita a La Lechera Ram√≠rez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: 
 
-## FormulaciÛn
+## Formulaci√≥n
 
-**1.** Escriba lo(s) conjunto(s), par·metro(s) y variable(s) de decisiÛn que utilizar· en el modelo.  
+**1.** Escriba lo(s) conjunto(s), par√°metro(s) y variable(s) de decisi√≥n que utilizar√° en el modelo.  
 
 ### Conjuntos
 - $P$: Plantas
 - $D$: Distribuidores
 
-### Par·metros
+### Par√°metros
 - $b_i$: oferta de leche de la planta $i\in P$
 - $t_j$: demanda de leche del distribuidor $j\in D$ 
-- $c_{ij}$: costo de envÌo de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
+- $c_{ij}$: costo de env√≠o de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
 
-### Variables de decisiÛn
+### Variables de decisi√≥n
 - $x_{ij}$: cantidad (en litros) de leche que van de la planta $i\in P$ al distribuidor $j\in D$
 
 ### Restricciones
-**2.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.   
+**2.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.   
 
 \begin{align}
 \sum_{j\in D}x_{ij} &\le b_i, &&\forall i\in P.
 \end{align}
 
-**3.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.  
+**3.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.  
 
 \begin{align}
 \sum_{i\in P}x_{ij} &\ge t_j, &&\forall j\in D.
 \end{align}
 
-**4.** Escriba la(s) restricciÛn(es) que describe(n) matem·ticamente el tipo de variable(s) que est· utilizando dentro del modelo.   
+**4.** Escriba la(s) restricci√≥n(es) que describe(n) matem√°ticamente el tipo de variable(s) que est√° utilizando dentro del modelo.   
 
 \begin{align}
 x_{ij} & \ge 0, &&\forall i\in P,j\in D.
 \end{align}
 
-### FunciÛn Objetivo
-**5.** Escriba la funciÛn objetivo.
+### Funci√≥n Objetivo
+**5.** Escriba la funci√≥n objetivo.
 
 $$
 \text{minimizar }  \sum_{i\in P}\sum_{j\in D}x_{ij}c_{ij}
 $$
 
-## FormulaciÛn matem·tica completa
+## Formulaci√≥n matem√°tica completa
 
 **Conjuntos:**
 - $P$: Plantas
 - $D$: Distribuidores
 
-**Par·metros:**
+**Par√°metros:**
 - $b_i$: oferta de leche de la planta $i\in P$
 - $t_j$: demanda de leche del distribuidor $j\in D$ 
-- $c_{ij}$: costo de envÌo de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
+- $c_{ij}$: costo de env√≠o de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
 
-**Variables de decisiÛn:**
+**Variables de decisi√≥n:**
 - $x_{ij}$: cantidad (en litros) de leche que van de la planta $i\in P$ al distribuidor $j\in D$
 
 **Modelo:**
@@ -84,11 +84,11 @@ Sujeto a,
 x_{ij} & \ge 0, &&\forall i\in P,j\in D. &(4)
 \end{align*}
 
-La funciÛn objetivo (1) minimiza los costos totales. Las restricciÛn (2) describe que se debe respetar la oferta de las plantas. La restricciÛn (3) describe que se debe satisfacer la demanda de los distribuidores. La restricciÛn (4) describe la naturaleza de la variable $x_{ij}$. 
+La funci√≥n objetivo (1) minimiza los costos totales. Las restricci√≥n (2) describe que se debe respetar la oferta de las plantas. La restricci√≥n (3) describe que se debe satisfacer la demanda de los distribuidores. La restricci√≥n (4) describe la naturaleza de la variable $x_{ij}$. 
 
-## ImplementaciÛn
-**g.** Resuelva el modelo planteado utilizando la librerÌa de PulP en Python. øCu·l es la soluciÛn
-Ûptima del problema? 
+## Implementaci√≥n
+**g.** Resuelva el modelo planteado utilizando la librer√≠a de PulP en Python. ¬øCu√°l es la soluci√≥n
+√≥ptima del problema? 
 
 #se importa la libreria de PulP
 import pulp as lp
@@ -116,7 +116,7 @@ D=["Distribuidor 1",
 P_x_D = [(planta, distribuidor) for planta in P for distribuidor in D] 
 
 #-----------------
-# Par·metros
+# Par√°metros
 #-----------------
 b={#planta: oferta de la planta i
    "Planta 1":1500,
@@ -169,20 +169,20 @@ c={#(planta, distribuidor): costo de envio de un litro de leche desde la planta 
    ("Planta 4","Distribuidor 8"):620} 
 
 #-------------------------------------
-# CreaciÛn del objeto problema en PuLP
+# Creaci√≥n del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
 problema=lp.LpProblem("Transporte",lp.LpMinimize)
 
 #-----------------------------
-# Variables de DecisiÛn
+# Variables de Decisi√≥n
 #-----------------------------
-x=lp.LpVariable.dicts('x',P_x_D,lowBound=0,cat='Continuous') #litros de leche que van de la planta i al distribuidor j; aca se aÒade de una vez la naturaleza de las variables
+x=lp.LpVariable.dicts('x',P_x_D,lowBound=0,cat='Continuous') #litros de leche que van de la planta i al distribuidor j; aca se a√±ade de una vez la naturaleza de las variables
 
 #-----------------------------
-# FunciÛn objetivo
+# Funci√≥n objetivo
 #-----------------------------
-#Crea la expresiÛn de minimizacion de costos
+#Crea la expresi√≥n de minimizacion de costos
 problema+=lp.lpSum(x[i,j]*c[i,j] for i in P for j in D), "Costos Totales"
 
 #-----------------------------
@@ -214,12 +214,12 @@ problema.solve()
 #Imprimir estado final del optimizador
 print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
-#Valor Ûptimo del plan de transporte  
+#Valor √≥ptimo del plan de transporte  
 print("\nTransporte - Costos totales = $", round(lp.value(problema.objective),2))
 print()
 
-#Imprimir variables de decisiÛn
-print("Variables de decisiÛn")
+#Imprimir variables de decisi√≥n
+print("Variables de decisi√≥n")
 print("              ","D1","D2","D3","D4","D5","D6","D7","D8",sep='\t')
 for i in P:
     print(i,end='\t')
@@ -227,8 +227,8 @@ for i in P:
         print(round(x[i,j].value()),end='\t')
     print()
 
-## CrÈditos
+## Cr√©ditos
 
-Equipo Principios de OptimizaciÛn<br>
-EdiciÛn: Camilo Aguilar, Juan Felipe Rengifo M<br>
+Equipo Principios de Optimizaci√≥n<br>
+Edici√≥n: Camilo Aguilar, Juan Felipe Rengifo M<br>
 Fecha: 20/09/2020

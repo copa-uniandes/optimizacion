@@ -2,9 +2,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extracción minera Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
@@ -14,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -24,12 +25,10 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -40,6 +39,7 @@
     <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Extracción minera" href="../Enunciados/ExtraccionMinera%20Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -72,10 +72,63 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
+  <p class="caption">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
+   Chocolatería
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">
+   Planeación de menús
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">
+   Producción de jugos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">
+   Producción de cemento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">
+   Extracción minera
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Extracción minera Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -127,6 +180,28 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Soluciones/ExtraccionMinera.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Soluciones/ExtraccionMinera.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -503,32 +578,37 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="variables-de-decision">
 <h4>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h4>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<p>\begin{align}
-x_i: \text{cantidad de carbón extraído en la zona <span class="math notranslate nohighlight">\(i\in M\)</span> (en toneladas)}\
-\end{align}</p>
+<div class="amsmath math notranslate nohighlight" id="equation-18a0aabd-4038-4bb1-b4d0-f702b6bac458">
+<span class="eqno">(7)<a class="headerlink" href="#equation-18a0aabd-4038-4bb1-b4d0-f702b6bac458" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
+\end{align}\]</div>
 </div>
 <div class="section" id="restricciones">
 <h4>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
-<p><em>Opción 1:</em>
-\begin{align}
-\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\
-\end{align}</p>
-<p><em>Opción 2:</em>
-\begin{align}
-\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\
-\end{align}</p>
+<p><em>Opción 1:</em></p>
+<div class="amsmath math notranslate nohighlight" id="equation-acc94671-4682-4854-8a78-100ff58517a7">
+<span class="eqno">(8)<a class="headerlink" href="#equation-acc94671-4682-4854-8a78-100ff58517a7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
+\end{align}\]</div>
+<p><em>Opción 2:</em></p>
+<div class="amsmath math notranslate nohighlight" id="equation-ff59e371-4c51-460a-9625-95e3e202f856">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ff59e371-4c51-460a-9625-95e3e202f856" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
+\end{align}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6fce6a42-068e-429b-a28d-3fa80b60124e">
+<span class="eqno">(10)<a class="headerlink" href="#equation-6fce6a42-068e-429b-a28d-3fa80b60124e" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_i, &amp;&amp;\forall i\in M.
-\end{align}</p>
+\end{align}\]</div>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h4>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2ff87d29-a562-4bf7-8d07-0540950c743b">
+<span class="eqno">(11)<a class="headerlink" href="#equation-2ff87d29-a562-4bf7-8d07-0540950c743b" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
-\end{align}</p>
+\end{align}\]</div>
 </div>
 <div class="section" id="funcion-objetivo">
 <h4>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h4>
@@ -562,12 +642,13 @@ x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
 \[
 \text{minimizar }  \sum_{i\in M}x_ic_i \text{ (1)} 
 \]</div>
-<p>Sujeto a,
-\begin{align*}
-\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\
-x_i &amp;\le n_i, &amp;&amp;\forall i\in M; &amp;(3)\
+<p>Sujeto a,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\\
+x_i &amp;\le n_i, &amp;&amp;\forall i\in M; &amp;(3)\\
 x_i &amp;\ge 0, &amp;&amp;\forall i\in M. &amp;(4)
-\end{align*}</p>
+\end{align*}\]</div>
 <p>La función objetivo (1) minimiza los costos totales. La restricción (2) describe que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe ser mínimo <span class="math notranslate nohighlight">\(b_j\)</span> toneladas. La restricción (3) describe que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -576,7 +657,7 @@ x_i &amp;\ge 0, &amp;&amp;\forall i\in M. &amp;(4)
 óptima del problema?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
 <span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
@@ -847,17 +928,15 @@ x_i &amp;\ge 0, &amp;&amp;\forall i\in M. &amp;(4)
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">())</span><span class="o">+</span><span class="s2">&quot; toneladas de &quot;</span><span class="o">+</span><span class="n">j</span><span class="p">)</span>
-
-
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
 
-Extracción Minera - [1m Costos totales [0m = $ 32782.0
+Extracción Minera - <span class=" -Color -Color-Bold"> Costos totales </span> = $ 32782.0
 
-[1mExtracción de las zonas[0m
+<span class=" -Color -Color-Bold">Extracción de las zonas</span>
 1: 189.0 toneladas de Hulla
 2: 196.0 toneladas de Hulla
 3: 103.0 toneladas de Turba
@@ -1018,23 +1097,26 @@ Extracción Minera - [1m Costos totales [0m = $ 32782.0
 <div class="section" id="id3">
 <h4>Variables de decisión<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión adicional(es) que utilizará en el modelo.</p>
-<p>\begin{align*}
-y_i:\begin{cases}1&amp;\text{, si se decide explotar la zona }i\in M \ 0 &amp; \text{, d.l.c}  \end{cases}
-\end{align*}</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_i:\begin{cases}1&amp;\text{, si se decide explotar la zona }i\in M \\ 0 &amp; \text{, d.l.c}  \end{cases}
+\end{align*}\]</div>
 </div>
 <div class="section" id="id4">
 <h4>Restricciones<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e6425b3b-a08d-48b4-a769-ab7123e3101b">
+<span class="eqno">(12)<a class="headerlink" href="#equation-e6425b3b-a08d-48b4-a769-ab7123e3101b" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M.
-\end{align}</p>
+\end{align}\]</div>
 </div>
 <div class="section" id="id5">
 <h4>Naturaleza de las variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p><strong>c.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-162448e0-ad60-4c98-9fff-8109ae0b65b6">
+<span class="eqno">(13)<a class="headerlink" href="#equation-162448e0-ad60-4c98-9fff-8109ae0b65b6" title="Permalink to this equation">¶</a></span>\[\begin{align}
 y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
-\end{align}</p>
+\end{align}\]</div>
 </div>
 <div class="section" id="id6">
 <h4>Función Objetivo<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
@@ -1070,13 +1152,14 @@ y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
 \[
 \text{minimizar }  \sum_{i\in M}y_iq_i+\sum_{i\in M}x_ic_i \text{ (1)} 
 \]</div>
-<p>Sujeto a,
-\begin{align*}
-\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\
-x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M; &amp;(3)\
-x_i &amp;\ge 0, &amp;&amp;\forall i\in M; &amp;(4)\
+<p>Sujeto a,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\\
+x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M; &amp;(3)\\
+x_i &amp;\ge 0, &amp;&amp;\forall i\in M; &amp;(4)\\
 y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M. &amp;(5)
-\end{align*}</p>
+\end{align*}\]</div>
 <p>La función objetivo (1) minimiza los costos totales. La restricción (2) describe que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe ser mínimo <span class="math notranslate nohighlight">\(b_j\)</span> toneladas. La restricción (3) describe que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón, pero que si no se decide explotar, la extracción de carbón debe ser igual a cero. Las restricciones (4) y (5) describen la naturaleza de las variables <span class="math notranslate nohighlight">\(x_i\)</span> y <span class="math notranslate nohighlight">\(y_i\)</span>.</p>
 </div>
 <div class="section" id="id8">
@@ -1085,7 +1168,7 @@ y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M. &amp;(5)
 óptima del problema?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
 <span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
 
 <span class="c1">#-----------------</span>
@@ -1360,11 +1443,11 @@ y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M. &amp;(5)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
 
-Extracción Minera - [1m Costos totales [0m = $ 39488.0
+Extracción Minera - <span class=" -Color -Color-Bold"> Costos totales </span> = $ 39488.0
 
-[1mExtracción de las zonas[0m
+<span class=" -Color -Color-Bold">Extracción de las zonas</span>
 1: 189.0 toneladas de Hulla
 2: 196.0 toneladas de Hulla
 3: 103.0 toneladas de Turba
@@ -1428,6 +1511,7 @@ Fecha: 12/09/2020</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../Enunciados/ExtraccionMinera%20Enunciado.html" title="previous page">Extracción minera</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

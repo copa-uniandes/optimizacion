@@ -1,9 +1,9 @@
-# Transporte de productos lácteos Visualización
+# Transporte de productos lÃ¡cteos VisualizaciÃ³n
 
 ## Enunciado
-La Lechera Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1,500, 1,200, 1,400, y 1,000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor. 
+La Lechera RamÃ­rez S.A. es una empresa que produce productos lÃ¡cteos y cuenta con cuatro plantas de producciÃ³n en Colombia cuyas capacidades de producciÃ³n mensuales de leche son 1,500, 1,200, 1,400, y 1,000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compaÃ±Ã­a al enviar un litro de leche desde cada planta hacia cada distribuidor. 
 
-<p style="text-align: center;"><b>Tabla 1. Costos de distribución</b></p>
+<p style="text-align: center;"><b>Tabla 1. Costos de distribuciÃ³n</b></p>
 
 |            |**Dist. 1**|Dist. 2|Dist. 3|Dist. 4|Dist. 5|Dist. 6|Dist. 7|Dist. 8|
 |:----------:|----------:|------:|------:|------:|------:|------:|------:|------:|
@@ -13,62 +13,62 @@ La Lechera Ramírez S.A. es una empresa que produce productos lácteos y cuenta co
 |**Planta 4**|450        |800    |650    |250    |340    |700    |600    |620    |
 
 <div style="text-align:justify">
-Formule un modelo general de optimización lineal que le permita a La Lechera Ramírez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: 
+Formule un modelo general de optimizaciÃ³n lineal que le permita a La Lechera RamÃ­rez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: 
 
-## Formulación
+## FormulaciÃ³n
 
-**1.** Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.  
+**1.** Escriba lo(s) conjunto(s), parÃ¡metro(s) y variable(s) de decisiÃ³n que utilizarÃ¡ en el modelo.  
 
 ### Conjuntos
 - $P$: Plantas
 - $D$: Distribuidores
 
-### Parámetros
+### ParÃ¡metros
 - $b_i$: oferta de leche de la planta $i\in P$
 - $t_j$: demanda de leche del distribuidor $j\in D$ 
-- $c_{ij}$: costo de envío de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
+- $c_{ij}$: costo de envÃ­o de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
 
-### Variables de decisión
+### Variables de decisiÃ³n
 - $x_{ij}$: cantidad (en litros) de leche que van de la planta $i\in P$ al distribuidor $j\in D$
 
 ### Restricciones
-**2.** Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.   
+**2.** Escriba la(s) restricciÃ³n(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.   
 
 \begin{align}
 \sum_{j\in D}x_{ij} &\le b_i, &&\forall i\in P.
 \end{align}
 
-**3.** Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.  
+**3.** Escriba la(s) restricciÃ³n(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.  
 
 \begin{align}
 \sum_{i\in P}x_{ij} &\ge t_j, &&\forall j\in D.
 \end{align}
 
-**4.** Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.   
+**4.** Escriba la(s) restricciÃ³n(es) que describe(n) matemÃ¡ticamente el tipo de variable(s) que estÃ¡ utilizando dentro del modelo.   
 
 \begin{align}
 x_{ij} & \ge 0, &&\forall i\in P,j\in D.
 \end{align}
 
-### Función Objetivo
-**5.** Escriba la función objetivo.
+### FunciÃ³n Objetivo
+**5.** Escriba la funciÃ³n objetivo.
 
 $$
 \text{minimizar }  \sum_{i\in P}\sum_{j\in D}x_{ij}c_{ij}
 $$
 
-## Formulación matemática completa
+## FormulaciÃ³n matemÃ¡tica completa
 
 **Conjuntos:**
 - $P$: Plantas
 - $D$: Distribuidores
 
-**Parámetros:**
+**ParÃ¡metros:**
 - $b_i$: oferta de leche de la planta $i\in P$
 - $t_j$: demanda de leche del distribuidor $j\in D$ 
-- $c_{ij}$: costo de envío de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
+- $c_{ij}$: costo de envÃ­o de un litro de leche de la planta $i\in P$ al distribuidor $j\in D$
 
-**Variables de decisión:**
+**Variables de decisiÃ³n:**
 - $x_{ij}$: cantidad (en litros) de leche que van de la planta $i\in P$ al distribuidor $j\in D$
 
 **Modelo:**
@@ -84,11 +84,11 @@ Sujeto a,
 x_{ij} & \ge 0, &&\forall i\in P,j\in D. &(4)
 \end{align*}
 
-La función objetivo (1) minimiza los costos totales. Las restricción (2) describe que se debe respetar la oferta de las plantas. La restricción (3) describe que se debe satisfacer la demanda de los distribuidores. La restricción (4) describe la naturaleza de la variable $x_{ij}$. 
+La funciÃ³n objetivo (1) minimiza los costos totales. Las restricciÃ³n (2) describe que se debe respetar la oferta de las plantas. La restricciÃ³n (3) describe que se debe satisfacer la demanda de los distribuidores. La restricciÃ³n (4) describe la naturaleza de la variable $x_{ij}$. 
 
-## Implementación
-**g.** Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
-óptima del problema? 
+## ImplementaciÃ³n
+**g.** Resuelva el modelo planteado utilizando la librerÃ­a de PulP en Python. Â¿CuÃ¡l es la soluciÃ³n
+Ã³ptima del problema? 
 
 #se importa la libreria de PulP
 import pulp as lp
@@ -116,7 +116,7 @@ D=["Distribuidor 1",
 P_x_D = [(planta, distribuidor) for planta in P for distribuidor in D] 
 
 #-----------------
-# Parámetros
+# ParÃ¡metros
 #-----------------
 b={#planta: oferta de la planta i
    "Planta 1":1500,
@@ -169,20 +169,20 @@ c={#(planta, distribuidor): costo de envio de un litro de leche desde la planta 
    ("Planta 4","Distribuidor 8"):620} 
 
 #-------------------------------------
-# Creación del objeto problema en PuLP
+# CreaciÃ³n del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
 problema=lp.LpProblem("Transporte",lp.LpMinimize)
 
 #-----------------------------
-# Variables de Decisión
+# Variables de DecisiÃ³n
 #-----------------------------
-x=lp.LpVariable.dicts('x',P_x_D,lowBound=0,cat='Continuous') #litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables
+x=lp.LpVariable.dicts('x',P_x_D,lowBound=0,cat='Continuous') #litros de leche que van de la planta i al distribuidor j; aca se aÃ±ade de una vez la naturaleza de las variables
 
 #-----------------------------
-# Función objetivo
+# FunciÃ³n objetivo
 #-----------------------------
-#Crea la expresión de minimizacion de costos
+#Crea la expresiÃ³n de minimizacion de costos
 problema+=lp.lpSum(x[i,j]*c[i,j] for i in P for j in D), "Costos Totales"
 
 #-----------------------------
@@ -214,12 +214,12 @@ problema.solve()
 #Imprimir estado final del optimizador
 print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
-#Valor óptimo del plan de transporte  
+#Valor Ã³ptimo del plan de transporte  
 print("\nTransporte - Costos totales = $", round(lp.value(problema.objective),2))
 print()
 
-#Imprimir variables de decisión
-print("Variables de decisión")
+#Imprimir variables de decisiÃ³n
+print("Variables de decisiÃ³n")
 print("              ","D1","D2","D3","D4","D5","D6","D7","D8",sep='\t')
 for i in P:
     print(i,end='\t')
@@ -227,13 +227,13 @@ for i in P:
         print(round(x[i,j].value()),end='\t')
     print()
 
-### Visualización de resultados
+### VisualizaciÃ³n de resultados
 
-En esta ocasión exploraremos una forma diferente de visualizar la solución. En los ejercicios anteriores hemos optado por imprimir los valores que toman las variables y acomodarlos en tablas. Ahora, revisaremos la forma de visualizar los datos para un mejor entendimiento de la solución. Para esto, tendremos la coordenadas de las plantas y los distribuidores guardadas en diccionarios. Importaremos el paquete de matplotlib y diseñaremos funciones que nos permitirán agregar elementos a los gráficos. 
+En esta ocasiÃ³n exploraremos una forma diferente de visualizar la soluciÃ³n. En los ejercicios anteriores hemos optado por imprimir los valores que toman las variables y acomodarlos en tablas. Ahora, revisaremos la forma de visualizar los datos para un mejor entendimiento de la soluciÃ³n. Para esto, tendremos la coordenadas de las plantas y los distribuidores guardadas en diccionarios. Importaremos el paquete de matplotlib y diseÃ±aremos funciones que nos permitirÃ¡n agregar elementos a los grÃ¡ficos. 
 
 #### NetworkX
 
-#se importan las librerias que se utilizarán para la visualización
+#se importan las librerias que se utilizarÃ¡n para la visualizaciÃ³n
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -263,14 +263,14 @@ labelsDistribuidores={n:n[-1] for n in D}
 coordenadasTodo=coordenadasPlantas
 coordenadasTodo.update(coordenadasDistribuidores)
 
-#Se guarda la solución en un vector
+#Se guarda la soluciÃ³n en un vector
 xSol={(i,j):x[i,j].value() for i in P for j in D if x[i,j].value()>0.1}
 
-#Se modifican las dimensiones de la visualización
+#Se modifican las dimensiones de la visualizaciÃ³n
 plt.rcParams["figure.figsize"] = 6,4
 plt.rcParams["figure.dpi"] = 200
 
-#Creación de un modelo de grafos dirigidos.
+#CreaciÃ³n de un modelo de grafos dirigidos.
 G=nx.DiGraph()
 
 #Dibujar los nodos de plantas y distribuidores.
@@ -289,12 +289,12 @@ nx.draw_networkx(G,coordenadasTodo,with_labels=True)
 #Borrar ejes, agregar titulo y mostrar la ventana del diagrama.
 plt.axis('off')
 nx.draw(G)
-plt.suptitle("Distribución La Lechera Ramírez S.A.",fontsize=20)
+plt.suptitle("DistribuciÃ³n La Lechera RamÃ­rez S.A.",fontsize=20)
 plt.show()
 
 #### Matplotlib
 
-#se importa la libreria que utilizará para la visualización
+#se importa la libreria que utilizarÃ¡ para la visualizaciÃ³n
 import matplotlib.pyplot as plt
 
 #Coordenadas de las plantas
@@ -315,37 +315,37 @@ coordenadasDistribuidores={#distribuidor: (x, y)
                            "Distribuidor 7":(7,17),
                            "Distribuidor 8":(1,15)}
 
-#Se guarda la solución en un vector
+#Se guarda la soluciÃ³n en un vector
 xSol={(i,j):x[i,j].value() for i in P for j in D}
 
-#función para pintar las plantas
+#funciÃ³n para pintar las plantas
 def pintarPlantas(pPlantas,pAx):
     xP=[i for (i,j) in pPlantas.values()]
     yP=[j for (i,j) in pPlantas.values()]
     pAx.scatter(xP,yP,c='green',marker='s',s=200,zorder=2)
     return pAx
 
-#función para pintar los distribuidores
+#funciÃ³n para pintar los distribuidores
 def pintarDistribuidores(pDistribuidores,pAx):
     xD=[i for (i,j) in pDistribuidores.values()]
     yD=[j for (i,j) in pDistribuidores.values()]
     pAx.scatter(xD,yD,c='red',s=100,zorder=2)
     return pAx
 
-#función para pintar la solución
-def pintarSolución(pSolucion,pPlantas,pDistribuidores,pAx):
+#funciÃ³n para pintar la soluciÃ³n
+def pintarSoluciÃ³n(pSolucion,pPlantas,pDistribuidores,pAx):
     for (i,j),val in pSolucion.items():
         if val>0:
             pAx.plot([pPlantas[i][0],pDistribuidores[j][0]],[pPlantas[i][1],pDistribuidores[j][1]],c='orange',zorder=1,label=val)
     return pAx
 
-#función para pintar los numeros de cada planta
+#funciÃ³n para pintar los numeros de cada planta
 def pintarNumPlantas(pPlantas,pAx):
     for i,pos in pPlantas.items():
         pAx.text(pos[0]-0.08,pos[1]-0.12,i[-1],fontsize=12,color='white')
     return ax
 
-#función para pintar los numeros de cada distribuidor
+#funciÃ³n para pintar los numeros de cada distribuidor
 def pintarNumDistribuidores(pDistribuidores,pAx):
     for i,pos in pDistribuidores.items():
         pAx.text(pos[0]-0.06,pos[1]-0.12,i[-1],fontsize=8,color='black')
@@ -353,20 +353,20 @@ def pintarNumDistribuidores(pDistribuidores,pAx):
 
 fig, ax = plt.subplots(figsize=(10,10))
 
-#se definen la dimensión de los ejes y se borran los labels de los ejes
+#se definen la dimensiÃ³n de los ejes y se borran los labels de los ejes
 ax.set_xlim([0,10])
 ax.set_ylim([2,20])
 ax.set_xticks([])
 ax.set_yticks([])
 
-ax=pintarSolución(xSol,coordenadasPlantas,coordenadasDistribuidores,ax)
+ax=pintarSoluciÃ³n(xSol,coordenadasPlantas,coordenadasDistribuidores,ax)
 ax=pintarDistribuidores(coordenadasDistribuidores,ax)
 ax=pintarNumDistribuidores(coordenadasDistribuidores,ax)
 ax=pintarPlantas(coordenadasPlantas,ax)
 ax=pintarNumPlantas(coordenadasPlantas,ax)
 
-## Créditos
+## CrÃ©ditos
 
-Equipo Principios de Optimización<br>
-Edición: Camilo Aguilar, Juan Felipe Rengifo M<br>
+Equipo Principios de OptimizaciÃ³n<br>
+EdiciÃ³n: Camilo Aguilar, Juan Felipe Rengifo M<br>
 Fecha: 20/09/2020

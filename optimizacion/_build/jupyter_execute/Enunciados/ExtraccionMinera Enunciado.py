@@ -1,9 +1,9 @@
-# Extracción minera
+# ExtracciÃ³n minera
 
 ## Punto 1
 
 ### Enunciado
-La minería de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracción de materiales como: arena, arcilla, cobre y carbón. Las directivas de una empresa de extracción minera desean explotar un conjunto de zonas ($M$), de las cuales se puede extraer un conjunto de diferentes tipos de carbón ($K$). Se sabe que de la zona $i\in M$ sólo puede extraerse el carbón tipo $j\in K$. Para ello, suponga que $a_{ij}$ es un parámetro binario que toma el valor de 1 si en la zona $i\in M$ se puede extraer carbón del tipo $j\in K$ y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbón. Por ejemplo, para la zona uno se tiene que $a_{11}=0$, $a_{12}=1$, $a_{13}=0$ y $a_{14}=0$ ya que de la zona 1 sólo puede extraerse el tipo de carbón 2 (hulla). 
+La minerÃ­a de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracciÃ³n de materiales como: arena, arcilla, cobre y carbÃ³n. Las directivas de una empresa de extracciÃ³n minera desean explotar un conjunto de zonas ($M$), de las cuales se puede extraer un conjunto de diferentes tipos de carbÃ³n ($K$). Se sabe que de la zona $i\in M$ sÃ³lo puede extraerse el carbÃ³n tipo $j\in K$. Para ello, suponga que $a_{ij}$ es un parÃ¡metro binario que toma el valor de 1 si en la zona $i\in M$ se puede extraer carbÃ³n del tipo $j\in K$ y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbÃ³n. Por ejemplo, para la zona uno se tiene que $a_{11}=0$, $a_{12}=1$, $a_{13}=0$ y $a_{14}=0$ ya que de la zona 1 sÃ³lo puede extraerse el tipo de carbÃ³n 2 (hulla). 
 
 *Figura 1:*
 <table>
@@ -66,11 +66,11 @@ La minería de cielo abierto es una actividad industrial que consiste en remover 
   </tr>
 </table>
 
-Cada tonelada de carbón extraída de la zona $i\in M$ le cuesta a la empresa $c_i$ pesos.  Adicionalmente, cada zona tiene una capacidad máxima de extracción de carbón de $n_i$ toneladas. La Tabla 1 muestra la información de capacidades máximas y costos para cada zona.
+Cada tonelada de carbÃ³n extraÃ­da de la zona $i\in M$ le cuesta a la empresa $c_i$ pesos.  Adicionalmente, cada zona tiene una capacidad mÃ¡xima de extracciÃ³n de carbÃ³n de $n_i$ toneladas. La Tabla 1 muestra la informaciÃ³n de capacidades mÃ¡ximas y costos para cada zona.
 
-<p style="text-align: center;"><b>Tabla 1. Información de extracción de cada zona</b></p>
+<p style="text-align: center;"><b>Tabla 1. InformaciÃ³n de extracciÃ³n de cada zona</b></p>
 
-|Zona|Capacidad máxima de extracción de carbón (ton)|Costo por tonelada de carbón extraído ($)|
+|Zona|Capacidad mÃ¡xima de extracciÃ³n de carbÃ³n (ton)|Costo por tonelada de carbÃ³n extraÃ­do ($)|
 |:--:|:--------------------------------------------:|:--------------------------------------:|
 |1|189|16|
 |2|196|6|
@@ -111,11 +111,11 @@ Cada tonelada de carbón extraída de la zona $i\in M$ le cuesta a la empresa $c_i
 
 <br>
 
-Por último. Suponga que las directivas desean explotar un mínimo de $b_j$ toneladas de cada tipo de carbón $j\in K$. La Tabla 2 presenta dichas cantidades.
+Por Ãºltimo. Suponga que las directivas desean explotar un mÃ­nimo de $b_j$ toneladas de cada tipo de carbÃ³n $j\in K$. La Tabla 2 presenta dichas cantidades.
 
-<p style="text-align: center;"><b>Tabla 2. Requerimiento mínimo de cada tipo de carbón</b></p>
+<p style="text-align: center;"><b>Tabla 2. Requerimiento mÃ­nimo de cada tipo de carbÃ³n</b></p>
 
-|Tipo de carbón|Mínimo de toneladas a explotar|
+|Tipo de carbÃ³n|MÃ­nimo de toneladas a explotar|
 |:------------:|:----------------------------:|
 |Antracita|862|
 |Huila|898|
@@ -123,39 +123,39 @@ Por último. Suponga que las directivas desean explotar un mínimo de $b_j$ tonela
 |Lignito|742|
 
 <br> 
-Usted debe formular un programa lineal que le permita a la empresa decidir cuánto deben extraer en cada zona de manera que se cumplan los requerimientos a un mínimo costo. Para esto usted debe seguir los siguientes pasos: 
+Usted debe formular un programa lineal que le permita a la empresa decidir cuÃ¡nto deben extraer en cada zona de manera que se cumplan los requerimientos a un mÃ­nimo costo. Para esto usted debe seguir los siguientes pasos: 
 
-### Formulación
-**a.** Describa la(s) variable(s) de decisión que utilizará en el modelo. 
-
-
-**b.** Escriba la(s) restricción(es) lineal(es) que describe(n) la cantidad de carbón extraído del tipo $j\in K$, debe como mínimo $b_j$.    
+### FormulaciÃ³n
+**a.** Describa la(s) variable(s) de decisiÃ³n que utilizarÃ¡ en el modelo. 
 
 
-**c.** Escriba la(s) restricción(es) lineal(es) que describe(n) que no se pueden extraer más de ($n_i$) toneladas de carbón en la zona $i\in M$.   
+**b.** Escriba la(s) restricciÃ³n(es) lineal(es) que describe(n) la cantidad de carbÃ³n extraÃ­do del tipo $j\in K$, debe como mÃ­nimo $b_j$.    
 
 
-**d.** Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo. 
+**c.** Escriba la(s) restricciÃ³n(es) lineal(es) que describe(n) que no se pueden extraer mÃ¡s de ($n_i$) toneladas de carbÃ³n en la zona $i\in M$.   
 
 
-**e.** Escriba la función objetivo.
+**d.** Escriba la(s) restricciÃ³n(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo. 
 
 
-### Implementación
-**g.** Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
-óptima del problema? 
+**e.** Escriba la funciÃ³n objetivo.
+
+
+### ImplementaciÃ³n
+**g.** Resuelva el modelo planteado utilizando la librerÃ­a de PulP en Python. Â¿CuÃ¡l es la soluciÃ³n
+Ã³ptima del problema? 
 
 
 
 ## Punto 2
 
 ### Enunciado
-Ahora considere el escenario en que la empresa incurre en un costo fijo de $q_i$ pesos cuando decide extraer carbón de la zona $i\in M$. Por lo tanto, si se decide explotar la mina $i\in M$, no se pueden extraer más de ($n_i$) toneladas de carbón. Pero si no se decide explotar, la extracción de carbón en esa zona debe ser igual a cero (0). La Tabla 3 presenta la información sobre los costos fijos de extraer cada zona. 
+Ahora considere el escenario en que la empresa incurre en un costo fijo de $q_i$ pesos cuando decide extraer carbÃ³n de la zona $i\in M$. Por lo tanto, si se decide explotar la mina $i\in M$, no se pueden extraer mÃ¡s de ($n_i$) toneladas de carbÃ³n. Pero si no se decide explotar, la extracciÃ³n de carbÃ³n en esa zona debe ser igual a cero (0). La Tabla 3 presenta la informaciÃ³n sobre los costos fijos de extraer cada zona. 
 <br>
 
-<p style="text-align: center;"><b>Tabla 3. Costo fijo por extracción para cada zona</b></p>
+<p style="text-align: center;"><b>Tabla 3. Costo fijo por extracciÃ³n para cada zona</b></p>
 
-|Zona|Costo fijo de extracción en la zona|
+|Zona|Costo fijo de extracciÃ³n en la zona|
 |:--:|:---------------------------------:|
 |1|240|
 |2|155|
@@ -199,28 +199,28 @@ Ahora considere el escenario en que la empresa incurre en un costo fijo de $q_i$
 
 Para esto usted debe seguir los siguientes pasos: 
 
-### Formulación
-**a.** Describa la(s) variable(s) de decisión adicional(es) que utilizará en el modelo. 
+### FormulaciÃ³n
+**a.** Describa la(s) variable(s) de decisiÃ³n adicional(es) que utilizarÃ¡ en el modelo. 
 
 
-**b.** Escriba la(s) restricción(es) lineal(es) que describe(n) que si se decide explotar la mina $i\in M$, no se pueden extraer más de ($n_i$) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.
+**b.** Escriba la(s) restricciÃ³n(es) lineal(es) que describe(n) que si se decide explotar la mina $i\in M$, no se pueden extraer mÃ¡s de ($n_i$) toneladas de carbÃ³n. Pero que, si no se decide explotar, la extracciÃ³n de carbÃ³n debe ser igual a cero.
 
-**c.** Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).
-
-
-
-**e.** Escriba la función objetivo.
-
-
-### Implementación
-**f.** Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
-óptima del problema? 
+**c.** Escriba la(s) restricciÃ³n(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).
 
 
 
-## Créditos
+**e.** Escriba la funciÃ³n objetivo.
 
-Equipo Principios de Optimización<br>
+
+### ImplementaciÃ³n
+**f.** Resuelva el modelo planteado utilizando la librerÃ­a de PulP en Python. Â¿CuÃ¡l es la soluciÃ³n
+Ã³ptima del problema? 
+
+
+
+## CrÃ©ditos
+
+Equipo Principios de OptimizaciÃ³n<br>
 Instancia: Juan Felipe Rengifo M<br>
 Fecha: 30/09/2020
 
@@ -230,5 +230,5 @@ Fecha: 30/09/2020
 :titlesonly:
 
 
-..\Soluciones\ExtraccionMinera
+../Soluciones/ExtraccionMinera
 ```
