@@ -42,12 +42,3 @@ Formule un modelo general de optimización lineal que le permita a La Lechita Ra
 
 Desarrollo: Juan Felipe Rengifo M<br>
 Fecha: 20/09/2020
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-Transporte
-```

@@ -265,12 +265,3 @@ El equipo de Principios de Optimización le ha pedido a usted que plantee y resu
 
 Desarrollo: Juan Felipe Rengifo M<br>
 Fecha: 20/09/2020
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-Asignación
-```

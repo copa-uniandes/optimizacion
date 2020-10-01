@@ -51,12 +51,3 @@ Tenga en cuenta que, al inicio de la planeación, se cuenta con 12,000 toneladas
 
 Desarrollador: Camilo Aguilar León<br>
 Fecha: 25/09/2020
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-Inventarios
-```

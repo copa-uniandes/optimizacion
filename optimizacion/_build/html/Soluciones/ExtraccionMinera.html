@@ -1,0 +1,1538 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extracción minera Solución &#8212; Repositorio Principios de Optimización</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Asignación de tareas" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" />
+    <link rel="prev" title="Extracción minera" href="../Enunciados/ExtraccionMinera%20Enunciado.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo-uniandes.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
+   Chocolatería
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">
+   Planeación de menús
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">
+   Producción de jugos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">
+   Producción de cemento
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">
+   Extracción minera
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Extracción minera Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Soluciones/ExtraccionMinera.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Soluciones/ExtraccionMinera.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Soluciones/ExtraccionMinera.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#punto-1">
+   Punto 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enunciado">
+     Enunciado
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulacion">
+     Formulación
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables-de-decision">
+       Variables de decisión
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#restricciones">
+       Restricciones
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#naturaleza-de-las-variables">
+       Naturaleza de las variables
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#funcion-objetivo">
+       Función Objetivo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulacion-matematica-completa">
+     Formulación matemática completa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementacion">
+     Implementación
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#punto-2">
+   Punto 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Enunciado
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Formulación
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Variables de decisión
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Restricciones
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Naturaleza de las variables
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Función Objetivo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Formulación matemática completa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Implementación
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="extraccion-minera-solucion">
+<h1>Extracción minera Solución<a class="headerlink" href="#extraccion-minera-solucion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="punto-1">
+<h2>Punto 1<a class="headerlink" href="#punto-1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enunciado">
+<h3>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h3>
+<p>La minería de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracción de materiales como: arena, arcilla, cobre y carbón. Las directivas de una empresa de extracción minera desean explotar un conjunto de zonas (<span class="math notranslate nohighlight">\(M\)</span>), de las cuales se puede extraer un conjunto de diferentes tipos de carbón (<span class="math notranslate nohighlight">\(K\)</span>). Se sabe que de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> sólo puede extraerse el carbón tipo <span class="math notranslate nohighlight">\(j\in K\)</span>. Para ello, suponga que <span class="math notranslate nohighlight">\(a_{ij}\)</span> es un parámetro binario que toma el valor de 1 si en la zona <span class="math notranslate nohighlight">\(i\in M\)</span> se puede extraer carbón del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbón. Por ejemplo, para la zona uno se tiene que <span class="math notranslate nohighlight">\(a_{11}=0\)</span>, <span class="math notranslate nohighlight">\(a_{12}=1\)</span>, <span class="math notranslate nohighlight">\(a_{13}=0\)</span> y <span class="math notranslate nohighlight">\(a_{14}=0\)</span> ya que de la zona 1 sólo puede extraerse el tipo de carbón 2 (hulla).</p>
+<p><em>Figura 1:</em></p>
+<table>
+  <tr id="ROW1">
+	<td style="text-align:center; background-color: lightblue">1</td>
+	<td style="text-align:center; background-color: lightblue">2</td>
+	<td style="text-align:center; background-color: green">3</td>
+    <td style="text-align:center; background-color: green">4</td> 
+    <td style="text-align:center; background-color: lightblue">5</td>
+    <td style="text-align:center; background-color: green">6</td>
+  </tr>
+  <tr id="ROW2">
+	<td style="text-align:center; background-color: lightblue">7</td>
+	<td style="text-align:center; background-color: lightblue">8</td>
+	<td style="text-align:center; background-color: purple">9</td>
+    <td style="text-align:center; background-color: purple">10</td> 
+    <td style="text-align:center; background-color: lightblue">11</td>
+    <td style="text-align:center; background-color: green">12</td>
+  </tr>
+  <tr id="ROW3">
+	<td style="text-align:center; background-color: purple">13</td>
+	<td style="text-align:center; background-color: green">14</td>
+	<td style="text-align:center; background-color: green">15</td>
+    <td style="text-align:center; background-color: lightblue">16</td> 
+    <td style="text-align:center; background-color: lightblue">17</td>
+    <td style="text-align:center; background-color: green">18</td>
+  </tr>
+  <tr id="ROW4">
+	<td style="text-align:center; background-color: purple">19</td>
+	<td style="text-align:center; background-color: red">20</td>
+	<td style="text-align:center; background-color: green">21</td>
+    <td style="text-align:center; background-color: purple">22</td> 
+    <td style="text-align:center; background-color: purple">23</td>
+    <td style="text-align:center; background-color: purple">24</td>
+  </tr>
+  <tr id="ROW5">
+	<td style="text-align:center; background-color: purple">25</td>
+	<td style="text-align:center; background-color: green">26</td>
+	<td style="text-align:center; background-color: green">27</td>
+    <td style="text-align:center; background-color: red">28</td> 
+    <td style="text-align:center; background-color: red">29</td>
+    <td style="text-align:center; background-color: red">30</td>
+  </tr>
+  <tr id="ROW6">
+	<td style="text-align:center; background-color: lightblue">31</td>
+	<td style="text-align:center; background-color: green">32</td>
+	<td style="text-align:center; background-color: lightblue">33</td>
+    <td style="text-align:center; background-color: purple">34</td> 
+    <td style="text-align:center; background-color: red">35</td>
+    <td style="text-align:center; background-color: purple">36</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr id="ROW1">
+	<td style="text-align:center; background-color: purple">Antracita</td>
+	<td style="text-align:center; background-color: lightblue">Hulla</td>
+	<td style="text-align:center; background-color: green">Turba</td>
+    <td style="text-align:center; background-color: red">Lignito</td> 
+  </tr>
+</table><p>Cada tonelada de carbón extraída de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> le cuesta a la empresa <span class="math notranslate nohighlight">\(c_i\)</span> pesos.  Adicionalmente, cada zona tiene una capacidad máxima de extracción de carbón de <span class="math notranslate nohighlight">\(n_i\)</span> toneladas. La Tabla 1 muestra la información de capacidades máximas y costos para cada zona.</p>
+<p style="text-align: center;"><b>Tabla 1. Información de extracción de cada zona</b></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Zona</p></th>
+<th class="text-align:center head"><p>Capacidad máxima de extracción de carbón (ton)</p></th>
+<th class="text-align:center head"><p>Costo por tonelada de carbón extraído ($)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>189</p></td>
+<td class="text-align:center"><p>16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>196</p></td>
+<td class="text-align:center"><p>6</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>143</p></td>
+<td class="text-align:center"><p>11</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>136</p></td>
+<td class="text-align:center"><p>8</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>106</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>151</p></td>
+<td class="text-align:center"><p>25</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>7</p></td>
+<td class="text-align:center"><p>170</p></td>
+<td class="text-align:center"><p>16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>129</p></td>
+<td class="text-align:center"><p>17</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>184</p></td>
+<td class="text-align:center"><p>25</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>122</p></td>
+<td class="text-align:center"><p>8</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>11</p></td>
+<td class="text-align:center"><p>146</p></td>
+<td class="text-align:center"><p>15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>12</p></td>
+<td class="text-align:center"><p>190</p></td>
+<td class="text-align:center"><p>8</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>13</p></td>
+<td class="text-align:center"><p>160</p></td>
+<td class="text-align:center"><p>10</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>14</p></td>
+<td class="text-align:center"><p>109</p></td>
+<td class="text-align:center"><p>20</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>15</p></td>
+<td class="text-align:center"><p>133</p></td>
+<td class="text-align:center"><p>6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>16</p></td>
+<td class="text-align:center"><p>198</p></td>
+<td class="text-align:center"><p>17</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>17</p></td>
+<td class="text-align:center"><p>138</p></td>
+<td class="text-align:center"><p>6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>18</p></td>
+<td class="text-align:center"><p>107</p></td>
+<td class="text-align:center"><p>20</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>19</p></td>
+<td class="text-align:center"><p>117</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>20</p></td>
+<td class="text-align:center"><p>150</p></td>
+<td class="text-align:center"><p>8</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>21</p></td>
+<td class="text-align:center"><p>171</p></td>
+<td class="text-align:center"><p>25</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>22</p></td>
+<td class="text-align:center"><p>103</p></td>
+<td class="text-align:center"><p>11</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>23</p></td>
+<td class="text-align:center"><p>157</p></td>
+<td class="text-align:center"><p>8</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>24</p></td>
+<td class="text-align:center"><p>143</p></td>
+<td class="text-align:center"><p>7</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>25</p></td>
+<td class="text-align:center"><p>170</p></td>
+<td class="text-align:center"><p>7</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>26</p></td>
+<td class="text-align:center"><p>130</p></td>
+<td class="text-align:center"><p>28</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>27</p></td>
+<td class="text-align:center"><p>140</p></td>
+<td class="text-align:center"><p>26</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>28</p></td>
+<td class="text-align:center"><p>126</p></td>
+<td class="text-align:center"><p>27</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>29</p></td>
+<td class="text-align:center"><p>180</p></td>
+<td class="text-align:center"><p>9</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>30</p></td>
+<td class="text-align:center"><p>153</p></td>
+<td class="text-align:center"><p>24</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>31</p></td>
+<td class="text-align:center"><p>108</p></td>
+<td class="text-align:center"><p>15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>32</p></td>
+<td class="text-align:center"><p>132</p></td>
+<td class="text-align:center"><p>14</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>33</p></td>
+<td class="text-align:center"><p>105</p></td>
+<td class="text-align:center"><p>22</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>34</p></td>
+<td class="text-align:center"><p>145</p></td>
+<td class="text-align:center"><p>20</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>35</p></td>
+<td class="text-align:center"><p>145</p></td>
+<td class="text-align:center"><p>19</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>36</p></td>
+<td class="text-align:center"><p>114</p></td>
+<td class="text-align:center"><p>8</p></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Por último. Suponga que las directivas desean explotar un mínimo de <span class="math notranslate nohighlight">\(b_j\)</span> toneladas de cada tipo de carbón <span class="math notranslate nohighlight">\(j\in K\)</span>. La Tabla 2 presenta dichas cantidades.</p>
+<p style="text-align: center;"><b>Tabla 2. Requerimiento mínimo de cada tipo de carbón</b></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Tipo de carbón</p></th>
+<th class="text-align:center head"><p>Mínimo de toneladas a explotar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Antracita</p></td>
+<td class="text-align:center"><p>862</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Huila</p></td>
+<td class="text-align:center"><p>898</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Turba</p></td>
+<td class="text-align:center"><p>562</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Lignito</p></td>
+<td class="text-align:center"><p>742</p></td>
+</tr>
+</tbody>
+</table>
+<br> 
+Usted debe formular un programa lineal que le permita a la empresa decidir cuánto deben extraer en cada zona de manera que se cumplan los requerimientos a un mínimo costo. Para esto usted debe seguir los siguientes pasos: </div>
+<div class="section" id="formulacion">
+<h3>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-de-decision">
+<h4>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h4>
+<p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2cee2072-6aa9-41aa-8bf8-2de69eadbdb4">
+<span class="eqno">(1)<a class="headerlink" href="#equation-2cee2072-6aa9-41aa-8bf8-2de69eadbdb4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
+\end{align}\]</div>
+</div>
+<div class="section" id="restricciones">
+<h4>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h4>
+<p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
+<p><em>Opción 1:</em></p>
+<div class="amsmath math notranslate nohighlight" id="equation-5df834a2-5584-4c93-8504-7bf54bf5e30c">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5df834a2-5584-4c93-8504-7bf54bf5e30c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
+\end{align}\]</div>
+<p><em>Opción 2:</em></p>
+<div class="amsmath math notranslate nohighlight" id="equation-6472a733-355c-43a0-955d-cca59277e563">
+<span class="eqno">(3)<a class="headerlink" href="#equation-6472a733-355c-43a0-955d-cca59277e563" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
+\end{align}\]</div>
+<p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-14851127-9749-4b89-9f6c-5ddfb7e55a0b">
+<span class="eqno">(4)<a class="headerlink" href="#equation-14851127-9749-4b89-9f6c-5ddfb7e55a0b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x_i &amp;\le n_i, &amp;&amp;\forall i\in M.
+\end{align}\]</div>
+</div>
+<div class="section" id="naturaleza-de-las-variables">
+<h4>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h4>
+<p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a948ad46-a12a-42aa-9f0c-40a3e91ecf1f">
+<span class="eqno">(5)<a class="headerlink" href="#equation-a948ad46-a12a-42aa-9f0c-40a3e91ecf1f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
+\end{align}\]</div>
+</div>
+<div class="section" id="funcion-objetivo">
+<h4>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h4>
+<p><strong>e.</strong> Escriba la función objetivo.</p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in M}x_ic_i 
+\]</div>
+</div>
+</div>
+<div class="section" id="formulacion-matematica-completa">
+<h3>Formulación matemática completa<a class="headerlink" href="#formulacion-matematica-completa" title="Permalink to this headline">¶</a></h3>
+<p><strong>Conjuntos:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span>: Zonas</p></li>
+<li><p><span class="math notranslate nohighlight">\(K\)</span>: Tipos de carbón</p></li>
+</ul>
+<p><strong>Parámetros:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_{ij}:\begin{cases}1&amp;\text{, si en la zona }i\in M\text{ se puede extraer carbón del tipo }j\in K \\ 0 &amp; \text{, d.l.c}  \end{cases}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c_i\)</span>: costo por cada tonelada de carbón extraída en la zona <span class="math notranslate nohighlight">\(i\in M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n_i\)</span>: capacidad máxima de extracción de carbón (en toneladas) en la zona <span class="math notranslate nohighlight">\(i\in M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b_j\)</span>: mínimo de toneladas a explotar del tipo de carbón <span class="math notranslate nohighlight">\(j\in K\)</span></p></li>
+</ul>
+<p><strong>Variables de decisión:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: toneladas de carbón extraído en la zona <span class="math notranslate nohighlight">\(i\in M\)</span></p></li>
+</ul>
+<p><strong>Modelo:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in M}x_ic_i \text{ (1)} 
+\]</div>
+<p>Sujeto a,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\\
+x_i &amp;\le n_i, &amp;&amp;\forall i\in M; &amp;(3)\\
+x_i &amp;\ge 0, &amp;&amp;\forall i\in M. &amp;(4)
+\end{align*}\]</div>
+<p>La función objetivo (1) minimiza los costos totales. La restricción (2) describe que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe ser mínimo <span class="math notranslate nohighlight">\(b_j\)</span> toneladas. La restricción (3) describe que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
+</div>
+<div class="section" id="implementacion">
+<h3>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h3>
+<p><strong>g.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+óptima del problema?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Conjuntos</span>
+<span class="c1">#-----------------</span>
+<span class="c1">#Zonas</span>
+<span class="n">M</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">37</span><span class="p">):</span>
+    <span class="n">M</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1">#Tipos de carbón</span>
+<span class="n">K</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Antracita&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Hulla&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Turba&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Lignito&quot;</span><span class="p">]</span>
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Parámetros</span>
+<span class="c1">#-----------------</span>
+<span class="n">a</span><span class="o">=</span><span class="p">{</span><span class="c1">#(zona, tipo de carbón): 1 si en la zona i se puede extraer carbón del tipo j, 0 d.l.c.</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">}</span> 
+
+<span class="n">datosZonas</span><span class="o">=</span><span class="p">{</span><span class="c1">#zona: [costo por cada tonelada de carbón extraída en la zona i, capacidad máxima de extracción de carbón (en toneladas) en la zona i] </span>
+            <span class="p">(</span><span class="mi">1</span><span class="p">):[</span><span class="mi">16</span><span class="p">,</span><span class="mi">189</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">2</span><span class="p">):[</span><span class="mi">6</span><span class="p">,</span><span class="mi">196</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">3</span><span class="p">):[</span><span class="mi">11</span><span class="p">,</span><span class="mi">143</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">4</span><span class="p">):[</span><span class="mi">8</span><span class="p">,</span><span class="mi">136</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">5</span><span class="p">):[</span><span class="mi">5</span><span class="p">,</span><span class="mi">106</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">6</span><span class="p">):[</span><span class="mi">25</span><span class="p">,</span><span class="mi">151</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">7</span><span class="p">):[</span><span class="mi">16</span><span class="p">,</span><span class="mi">170</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">8</span><span class="p">):[</span><span class="mi">17</span><span class="p">,</span><span class="mi">129</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">9</span><span class="p">):[</span><span class="mi">25</span><span class="p">,</span><span class="mi">184</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">10</span><span class="p">):[</span><span class="mi">8</span><span class="p">,</span><span class="mi">122</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">11</span><span class="p">):[</span><span class="mi">15</span><span class="p">,</span><span class="mi">146</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">12</span><span class="p">):[</span><span class="mi">8</span><span class="p">,</span><span class="mi">190</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">13</span><span class="p">):[</span><span class="mi">10</span><span class="p">,</span><span class="mi">160</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">14</span><span class="p">):[</span><span class="mi">20</span><span class="p">,</span><span class="mi">109</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">15</span><span class="p">):[</span><span class="mi">6</span><span class="p">,</span><span class="mi">133</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">16</span><span class="p">):[</span><span class="mi">17</span><span class="p">,</span><span class="mi">198</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">17</span><span class="p">):[</span><span class="mi">6</span><span class="p">,</span><span class="mi">138</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">18</span><span class="p">):[</span><span class="mi">20</span><span class="p">,</span><span class="mi">107</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">19</span><span class="p">):[</span><span class="mi">5</span><span class="p">,</span><span class="mi">117</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">20</span><span class="p">):[</span><span class="mi">8</span><span class="p">,</span><span class="mi">150</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">21</span><span class="p">):[</span><span class="mi">25</span><span class="p">,</span><span class="mi">171</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">22</span><span class="p">):[</span><span class="mi">11</span><span class="p">,</span><span class="mi">103</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">23</span><span class="p">):[</span><span class="mi">8</span><span class="p">,</span><span class="mi">157</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">24</span><span class="p">):[</span><span class="mi">7</span><span class="p">,</span><span class="mi">143</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">25</span><span class="p">):[</span><span class="mi">7</span><span class="p">,</span><span class="mi">170</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">26</span><span class="p">):[</span><span class="mi">28</span><span class="p">,</span><span class="mi">130</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">27</span><span class="p">):[</span><span class="mi">26</span><span class="p">,</span><span class="mi">140</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">28</span><span class="p">):[</span><span class="mi">27</span><span class="p">,</span><span class="mi">126</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">29</span><span class="p">):[</span><span class="mi">9</span><span class="p">,</span><span class="mi">180</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">30</span><span class="p">):[</span><span class="mi">24</span><span class="p">,</span><span class="mi">153</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">31</span><span class="p">):[</span><span class="mi">15</span><span class="p">,</span><span class="mi">108</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">32</span><span class="p">):[</span><span class="mi">14</span><span class="p">,</span><span class="mi">132</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">33</span><span class="p">):[</span><span class="mi">22</span><span class="p">,</span><span class="mi">105</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">34</span><span class="p">):[</span><span class="mi">20</span><span class="p">,</span><span class="mi">145</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">35</span><span class="p">):[</span><span class="mi">19</span><span class="p">,</span><span class="mi">145</span><span class="p">],</span>
+            <span class="p">(</span><span class="mi">36</span><span class="p">):[</span><span class="mi">8</span><span class="p">,</span><span class="mi">114</span><span class="p">]}</span>  
+
+<span class="c1">#parámetros indexados en las zonas</span>
+<span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">splitDict</span><span class="p">(</span><span class="n">datosZonas</span><span class="p">)</span>
+
+
+<span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="c1">#mínimo de toneladas a explotar del tipo de carbón j</span>
+    <span class="p">(</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">862</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">898</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">562</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">742</span><span class="p">}</span>  
+
+<span class="c1">#-------------------------------------</span>
+<span class="c1"># Creación del objeto problema en PuLP</span>
+<span class="c1">#-------------------------------------</span>
+<span class="c1">#Crea el problema para cargarlo con la instancia </span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Extracción Minera&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Variables de Decisión</span>
+<span class="c1">#-----------------------------</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#toneladas de carbón extraído de la zona i; aca se añade de una vez la naturaleza de las variables</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Función objetivo</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Crea la expresión de minimización de costos</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span><span class="p">),</span> <span class="s2">&quot;Costos Totales&quot;</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Restricciones</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#sum(i in M)a_ij*x_i &gt;= b_j forall j in K</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="s2">&quot;Mínimo toneladas de extracción del tipo de carbón &quot;</span><span class="o">+</span><span class="n">j</span> <span class="c1">#se garantiza el mínimo de toneladas extraidas del tipo de carbón j</span>
+
+<span class="c1">#x_i &lt;= n_i*y_i forall i in M</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;Máximo toneladas de extracción de la zona &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>   <span class="c1">#se garantiza el máximo de toneladas de carbón que se pueden extraer de la zona i</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Imprimir formato LP</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Escribe el problema en un archivo con formato LP </span>
+<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">&quot;ExtraccionMinera.lp&quot;</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Invocar el optimizador</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Optimizar el modelo con CBC (default de PuLP)</span>
+<span class="n">problema</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1">#    Imprimir resultados</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Imprimir estado final del optimizador</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#Valor óptimo del portafolio de Petroco    </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Extracción Minera - </span><span class="se">\033</span><span class="s2">[1m Costos totales </span><span class="se">\033</span><span class="s2">[0m = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1">#Imprimir variables de decisión</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1m&#39;</span><span class="s2">&quot;Extracción de las zonas&quot;</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">())</span><span class="o">+</span><span class="s2">&quot; toneladas de &quot;</span><span class="o">+</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
+
+Extracción Minera - <span class=" -Color -Color-Bold"> Costos totales </span> = $ 32782.0
+
+<span class=" -Color -Color-Bold">Extracción de las zonas</span>
+1: 189.0 toneladas de Hulla
+2: 196.0 toneladas de Hulla
+3: 103.0 toneladas de Turba
+4: 136.0 toneladas de Turba
+5: 106.0 toneladas de Hulla
+7: 15.0 toneladas de Hulla
+10: 122.0 toneladas de Antracita
+11: 146.0 toneladas de Hulla
+12: 190.0 toneladas de Turba
+13: 39.0 toneladas de Antracita
+15: 133.0 toneladas de Turba
+17: 138.0 toneladas de Hulla
+19: 117.0 toneladas de Antracita
+20: 150.0 toneladas de Lignito
+23: 157.0 toneladas de Antracita
+24: 143.0 toneladas de Antracita
+25: 170.0 toneladas de Antracita
+28: 114.0 toneladas de Lignito
+29: 180.0 toneladas de Lignito
+30: 153.0 toneladas de Lignito
+31: 108.0 toneladas de Hulla
+35: 145.0 toneladas de Lignito
+36: 114.0 toneladas de Antracita
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="punto-2">
+<h2>Punto 2<a class="headerlink" href="#punto-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Enunciado<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Ahora considere el escenario en que la empresa incurre en un costo fijo de <span class="math notranslate nohighlight">\(q_i\)</span> pesos cuando decide extraer carbón de la zona <span class="math notranslate nohighlight">\(i\in M\)</span>. Por lo tanto, si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero si no se decide explotar, la extracción de carbón en esa zona debe ser igual a cero (0). La Tabla 3 presenta la información sobre los costos fijos de extraer cada zona.
+<br></p>
+<p style="text-align: center;"><b>Tabla 3. Costo fijo por extracción para cada zona</b></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Zona</p></th>
+<th class="text-align:center head"><p>Costo fijo de extracción en la zona</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>240</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>155</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>240</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>125</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>177</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>342</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>7</p></td>
+<td class="text-align:center"><p>157</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>457</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>396</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>411</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>11</p></td>
+<td class="text-align:center"><p>341</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>12</p></td>
+<td class="text-align:center"><p>469</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>13</p></td>
+<td class="text-align:center"><p>402</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>14</p></td>
+<td class="text-align:center"><p>186</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>15</p></td>
+<td class="text-align:center"><p>404</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>16</p></td>
+<td class="text-align:center"><p>344</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>17</p></td>
+<td class="text-align:center"><p>290</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>18</p></td>
+<td class="text-align:center"><p>340</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>19</p></td>
+<td class="text-align:center"><p>482</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>20</p></td>
+<td class="text-align:center"><p>472</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>21</p></td>
+<td class="text-align:center"><p>394</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>22</p></td>
+<td class="text-align:center"><p>102</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>23</p></td>
+<td class="text-align:center"><p>330</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>24</p></td>
+<td class="text-align:center"><p>433</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>25</p></td>
+<td class="text-align:center"><p>205</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>26</p></td>
+<td class="text-align:center"><p>394</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>27</p></td>
+<td class="text-align:center"><p>156</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>28</p></td>
+<td class="text-align:center"><p>298</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>29</p></td>
+<td class="text-align:center"><p>134</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>30</p></td>
+<td class="text-align:center"><p>462</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>31</p></td>
+<td class="text-align:center"><p>432</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>32</p></td>
+<td class="text-align:center"><p>362</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>33</p></td>
+<td class="text-align:center"><p>127</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>34</p></td>
+<td class="text-align:center"><p>203</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>35</p></td>
+<td class="text-align:center"><p>417</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>36</p></td>
+<td class="text-align:center"><p>215</p></td>
+</tr>
+</tbody>
+</table>
+<p>Para esto usted debe seguir los siguientes pasos:</p>
+</div>
+<div class="section" id="id2">
+<h3>Formulación<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Variables de decisión<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p><strong>a.</strong> Describa la(s) variable(s) de decisión adicional(es) que utilizará en el modelo.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_i:\begin{cases}1&amp;\text{, si se decide explotar la zona }i\in M \\ 0 &amp; \text{, d.l.c}  \end{cases}
+\end{align*}\]</div>
+</div>
+<div class="section" id="id4">
+<h4>Restricciones<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d27e434a-53a2-4c5b-b977-fdfb39f1beb5">
+<span class="eqno">(6)<a class="headerlink" href="#equation-d27e434a-53a2-4c5b-b977-fdfb39f1beb5" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M.
+\end{align}\]</div>
+</div>
+<div class="section" id="id5">
+<h4>Naturaleza de las variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p><strong>c.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).</p>
+<div class="amsmath math notranslate nohighlight" id="equation-62f723c1-3b32-4640-af39-16afe22a9cf1">
+<span class="eqno">(7)<a class="headerlink" href="#equation-62f723c1-3b32-4640-af39-16afe22a9cf1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
+\end{align}\]</div>
+</div>
+<div class="section" id="id6">
+<h4>Función Objetivo<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p><strong>e.</strong> Escriba la función objetivo.</p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in M}y_iq_i+\sum_{i\in M}x_ic_i
+\]</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Formulación matemática completa<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p><strong>Conjuntos:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span>: Zonas</p></li>
+<li><p><span class="math notranslate nohighlight">\(K\)</span>: Tipos de carbón</p></li>
+</ul>
+<p><strong>Parámetros:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_{ij}:\begin{cases}1&amp;\text{, si en la zona }i\in M\text{ se puede extraer carbón del tipo }j\in K \\ 0 &amp; \text{, d.l.c}  \end{cases}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c_i\)</span>: costo por cada tonelada de carbón extraída en la zona <span class="math notranslate nohighlight">\(i\in M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n_i\)</span>: capacidad máxima de extracción de carbón (en toneladas) en la zona <span class="math notranslate nohighlight">\(i\in M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b_j\)</span>: mínimo de toneladas a explotar del tipo de carbón <span class="math notranslate nohighlight">\(j\in K\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(q_i\)</span>: costo fijo si se decide extraer carbón de la zona <span class="math notranslate nohighlight">\(i\in M\)</span></p></li>
+</ul>
+<p><strong>Variables de decisión:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: toneladas de carbón extraído en la zona <span class="math notranslate nohighlight">\(i\in M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y_i:\begin{cases}1&amp;\text{, si se decide explotar la zona} i\in M \\ 0 &amp; \text{, d.l.c}  \end{cases}\)</span></p></li>
+</ul>
+<p><strong>Modelo:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in M}y_iq_i+\sum_{i\in M}x_ic_i \text{ (1)} 
+\]</div>
+<p>Sujeto a,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\\
+x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M; &amp;(3)\\
+x_i &amp;\ge 0, &amp;&amp;\forall i\in M; &amp;(4)\\
+y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M. &amp;(5)
+\end{align*}\]</div>
+<p>La función objetivo (1) minimiza los costos totales. La restricción (2) describe que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe ser mínimo <span class="math notranslate nohighlight">\(b_j\)</span> toneladas. La restricción (3) describe que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón, pero que si no se decide explotar, la extracción de carbón debe ser igual a cero. Las restricciones (4) y (5) describen la naturaleza de las variables <span class="math notranslate nohighlight">\(x_i\)</span> y <span class="math notranslate nohighlight">\(y_i\)</span>.</p>
+</div>
+<div class="section" id="id8">
+<h3>Implementación<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p><strong>f.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+óptima del problema?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Conjuntos</span>
+<span class="c1">#-----------------</span>
+<span class="c1">#Zonas</span>
+<span class="n">M</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">37</span><span class="p">):</span>
+    <span class="n">M</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1">#Tipos de carbón</span>
+<span class="n">K</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Antracita&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Hulla&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Turba&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Lignito&quot;</span><span class="p">]</span>
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Parámetros</span>
+<span class="c1">#-----------------</span>
+<span class="n">a</span><span class="o">=</span><span class="p">{</span><span class="c1">#(zona, tipo de carbón): 1 si en la zona i se puede extraer carbón del tipo j, 0 d.l.c.</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">}</span> 
+
+<span class="n">datosZonas</span><span class="o">=</span><span class="p">{</span><span class="c1">#zona: [costo fijo si se decide extraer carbón de la zona i, costo por cada tonelada de carbón extraída en la zona i, capacidad máxima de extracción de carbón (en toneladas) en la zona i] </span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">):[</span><span class="mi">240</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">189</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">2</span><span class="p">):[</span><span class="mi">155</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">196</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">3</span><span class="p">):[</span><span class="mi">240</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">143</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">4</span><span class="p">):[</span><span class="mi">125</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">136</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">5</span><span class="p">):[</span><span class="mi">177</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">106</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">6</span><span class="p">):[</span><span class="mi">342</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">151</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">7</span><span class="p">):[</span><span class="mi">157</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">170</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">8</span><span class="p">):[</span><span class="mi">457</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">129</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">9</span><span class="p">):[</span><span class="mi">396</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">184</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">10</span><span class="p">):[</span><span class="mi">411</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">122</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">11</span><span class="p">):[</span><span class="mi">341</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">146</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">12</span><span class="p">):[</span><span class="mi">469</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">190</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">13</span><span class="p">):[</span><span class="mi">402</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">160</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">14</span><span class="p">):[</span><span class="mi">186</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">109</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">15</span><span class="p">):[</span><span class="mi">404</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">133</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">16</span><span class="p">):[</span><span class="mi">344</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">198</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">17</span><span class="p">):[</span><span class="mi">290</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">138</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">18</span><span class="p">):[</span><span class="mi">340</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">107</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">19</span><span class="p">):[</span><span class="mi">482</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">117</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">20</span><span class="p">):[</span><span class="mi">472</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">150</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">21</span><span class="p">):[</span><span class="mi">394</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">171</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">22</span><span class="p">):[</span><span class="mi">102</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">103</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">23</span><span class="p">):[</span><span class="mi">330</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">157</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">24</span><span class="p">):[</span><span class="mi">433</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">143</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">25</span><span class="p">):[</span><span class="mi">205</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">170</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">26</span><span class="p">):[</span><span class="mi">394</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">130</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">27</span><span class="p">):[</span><span class="mi">156</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">140</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">28</span><span class="p">):[</span><span class="mi">298</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">126</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">29</span><span class="p">):[</span><span class="mi">134</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">180</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">30</span><span class="p">):[</span><span class="mi">462</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">153</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">31</span><span class="p">):[</span><span class="mi">432</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">108</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">32</span><span class="p">):[</span><span class="mi">362</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">132</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">33</span><span class="p">):[</span><span class="mi">127</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">105</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">34</span><span class="p">):[</span><span class="mi">203</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">145</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">35</span><span class="p">):[</span><span class="mi">417</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">145</span><span class="p">],</span>
+        <span class="p">(</span><span class="mi">36</span><span class="p">):[</span><span class="mi">215</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">114</span><span class="p">]}</span> 
+
+<span class="c1">#parámetros indexados en las zonas</span>
+<span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">splitDict</span><span class="p">(</span><span class="n">datosZonas</span><span class="p">)</span>
+
+<span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="c1">#mínimo de toneladas a explotar del tipo de carbón j</span>
+    <span class="p">(</span><span class="s2">&quot;Antracita&quot;</span><span class="p">):</span><span class="mi">862</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;Hulla&quot;</span><span class="p">):</span><span class="mi">898</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;Turba&quot;</span><span class="p">):</span><span class="mi">562</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;Lignito&quot;</span><span class="p">):</span><span class="mi">742</span><span class="p">}</span> 
+
+<span class="c1">#-------------------------------------</span>
+<span class="c1"># Creación del objeto problema en PuLP</span>
+<span class="c1">#-------------------------------------</span>
+<span class="c1">#Crea el problema para cargarlo con la instancia </span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Extracción Minera&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Variables de Decisión</span>
+<span class="c1">#-----------------------------</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#toneladas de carbón extraído de la zona i; aca se añade de una vez la naturaleza de las variables</span>
+<span class="n">y</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Binary&#39;</span><span class="p">)</span> <span class="c1">#1 si se decide explotar la zona i, 0 d.l.c. ; aca se añade de una vez la naturaleza </span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Función objetivo</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Crea la expresión de minimización de costos</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span><span class="p">),</span> <span class="s2">&quot;Costos Totales&quot;</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Restricciones</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#sum(i in M |a_ij=1)x_i &gt;= b_j forall j in K</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span> <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="s2">&quot;Mínimo toneladas de extracción del tipo de carbón &quot;</span><span class="o">+</span><span class="n">j</span> <span class="c1">#se garantiza el mínimo de toneladas extraidas del tipo de carbón j</span>
+
+<span class="c1">#x_i &lt;= n_i*y_i forall i in M</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;Maximo toneladas de extracción si se decide explotar la zona &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>   <span class="c1">#se garantiza el máximo de toneladas de carbón que se pueden extraer si se decide explotar la zona i</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Imprimir formato LP</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Escribe el problema en un archivo con formato LP </span>
+<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">&quot;ExtraccionMinera.lp&quot;</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Invocar el optimizador</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Optimizar el modelo con CBC (default de PuLP)</span>
+<span class="n">problema</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1">#    Imprimir resultados</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Imprimir estado final del optimizador</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#Valor óptimo del portafolio de Petroco    </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Extracción Minera - </span><span class="se">\033</span><span class="s2">[1m Costos totales </span><span class="se">\033</span><span class="s2">[0m = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1">#Imprimir variables de decisión</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1m&#39;</span><span class="s2">&quot;Extracción de las zonas&quot;</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">M</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">())</span><span class="o">+</span><span class="s2">&quot; toneladas de &quot;</span><span class="o">+</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
+
+Extracción Minera - <span class=" -Color -Color-Bold"> Costos totales </span> = $ 39488.0
+
+<span class=" -Color -Color-Bold">Extracción de las zonas</span>
+1: 189.0 toneladas de Hulla
+2: 196.0 toneladas de Hulla
+3: 103.0 toneladas de Turba
+4: 136.0 toneladas de Turba
+5: 106.0 toneladas de Hulla
+7: 123.0 toneladas de Hulla
+10: 122.0 toneladas de Antracita
+11: 146.0 toneladas de Hulla
+12: 190.0 toneladas de Turba
+15: 133.0 toneladas de Turba
+17: 138.0 toneladas de Hulla
+19: 117.0 toneladas de Antracita
+20: 150.0 toneladas de Lignito
+22: 39.0 toneladas de Antracita
+23: 157.0 toneladas de Antracita
+24: 143.0 toneladas de Antracita
+25: 170.0 toneladas de Antracita
+28: 114.0 toneladas de Lignito
+29: 180.0 toneladas de Lignito
+30: 153.0 toneladas de Lignito
+35: 145.0 toneladas de Lignito
+36: 114.0 toneladas de Antracita
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creditos">
+<h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
+<p>Desarrollo: Juan Felipe Rengifo M<br>
+Fecha: 12/09/2020</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Soluciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Enunciados/ExtraccionMinera%20Enunciado.html" title="previous page">Extracción minera</a>
+    <a class='right-next' id="next-link" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" title="next page">Asignación de tareas</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Equipo Principios de Optimización<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

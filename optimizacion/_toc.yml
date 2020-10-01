@@ -1,25 +1,25 @@
-- file: Bienvenida
+- file: Intro
 
 - part: Prácticas de formulación
   chapters:
-  - file: Chocolatería Enunciado
+  - file: Enunciados\Chocolatería Enunciado
     sections:
-      - file: Chocolatería
-  - file: PlaneacionMenus Enunciado
+      - file: Soluciones\Chocolatería
+  - file: Enunciados\PlaneacionMenus Enunciado
     sections:
-      - file: PlaneacionMenus
-  - file: OptiJuice Enunciado
+      - file: Soluciones\PlaneacionMenus
+  - file: Enunciados\OptiJuice Enunciado
     sections:
-      - file: OptiJuice
-  - file: Inventarios Enunciado
+      - file: Soluciones\OptiJuice
+  - file: Enunciados\Inventarios Enunciado
     sections:
-      - file: Inventarios
-  - file: ExtraccionMinera Enunciado
+      - file: Soluciones\Inventarios
+  - file: Enunciados\ExtraccionMinera Enunciado
     sections:
-      - file: ExtraccionMinera
-  - file: Asignación Enunciado
+      - file: Soluciones\ExtraccionMinera
+  - file: Enunciados\Asignación Enunciado
     sections:
-      - file: Asignación
-  - file: Transporte Enunciado
+      - file: Soluciones\Asignación
+  - file: Enunciados\Transporte Enunciado
     sections:
-      - file: Transporte
+      - file: Soluciones\Transporte

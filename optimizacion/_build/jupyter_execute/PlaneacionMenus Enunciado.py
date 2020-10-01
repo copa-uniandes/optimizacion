@@ -63,12 +63,3 @@ optimización en el sistema de planeación del hospital.
 
 Desarrollador: Camilo Aguilar León<br>
 Fecha: 08/09/2020
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-PlaneacionMenus
-```

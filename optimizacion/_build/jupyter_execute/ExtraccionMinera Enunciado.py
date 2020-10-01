@@ -223,12 +223,3 @@ Para esto usted debe seguir los siguientes pasos:
 Equipo Principios de Optimización<br>
 Instancia: Juan Felipe Rengifo M<br>
 Fecha: 30/09/2020
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-ExtraccionMinera
-```

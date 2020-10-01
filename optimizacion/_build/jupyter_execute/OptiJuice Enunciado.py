@@ -254,12 +254,3 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
 Equipo Principios de Optimización<br>
 Instancias: Juan Felipe Rengifo M, Camilo Aguilar<br>
 Fecha: 05/09/2020
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-OptiJuice
-```
