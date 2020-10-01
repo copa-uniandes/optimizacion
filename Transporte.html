@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Transporte Solución &#8212; Repositorio Principios de Optimización</title>
+    <title>Transporte de productos lácteos Solución &#8212; Repositorio Principios de Optimización</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -40,7 +40,7 @@
     <link rel="shortcut icon" href="_static/icon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Transporte" href="Transporte Enunciado.html" />
+    <link rel="prev" title="Transporte de productos lácteos" href="Transporte Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -80,18 +80,23 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="Chocolatería Enunciado.html">
+   Chocolatería
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="PlaneacionMenus Enunciado.html">
    Planeación de menús
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="OptiJuice Enunciado.html">
-   OptiJuice
+   Producción de jugos
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Inventarios Enunciado.html">
-   Inventarios
+   Producción de cemento
   </a>
  </li>
  <li class="toctree-l1">
@@ -101,17 +106,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Asignación Enunciado.html">
-   Asignación
+   Asignación de tareas
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="Transporte Enunciado.html">
-   Transporte
+   Transporte de productos lácteos
   </a>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Transporte Solución
+     Transporte de productos lácteos Solución
     </a>
    </li>
   </ul>
@@ -228,11 +233,25 @@
   <a class="reference internal nav-link" href="#implementacion">
    Implementación
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualizacion-de-resultados">
-   Visualización de resultados
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizacion-de-resultados">
+     Visualización de resultados
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#networkx">
+       NetworkX
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matplotlib">
+       Matplotlib
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creditos">
@@ -249,11 +268,11 @@
         
               <div>
                 
-  <div class="section" id="transporte-solucion">
-<h1>Transporte Solución<a class="headerlink" href="#transporte-solucion" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="transporte-de-productos-lacteos-solucion">
+<h1>Transporte de productos lácteos Solución<a class="headerlink" href="#transporte-de-productos-lacteos-solucion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
-<p>La Lechita Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1500, 1200, 1400, y 1000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor.</p>
+<p>La Lechera Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1500, 1200, 1400, y 1000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor.</p>
 <p><em>Tabla 1:</em></p>
 <table class="colwidths-auto table">
 <thead>
@@ -312,7 +331,7 @@
 </tbody>
 </table>
 <div style="text-align:justify">
-Formule un modelo general de optimización lineal que le permita a La Lechita Ramírez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: </div>
+Formule un modelo general de optimización lineal que le permita a La Lechera Ramírez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: </div>
 <div class="section" id="formulacion">
 <h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
 <p><strong>1.</strong> Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.</p>
@@ -528,14 +547,11 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Using license file C:\Users\alfai\gurobi.lic
-</pre></div>
-</div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Welcome to the CBC MILP Solver 
 Version: 2.9.0 
 Build Date: Feb 12 2015 
 
-command line - c:\users\alfai\src\pulpa\pulp\apis\..\solverdir\cbc\win\64\cbc.exe C:\Users\alfai\AppData\Local\Temp\a758992fbc3c44208ef69371dcb2aad2-pulp.mps ratio None allow None threads None presolve on strong None gomory on knapsack on probing on branch printingOptions all solution C:\Users\alfai\AppData\Local\Temp\a758992fbc3c44208ef69371dcb2aad2-pulp.sol (default strategy 1)
+command line - c:\users\alfai\src\pulpa\pulp\apis\..\solverdir\cbc\win\64\cbc.exe C:\Users\alfai\AppData\Local\Temp\adf0f43c6e274822b322a76d660f2225-pulp.mps ratio None allow None threads None presolve on strong None gomory on knapsack on probing on branch printingOptions all solution C:\Users\alfai\AppData\Local\Temp\adf0f43c6e274822b322a76d660f2225-pulp.sol (default strategy 1)
 At line 2 NAME          MODEL
 At line 3 ROWS
 At line 17 COLUMNS
@@ -556,7 +572,7 @@ Presolve 12 (0) rows, 32 (0) columns and 64 (0) elements
 Optimal - objective value 1224800
 Optimal objective 1224800 - 13 iterations time 0.002
 Option for printingOptions changed from normal to all
-Total time (CPU seconds):       0.02   (Wallclock seconds):       0.02
+Total time (CPU seconds):       0.00   (Wallclock seconds):       0.00
 
 Estado (optimizador): Optimal
 
@@ -566,17 +582,92 @@ Transporte - Costos totales = $ 1224800.0
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="visualizacion-de-resultados">
-<h2>Visualización de resultados<a class="headerlink" href="#visualizacion-de-resultados" title="Permalink to this headline">¶</a></h2>
+<h3>Visualización de resultados<a class="headerlink" href="#visualizacion-de-resultados" title="Permalink to this headline">¶</a></h3>
+<p>En esta ocasión exploraremos una forma diferente de visualizar la solución. En los ejercicios anteriores hemos optado por imprimir los valores que toman las variables y acomodarlos en tablas. Ahora, revisaremos la forma de visualizar los datos para un mejor entendimiento de la solución. Para esto, tendremos la coordenadas de las plantas y los distribuidores guardadas en diccionarios. Importaremos el paquete de matplotlib y diseñaremos funciones que nos permitirán agregar elementos a los gráficos.</p>
+<div class="section" id="networkx">
+<h4>NetworkX<a class="headerlink" href="#networkx" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Coordenadas de las plantas</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importan las librerias que se utilizarán para la visualización</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Coordenadas de las plantas</span>
 <span class="n">coordenadasPlantas</span><span class="o">=</span><span class="p">{</span><span class="c1">#planta: (x, y)</span>
-   <span class="s2">&quot;Planta 1&quot;</span><span class="p">:(</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span>
-   <span class="s2">&quot;Planta 2&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
-   <span class="s2">&quot;Planta 3&quot;</span><span class="p">:(</span><span class="mi">5</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span>
-   <span class="s2">&quot;Planta 4&quot;</span><span class="p">:(</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">10.5</span><span class="p">)}</span>
+                    <span class="s2">&quot;Planta 1&quot;</span><span class="p">:(</span><span class="mf">9.5</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span>
+                    <span class="s2">&quot;Planta 2&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span>
+                    <span class="s2">&quot;Planta 3&quot;</span><span class="p">:(</span><span class="mi">5</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span>
+                    <span class="s2">&quot;Planta 4&quot;</span><span class="p">:(</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">9.5</span><span class="p">)}</span>
+
+<span class="c1">#Coordenadas de los distribuidores</span>
+<span class="n">coordenadasDistribuidores</span><span class="o">=</span><span class="p">{</span><span class="c1">#distribuidor: (x, y)</span>
+                           <span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">:(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">:(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">:(</span><span class="mf">7.5</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span><span class="mi">17</span><span class="p">),</span>
+                           <span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">:(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)}</span>
+
+<span class="c1">#se crean dos conjuntos auxiliares para los labels de los nodos de las plantas y distribuidores</span>
+<span class="n">labelsPlantas</span><span class="o">=</span><span class="p">{</span><span class="n">n</span><span class="p">:</span><span class="n">n</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">P</span><span class="p">}</span>
+<span class="n">labelsDistribuidores</span><span class="o">=</span><span class="p">{</span><span class="n">n</span><span class="p">:</span><span class="n">n</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">D</span><span class="p">}</span>
+
+<span class="c1">#se crea un conjunto auxiliar para los labels de los arcos</span>
+<span class="n">coordenadasTodo</span><span class="o">=</span><span class="n">coordenadasPlantas</span>
+<span class="n">coordenadasTodo</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">coordenadasDistribuidores</span><span class="p">)</span>
+
+<span class="c1">#Se guarda la solución en un vector</span>
+<span class="n">xSol</span><span class="o">=</span><span class="p">{(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">0.1</span><span class="p">}</span>
+
+<span class="c1">#Se modifican las dimensiones de la visualización</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span><span class="mi">4</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.dpi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span>
+
+<span class="c1">#Creación de un modelo de grafos dirigidos.</span>
+<span class="n">G</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+
+<span class="c1">#Dibujar los nodos de plantas y distribuidores.</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">coordenadasPlantas</span><span class="p">,</span><span class="n">nodelist</span><span class="o">=</span><span class="n">P</span><span class="p">,</span><span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span><span class="n">node_size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">coordenadasDistribuidores</span><span class="p">,</span><span class="n">nodelist</span><span class="o">=</span><span class="n">D</span><span class="p">,</span><span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span><span class="n">node_size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1">#Dibujar los labels de los nodos de plantas y distribuidores.</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">coordenadasPlantas</span><span class="p">,</span><span class="n">labelsPlantas</span><span class="p">,</span><span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">coordenadasDistribuidores</span><span class="p">,</span><span class="n">labelsDistribuidores</span><span class="p">,</span><span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1">#Dibujar arcos del diagrama con sus respectivos litros de leche enviados.</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">coordenadasTodo</span><span class="p">,</span><span class="n">xSol</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">coordenadasTodo</span><span class="p">,</span><span class="n">edge_labels</span><span class="o">=</span><span class="n">xSol</span><span class="p">,</span><span class="n">font_size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">coordenadasTodo</span><span class="p">,</span><span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#Borrar ejes, agregar titulo y mostrar la ventana del diagrama.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Distribución La Lechera Ramírez S.A.&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Transporte_16_0.png" src="_images/Transporte_16_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="matplotlib">
+<h4>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria que utilizará para la visualización</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Coordenadas de las plantas</span>
+<span class="n">coordenadasPlantas</span><span class="o">=</span><span class="p">{</span><span class="c1">#planta: (x, y)</span>
+                    <span class="s2">&quot;Planta 1&quot;</span><span class="p">:(</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span>
+                    <span class="s2">&quot;Planta 2&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
+                    <span class="s2">&quot;Planta 3&quot;</span><span class="p">:(</span><span class="mi">5</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span>
+                    <span class="s2">&quot;Planta 4&quot;</span><span class="p">:(</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">10.5</span><span class="p">)}</span>
 
 <span class="c1">#Coordenadas de los distribuidores</span>
 <span class="n">coordenadasDistribuidores</span><span class="o">=</span><span class="p">{</span><span class="c1">#distribuidor: (x, y)</span>
@@ -588,17 +679,9 @@ Transporte - Costos totales = $ 1224800.0
                            <span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">:(</span><span class="mf">7.5</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span>
                            <span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span><span class="mi">17</span><span class="p">),</span>
                            <span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">:(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)}</span>
+
 <span class="c1">#Se guarda la solución en un vector</span>
 <span class="n">xSol</span><span class="o">=</span><span class="p">{(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">}</span>
-
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria que utilizará para la visualización</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1">#función para pintar las plantas</span>
 <span class="k">def</span> <span class="nf">pintarPlantas</span><span class="p">(</span><span class="n">pPlantas</span><span class="p">,</span><span class="n">pAx</span><span class="p">):</span>
@@ -632,13 +715,8 @@ Transporte - Costos totales = $ 1224800.0
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">pos</span> <span class="ow">in</span> <span class="n">pDistribuidores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">pAx</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">0.06</span><span class="p">,</span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mf">0.12</span><span class="p">,</span><span class="n">i</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">pAx</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="c1">#se definen la dimensión de los ejes y se borran los labels de los ejes</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
@@ -655,13 +733,16 @@ Transporte - Costos totales = $ 1224800.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Transporte_17_0.png" src="_images/Transporte_17_0.png" />
+<img alt="_images/Transporte_18_0.png" src="_images/Transporte_18_0.png" />
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="creditos">
 <h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
-<p>Desarrollo: Juan Felipe Rengifo M<br>
+<p>Equipo Principios de Optimización<br>
+Edición: Juan Felipe Rengifo M<br>
 Fecha: 20/09/2020</p>
 </div>
 </div>
@@ -694,7 +775,7 @@ Fecha: 20/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Transporte Enunciado.html" title="previous page">Transporte</a>
+    <a class='left-prev' id="prev-link" href="Transporte Enunciado.html" title="previous page">Transporte de productos lácteos</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
