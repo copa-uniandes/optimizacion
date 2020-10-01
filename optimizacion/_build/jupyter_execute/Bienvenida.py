@@ -18,11 +18,11 @@ Sin más, ¡a optimizar!
 :titlesonly:
 :caption: Prácticas de formulación
 
-Chocolatería Enunciado
-PlaneacionMenus Enunciado
-OptiJuice Enunciado
-Inventarios Enunciado
-ExtraccionMinera Enunciado
-Asignación Enunciado
-Transporte Enunciado
+Enunciados/Chocolatería Enunciado
+Enunciados/PlaneacionMenus Enunciado
+Enunciados/OptiJuice Enunciado
+Enunciados/Inventarios Enunciado
+Enunciados/ExtraccionMinera Enunciado
+Enunciados/Asignación Enunciado
+Enunciados/Transporte Enunciado
 ```
