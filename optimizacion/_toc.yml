@@ -18,9 +18,9 @@
   - file: Enunciados\Inventarios Enunciado
     sections:
       - file: Soluciones\Inventarios
+- file: Enunciados\Asignación Enunciado
+    sections:
+      - file: Soluciones\Asignación
   - file: Enunciados\ExtraccionMinera Enunciado
     sections:
       - file: Soluciones\ExtraccionMinera
-  - file: Enunciados\Asignación Enunciado
-    sections:
-      - file: Soluciones\Asignación
