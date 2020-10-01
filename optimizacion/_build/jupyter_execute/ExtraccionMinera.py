@@ -1,9 +1,9 @@
-# ExtracciÛn minera SoluciÛn
+# Extracci√≥n minera Soluci√≥n
 
 ## Punto 1
 
 ### Enunciado
-La minerÌa de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracciÛn de materiales como: arena, arcilla, cobre y carbÛn. Las directivas de una empresa de extracciÛn minera desean explotar un conjunto de zonas ($M$), de las cuales se puede extraer un conjunto de diferentes tipos de carbÛn ($K$). Se sabe que de la zona $i\in M$ sÛlo puede extraerse el carbÛn tipo $j\in K$. Para ello, suponga que $a_{ij}$ es un par·metro binario que toma el valor de 1 si en la zona $i\in M$ se puede extraer carbÛn del tipo $j\in K$ y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbÛn. Por ejemplo, para la zona uno se tiene que $a_{11}=0$, $a_{12}=1$, $a_{13}=0$ y $a_{14}=0$ ya que de la zona 1 sÛlo puede extraerse el tipo de carbÛn 2 (hulla). 
+La miner√≠a de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracci√≥n de materiales como: arena, arcilla, cobre y carb√≥n. Las directivas de una empresa de extracci√≥n minera desean explotar un conjunto de zonas ($M$), de las cuales se puede extraer un conjunto de diferentes tipos de carb√≥n ($K$). Se sabe que de la zona $i\in M$ s√≥lo puede extraerse el carb√≥n tipo $j\in K$. Para ello, suponga que $a_{ij}$ es un par√°metro binario que toma el valor de 1 si en la zona $i\in M$ se puede extraer carb√≥n del tipo $j\in K$ y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carb√≥n. Por ejemplo, para la zona uno se tiene que $a_{11}=0$, $a_{12}=1$, $a_{13}=0$ y $a_{14}=0$ ya que de la zona 1 s√≥lo puede extraerse el tipo de carb√≥n 2 (hulla). 
 
 *Figura 1:*
 <table>
@@ -66,65 +66,114 @@ La minerÌa de cielo abierto es una actividad industrial que consiste en remover 
   </tr>
 </table>
 
-Cada tonelada de carbÛn extraÌda de la zona $i\in M$ le cuesta a la empresa $c_i$ pesos.  Adicionalmente, cada zona tiene una capacidad m·xima de extracciÛn de carbÛn de $n_i$ toneladas. Suponga que las directivas desean explotar un mÌnimo de $b_j$ toneladas de cada tipo de carbÛn $j\in K$.    
-<br> 
-Usted debe formular un programa lineal que le permita a la empresa decidir cu·nto deben extraer en cada zona de manera que se cumplan los requerimientos a un mÌnimo costo. Para esto usted debe seguir los siguientes pasos: 
+Cada tonelada de carb√≥n extra√≠da de la zona $i\in M$ le cuesta a la empresa $c_i$ pesos.  Adicionalmente, cada zona tiene una capacidad m√°xima de extracci√≥n de carb√≥n de $n_i$ toneladas. Suponga que las directivas desean explotar un m√≠nimo de $b_j$ toneladas de cada tipo de carb√≥n $j\in K$.    
 
-### FormulaciÛn
-#### Variables de decisiÛn
-**a.** Describa la(s) variable(s) de decisiÛn que utilizar· en el modelo. 
+|Zona|Capacidad m√°xima de extracci√≥n de carb√≥n (ton)|Costo por tonelada de carb√≥n extra√≠do ($)|
+|:--:|:--------------------------------------------:|:--------------------------------------:|
+|1|189|16|
+|2|196|6|
+|3|143|11|
+|4|136|8|
+|5|106|5|
+|6|151|25|
+|7|170|16|
+|8|129|17|
+|9|184|25|
+|10|122|8|
+|11|146|15|
+|12|190|8|
+|13|160|10|
+|14|109|20|
+|15|133|6|
+|16|198|17|
+|17|138|6|
+|18|107|20|
+|19|117|5|
+|20|150|8|
+|21|171|25|
+|22|103|11|
+|23|157|8|
+|24|143|7|
+|25|170|7|
+|26|130|28|
+|27|140|26|
+|28|126|27|
+|29|180|9|
+|30|153|24|
+|31|108|15|
+|32|132|14|
+|33|105|22|
+|34|145|20|
+|35|145|19|
+|36|114|8|
+
+<br>
+
+|Tipo de carb√≥n|M√≠nimo de toneladas a explotar|
+|:------------:|:----------------------------:|
+|Antracita|862|
+|Huila|898|
+|Turba|562|
+|Lignito|742|
+
+<br> 
+Usted debe formular un programa lineal que le permita a la empresa decidir cu√°nto deben extraer en cada zona de manera que se cumplan los requerimientos a un m√≠nimo costo. Para esto usted debe seguir los siguientes pasos: 
+
+### Formulaci√≥n
+#### Variables de decisi√≥n
+**a.** Describa la(s) variable(s) de decisi√≥n que utilizar√° en el modelo. 
 
 \begin{align}
-x_i: \text{cantidad de carbÛn extraÌdo en la zona $i\in M$ (en toneladas)}\\
+x_i: \text{cantidad de carb√≥n extra√≠do en la zona $i\in M$ (en toneladas)}\\
 \end{align}
 
 #### Restricciones
-**b.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) la cantidad de carbÛn extraÌdo del tipo $j\in K$, debe como mÌnimo $b_j$.    
+**b.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) la cantidad de carb√≥n extra√≠do del tipo $j\in K$, debe como m√≠nimo $b_j$.    
 
-*OpciÛn 1:*
+*Opci√≥n 1:*
 \begin{align}
 \sum_{i\in M}a_{ij}x_i &\ge b_j, &&\forall j\in K.\\
 \end{align}
 
-*OpciÛn 2:*
+*Opci√≥n 2:*
 \begin{align}
 \sum_{i\in M|a_{ij}=1}x_i &\ge b_j, &&\forall j\in K.\\
 \end{align}
 
-**c.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) que no se pueden extraer m·s de ($n_i$) toneladas de carbÛn en la zona $i\in M$.   
+**c.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) que no se pueden extraer m√°s de ($n_i$) toneladas de carb√≥n en la zona $i\in M$.   
 
 \begin{align}
 x_i &\le n_i, &&\forall i\in M.
 \end{align}
 
 #### Naturaleza de las variables
-**d.** Escriba la(s) restricciÛn(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo. 
+**d.** Escriba la(s) restricci√≥n(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo. 
 
 \begin{align}
 x_i &\ge 0, &&\forall i\in M.
 \end{align}
 
-#### FunciÛn Objetivo
-**e.** Escriba la funciÛn objetivo.
+#### Funci√≥n Objetivo
+**e.** Escriba la funci√≥n objetivo.
 
 $$
 \text{minimizar }  \sum_{i\in M}x_ic_i 
 $$
 
-### FormulaciÛn matem·tica completa
+### Formulaci√≥n matem√°tica completa
 
 **Conjuntos:**
 - $M$: Zonas
-- $K$: Tipos de carbÛn
+- $K$: Tipos de carb√≥n
 
-**Par·metros:**
-- $a_{ij}:\begin{cases}1&\text{, si en la zona }i\in M\text{ se puede extraer carbÛn del tipo }j\in K \\ 0 & \text{, d.l.c}  \end{cases}$
-- $c_i$: costo por cada tonelada de carbÛn extraÌda en la zona $i\in M$  
-- $n_i$: capacidad m·xima de extracciÛn de carbÛn (en toneladas) en la zona $i\in M$
-- $b_j$: mÌnimo de toneladas a explotar del tipo de carbÛn $j\in K$
+**Par√°metros:**
+- $a_{ij}:\begin{cases}1&\text{, si en la zona }i\in M\text{ se puede extraer carb√≥n del tipo }j\in K \\ 0 & \text{, d.l.c}  \end{cases}$
+- $c_i$: costo por cada tonelada de carb√≥n extra√≠da en la zona $i\in M$  
+- $n_i$: capacidad m√°xima de extracci√≥n de carb√≥n (en toneladas) en la zona $i\in M$
+- $b_j$: m√≠nimo de toneladas a explotar del tipo de carb√≥n $j\in K$
 
-**Variables de decisiÛn:**
-- $x_i$: toneladas de carbÛn extraÌdo en la zona $i\in M$  
+**Variables de decisi√≥n:**
+- $x_i$: toneladas de carb√≥n extra√≠do en la zona $i\in M$  
 
 **Modelo:**
 
@@ -140,11 +189,11 @@ x_i &\ge 0, &&\forall i\in M. &(4)
 \end{align*}
 
 
-La funciÛn objetivo (1) minimiza los costos totales. La restricciÛn (2) describe que la cantidad de carbÛn extraÌdo del tipo $j\in K$ debe ser mÌnimo $b_j$ toneladas. La restricciÛn (3) describe que no se pueden extraer m·s de ($n_i$) toneladas de carbÛn en la zona $i\in M$. La restricciÛn (4) describe la naturaleza de la variable $x_i$. 
+La funci√≥n objetivo (1) minimiza los costos totales. La restricci√≥n (2) describe que la cantidad de carb√≥n extra√≠do del tipo $j\in K$ debe ser m√≠nimo $b_j$ toneladas. La restricci√≥n (3) describe que no se pueden extraer m√°s de ($n_i$) toneladas de carb√≥n en la zona $i\in M$. La restricci√≥n (4) describe la naturaleza de la variable $x_i$. 
 
-### ImplementaciÛn
-**g.** Resuelva el modelo planteado utilizando la librerÌa de PulP en Python. øCu·l es la soluciÛn
-Ûptima del problema? 
+### Implementaci√≥n
+**g.** Resuelva el modelo planteado utilizando la librer√≠a de PulP en Python. ¬øCu√°l es la soluci√≥n
+√≥ptima del problema? 
 
 #se importa la libreria de PulP
 import pulp as lp
@@ -157,16 +206,16 @@ M=[]
 for i in range(1,37):
     M.append(i)
 
-#Tipos de carbÛn
+#Tipos de carb√≥n
 K=["Antracita",
    "Hulla",
    "Turba",
    "Lignito"]
 
 #-----------------
-# Par·metros
+# Par√°metros
 #-----------------
-a={#(zona, tipo de carbÛn): 1 si en la zona i se puede extraer carbÛn del tipo j, 0 d.l.c.
+a={#(zona, tipo de carb√≥n): 1 si en la zona i se puede extraer carb√≥n del tipo j, 0 d.l.c.
     (1,"Antracita"):0,
     (1,"Hulla"):1,
     (1,"Turba"):0,
@@ -312,7 +361,7 @@ a={#(zona, tipo de carbÛn): 1 si en la zona i se puede extraer carbÛn del tipo j
     (36,"Turba"):0,
     (36,"Lignito"):0} 
 
-datosZonas={#zona: [costo por cada tonelada de carbÛn extraÌda en la zona i, capacidad m·xima de extracciÛn de carbÛn (en toneladas) en la zona i] 
+datosZonas={#zona: [costo por cada tonelada de carb√≥n extra√≠da en la zona i, capacidad m√°xima de extracci√≥n de carb√≥n (en toneladas) en la zona i] 
             (1):[16,189],
             (2):[6,196],
             (3):[11,143],
@@ -350,31 +399,31 @@ datosZonas={#zona: [costo por cada tonelada de carbÛn extraÌda en la zona i, cap
             (35):[19,145],
             (36):[8,114]}  
 
-#par·metros indexados en las zonas
+#par√°metros indexados en las zonas
 (c, n)=lp.splitDict(datosZonas)
 
 
-b={#mÌnimo de toneladas a explotar del tipo de carbÛn j
+b={#m√≠nimo de toneladas a explotar del tipo de carb√≥n j
     ("Antracita"):862,
     ("Hulla"):898,
     ("Turba"):562,
     ("Lignito"):742}  
 
 #-------------------------------------
-# CreaciÛn del objeto problema en PuLP
+# Creaci√≥n del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=lp.LpProblem("ExtracciÛn Minera",lp.LpMinimize)
+problema=lp.LpProblem("Extracci√≥n Minera",lp.LpMinimize)
 
 #-----------------------------
-# Variables de DecisiÛn
+# Variables de Decisi√≥n
 #-----------------------------
-x=lp.LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carbÛn extraÌdo de la zona i; aca se aÒade de una vez la naturaleza de las variables
+x=lp.LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carb√≥n extra√≠do de la zona i; aca se a√±ade de una vez la naturaleza de las variables
 
 #-----------------------------
-# FunciÛn objetivo
+# Funci√≥n objetivo
 #-----------------------------
-#Crea la expresiÛn de minimizaciÛn de costos
+#Crea la expresi√≥n de minimizaci√≥n de costos
 problema+=lp.lpSum(x[i]*c[i] for i in M), "Costos Totales"
 
 #-----------------------------
@@ -382,11 +431,11 @@ problema+=lp.lpSum(x[i]*c[i] for i in M), "Costos Totales"
 #-----------------------------
 #sum(i in M)a_ij*x_i >= b_j forall j in K
 for j in K:
-    problema+= lp.lpSum(a[i,j]*x[i] for i in M) >= b[j], "MÌnimo toneladas de extracciÛn del tipo de carbÛn "+j #se garantiza el mÌnimo de toneladas extraidas del tipo de carbÛn j
+    problema+= lp.lpSum(a[i,j]*x[i] for i in M) >= b[j], "M√≠nimo toneladas de extracci√≥n del tipo de carb√≥n "+j #se garantiza el m√≠nimo de toneladas extraidas del tipo de carb√≥n j
 
 #x_i <= n_i*y_i forall i in M
 for i in M:
-    problema+= x[i] <= n[i], "M·ximo toneladas de extracciÛn de la zona "+str(i)   #se garantiza el m·ximo de toneladas de carbÛn que se pueden extraer de la zona i
+    problema+= x[i] <= n[i], "M√°ximo toneladas de extracci√≥n de la zona "+str(i)   #se garantiza el m√°ximo de toneladas de carb√≥n que se pueden extraer de la zona i
 
 #-----------------------------
 # Imprimir formato LP
@@ -406,12 +455,12 @@ problema.solve()
 #Imprimir estado final del optimizador
 print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
-#Valor Ûptimo del portafolio de Petroco    
-print("\nExtracciÛn Minera - \033[1m Costos totales \033[0m = $", round(lp.value(problema.objective),2))
+#Valor √≥ptimo del portafolio de Petroco    
+print("\nExtracci√≥n Minera - \033[1m Costos totales \033[0m = $", round(lp.value(problema.objective),2))
 print()
 
-#Imprimir variables de decisiÛn
-print('\033[1m'"ExtracciÛn de las zonas"'\033[0m')
+#Imprimir variables de decisi√≥n
+print('\033[1m'"Extracci√≥n de las zonas"'\033[0m')
 for i in M:
     if x[i].value()>0.5:
         for j in K:
@@ -424,52 +473,96 @@ for i in M:
 ## Punto 2
 
 ### Enunciado
-Ahora considere el escenario en que la empresa incurre en un costo fijo de $q_i$ pesos cuando decide extraer carbÛn de la zona $i\in M$. Por lo tanto, si se decide explotar la mina $i\in M$, no se pueden extraer m·s de ($n_i$) toneladas de carbÛn. Pero si no se decide explotar, la extracciÛn de carbÛn en esa zona debe ser igual a cero (0). Para esto usted debe seguir los siguientes pasos: 
+Ahora considere el escenario en que la empresa incurre en un costo fijo de $q_i$ pesos cuando decide extraer carb√≥n de la zona $i\in M$. Por lo tanto, si se decide explotar la mina $i\in M$, no se pueden extraer m√°s de ($n_i$) toneladas de carb√≥n. Pero si no se decide explotar, la extracci√≥n de carb√≥n en esa zona debe ser igual a cero (0). 
 
-### FormulaciÛn
-#### Variables de decisiÛn
-**a.** Describa la(s) variable(s) de decisiÛn adicional(es) que utilizar· en el modelo. 
+<br>
+
+|Zona|Costo fijo de extracci√≥n en la zona|
+|:--:|:---------------------------------:|
+|1|240|
+|2|155|
+|3|240|
+|4|125|
+|5|177|
+|6|342|
+|7|157|
+|8|457|
+|9|396|
+|10|411|
+|11|341|
+|12|469|
+|13|402|
+|14|186|
+|15|404|
+|16|344|
+|17|290|
+|18|340|
+|19|482|
+|20|472|
+|21|394|
+|22|102|
+|23|330|
+|24|433|
+|25|205|
+|26|394|
+|27|156|
+|28|298|
+|29|134|
+|30|462|
+|31|432|
+|32|362|
+|33|127|
+|34|203|
+|35|417|
+|36|215|
+
+
+Para esto usted debe seguir los siguientes pasos: 
+
+### Formulaci√≥n
+#### Variables de decisi√≥n
+**a.** Describa la(s) variable(s) de decisi√≥n adicional(es) que utilizar√° en el modelo. 
 
 \begin{align*}
 y_i:\begin{cases}1&\text{, si se decide explotar la zona }i\in M \\ 0 & \text{, d.l.c}  \end{cases}
 \end{align*}
 
 #### Restricciones
-**b.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) que si se decide explotar la mina $i\in M$, no se pueden extraer m·s de ($n_i$) toneladas de carbÛn. Pero que, si no se decide explotar, la extracciÛn de carbÛn debe ser igual a cero.    
+**b.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) que si se decide explotar la mina $i\in M$, no se pueden extraer m√°s de ($n_i$) toneladas de carb√≥n. Pero que, si no se decide explotar, la extracci√≥n de carb√≥n debe ser igual a cero.    
 
 \begin{align}
 x_i &\le n_iy_i, &&\forall i\in M.
 \end{align}
 
 #### Naturaleza de las variables
-**c.** Escriba la(s) restricciÛn(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).
+**c.** Escriba la(s) restricci√≥n(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).
 
 \begin{align}
 y_i &\in \text{{0,1}}, &&\forall i\in M.
 \end{align}
 
-#### FunciÛn Objetivo
-**e.** Escriba la funciÛn objetivo.
+#### Funci√≥n Objetivo
+**e.** Escriba la funci√≥n objetivo.
 
 $$
 \text{minimizar }  \sum_{i\in M}y_iq_i+\sum_{i\in M}x_ic_i
 $$
 
-### FormulaciÛn matem·tica completa
+### Formulaci√≥n matem√°tica completa
 
 **Conjuntos:**
 - $M$: Zonas
-- $K$: Tipos de carbÛn
+- $K$: Tipos de carb√≥n
 
-**Par·metros:**
-- $a_{ij}:\begin{cases}1&\text{, si en la zona }i\in M\text{ se puede extraer carbÛn del tipo }j\in K \\ 0 & \text{, d.l.c}  \end{cases}$
-- $c_i$: costo por cada tonelada de carbÛn extraÌda en la zona $i\in M$  
-- $n_i$: capacidad m·xima de extracciÛn de carbÛn (en toneladas) en la zona $i\in M$
-- $b_j$: mÌnimo de toneladas a explotar del tipo de carbÛn $j\in K$
-- $q_i$: costo fijo si se decide extraer carbÛn de la zona $i\in M$
+**Par√°metros:**
+- $a_{ij}:\begin{cases}1&\text{, si en la zona }i\in M\text{ se puede extraer carb√≥n del tipo }j\in K \\ 0 & \text{, d.l.c}  \end{cases}$
+- $c_i$: costo por cada tonelada de carb√≥n extra√≠da en la zona $i\in M$  
+- $n_i$: capacidad m√°xima de extracci√≥n de carb√≥n (en toneladas) en la zona $i\in M$
+- $b_j$: m√≠nimo de toneladas a explotar del tipo de carb√≥n $j\in K$
+- $q_i$: costo fijo si se decide extraer carb√≥n de la zona $i\in M$
 
-**Variables de decisiÛn:**
-- $x_i$: toneladas de carbÛn extraÌdo en la zona $i\in M$ 
+**Variables de decisi√≥n:**
+- $x_i$: toneladas de carb√≥n extra√≠do en la zona $i\in M$ 
 - $y_i:\begin{cases}1&\text{, si se decide explotar la zona} i\in M \\ 0 & \text{, d.l.c}  \end{cases}$ 
 
 **Modelo:**
@@ -487,11 +580,11 @@ y_i &\in \text{{0,1}}, &&\forall i\in M. &(5)
 \end{align*}
 
 
-La funciÛn objetivo (1) minimiza los costos totales. La restricciÛn (2) describe que la cantidad de carbÛn extraÌdo del tipo $j\in K$ debe ser mÌnimo $b_j$ toneladas. La restricciÛn (3) describe que si se decide explotar la mina $i\in M$, no se pueden extraer m·s de ($n_i$) toneladas de carbÛn, pero que si no se decide explotar, la extracciÛn de carbÛn debe ser igual a cero. Las restricciones (4) y (5) describen la naturaleza de las variables $x_i$ y $y_i$. 
+La funci√≥n objetivo (1) minimiza los costos totales. La restricci√≥n (2) describe que la cantidad de carb√≥n extra√≠do del tipo $j\in K$ debe ser m√≠nimo $b_j$ toneladas. La restricci√≥n (3) describe que si se decide explotar la mina $i\in M$, no se pueden extraer m√°s de ($n_i$) toneladas de carb√≥n, pero que si no se decide explotar, la extracci√≥n de carb√≥n debe ser igual a cero. Las restricciones (4) y (5) describen la naturaleza de las variables $x_i$ y $y_i$. 
 
-### ImplementaciÛn
-**f.** Resuelva el modelo planteado utilizando la librerÌa de PulP en Python. øCu·l es la soluciÛn
-Ûptima del problema? 
+### Implementaci√≥n
+**f.** Resuelva el modelo planteado utilizando la librer√≠a de PulP en Python. ¬øCu√°l es la soluci√≥n
+√≥ptima del problema? 
 
 #se importa la libreria de PulP
 import pulp as lp
@@ -504,16 +597,16 @@ M=[]
 for i in range(1,37):
     M.append(i)
 
-#Tipos de carbÛn
+#Tipos de carb√≥n
 K=["Antracita",
    "Hulla",
    "Turba",
    "Lignito"]
 
 #-----------------
-# Par·metros
+# Par√°metros
 #-----------------
-a={#(zona, tipo de carbÛn): 1 si en la zona i se puede extraer carbÛn del tipo j, 0 d.l.c.
+a={#(zona, tipo de carb√≥n): 1 si en la zona i se puede extraer carb√≥n del tipo j, 0 d.l.c.
     (1,"Antracita"):0,
     (1,"Hulla"):1,
     (1,"Turba"):0,
@@ -659,7 +752,7 @@ a={#(zona, tipo de carbÛn): 1 si en la zona i se puede extraer carbÛn del tipo j
     (36,"Turba"):0,
     (36,"Lignito"):0} 
 
-datosZonas={#zona: [costo fijo si se decide extraer carbÛn de la zona i, costo por cada tonelada de carbÛn extraÌda en la zona i, capacidad m·xima de extracciÛn de carbÛn (en toneladas) en la zona i] 
+datosZonas={#zona: [costo fijo si se decide extraer carb√≥n de la zona i, costo por cada tonelada de carb√≥n extra√≠da en la zona i, capacidad m√°xima de extracci√≥n de carb√≥n (en toneladas) en la zona i] 
         (1):[240,16,189],
         (2):[155,6,196],
         (3):[240,11,143],
@@ -697,31 +790,31 @@ datosZonas={#zona: [costo fijo si se decide extraer carbÛn de la zona i, costo p
         (35):[417,19,145],
         (36):[215,8,114]} 
 
-#par·metros indexados en las zonas
+#par√°metros indexados en las zonas
 (q, c, n)=lp.splitDict(datosZonas)
 
-b={#mÌnimo de toneladas a explotar del tipo de carbÛn j
+b={#m√≠nimo de toneladas a explotar del tipo de carb√≥n j
     ("Antracita"):862,
     ("Hulla"):898,
     ("Turba"):562,
     ("Lignito"):742} 
 
 #-------------------------------------
-# CreaciÛn del objeto problema en PuLP
+# Creaci√≥n del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
-problema=lp.LpProblem("ExtracciÛn Minera",lp.LpMinimize)
+problema=lp.LpProblem("Extracci√≥n Minera",lp.LpMinimize)
 
 #-----------------------------
-# Variables de DecisiÛn
+# Variables de Decisi√≥n
 #-----------------------------
-x=lp.LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carbÛn extraÌdo de la zona i; aca se aÒade de una vez la naturaleza de las variables
-y=lp.LpVariable.dicts('y',M,cat='Binary') #1 si se decide explotar la zona i, 0 d.l.c. ; aca se aÒade de una vez la naturaleza 
+x=lp.LpVariable.dicts('x',M,lowBound=0,cat='Continuous') #toneladas de carb√≥n extra√≠do de la zona i; aca se a√±ade de una vez la naturaleza de las variables
+y=lp.LpVariable.dicts('y',M,cat='Binary') #1 si se decide explotar la zona i, 0 d.l.c. ; aca se a√±ade de una vez la naturaleza 
 
 #-----------------------------
-# FunciÛn objetivo
+# Funci√≥n objetivo
 #-----------------------------
-#Crea la expresiÛn de minimizaciÛn de costos
+#Crea la expresi√≥n de minimizaci√≥n de costos
 problema+=lp.lpSum(x[i]*c[i]+y[i]*q[i] for i in M), "Costos Totales"
 
 #-----------------------------
@@ -729,11 +822,11 @@ problema+=lp.lpSum(x[i]*c[i]+y[i]*q[i] for i in M), "Costos Totales"
 #-----------------------------
 #sum(i in M |a_ij=1)x_i >= b_j forall j in K
 for j in K:
-    problema+= lp.lpSum(x[i] for i in M if a[i,j]==1) >= b[j], "MÌnimo toneladas de extracciÛn del tipo de carbÛn "+j #se garantiza el mÌnimo de toneladas extraidas del tipo de carbÛn j
+    problema+= lp.lpSum(x[i] for i in M if a[i,j]==1) >= b[j], "M√≠nimo toneladas de extracci√≥n del tipo de carb√≥n "+j #se garantiza el m√≠nimo de toneladas extraidas del tipo de carb√≥n j
 
 #x_i <= n_i*y_i forall i in M
 for i in M:
-    problema+= x[i] <= n[i]*y[i], "Maximo toneladas de extracciÛn si se decide explotar la zona "+str(i)   #se garantiza el m·ximo de toneladas de carbÛn que se pueden extraer si se decide explotar la zona i
+    problema+= x[i] <= n[i]*y[i], "Maximo toneladas de extracci√≥n si se decide explotar la zona "+str(i)   #se garantiza el m√°ximo de toneladas de carb√≥n que se pueden extraer si se decide explotar la zona i
 
 #-----------------------------
 # Imprimir formato LP
@@ -753,19 +846,19 @@ problema.solve()
 #Imprimir estado final del optimizador
 print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
-#Valor Ûptimo del portafolio de Petroco    
-print("\nExtracciÛn Minera - \033[1m Costos totales \033[0m = $", round(lp.value(problema.objective),2))
+#Valor √≥ptimo del portafolio de Petroco    
+print("\nExtracci√≥n Minera - \033[1m Costos totales \033[0m = $", round(lp.value(problema.objective),2))
 print()
 
-#Imprimir variables de decisiÛn
-print('\033[1m'"ExtracciÛn de las zonas"'\033[0m')
+#Imprimir variables de decisi√≥n
+print('\033[1m'"Extracci√≥n de las zonas"'\033[0m')
 for i in M:
     if x[i].value()>0.5:
         for j in K:
             if a[i,j]==1:
                 print(str(i)+": "+str(x[i].value())+" toneladas de "+j)
 
-## CrÈditos
+## Cr√©ditos
 
 Desarrollo: Juan Felipe Rengifo M<br>
 Fecha: 12/09/2020

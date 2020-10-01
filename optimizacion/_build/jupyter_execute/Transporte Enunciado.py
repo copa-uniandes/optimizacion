@@ -1,7 +1,7 @@
-# Transporte
+# Transporte de productos l√°cteos
 
 ## Enunciado
-La Lechita RamÌrez S.A. es una empresa que produce productos l·cteos y cuenta con cuatro plantas de producciÛn en Colombia cuyas capacidades de producciÛn mensuales de leche son 1500, 1200, 1400, y 1000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compaÒÌa al enviar un litro de leche desde cada planta hacia cada distribuidor. 
+La Lechera Ram√≠rez S.A. es una empresa que produce productos l√°cteos y cuenta con cuatro plantas de producci√≥n en Colombia cuyas capacidades de producci√≥n mensuales de leche son 1500, 1200, 1400, y 1000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compa√±√≠a al enviar un litro de leche desde cada planta hacia cada distribuidor. 
 
 *Tabla 1:*
 
@@ -13,32 +13,32 @@ La Lechita RamÌrez S.A. es una empresa que produce productos l·cteos y cuenta co
 |**Planta 4**|450        |800    |650    |250    |340    |700    |600    |620    |
 
 <div style="text-align:justify">
-Formule un modelo general de optimizaciÛn lineal que le permita a La Lechita RamÌrez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: 
+Formule un modelo general de optimizaci√≥n lineal que le permita a La Lechita Ram√≠rez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: 
 
-## FormulaciÛn
+## Formulaci√≥n
 
-**1.** Escriba lo(s) conjunto(s), par·metro(s) y variable(s) de decisiÛn que utilizar· en el modelo.  
-
-
-**2.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.   
+**1.** Escriba lo(s) conjunto(s), par√°metro(s) y variable(s) de decisi√≥n que utilizar√° en el modelo.  
 
 
-**3.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.  
+**2.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.   
 
 
-**4.** Escriba la(s) restricciÛn(es) que describe(n) matem·ticamente el tipo de variable(s) que est· utilizando dentro del modelo.   
+**3.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.  
 
 
-**5.** Escriba la funciÛn objetivo.
+**4.** Escriba la(s) restricci√≥n(es) que describe(n) matem√°ticamente el tipo de variable(s) que est√° utilizando dentro del modelo.   
 
 
-## ImplementaciÛn
-**g.** Resuelva el modelo planteado utilizando la librerÌa de PulP en Python. øCu·l es la soluciÛn
-Ûptima del problema? 
+**5.** Escriba la funci√≥n objetivo.
+
+
+## Implementaci√≥n
+**g.** Resuelva el modelo planteado utilizando la librer√≠a de PulP en Python. ¬øCu√°l es la soluci√≥n
+√≥ptima del problema? 
 
 
 
-## CrÈditos
+## Cr√©ditos
 
 Desarrollo: Juan Felipe Rengifo M<br>
 Fecha: 20/09/2020
