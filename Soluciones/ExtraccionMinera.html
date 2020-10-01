@@ -39,7 +39,6 @@
     <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Asignación de tareas" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" />
     <link rel="prev" title="Extracción minera" href="../Enunciados/ExtraccionMinera%20Enunciado.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,8 +94,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">
    Producción de cemento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -110,16 +119,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
-   Asignación de tareas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
-   Transporte de productos lácteos
-  </a>
  </li>
 </ul>
 
@@ -579,8 +578,8 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="variables-de-decision">
 <h4>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h4>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ec10972-3c1f-4a78-bc54-8f49ad97be5a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-1ec10972-3c1f-4a78-bc54-8f49ad97be5a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ac59d0b0-c74c-44c7-a061-8357bf78d7be">
+<span class="eqno">(7)<a class="headerlink" href="#equation-ac59d0b0-c74c-44c7-a061-8357bf78d7be" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
 \end{align}\]</div>
 </div>
@@ -588,26 +587,26 @@ x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
 <h4>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
 <p><em>Opción 1:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-9b7f0b45-8985-4e43-ae1a-0d24bc3477c1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-9b7f0b45-8985-4e43-ae1a-0d24bc3477c1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-816fa5a7-789d-4bf4-b757-b33b2a27a74f">
+<span class="eqno">(8)<a class="headerlink" href="#equation-816fa5a7-789d-4bf4-b757-b33b2a27a74f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
 \end{align}\]</div>
 <p><em>Opción 2:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-767205f3-ddbe-40f5-bdc4-bb8eb538fdcf">
-<span class="eqno">(3)<a class="headerlink" href="#equation-767205f3-ddbe-40f5-bdc4-bb8eb538fdcf" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-22abb98d-db23-47ea-8dc2-560a783ee9f7">
+<span class="eqno">(9)<a class="headerlink" href="#equation-22abb98d-db23-47ea-8dc2-560a783ee9f7" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
 \end{align}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b924521-0b70-4b2c-8cee-69bf61e71b63">
-<span class="eqno">(4)<a class="headerlink" href="#equation-8b924521-0b70-4b2c-8cee-69bf61e71b63" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1f908ee6-63ed-48f2-843e-7fe002ab74b4">
+<span class="eqno">(10)<a class="headerlink" href="#equation-1f908ee6-63ed-48f2-843e-7fe002ab74b4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_i, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h4>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d708183-84a3-4c36-bcb9-2e21b2a0fc87">
-<span class="eqno">(5)<a class="headerlink" href="#equation-9d708183-84a3-4c36-bcb9-2e21b2a0fc87" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-60f31c13-5962-4017-8106-a38dd179887b">
+<span class="eqno">(11)<a class="headerlink" href="#equation-60f31c13-5962-4017-8106-a38dd179887b" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
@@ -1106,16 +1105,16 @@ y_i:\begin{cases}1&amp;\text{, si se decide explotar la zona }i\in M \\ 0 &amp; 
 <div class="section" id="id4">
 <h4>Restricciones<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01bfe5f4-231c-4319-b280-ce6875f0dab7">
-<span class="eqno">(6)<a class="headerlink" href="#equation-01bfe5f4-231c-4319-b280-ce6875f0dab7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-104e1455-ad72-47ff-8dac-4834cc64fa03">
+<span class="eqno">(12)<a class="headerlink" href="#equation-104e1455-ad72-47ff-8dac-4834cc64fa03" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
 <div class="section" id="id5">
 <h4>Naturaleza de las variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p><strong>c.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-db7039fd-87b6-4fe8-bd89-6154f391530d">
-<span class="eqno">(7)<a class="headerlink" href="#equation-db7039fd-87b6-4fe8-bd89-6154f391530d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b8e55af5-ce0d-46bd-95bb-a282c48bac49">
+<span class="eqno">(13)<a class="headerlink" href="#equation-b8e55af5-ce0d-46bd-95bb-a282c48bac49" title="Permalink to this equation">¶</a></span>\[\begin{align}
 y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
@@ -1513,7 +1512,6 @@ Fecha: 12/09/2020</p>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../Enunciados/ExtraccionMinera%20Enunciado.html" title="previous page">Extracción minera</a>
-    <a class='right-next' id="next-link" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" title="next page">Asignación de tareas</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
