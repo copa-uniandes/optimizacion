@@ -1,32 +1,32 @@
-# ChocolaterÃ­a
+# Chocolatería
 
 ## Enunciado
 
-La chocolaterÃ­a Perla Caribe es un pequeÃ±o emprendimiento que fabrica y comercializa chocolates artesanales con cacao de distintas variedades comprado directamente a agricultores locales. Actualmente producen dos tipos de chocolates: chocolate oscuro y chocolate blanco. Una unidad de cualquier tipo de chocolate pesa 60g. Una unidad de chocolate oscuro se vende a 7,000 COP y una unidad de chocolate blanco se vende a 6,000 COP. Los costos asociados a materia prima, mano de obra y demÃ¡s costos operacionales equivalen a 3,500 COP por cada unidad de chocolate oscuro y 2,000 COP por cada unidad de chocolate blanco. 
+La chocolatería Perla Caribe es un pequeño emprendimiento que fabrica y comercializa chocolates artesanales con cacao de distintas variedades comprado directamente a agricultores locales. Actualmente producen dos tipos de chocolates: chocolate oscuro y chocolate blanco. Una unidad de cualquier tipo de chocolate pesa 60g. Una unidad de chocolate oscuro se vende a 7,000 COP y una unidad de chocolate blanco se vende a 6,000 COP. Los costos asociados a materia prima, mano de obra y demás costos operacionales equivalen a 3,500 COP por cada unidad de chocolate oscuro y 2,000 COP por cada unidad de chocolate blanco. 
 
-La producciÃ³n de estos chocolates requiere de dos ingredientes en comÃºn: manteca de cacao y azÃºcar. Por cada unidad de chocolate oscuro se requiere 6g de manteca de cacao y 21 g de azÃºcar. Por cada unidad de chocolate blanco se requiere 22g de manteca de cacao y 18g de az]Ãºcar. Cada semana, la chocolaterÃ­a Perla Caribe tiene disponible 12kg de manteca de cacao y 20kg de azÃºcar. La demanda de chocolate oscuro es ilimitada, pero a lo sumo le demandan 315 unidades de chocolate blanco por semana.
+La producción de estos chocolates requiere de dos ingredientes en común: manteca de cacao y azúcar. Por cada unidad de chocolate oscuro se requiere 6g de manteca de cacao y 21 g de azúcar. Por cada unidad de chocolate blanco se requiere 22g de manteca de cacao y 18g de az]úcar. Cada semana, la chocolatería Perla Caribe tiene disponible 12kg de manteca de cacao y 20kg de azúcar. La demanda de chocolate oscuro es ilimitada, pero a lo sumo le demandan 315 unidades de chocolate blanco por semana.
 
-La chocolaterÃ­a Perla Caribe quiere maximizar su utilidad (ingresos menos costos). Formule un modelo matemÃ¡tico que represente la situaciÃ³n y que les permita cumplir con su objetivo. 
+La chocolatería Perla Caribe quiere maximizar su utilidad (ingresos menos costos). Formule un modelo matemático que represente la situación y que les permita cumplir con su objetivo. 
 
-## FormulaciÃ³n
+## Formulación
 
-**a.** Escriba tÃ©rmino a tÃ©rmino la(s) variable(s) de decisiÃ³n que utilizarÃ¡ en el modelo. 
-
-
-**b.** Escriba tÃ©rmino a tÃ©rmino la(s) restricciÃ³n(es) lineal(es) y descrÃ­bala(s)
-
-**c.** Escriba tÃ©rmino a tÃ©rmino la funciÃ³n objetivo que maximiza la utilidad.
-
-## ImplementaciÃ³n
-
-**d.** Resuelva el modelo planteado utilizando la librerÃ­a de PuLP en Python. Â¿CuÃ¡l es la soluciÃ³n
-Ã³ptima del problema? 
+**a.** Escriba término a término la(s) variable(s) de decisión que utilizará en el modelo. 
 
 
+**b.** Escriba término a término la(s) restricción(es) lineal(es) y descríbala(s)
 
-## CrÃ©ditos
+**c.** Escriba término a término la función objetivo que maximiza la utilidad.
 
-Equipo Principios de OptimizaciÃ³n<br>
+## Implementación
+
+**d.** Resuelva el modelo planteado utilizando la librería de PuLP en Python. ¿Cuál es la solución
+óptima del problema? 
+
+
+
+## Créditos
+
+Equipo Principios de Optimización<br>
 Desarrollo: Alfaima Solano<br>
 Fecha: 30/09/2020
 
@@ -36,5 +36,5 @@ Fecha: 30/09/2020
 :titlesonly:
 
 
-../Soluciones/ChocolaterÃ­a
+..\Soluciones\Chocolatería
 ```

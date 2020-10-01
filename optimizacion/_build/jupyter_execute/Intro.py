@@ -1,28 +1,28 @@
-## Repositorio de Principios de OptimizaciÃ³n
+## Repositorio de Principios de Optimización
 
 <div style="text-align:justify">
-Bienvenidos al repositorio de prÃ¡cticas de formulaciÃ³n del curso IIND2103 Principios de OptimizaciÃ³n. El objetivo de este repositorio es el de acompaÃ±ar las clases del curso con ejercicios prÃ¡cticos que los estudiantes puedan revisar como material complementario. Para resolver los ejercicios, usaremos <i>Python</i> como lenguaje de programaciÃ³n y el paquete <i>PuLP</i> para los modelos de optimizaciÃ³n.
+Bienvenidos al repositorio de prácticas de formulación del curso IIND2103 Principios de Optimización. El objetivo de este repositorio es el de acompañar las clases del curso con ejercicios prácticos que los estudiantes puedan revisar como material complementario. Para resolver los ejercicios, usaremos <i>Python</i> como lenguaje de programación y el paquete <i>PuLP</i> para los modelos de optimización.
 <br>
 <br>
-En la parte derecha te encontrarÃ¡s con algunas secciones que corresponden a practicas de formulaciÃ³n. Cada secciÃ³n tiene una pestaÃ±a de enunciado y una pestaÃ±a de soluciÃ³n. La idea de esta divisiÃ³n es que puedas intentar desarrollar el ejercicio por tu cuenta, sin distracciones, y que luego puedas comparar tu desarrollo con nuestra soluciÃ³n. Los cÃ³digos que encuentres en este compilado, los puedes copiar y pegar en un script de <i>Python</i> y modificarlos con un ambiente de desarrollo como <i>Spyder</i>. 
+En la parte izquierda te encontrarás con algunas secciones que corresponden a practicas de formulación. Cada sección tiene una pestaña de enunciado y una pestaña de solución. La idea de esta división es que puedas intentar desarrollar el ejercicio por tu cuenta, sin distracciones, y que luego puedas comparar tu desarrollo con nuestra solución. Los códigos que encuentres en este compilado, los puedes copiar y pegar en un script de <i>Python</i> y modificarlos con un ambiente de desarrollo como <i>Spyder</i>. 
 <br>
 <br> 
-Las prÃ¡cticas estÃ¡n organizadas por temas, empezando desde las mÃ¡s sencillas e incrementando poco a poco el nivel de complejidad. Si no estÃ¡s seguro de cuÃ¡les son las prÃ¡cticas que puedes resolver hasta el momento puedes consultarle a un asistente o instructor del curso al respecto. 
+Las prácticas están organizadas por temas, empezando desde las más sencillas e incrementando poco a poco el nivel de complejidad. Si no estás seguro de cuáles son las prácticas que puedes resolver hasta el momento puedes consultarle a un asistente o instructor del curso al respecto. 
 <br>
 <br>
-Sin mÃ¡s, Â¡a optimizar!
+Sin más, ¡a optimizar!
 
 
 ```{toctree}
 :hidden:
 :titlesonly:
-:caption: PrÃ¡cticas de formulaciÃ³n
+:caption: Prácticas de formulación
 
-Enunciados/ChocolaterÃ­a Enunciado
-Enunciados/PlaneacionMenus Enunciado
-Enunciados/OptiJuice Enunciado
-Enunciados/Inventarios Enunciado
-Enunciados/ExtraccionMinera Enunciado
-Enunciados/AsignaciÃ³n Enunciado
-Enunciados/Transporte Enunciado
+Enunciados\Chocolatería Enunciado
+Enunciados\PlaneacionMenus Enunciado
+Enunciados\OptiJuice Enunciado
+Enunciados\Transporte Enunciado
+Enunciados\Inventarios Enunciado
+Enunciados\ExtraccionMinera Enunciado
+Enunciados\Asignación Enunciado
 ```

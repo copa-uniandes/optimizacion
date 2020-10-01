@@ -11,6 +11,10 @@
   - file: Enunciados\OptiJuice Enunciado
     sections:
       - file: Soluciones\OptiJuice
+  - file: Enunciados\Transporte Enunciado
+    sections:
+      - file: Soluciones\Transporte
+      - file: Soluciones\Transporte-vis
   - file: Enunciados\Inventarios Enunciado
     sections:
       - file: Soluciones\Inventarios
@@ -20,6 +24,3 @@
   - file: Enunciados\Asignación Enunciado
     sections:
       - file: Soluciones\Asignación
-  - file: Enunciados\Transporte Enunciado
-    sections:
-      - file: Soluciones\Transporte

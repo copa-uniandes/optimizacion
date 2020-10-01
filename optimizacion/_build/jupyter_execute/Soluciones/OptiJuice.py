@@ -1,22 +1,22 @@
-# ProducciÃ³n de jugos SoluciÃ³n
+# Producción de jugos Solución
 
 ## Enunciado
 
-OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo conjunto de jugos autÃ³ctonos ($K$). Los jugos son una mezcla de diferentes frutas tropicales ($R$) dentro de las que se encuentran la piÃ±a, la guayaba, el nÃ­spero y el zapote. Cada uno de los tipos de jugo se diferencia de los demÃ¡s en la cantidad de litros de zumo que tiene de las distintas frutas. Es por esto que, para garantizar la calidad de los jugos es necesario que el jugo del tipo $k \in K$ contenga entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i \in R$. Para la producciÃ³n de jugos, OptiJuice tiene disponibles $b_i$ litros de zumo de la fruta $i \in R$. La compaÃ±Ã­a espera una demanda mÃ­nima de $d_k$ litros y desea vender cada litro de jugo del tipo $k \in K$ a $p_k$ pesos. La informaciÃ³n mencionada se presenta en las Tablas 1 a 4. 
+OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo conjunto de jugos autóctonos ($K$). Los jugos son una mezcla de diferentes frutas tropicales ($R$) dentro de las que se encuentran la piña, la guayaba, el níspero y el zapote. Cada uno de los tipos de jugo se diferencia de los demás en la cantidad de litros de zumo que tiene de las distintas frutas. Es por esto que, para garantizar la calidad de los jugos es necesario que el jugo del tipo $k \in K$ contenga entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i \in R$. Para la producción de jugos, OptiJuice tiene disponibles $b_i$ litros de zumo de la fruta $i \in R$. La compañía espera una demanda mínima de $d_k$ litros y desea vender cada litro de jugo del tipo $k \in K$ a $p_k$ pesos. La información mencionada se presenta en las Tablas 1 a 4. 
 
 
-<p style="text-align: center;"><b>Tabla 1. MÃ­nimo porcentaje de las frutas en los jugos</b></p>
+<p style="text-align: center;"><b>Tabla 1. Mínimo porcentaje de las frutas en los jugos</b></p>
 
 <table class="egt">
     
   <tr>  
-    <th>MÃ­nimo porcentaje</th> 
+    <th>Mínimo porcentaje</th> 
     <th colspan="5";style="text-align:center">Frutas</th>
   </tr>
     
   <tr>
     <th style="text-align:center">Jugos</th>
-    <td style="text-align:center"><i>PiÃ±a (%)</i></td>
+    <td style="text-align:center"><i>Piña (%)</i></td>
     <td style="text-align:center"><i>Guayaba (%)</i></td>
     <td style="text-align:center"><i>Nispero (%)</i></td>
     <td style="text-align:center"><i>Zapote (%)</i></td>
@@ -39,7 +39,7 @@ OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo
   </tr>
     
   <tr>
-    <td style="text-align:left"><i>MaÃ±anero</i></td>
+    <td style="text-align:left"><i>Mañanero</i></td>
     <td style="text-align:center">7</td>
     <td style="text-align:center">31</td>
     <td style="text-align:center">28</td>
@@ -72,18 +72,18 @@ OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo
     
 </table>
 
-<p style="text-align: center;"><b>Tabla 2. MÃ¡ximo porcentaje de las frutas en los jugos</b></p>
+<p style="text-align: center;"><b>Tabla 2. Máximo porcentaje de las frutas en los jugos</b></p>
 
 <table class="egt">
     
   <tr>  
-    <th>MÃ¡ximo porcentaje</th> 
+    <th>Máximo porcentaje</th> 
     <th colspan="5";style="text-align:center">Frutas</th>
   </tr>
     
   <tr>
     <th style="text-align:center">Jugos</th>
-    <td style="text-align:center"><i>PiÃ±a (%)</i></td>
+    <td style="text-align:center"><i>Piña (%)</i></td>
     <td style="text-align:center"><i>Guayaba (%)</i></td>
     <td style="text-align:center"><i>Nispero (%)</i></td>
     <td style="text-align:center"><i>Zapote (%)</i></td>
@@ -106,7 +106,7 @@ OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo
   </tr>
     
   <tr>
-    <td style="text-align:left"><i>MaÃ±anero</i></td>
+    <td style="text-align:left"><i>Mañanero</i></td>
     <td style="text-align:center">81</td>
     <td style="text-align:center">61</td>
     <td style="text-align:center">28</td>
@@ -149,7 +149,7 @@ OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo
   </tr>
     
   <tr>
-    <td style="text-align:center"><i>PiÃ±a</i></td>
+    <td style="text-align:center"><i>Piña</i></td>
     <td style="text-align:center">4,318</td>
   </tr>
     
@@ -170,13 +170,13 @@ OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo
     
 </table>
 
-<p style="text-align: center;"><b>Tabla 4. Demanda mÃ­nima y precio de cada jugo</b></p>
+<p style="text-align: center;"><b>Tabla 4. Demanda mínima y precio de cada jugo</b></p>
 
 <table class="egt">
     
   <tr>  
     <th style="text-align:center">Jugos</th> 
-    <th style="text-align:center">Demanda mÃ­nima</th>
+    <th style="text-align:center">Demanda mínima</th>
     <th style="text-align:center">Precio</th>
   </tr>
     
@@ -193,7 +193,7 @@ OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo
   </tr>
     
   <tr>
-    <td style="text-align:center"><i>MaÃ±anero</i></td>
+    <td style="text-align:center"><i>Mañanero</i></td>
     <td style="text-align:center">1,865</td>
     <td style="text-align:center">6,000</td>
   </tr>
@@ -218,72 +218,72 @@ OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo
     
 </table>
 
-Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: Â¿CuÃ¡ntos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?
+Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: ¿Cuántos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?
 
-## FormulaciÃ³n
+## Formulación
 
-### Variables de DecisiÃ³n
+### Variables de Decisión
 
-**a.** Describa la(s) variable(s) de decisiÃ³n que utilizarÃ¡ en el modelo. 
+**a.** Describa la(s) variable(s) de decisión que utilizará en el modelo. 
 
 \begin{align*}
-x_{ki}: \text{cantidad (en litros) del zumo de la fruta $i\in R$ destinados a la producciÃ³n del jugo de tipo $k\in K$}
+x_{ki}: \text{cantidad (en litros) del zumo de la fruta $i\in R$ destinados a la producción del jugo de tipo $k\in K$}
 \end{align*}
 
 ### Restricciones
 
-**b.** Escriba la(s) restricciÃ³n(es) lineal(es) que describe(n) que el jugo del tipo $k\in K$ debe contener entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i\in R$. 
+**b.** Escriba la(s) restricción(es) lineal(es) que describe(n) que el jugo del tipo $k\in K$ debe contener entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i\in R$. 
 
 \begin{align*}
 x_{ki} &\ge l_{ki}\%\sum_{j\in R} x_{kj}, &&\forall k\in K,i\in R;\\
 x_{ki} &\le u_{ki}\%\sum_{j\in R} x_{kj}, &&\forall k\in K,i\in R.
 \end{align*}
 
-**c.** Escriba la(s) restricciÃ³n(es) que describe(n) que OptiJuice puede utilizar mÃ¡ximo $b_i$ litros de zumo de la fruta $i\in R$. 
+**c.** Escriba la(s) restricción(es) que describe(n) que OptiJuice puede utilizar máximo $b_i$ litros de zumo de la fruta $i\in R$. 
 
 \begin{align*}
 \sum_{k\in K} x_{ki} &\le b_i, &&\forall i\in R.
 \end{align*}
 
-**d.** Escriba la(s) restricciÃ³n(es) que describe(n) que OptiJuice desea cumplir con la demanda mÃ­nima de $d_k$ litros jugo del tipo $k\in K$. 
+**d.** Escriba la(s) restricción(es) que describe(n) que OptiJuice desea cumplir con la demanda mínima de $d_k$ litros jugo del tipo $k\in K$. 
 
 \begin{align*}
 \sum_{i\in R} x_{ki} &\ge d_k, &&\forall k\in K.
 \end{align*}
 
 ### Naturaleza de las Variables
-**e.** Escriba la(s) restricciÃ³n(es) que describe(n) matemÃ¡ticamente el tipo de variable(s) que estÃ¡ utilizando dentro del modelo. 
+**e.** Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo. 
 
 \begin{align*}
 x_{ki} & \ge 0, &&\forall k\in K,i\in R.
 \end{align*}
 
-### FunciÃ³n Objetivo
+### Función Objetivo
 
-**f.** Escriba la funciÃ³n objetivo que maximiza los ingresos totales.
+**f.** Escriba la función objetivo que maximiza los ingresos totales.
 
 $$
 \text{maximizar }  \sum_{k\in K}\sum_{i\in R}p_kx_{ki}
 $$
 
-## FormulaciÃ³n matemÃ¡tica
+## Formulación matemática
 
 **Conjuntos:**
 
-- $K$: Jugos autÃ³ctonos
+- $K$: Jugos autóctonos
 - $R$: Frutas tropicales
 
-**ParÃ¡metros:**
+**Parámetros:**
 
-- $l_{ki}$%: porcentaje mÃ­nimo de litros de zumo de la fruta $i\in R$ que tiene que tener el jugo del tipo $k\in K$
-- $u_{ki}$%: porcentaje mÃ¡ximo de litros de zumo de la fruta $i\in R$ que tiene que tener el jugo del tipo $k\in K$
+- $l_{ki}$%: porcentaje mínimo de litros de zumo de la fruta $i\in R$ que tiene que tener el jugo del tipo $k\in K$
+- $u_{ki}$%: porcentaje máximo de litros de zumo de la fruta $i\in R$ que tiene que tener el jugo del tipo $k\in K$
 - $b_i$: litros de zumo de la fruta $i\in R$ disponibles
-- $d_k$: demanda mÃ­nima (en litros) del jugo de tipo $k\in K$ 
+- $d_k$: demanda mínima (en litros) del jugo de tipo $k\in K$ 
 - $p_k$: precio de un litro del jugo de tipo $k\in K$
 
-**Variables de decisiÃ³n:**
+**Variables de decisión:**
 
-- $x_{ki}$: cantidad (en litros) del zumo de la fruta $i\in R$ destinados a la producciÃ³n del jugo de tipo $k\in K$
+- $x_{ki}$: cantidad (en litros) del zumo de la fruta $i\in R$ destinados a la producción del jugo de tipo $k\in K$
 
 **Modelo:**
 
@@ -300,12 +300,12 @@ x_{ki} &\le u_{ki}\%\sum_{j\in R} x_{kj}, &&\forall k\in K,i\in R; &(3)\\
 x_{ki} & \ge 0, &&\forall k\in K,i\in R. &(6)
 \end{align*}
 
-La funciÃ³n objetivo (1) maximiza los ingresos totales. Las restricciones (2) y (3) describen que el jugo del tipo $k\in K$ debe contener entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i\in R$. La restricciÃ³n (4) describe que OptiJuice puede utilizar mÃ¡ximo $b_i$ litros de zumo de la fruta $i\in R$. La restricciÃ³n (5) describe que OptiJuice desea cumplir con la demanda mÃ­nima de $d_k$ litros jugo del tipo $k\in K$. La restricciÃ³n (6) describe la naturaleza de la variable $x_{ki}$. 
+La función objetivo (1) maximiza los ingresos totales. Las restricciones (2) y (3) describen que el jugo del tipo $k\in K$ debe contener entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i\in R$. La restricción (4) describe que OptiJuice puede utilizar máximo $b_i$ litros de zumo de la fruta $i\in R$. La restricción (5) describe que OptiJuice desea cumplir con la demanda mínima de $d_k$ litros jugo del tipo $k\in K$. La restricción (6) describe la naturaleza de la variable $x_{ki}$. 
 
-## ImplementaciÃ³n
+## Implementación
 
-**g.** Resuelva el modelo planteado utilizando la librerÃ­a de PulP en Python. Â¿CuÃ¡l es la soluciÃ³n
-Ã³ptima del problema? 
+**g.** Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+óptima del problema? 
 
 #se importa la libreria de PulP
 import pulp as lp
@@ -316,85 +316,85 @@ import pulp as lp
 #Jugos
 K=["Saludable", 
    "Tropical", 
-   "MaÃ±anero", 
+   "Mañanero", 
    "Colombiano", 
    "Refrescante", 
    "Light"]
 
 #Frutas
-R=["PiÃ±a", 
+R=["Piña", 
    "Guayaba", 
-   "NÃ­spero", 
+   "Níspero", 
    "Zapote"]
 
 # Conjunto con todas las duplas (pozo,tiempo)
 K_x_R = [(jugo, fruta) for jugo in K for fruta in R] 
 
 #-----------------
-# ParÃ¡metros
+# Parámetros
 #-----------------
-l={#(jugo, fruta): porcentaje mÃ­nimo de litros de la fruta i en el jugo k
-   ("Saludable", "PiÃ±a"):0.32,
+l={#(jugo, fruta): porcentaje mínimo de litros de la fruta i en el jugo k
+   ("Saludable", "Piña"):0.32,
    ("Saludable", "Guayaba"):0.27, 
-   ("Saludable", "NÃ­spero"):0.12, 
+   ("Saludable", "Níspero"):0.12, 
    ("Saludable", "Zapote"):0.13, 
-   ("Tropical", "PiÃ±a"):0.18, 
+   ("Tropical", "Piña"):0.18, 
    ("Tropical", "Guayaba"):0.30, 
-   ("Tropical", "NÃ­spero"):0.31, 
+   ("Tropical", "Níspero"):0.31, 
    ("Tropical", "Zapote"):0.34, 
-   ("MaÃ±anero", "PiÃ±a"):0.07, 
-   ("MaÃ±anero", "Guayaba"):0.31, 
-   ("MaÃ±anero", "NÃ­spero"):0.28, 
-   ("MaÃ±anero", "Zapote"):0.22, 
-   ("Colombiano", "PiÃ±a"):0.11, 
+   ("Mañanero", "Piña"):0.07, 
+   ("Mañanero", "Guayaba"):0.31, 
+   ("Mañanero", "Níspero"):0.28, 
+   ("Mañanero", "Zapote"):0.22, 
+   ("Colombiano", "Piña"):0.11, 
    ("Colombiano", "Guayaba"):0.05,
-   ("Colombiano", "NÃ­spero"):0.15,
+   ("Colombiano", "Níspero"):0.15,
    ("Colombiano", "Zapote"):0.18,
-   ("Refrescante", "PiÃ±a"):0.46,
+   ("Refrescante", "Piña"):0.46,
    ("Refrescante", "Guayaba"):0.50,
-   ("Refrescante", "NÃ­spero"):0.02,
+   ("Refrescante", "Níspero"):0.02,
    ("Refrescante", "Zapote"):0.43,
-   ("Light", "PiÃ±a"):0.36,
+   ("Light", "Piña"):0.36,
    ("Light", "Guayaba"):0.19,
-   ("Light", "NÃ­spero"):0.14,
+   ("Light", "Níspero"):0.14,
    ("Light", "Zapote"):0.40} 
 
-u={#(jugo, fruta): porcentaje mÃ¡ximo de litros de la fruta i en el jugo k
-   ("Saludable", "PiÃ±a"):0.95,
+u={#(jugo, fruta): porcentaje máximo de litros de la fruta i en el jugo k
+   ("Saludable", "Piña"):0.95,
    ("Saludable", "Guayaba"):0.83, 
-   ("Saludable", "NÃ­spero"):0.66, 
+   ("Saludable", "Níspero"):0.66, 
    ("Saludable", "Zapote"):0.87, 
-   ("Tropical", "PiÃ±a"):0.92, 
+   ("Tropical", "Piña"):0.92, 
    ("Tropical", "Guayaba"):0.76, 
-   ("Tropical", "NÃ­spero"):0.69, 
+   ("Tropical", "Níspero"):0.69, 
    ("Tropical", "Zapote"):0.56, 
-   ("MaÃ±anero", "PiÃ±a"):0.81, 
-   ("MaÃ±anero", "Guayaba"):0.61, 
-   ("MaÃ±anero", "NÃ­spero"):0.28, 
-   ("MaÃ±anero", "Zapote"):0.94, 
-   ("Colombiano", "PiÃ±a"):0.82, 
+   ("Mañanero", "Piña"):0.81, 
+   ("Mañanero", "Guayaba"):0.61, 
+   ("Mañanero", "Níspero"):0.28, 
+   ("Mañanero", "Zapote"):0.94, 
+   ("Colombiano", "Piña"):0.82, 
    ("Colombiano", "Guayaba"):0.88,
-   ("Colombiano", "NÃ­spero"):0.63,
+   ("Colombiano", "Níspero"):0.63,
    ("Colombiano", "Zapote"):0.98,
-   ("Refrescante", "PiÃ±a"):0.60,
+   ("Refrescante", "Piña"):0.60,
    ("Refrescante", "Guayaba"):0.85,
-   ("Refrescante", "NÃ­spero"):0.73,
+   ("Refrescante", "Níspero"):0.73,
    ("Refrescante", "Zapote"):0.78,
-   ("Light", "PiÃ±a"):0.50,
+   ("Light", "Piña"):0.50,
    ("Light", "Guayaba"):0.55,
-   ("Light", "NÃ­spero"):0.82,
+   ("Light", "Níspero"):0.82,
    ("Light", "Zapote"):0.91} 
 
 b={#fruta: litros disponibles de la fruta i
-   "PiÃ±a":4318, 
+   "Piña":4318, 
    "Guayaba":1902, 
-   "NÃ­spero":2683, 
+   "Níspero":2683, 
    "Zapote":1111}  
 
 d={#jugo: demanda del jugo k
    "Saludable":1200, 
    "Tropical":925, 
-   "MaÃ±anero":1865, 
+   "Mañanero":1865, 
    "Colombiano":1035, 
    "Refrescante":2231, 
    "Light":1353} 
@@ -402,26 +402,26 @@ d={#jugo: demanda del jugo k
 p={#jugo: precio del jugo k
    "Saludable":9000, 
    "Tropical":5000, 
-   "MaÃ±anero":6000, 
+   "Mañanero":6000, 
    "Colombiano":10000, 
    "Refrescante":7000, 
    "Light":8000} 
 
 #-------------------------------------
-# CreaciÃ³n del objeto problema en PuLP
+# Creación del objeto problema en PuLP
 #-------------------------------------
 #Crea el problema para cargarlo con la instancia 
 problema=lp.LpProblem("OptiJuice",lp.LpMaximize)
 
 #-----------------------------
-# Variables de DecisiÃ³n
+# Variables de Decisión
 #-----------------------------
-x=lp.LpVariable.dicts('x',K_x_R,lowBound=0,cat='Continuous') #litros de la fruta i para producir el jugo k, aca se aÃ±ade de una vez la naturaleza de las variables
+x=lp.LpVariable.dicts('x',K_x_R,lowBound=0,cat='Continuous') #litros de la fruta i para producir el jugo k, aca se añade de una vez la naturaleza de las variables
 
 #-----------------------------
-# FunciÃ³n objetivo
+# Función objetivo
 #-----------------------------
-#Crea la expresiÃ³n de maximizaciÃ³n de ingresos
+#Crea la expresión de maximización de ingresos
 problema+=lp.lpSum(p[k]*x[k,i] for k in K for i in R), "Ingresos Totales"
 
 #-----------------------------
@@ -430,18 +430,18 @@ problema+=lp.lpSum(p[k]*x[k,i] for k in K for i in R), "Ingresos Totales"
 for k in K:
     for i in R:
         #x_ki >= l_ki*sum(j in R)x_kj forall k in K, i in R
-        problema+= x[k,i] >= l[k,i]*lp.lpSum(x[k,j] for j in R), "MÃ­nimo fruta "+i +" -jugo "+k  #se garantiza el mÃ­nimo de fruta i en el jugo k
+        problema+= x[k,i] >= l[k,i]*lp.lpSum(x[k,j] for j in R), "Mínimo fruta "+i +" -jugo "+k  #se garantiza el mínimo de fruta i en el jugo k
         
         #x_ki <= u_ki*sum(j in R)x_kj forall k in K, i in R
-        problema+= x[k,i] <= u[k,i]*lp.lpSum(x[k,j] for j in R), "MÃ¡ximo fruta "+i +" -jugo "+k  #se garantiza el mÃ¡ximo de fruta i en el jugo k
+        problema+= x[k,i] <= u[k,i]*lp.lpSum(x[k,j] for j in R), "Máximo fruta "+i +" -jugo "+k  #se garantiza el máximo de fruta i en el jugo k
 
 #sum(k in K)x_ki <= b_i forall i in R
 for i in R:
-    problema+= lp.lpSum(x[k,i] for k in K) <= b[i], "lÃ­mite fruta "+i #se garantiza que no se utilice mÃ¡s fruta de la que hay disponible
+    problema+= lp.lpSum(x[k,i] for k in K) <= b[i], "límite fruta "+i #se garantiza que no se utilice más fruta de la que hay disponible
 
 #sum(i in R)x_ki <= d_k forall k in K
 for k in K:
-    problema+= lp.lpSum(x[k,i] for i in R) <= d[k], "Demanda mÃ­nima jugo "+k #se satisface la demanda
+    problema+= lp.lpSum(x[k,i] for i in R) <= d[k], "Demanda mínima jugo "+k #se satisface la demanda
     
 #-----------------------------
 # Imprimir formato LP
@@ -461,22 +461,22 @@ problema.solve()
 #Imprimir estado final del optimizador
 print("Estado (optimizador):", lp.LpStatus[problema.status],end='\n')
 
-#Valor Ã³ptimo del portafolio de Petroco    
+#Valor óptimo de la función objetivo   
 print("\nOptiJuice - Ingresos totales = $", round(lp.value(problema.objective),2))
 print()
 
-#Imprimir variables de decisiÃ³n
-print("Variables de decisiÃ³n")
-print("              ","PiÃ±a", "Guayaba", "NÃ­spero", "Zapote",sep='\t')
+#Imprimir variables de decisión
+print("Variables de decisión")
+print("              ","Piña", "Guayaba", "Níspero", "Zapote",sep='\t')
 for k in K:
-    print(k,round(x[k,"PiÃ±a"].value(),2),round(x[k,"Guayaba"].value(),2),round(x[k,"NÃ­spero"].value(),2),round(x[k,"Zapote"].value(),2),sep='\t')
+    print(k,round(x[k,"Piña"].value(),2),round(x[k,"Guayaba"].value(),2),round(x[k,"Níspero"].value(),2),round(x[k,"Zapote"].value(),2),sep='\t')
 
 
 
 
 
 
-## CrÃ©ditos
+## Créditos
 
 Desarrollo: Juan Felipe Rengifo M<br>
 Fecha: 05/09/2020

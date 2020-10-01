@@ -1,11 +1,11 @@
-# Producci√≥n de cemento
+# ProducciÛn de cemento
 
 ## Enunciado
-Artos S.A. es una empresa dedicada a la producci√≥n de cemento que cuenta con una √∫nica planta en la ciudad de Barranquilla. La empresa debe determinar la cantidad de toneladas de cemento a producir en cada una de las siguientes 12 semanas. Los costos de producci√≥n, costos de almacenamiento, as√≠ como la demanda y el precio por tonelada de cemento, var√≠an semana a semana y se presentan en la siguiente tabla. 
+Artos S.A. es una empresa dedicada a la producciÛn de cemento que cuenta con una ˙nica planta en la ciudad de Barranquilla. La empresa debe determinar la cantidad de toneladas de cemento a producir en cada una de las siguientes 12 semanas. Los costos de producciÛn, costos de almacenamiento, asÌ como la demanda y el precio por tonelada de cemento, varÌan semana a semana y se presentan en la siguiente tabla. 
 
 
 
-|Semana|Costo de producci√≥n \[Miles de COP/ton\]|Costo de almacenamiento \[Miles de COP/ton\]|Demanda \[ton\]|Precio \[Miles de COP/ton\]|
+|Semana|Costo de producciÛn \[Miles de COP/ton\]|Costo de almacenamiento \[Miles de COP/ton\]|Demanda \[ton\]|Precio \[Miles de COP/ton\]|
 |:---:|:---:|:---:|:---:|:---:|
 |1|172.8|6.9|95,000|432.0|
 |2|178.7|7.2|99,750|440.6|
@@ -20,36 +20,36 @@ Artos S.A. es una empresa dedicada a la producci√≥n de cemento que cuenta con un
 |11|173.4|9.2|78,390|526.6|
 |12|168.8|8.4|94,068|537.1|
 
-Tenga en cuenta que, al inicio de la planeaci√≥n, se cuenta con 12,000 toneladas de cemento y que, por especificaciones de la maquinaria, no se puede producir m√°s de 110,000 toneladas ni menos de 85,000 toneladas en una semana cualquiera.
+Tenga en cuenta que, al inicio de la planeaciÛn, se cuenta con 12,000 toneladas de cemento y que, por especificaciones de la maquinaria, no se puede producir m·s de 110,000 toneladas ni menos de 85,000 toneladas en una semana cualquiera.
 
-## Formulaci√≥n 
-**1.** Formule el problema de optimizaci√≥n lineal con el fin de determinar la producci√≥n semanal de Artos y lograr la mayor utilidad posible. Para esto usted debe seguir los siguientes pasos: <br>
-
-
-
-**a.** Escriba lo(s) conjunto(s), par√°metro(s) y variable(s) de decisi√≥n que utilizar√° en el modelo.
+## FormulaciÛn 
+**1.** Formule el problema de optimizaciÛn lineal con el fin de determinar la producciÛn semanal de Artos y lograr la mayor utilidad posible. Para esto usted debe seguir los siguientes pasos: <br>
 
 
-**b.** Escriba la(s) restricci√≥n(es) lineal(es) que describe(n) que se deben respetar los l√≠mites de producci√≥n
+
+**a.** Escriba lo(s) conjunto(s), par·metro(s) y variable(s) de decisiÛn que utilizar· en el modelo.
 
 
-**c.** Escriba la(s) restricci√≥n(es) lineal(es) que contabiliza(n) el inventario de cada semana
+**b.** Escriba la(s) restricciÛn(es) lineal(es) que describe(n) que se deben respetar los lÌmites de producciÛn
 
 
-**d.** Escriba la(s) restricci√≥n(es) que describe(n) matem√°ticamente el tipo de variable(s) que est√° utilizando dentro del modelo
+**c.** Escriba la(s) restricciÛn(es) lineal(es) que contabiliza(n) el inventario de cada semana
 
 
-**e.** Escriba la funci√≥n objetivo
+**d.** Escriba la(s) restricciÛn(es) que describe(n) matem·ticamente el tipo de variable(s) que est· utilizando dentro del modelo
 
 
-## Implementaci√≥n
+**e.** Escriba la funciÛn objetivo
+
+
+## ImplementaciÛn
 **2.** Resuelva su modelo. Reporte sus resultados de una manera amigable
 
 
 
-## Cr√©ditos
+## CrÈditos
 
-Desarrollador: Camilo Aguilar Le√≥n<br>
+Desarrollador: Camilo Aguilar LeÛn<br>
 Fecha: 25/09/2020
 
 
@@ -58,5 +58,5 @@ Fecha: 25/09/2020
 :titlesonly:
 
 
-../Soluciones/Inventarios
+..\Soluciones\Inventarios
 ```

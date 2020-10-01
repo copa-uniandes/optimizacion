@@ -1,23 +1,23 @@
-# ProducciÃ³n de jugos
+# Producción de jugos
 
 ## Enunciado
 
-OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo conjunto de jugos autÃ³ctonos ($K$). Los jugos son una mezcla de diferentes frutas tropicales ($R$) dentro de las que se encuentran la piÃ±a, la guayaba, el nÃ­spero y el zapote. Cada uno de los tipos de jugo se diferencia de los demÃ¡s en la cantidad de litros de zumo que tiene de las distintas frutas. Es por esto que, para garantizar la calidad de los jugos es necesario que el jugo del tipo $k \in K$ contenga entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i \in R$. Para la producciÃ³n de jugos, OptiJuice tiene disponibles $b_i$ litros de zumo de la fruta $i \in R$. La compaÃ±Ã­a espera una demanda mÃ­nima de $d_k$ litros y desea vender cada litro de jugo del tipo $k \in K$ a $p_k$ pesos. La informaciÃ³n mencionada se presenta en las Tablas 1 a 4. 
+OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo conjunto de jugos autóctonos ($K$). Los jugos son una mezcla de diferentes frutas tropicales ($R$) dentro de las que se encuentran la piña, la guayaba, el níspero y el zapote. Cada uno de los tipos de jugo se diferencia de los demás en la cantidad de litros de zumo que tiene de las distintas frutas. Es por esto que, para garantizar la calidad de los jugos es necesario que el jugo del tipo $k \in K$ contenga entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i \in R$. Para la producción de jugos, OptiJuice tiene disponibles $b_i$ litros de zumo de la fruta $i \in R$. La compañía espera una demanda mínima de $d_k$ litros y desea vender cada litro de jugo del tipo $k \in K$ a $p_k$ pesos. La información mencionada se presenta en las Tablas 1 a 4. 
 
-Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: Â¿CuÃ¡ntos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?
+Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: ¿Cuántos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?
 
-<p style="text-align: center;"><b>Tabla 1. MÃ­nimo porcentaje de las frutas en los jugos</b></p>
+<p style="text-align: center;"><b>Tabla 1. Mínimo porcentaje de las frutas en los jugos</b></p>
 
 <table class="egt">
     
   <tr>  
-    <th>MÃ­nimo porcentaje</th> 
+    <th>Mínimo porcentaje</th> 
     <th colspan="5";style="text-align:center">Frutas</th>
   </tr>
     
   <tr>
     <th style="text-align:center">Jugos</th>
-    <td style="text-align:center"><i>PiÃ±a (%)</i></td>
+    <td style="text-align:center"><i>Piña (%)</i></td>
     <td style="text-align:center"><i>Guayaba (%)</i></td>
     <td style="text-align:center"><i>Nispero (%)</i></td>
     <td style="text-align:center"><i>Zapote (%)</i></td>
@@ -40,7 +40,7 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
   </tr>
     
   <tr>
-    <td style="text-align:left"><i>MaÃ±anero</i></td>
+    <td style="text-align:left"><i>Mañanero</i></td>
     <td style="text-align:center">7</td>
     <td style="text-align:center">31</td>
     <td style="text-align:center">28</td>
@@ -73,18 +73,18 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
     
 </table>
 
-<p style="text-align: center;"><b>Tabla 2. MÃ¡ximo porcentaje de las frutas en los jugos</b></p>
+<p style="text-align: center;"><b>Tabla 2. Máximo porcentaje de las frutas en los jugos</b></p>
 
 <table class="egt">
     
   <tr>  
-    <th>MÃ¡ximo porcentaje</th> 
+    <th>Máximo porcentaje</th> 
     <th colspan="5";style="text-align:center">Frutas</th>
   </tr>
     
   <tr>
     <th style="text-align:center">Jugos</th>
-    <td style="text-align:center"><i>PiÃ±a (%)</i></td>
+    <td style="text-align:center"><i>Piña (%)</i></td>
     <td style="text-align:center"><i>Guayaba (%)</i></td>
     <td style="text-align:center"><i>Nispero (%)</i></td>
     <td style="text-align:center"><i>Zapote (%)</i></td>
@@ -107,7 +107,7 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
   </tr>
     
   <tr>
-    <td style="text-align:left"><i>MaÃ±anero</i></td>
+    <td style="text-align:left"><i>Mañanero</i></td>
     <td style="text-align:center">81</td>
     <td style="text-align:center">61</td>
     <td style="text-align:center">28</td>
@@ -150,7 +150,7 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
   </tr>
     
   <tr>
-    <td style="text-align:center"><i>PiÃ±a</i></td>
+    <td style="text-align:center"><i>Piña</i></td>
     <td style="text-align:center">4,318</td>
   </tr>
     
@@ -171,13 +171,13 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
     
 </table>
 
-<p style="text-align: center;"><b>Tabla 4. Demanda mÃ­nima y precio de cada jugo</b></p>
+<p style="text-align: center;"><b>Tabla 4. Demanda mínima y precio de cada jugo</b></p>
 
 <table class="egt">
     
   <tr>  
     <th style="text-align:center">Jugos</th> 
-    <th style="text-align:center">Demanda mÃ­nima</th>
+    <th style="text-align:center">Demanda mínima</th>
     <th style="text-align:center">Precio</th>
   </tr>
     
@@ -194,7 +194,7 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
   </tr>
     
   <tr>
-    <td style="text-align:center"><i>MaÃ±anero</i></td>
+    <td style="text-align:center"><i>Mañanero</i></td>
     <td style="text-align:center">1,865</td>
     <td style="text-align:center">6,000</td>
   </tr>
@@ -219,39 +219,39 @@ Usted debe formular un programa lineal que le permita OptiJuice responder la sig
     
 </table>
 
-Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: Â¿CuÃ¡ntos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?
+Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: ¿Cuántos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?
 
-## FormulaciÃ³n
+## Formulación
 
-**a.** Describa la(s) variable(s) de decisiÃ³n que utilizarÃ¡ en el modelo. 
-
-
-
-**b.** Escriba la(s) restricciÃ³n(es) lineal(es) que describe(n) que el jugo del tipo $k\in K$ debe contener entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i\in R$. 
-
-
-**c.** Escriba la(s) restricciÃ³n(es) que describe(n) que OptiJuice puede utilizar mÃ¡ximo $b_i$ litros de zumo de la fruta $i\in R$. 
-
-
-**d.** Escriba la(s) restricciÃ³n(es) que describe(n) que OptiJuice desea cumplir con la demanda mÃ­nima de $d_k$ litros jugo del tipo $k\in K$. 
-
-
-**e.** Escriba la(s) restricciÃ³n(es) que describe(n) matemÃ¡ticamente el tipo de variable(s) que estÃ¡ utilizando dentro del modelo. 
-
-
-**f.** Escriba la funciÃ³n objetivo que maximiza los ingresos totales.
-
-
-## ImplementaciÃ³n
-
-**g.** Resuelva el modelo planteado utilizando la librerÃ­a de PulP en Python. Â¿CuÃ¡l es la soluciÃ³n
-Ã³ptima del problema? 
+**a.** Describa la(s) variable(s) de decisión que utilizará en el modelo. 
 
 
 
-## CrÃ©ditos
+**b.** Escriba la(s) restricción(es) lineal(es) que describe(n) que el jugo del tipo $k\in K$ debe contener entre un $l_{ki}$% y un $u_{ki}$% de litros de zumo de la fruta $i\in R$. 
 
-Equipo Principios de OptimizaciÃ³n<br>
+
+**c.** Escriba la(s) restricción(es) que describe(n) que OptiJuice puede utilizar máximo $b_i$ litros de zumo de la fruta $i\in R$. 
+
+
+**d.** Escriba la(s) restricción(es) que describe(n) que OptiJuice desea cumplir con la demanda mínima de $d_k$ litros jugo del tipo $k\in K$. 
+
+
+**e.** Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo. 
+
+
+**f.** Escriba la función objetivo que maximiza los ingresos totales.
+
+
+## Implementación
+
+**g.** Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+óptima del problema? 
+
+
+
+## Créditos
+
+Equipo Principios de Optimización<br>
 Instancias: Juan Felipe Rengifo M, Camilo Aguilar<br>
 Fecha: 05/09/2020
 
@@ -261,5 +261,5 @@ Fecha: 05/09/2020
 :titlesonly:
 
 
-../Soluciones/OptiJuice
+..\Soluciones\OptiJuice
 ```
