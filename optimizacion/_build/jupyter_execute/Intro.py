@@ -23,6 +23,6 @@ Enunciados\PlaneacionMenus Enunciado
 Enunciados\OptiJuice Enunciado
 Enunciados\Transporte Enunciado
 Enunciados\Inventarios Enunciado
-Enunciados\ExtraccionMinera Enunciado
 Enunciados\Asignación Enunciado
+Enunciados\ExtraccionMinera Enunciado
 ```
