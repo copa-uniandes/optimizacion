@@ -1,7 +1,10 @@
-- file: intro
+- file: Bienvenida
 
 - part: Prácticas de formulación
   chapters:
+  - file: Chocolatería Enunciado
+    sections:
+      - file: Chocolatería
   - file: PlaneacionMenus Enunciado
     sections:
       - file: PlaneacionMenus
