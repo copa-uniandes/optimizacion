@@ -2,7 +2,7 @@
 
 RpF es un proyecto piloto de desarrollo de páginas estáticas para el contenido de cursos del departamento de ingeniería industrial de la Universidad de los Andes, liderado por la instructora Alfaima Solano para el curso Principios de Optimización (IIND-2103).
 
-La idea es tener una página accesible por todos con escenarios de optimización que se prestan para la construcción de modelos de programación matemática lineales. Cada enunciado cuenta con una descripción del escenario y, para luego de que el estudiante haya intentado su propia implementación del modelo en _Python_, un modelo posible junto con su respectiva implementación haciendo uso de la librería _Pulp_.
+La idea es tener una página accesible por todos con escenarios de optimización que se prestan para la construcción de modelos de programación matemática lineal-entera. Cada enunciado cuenta con una descripción del escenario y, para luego de que el estudiante haya intentado su propia implementación del modelo en _Python_, un modelo posible junto con su respectiva implementación haciendo uso de la librería _Pulp_.
 
 Acceda a la página estática a través de este [enlace](https://alfaimasb.github.io/optimizacion/intro.html).
 
