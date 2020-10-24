@@ -1,312 +1,318 @@
-# Asignación de tareas Solución
+#!/usr/bin/env python
+# coding: utf-8
 
-## Enunciado
-El equipo de Principios de Optimización se encuentra realizando un rediseño estructural del curso. Dado el largo trabajo que este rediseño implica, los integrantes del equipo han definido diez responsabilidades que deben ser ejecutadas. Para esto, el equipo debe decidir cuál es la mejor asignación de responsabilidades a los diferentes integrantes del equipo para el periodo intersemestral. 
-<br>
-<br>
-Cada uno de los cinco miembros del equipo está en la capacidad de encargarse de cualquiera de estas diez responsabilidades, sin embargo, debido sus preferencias y habilidades, cada uno ha determinado el tiempo (en horas) que le tomará realizar cada una de las responsabilidades que le pueden ser asignadas. Además, cada uno de ellos cuenta con una disponibilidad horaria de acuerdo con su contrato y sus demás compromisos personales. La información descrita anteriormente se encuentra disponible en la Tabla 1. 
+# # Asignación de tareas Solución
 
-<p style="text-align: center;"><b>Tabla 1. Tiempos de realización y disponibilidad (en horas)</b></p>
+# ## Enunciado
+# El equipo de Principios de Optimización se encuentra realizando un rediseño estructural del curso. Dado el largo trabajo que este rediseño implica, los integrantes del equipo han definido diez responsabilidades que deben ser ejecutadas. Para esto, el equipo debe decidir cuál es la mejor asignación de responsabilidades a los diferentes integrantes del equipo para el periodo intersemestral. 
+# <br>
+# <br>
+# Cada uno de los cinco miembros del equipo está en la capacidad de encargarse de cualquiera de estas diez responsabilidades, sin embargo, debido sus preferencias y habilidades, cada uno ha determinado el tiempo (en horas) que le tomará realizar cada una de las responsabilidades que le pueden ser asignadas. Además, cada uno de ellos cuenta con una disponibilidad horaria de acuerdo con su contrato y sus demás compromisos personales. La información descrita anteriormente se encuentra disponible en la Tabla 1. 
 
-<table class="egt">
-    
-  <tr>  
-    <th></th> 
-    <th colspan="5";style="text-align:center">Integrantes</th>
-  </tr>
-    
-  <tr>
-    <th style="text-align:center">Responsabilidades</th>
-    <th style="text-align:center">1</th>
-    <th style="text-align:center">2</th>
-    <th style="text-align:center">3</th>
-    <th style="text-align:center">4</th>
-    <th style="text-align:center">5</th>
-  </tr>
+# <p style="text-align: center;"><b>Tabla 1. Tiempos de realización y disponibilidad (en horas)</b></p>
+# 
+# <table class="egt">
+#     
+#   <tr>  
+#     <th></th> 
+#     <th colspan="5";style="text-align:center">Integrantes</th>
+#   </tr>
+#     
+#   <tr>
+#     <th style="text-align:center">Responsabilidades</th>
+#     <th style="text-align:center">1</th>
+#     <th style="text-align:center">2</th>
+#     <th style="text-align:center">3</th>
+#     <th style="text-align:center">4</th>
+#     <th style="text-align:center">5</th>
+#   </tr>
+# 
+#   <tr>
+#     <td style="text-align:left"><i>Diseño parciales</i></td>
+#     <td style="text-align:center">25</td>
+#     <td style="text-align:center">75</td>
+#     <td style="text-align:center">125</td>
+#     <td style="text-align:center">200</td>
+#     <td style="text-align:center">250</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño tareas</i></td>
+#     <td style="text-align:center">75</td>
+#     <td style="text-align:center">25</td>
+#     <td style="text-align:center">225</td>
+#     <td style="text-align:center">250</td>
+#     <td style="text-align:center">200</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño y grabación videos magistrales</i></td>
+#     <td style="text-align:center">50</td>
+#     <td style="text-align:center">125</td>
+#     <td style="text-align:center">100</td>
+#     <td style="text-align:center">175</td>
+#     <td style="text-align:center">225</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño talleres magistrales</i></td>
+#     <td style="text-align:center">100</td>
+#     <td style="text-align:center">50</td>
+#     <td style="text-align:center">250</td>
+#     <td style="text-align:center">225</td>
+#     <td style="text-align:center">175</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño jupyter notebooks </i></td>
+#     <td style="text-align:center">125</td>
+#     <td style="text-align:center">150</td>
+#     <td style="text-align:center">25</td>
+#     <td style="text-align:center">150</td>
+#     <td style="text-align:center">50</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Grabación videos trabajo asistido</i></td>
+#     <td style="text-align:center">175</td>
+#     <td style="text-align:center">175</td>
+#     <td style="text-align:center">50</td>
+#     <td style="text-align:center">100</td>
+#     <td style="text-align:center">75</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Edición videos trabajo asistido </i></td>
+#     <td style="text-align:center">225</td>
+#     <td style="text-align:center">200</td>
+#     <td style="text-align:center">175</td>
+#     <td style="text-align:center">25</td>
+#     <td style="text-align:center">150</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño talleres trabajo asistido </i></td>
+#     <td style="text-align:center">150</td>
+#     <td style="text-align:center">100</td>
+#     <td style="text-align:center">75</td>
+#     <td style="text-align:center">125</td>
+#     <td style="text-align:center">100</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño y grabación videos PulP </i></td>
+#     <td style="text-align:center">200</td>
+#     <td style="text-align:center">225</td>
+#     <td style="text-align:center">150</td>
+#     <td style="text-align:center">75</td>
+#     <td style="text-align:center">50</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Edición videos PulP </i></td>
+#     <td style="text-align:center">250</td>
+#     <td style="text-align:center">250</td>
+#     <td style="text-align:center">200</td>
+#     <td style="text-align:center">50</td>
+#     <td style="text-align:center">125</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:right"><b>Disponibilidad </b></td>
+#     <td style="text-align:center">200</td>
+#     <td style="text-align:center">150</td>
+#     <td style="text-align:center">150</td>
+#     <td style="text-align:center">100</td>
+#     <td style="text-align:center">75</td>
+#   </tr>
+# 
+# 
+# </table>
 
-  <tr>
-    <td style="text-align:left"><i>Diseño parciales</i></td>
-    <td style="text-align:center">25</td>
-    <td style="text-align:center">75</td>
-    <td style="text-align:center">125</td>
-    <td style="text-align:center">200</td>
-    <td style="text-align:center">250</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño tareas</i></td>
-    <td style="text-align:center">75</td>
-    <td style="text-align:center">25</td>
-    <td style="text-align:center">225</td>
-    <td style="text-align:center">250</td>
-    <td style="text-align:center">200</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño y grabación videos magistrales</i></td>
-    <td style="text-align:center">50</td>
-    <td style="text-align:center">125</td>
-    <td style="text-align:center">100</td>
-    <td style="text-align:center">175</td>
-    <td style="text-align:center">225</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño talleres magistrales</i></td>
-    <td style="text-align:center">100</td>
-    <td style="text-align:center">50</td>
-    <td style="text-align:center">250</td>
-    <td style="text-align:center">225</td>
-    <td style="text-align:center">175</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño jupyter notebooks </i></td>
-    <td style="text-align:center">125</td>
-    <td style="text-align:center">150</td>
-    <td style="text-align:center">25</td>
-    <td style="text-align:center">150</td>
-    <td style="text-align:center">50</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Grabación videos trabajo asistido</i></td>
-    <td style="text-align:center">175</td>
-    <td style="text-align:center">175</td>
-    <td style="text-align:center">50</td>
-    <td style="text-align:center">100</td>
-    <td style="text-align:center">75</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Edición videos trabajo asistido </i></td>
-    <td style="text-align:center">225</td>
-    <td style="text-align:center">200</td>
-    <td style="text-align:center">175</td>
-    <td style="text-align:center">25</td>
-    <td style="text-align:center">150</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño talleres trabajo asistido </i></td>
-    <td style="text-align:center">150</td>
-    <td style="text-align:center">100</td>
-    <td style="text-align:center">75</td>
-    <td style="text-align:center">125</td>
-    <td style="text-align:center">100</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño y grabación videos PulP </i></td>
-    <td style="text-align:center">200</td>
-    <td style="text-align:center">225</td>
-    <td style="text-align:center">150</td>
-    <td style="text-align:center">75</td>
-    <td style="text-align:center">50</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Edición videos PulP </i></td>
-    <td style="text-align:center">250</td>
-    <td style="text-align:center">250</td>
-    <td style="text-align:center">200</td>
-    <td style="text-align:center">50</td>
-    <td style="text-align:center">125</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:right"><b>Disponibilidad </b></td>
-    <td style="text-align:center">200</td>
-    <td style="text-align:center">150</td>
-    <td style="text-align:center">150</td>
-    <td style="text-align:center">100</td>
-    <td style="text-align:center">75</td>
-  </tr>
+# <br>
+# Aparte de hacer un curso agradable y productivo para cada uno de los estudiantes, el equipo del curso se siente motivado y a gusto en el proceso de rediseño. Por lo anterior, cada uno ha definido el índice de preferencia asociado a realizar cada una de las responsabilidades. Este índice se encuentra en una escala de 1 a 10, correspondiendo 1 y 10 a la responsabilidad menos deseada y a la preferida, respectivamente. En la Tabla 2 se presenta esta información. 
 
+# <p style="text-align: center;"><b>Tabla 2. Preferencias</b></p>
+# 
+# <table class="egt">
+#     
+#   <tr>  
+#     <th></th> 
+#     <th colspan="5";style="text-align:center">Integrantes</th>
+#   </tr>
+#     
+#   <tr>
+#     <th style="text-align:center">Responsabilidades</th>
+#     <th style="text-align:center">1</th>
+#     <th style="text-align:center">2</th>
+#     <th style="text-align:center">3</th>
+#     <th style="text-align:center">4</th>
+#     <th style="text-align:center">5</th>
+#   </tr>
+# 
+#   <tr>
+#     <td style="text-align:left"><i>Diseño parciales</i></td>
+#     <td style="text-align:center">1</td>
+#     <td style="text-align:center">3</td>
+#     <td style="text-align:center">5</td>
+#     <td style="text-align:center">8</td>
+#     <td style="text-align:center">10</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño tareas</i></td>
+#     <td style="text-align:center">3</td>
+#     <td style="text-align:center">1</td>
+#     <td style="text-align:center">9</td>
+#     <td style="text-align:center">10</td>
+#     <td style="text-align:center">8</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño y grabación videos magistrales</i></td>
+#     <td style="text-align:center">2</td>
+#     <td style="text-align:center">5</td>
+#     <td style="text-align:center">4</td>
+#     <td style="text-align:center">7</td>
+#     <td style="text-align:center">9</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño talleres magistrales</i></td>
+#     <td style="text-align:center">4</td>
+#     <td style="text-align:center">2</td>
+#     <td style="text-align:center">10</td>
+#     <td style="text-align:center">9</td>
+#     <td style="text-align:center">7</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño jupyter notebooks </i></td>
+#     <td style="text-align:center">5</td>
+#     <td style="text-align:center">6</td>
+#     <td style="text-align:center">1</td>
+#     <td style="text-align:center">6</td>
+#     <td style="text-align:center">2</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Grabación videos trabajo asistido</i></td>
+#     <td style="text-align:center">7</td>
+#     <td style="text-align:center">7</td>
+#     <td style="text-align:center">2</td>
+#     <td style="text-align:center">4</td>
+#     <td style="text-align:center">3</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Edición videos trabajo asistido </i></td>
+#     <td style="text-align:center">9</td>
+#     <td style="text-align:center">8</td>
+#     <td style="text-align:center">7</td>
+#     <td style="text-align:center">1</td>
+#     <td style="text-align:center">6</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño talleres trabajo asistido </i></td>
+#     <td style="text-align:center">6</td>
+#     <td style="text-align:center">4</td>
+#     <td style="text-align:center">3</td>
+#     <td style="text-align:center">5</td>
+#     <td style="text-align:center">4</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Diseño y grabación videos PulP </i></td>
+#     <td style="text-align:center">8</td>
+#     <td style="text-align:center">9</td>
+#     <td style="text-align:center">6</td>
+#     <td style="text-align:center">3</td>
+#     <td style="text-align:center">1</td>
+#   </tr>
+#     
+#   <tr>
+#     <td style="text-align:left"><i>Edición videos PulP </i></td>
+#     <td style="text-align:center">10</td>
+#     <td style="text-align:center">10</td>
+#     <td style="text-align:center">8</td>
+#     <td style="text-align:center">2</td>
+#     <td style="text-align:center">5</td>
+#   </tr>
+# 
+# </table>
 
-</table>
+# <br>
+# El equipo de Principios de Optimización le ha pedido a usted que plantee y resuelva un modelo matemático que represente la situación. Para esto usted debe seguir los siguientes pasos: 
 
-<br>
-Aparte de hacer un curso agradable y productivo para cada uno de los estudiantes, el equipo del curso se siente motivado y a gusto en el proceso de rediseño. Por lo anterior, cada uno ha definido el índice de preferencia asociado a realizar cada una de las responsabilidades. Este índice se encuentra en una escala de 1 a 10, correspondiendo 1 y 10 a la responsabilidad menos deseada y a la preferida, respectivamente. En la Tabla 2 se presenta esta información. 
+# ## Formulación
+# **a.** Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.</p>
+# 
+# ### Conjuntos
+# - $I$: Integrantes 
+# - $R$: Responsabilidades 
+# 
+# ### Parámetros
+# - $t_{ir}$: tiempo que le tomaría al integrante $i\in I$ realizar la responsabilidad $r\in R$ 
+# - $d_{i}$: disponibilidad de tiempo del integrante $i\in I$ 
+# - $p_{ir}$: preferencia del integrante $i\in I$ por realizar la responsabilidad $r\in R$ 
+# 
+# ### Variables de decisión
+# - $x_{ir}: \begin{cases}1&\text{, si el integrante }i\in I\text{ realiza la responsabilidad }r\in R\text{;}\\ 0 & \text{, d.l.c.}  \end{cases}$ 
 
-<p style="text-align: center;"><b>Tabla 2. Preferencias</b></p>
+# ### Restricciones
+# **b.** Escriba la(s) restricción(es) lineal(es) que describe(n) que cada responsabilidad se debe asignar a una persona.  
+# 
+# $$\sum_{i\in I}x_{ir}=1, \forall r\in R;$$ 
 
-<table class="egt">
-    
-  <tr>  
-    <th></th> 
-    <th colspan="5";style="text-align:center">Integrantes</th>
-  </tr>
-    
-  <tr>
-    <th style="text-align:center">Responsabilidades</th>
-    <th style="text-align:center">1</th>
-    <th style="text-align:center">2</th>
-    <th style="text-align:center">3</th>
-    <th style="text-align:center">4</th>
-    <th style="text-align:center">5</th>
-  </tr>
+# **c.** Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la limitación de tiempo de cada integrante. 
+# 
+# $$\sum_{r\in R}t_{ir}\cdot x_{ir}\le d_i, \forall i\in I;$$ 
 
-  <tr>
-    <td style="text-align:left"><i>Diseño parciales</i></td>
-    <td style="text-align:center">1</td>
-    <td style="text-align:center">3</td>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">8</td>
-    <td style="text-align:center">10</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño tareas</i></td>
-    <td style="text-align:center">3</td>
-    <td style="text-align:center">1</td>
-    <td style="text-align:center">9</td>
-    <td style="text-align:center">10</td>
-    <td style="text-align:center">8</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño y grabación videos magistrales</i></td>
-    <td style="text-align:center">2</td>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">4</td>
-    <td style="text-align:center">7</td>
-    <td style="text-align:center">9</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño talleres magistrales</i></td>
-    <td style="text-align:center">4</td>
-    <td style="text-align:center">2</td>
-    <td style="text-align:center">10</td>
-    <td style="text-align:center">9</td>
-    <td style="text-align:center">7</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño jupyter notebooks </i></td>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">6</td>
-    <td style="text-align:center">1</td>
-    <td style="text-align:center">6</td>
-    <td style="text-align:center">2</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Grabación videos trabajo asistido</i></td>
-    <td style="text-align:center">7</td>
-    <td style="text-align:center">7</td>
-    <td style="text-align:center">2</td>
-    <td style="text-align:center">4</td>
-    <td style="text-align:center">3</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Edición videos trabajo asistido </i></td>
-    <td style="text-align:center">9</td>
-    <td style="text-align:center">8</td>
-    <td style="text-align:center">7</td>
-    <td style="text-align:center">1</td>
-    <td style="text-align:center">6</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño talleres trabajo asistido </i></td>
-    <td style="text-align:center">6</td>
-    <td style="text-align:center">4</td>
-    <td style="text-align:center">3</td>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">4</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Diseño y grabación videos PulP </i></td>
-    <td style="text-align:center">8</td>
-    <td style="text-align:center">9</td>
-    <td style="text-align:center">6</td>
-    <td style="text-align:center">3</td>
-    <td style="text-align:center">1</td>
-  </tr>
-    
-  <tr>
-    <td style="text-align:left"><i>Edición videos PulP </i></td>
-    <td style="text-align:center">10</td>
-    <td style="text-align:center">10</td>
-    <td style="text-align:center">8</td>
-    <td style="text-align:center">2</td>
-    <td style="text-align:center">5</td>
-  </tr>
+# ### Naturaleza de las variables
+# **d.** Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo. 
+# 
+# $$x_{ir}\in\{0,1\},\forall i\in I, r\in R.$$
+#  
 
-</table>
+# ### Función Objetivo
+# **e.** Escriba la función objetivo. 
+# 
+# $$\text{maximizar}  \sum_{i\in I}\sum_{r\in R}p_{ir}\cdot x_{ir}$$
+# 
 
-<br>
-El equipo de Principios de Optimización le ha pedido a usted que plantee y resuelva un modelo matemático que represente la situación. Para esto usted debe seguir los siguientes pasos: 
+# ## Formulación matemática completa
 
-## Formulación
-**a.** Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.</p>
+# **Conjuntos:**
+# - $I$: Integrantes 
+# - $R$: Responsabilidades 
+# 
+# **Parámetros:**
+# - $t_{ir}$: tiempo que le tomaría al integrante $i\in I$ realizar la responsabilidad $r\in R$ 
+# - $d_{i}$: disponibilidad de tiempo del integrante $i\in I$ 
+# - $p_{ir}$: preferencia del integrante $i\in I$ por realizar la responsabilidad $r\in R$ 
+# 
+# **Variables de decisión:**
+# - $x_{ir}: \begin{cases}1&\text{, si el integrante }i\in I\text{ realiza la responsabilidad }r\in R\text{;}\\ 0 & \text{, d.l.c.}  \end{cases}$
+# 
+# **Modelo:**
+# 
+# $$\text{maximizar}  \sum_{i\in I}\sum_{r\in R}p_{ir}\cdot x_{ir}$$
+# 
+# Sujeto a,
+# \begin{align*}
+# \sum_{i\in I}x_{ir}&=1, &&\forall r\in R; &(2)\\
+# \sum_{r\in R}t_{ir}x_{ir} &\le d_i, &&\forall i\in I; &(3)\\
+# x_{ir}&\in\{0,1\},&&\forall i\in I, r\in R. &(4)
+# \end{align*}
 
-### Conjuntos
-- $I$: Integrantes 
-- $R$: Responsabilidades 
+# La función objetivo (1) maximiza la satisfacción total. La restricción (2) describe que cada responsabilidad se debe asignar a una persona. La restricción (3) describe que se debe respetar la limitación de tiempo de cada integrante. La restricción (4) describe la naturaleza de la variable $x_{ir}$. 
 
-### Parámetros
-- $t_{ir}$: tiempo que le tomaría al integrante $i\in I$ realizar la responsabilidad $r\in R$ 
-- $d_{i}$: disponibilidad de tiempo del integrante $i\in I$ 
-- $p_{ir}$: preferencia del integrante $i\in I$ por realizar la responsabilidad $r\in R$ 
+# ## Implementación
+# **f.** Resuelva el modelo planteado utilizando la librería de PulP en Python. Reporte sus resultados de una manera amigable.
 
-### Variables de decisión
-- $x_{ir}: \begin{cases}1&\text{, si el integrante }i\in I\text{ realiza la responsabilidad }r\in R\text{;}\\ 0 & \text{, d.l.c.}  \end{cases}$ 
+# In[1]:
 
-### Restricciones
-**b.** Escriba la(s) restricción(es) lineal(es) que describe(n) que cada responsabilidad se debe asignar a una persona.  
-
-$$\sum_{i\in I}x_{ir}=1, \forall r\in R;$$ 
-
-**c.** Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la limitación de tiempo de cada integrante. 
-
-$$\sum_{r\in R}t_{ir}\cdot x_{ir}\le d_i, \forall i\in I;$$ 
-
-### Naturaleza de las variables
-**d.** Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo. 
-
-$$x_{ir}\in\{0,1\},\forall i\in I, r\in R.$$
- 
-
-### Función Objetivo
-**e.** Escriba la función objetivo. 
-
-$$\text{maximizar}  \sum_{i\in I}\sum_{r\in R}p_{ir}\cdot x_{ir}$$
-
-
-## Formulación matemática completa
-
-**Conjuntos:**
-- $I$: Integrantes 
-- $R$: Responsabilidades 
-
-**Parámetros:**
-- $t_{ir}$: tiempo que le tomaría al integrante $i\in I$ realizar la responsabilidad $r\in R$ 
-- $d_{i}$: disponibilidad de tiempo del integrante $i\in I$ 
-- $p_{ir}$: preferencia del integrante $i\in I$ por realizar la responsabilidad $r\in R$ 
-
-**Variables de decisión:**
-- $x_{ir}: \begin{cases}1&\text{, si el integrante }i\in I\text{ realiza la responsabilidad }r\in R\text{;}\\ 0 & \text{, d.l.c.}  \end{cases}$
-
-**Modelo:**
-
-$$\text{maximizar}  \sum_{i\in I}\sum_{r\in R}p_{ir}\cdot x_{ir}$$
-
-Sujeto a,
-\begin{align*}
-\sum_{i\in I}x_{ir}&=1, &&\forall r\in R; &(2)\\
-\sum_{r\in R}t_{ir}x_{ir} &\le d_i, &&\forall i\in I; &(3)\\
-x_{ir}&\in\{0,1\},&&\forall i\in I, r\in R. &(4)
-\end{align*}
-
-La función objetivo (1) maximiza la satisfacción total. La restricción (2) describe que cada responsabilidad se debe asignar a una persona. La restricción (3) describe que se debe respetar la limitación de tiempo de cada integrante. La restricción (4) describe la naturaleza de la variable $x_{ir}$. 
-
-## Implementación
-**f.** Resuelva el modelo planteado utilizando la librería de PulP en Python. Reporte sus resultados de una manera amigable.
 
 #se importa la libreria de PulP
 import pulp as lp
@@ -462,7 +468,7 @@ for i in range(1,5):
         print(xSol[i][j])
 
 
-## Créditos
-
-Desarrollo: Juan Felipe Rengifo M<br>
-Fecha: 20/09/2020
+# ## Créditos
+# 
+# Desarrollo: Juan Felipe Rengifo M<br>
+# Fecha: 20/09/2020
