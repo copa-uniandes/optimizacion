@@ -16,7 +16,7 @@ En su computador debe tener un ambiente virtual de _Python_ con los siguientes p
 
  * Jupyter Book ([Proyect Home](https://jupyterbook.org/intro.html)) ([PyPI Install](https://pypi.org/project/jupyter-book/))
  * Git ([Proyect Home](https://git-scm.com/)) ([Conda Install](https://anaconda.org/anaconda/git))
- * ghp-import ([Conda Install)](https://anaconda.org/conda-forge/ghp-import))
+ * ghp-import ([Conda Install](https://anaconda.org/conda-forge/ghp-import))
 
 Recomendamos también usar _GitHub Desktop_ para hacer el manejo de versiones de su _Fork_.
 
