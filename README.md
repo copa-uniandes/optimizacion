@@ -2,7 +2,7 @@
 
 RpF es un proyecto piloto de desarrollo de páginas estáticas para el contenido de cursos del departamento de ingeniería industrial de la Universidad de los Andes, liderado por la instructora Alfaima Solano para el curso Principios de Optimización (IIND-2103).
 
-La idea es tener una página accesible por todos con escenarios de optimización que se prestan para la construcción de modelos de programación matemática lineal-entera. Cada enunciado cuenta con una descripción del escenario y, para luego de que el estudiante haya intentado su propia implementación del modelo en _Python_, un modelo posible junto con su respectiva implementación haciendo uso de la librería _Pulp_.
+La idea es tener una página accesible por todos con escenarios de optimización que se prestan para la construcción de modelos de programación matemática lineal-entera. Cada enunciado cuenta con una descripción del escenario y, para luego de que el estudiante haya intentado su propia implementación del modelo en _Python_, un modelo posible junto con su respectiva implementación haciendo uso de la librería _PuLP_.
 
 Acceda a la página estática a través de este [enlace](https://alfaimasb.github.io/optimizacion/intro.html).
 
@@ -14,9 +14,9 @@ Si gustaría contribuir al proyecto, realice un _Fork_ y haga sus cambios sugeri
 
 En su computador debe tener un ambiente virtual de _Python_ con los siguientes paquetes y sus dependencias. Recomendamos _Python 3.7_ con _Miniconda_ o _pipenv_. Si su sistema operativo es _Windows_, siga las instrucciones en este [enlace](https://jupyterbook.org/advanced/advanced.html?highlight=windows#working-on-windows) para trabajar con _Jupyter Book_.
 
- * Jupyter Book [(Proyect Home)](https://jupyterbook.org/intro.html) [(PyPI Install)](https://pypi.org/project/jupyter-book/)
- * Git [(Proyect Home)](https://git-scm.com/) [(Conda Install)](https://anaconda.org/anaconda/git)
- * ghp-import [(Conda install)](https://anaconda.org/conda-forge/ghp-import)
+ * Jupyter Book ([Proyect Home](https://jupyterbook.org/intro.html)) ([PyPI Install](https://pypi.org/project/jupyter-book/))
+ * Git ([Proyect Home](https://git-scm.com/)) ([Conda Install](https://anaconda.org/anaconda/git))
+ * ghp-import ([Conda Install)](https://anaconda.org/conda-forge/ghp-import))
 
 Recomendamos también usar _GitHub Desktop_ para hacer el manejo de versiones de su _Fork_.
 
@@ -33,3 +33,12 @@ Recomendamos también usar _GitHub Desktop_ para hacer el manejo de versiones de
  * Ahora desde esta página del proyecto, realice los _pull request_ de su _Fork_ para las ramas 'master' y 'gp-pages'. Comente en buen detalle y de forma concisa sus cambios.
 
 Algún dueño del proyecto evaluará su _PR_ y, según vea apropiado, aceptará, rechazará o sugerirá cambios.
+
+## Enlaces
+ * [Universidad de los Andes](https://uniandes.edu.co/)
+ * [Facultad de Ingeniería](https://ingenieria.uniandes.edu.co/)
+ * [Departamento de Ingeniería Industrial](https://industrial.uniandes.edu.co/)
+
+## Disclaimer
+
+Este proyecto está en sus primeras etapas de desarrollo y, por lo tanto, puede tener errores o inconsistencias. Apreciamos cualquier aporte que puedan hacer para mejorar el contenido.
