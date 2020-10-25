@@ -30,11 +30,15 @@ jobs:
         pip install ghp-import
         PATH="${PATH}:${HOME}/.local/bin"
 
+    # Print Working Directory
+    - name: pwd
+      run: |
+        pwd
+
     # Build the book
     - name: Build the book
       run: |
-        pwd
-        jupyter-book build ./optimizacion
+        jupyter-book build .
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
