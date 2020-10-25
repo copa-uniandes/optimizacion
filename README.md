@@ -14,8 +14,8 @@ Si gustaría contribuir al proyecto, realice un _Fork_ y haga sus cambios sugeri
 
 En su computador debe tener un ambiente virtual de _Python_ con los siguientes paquetes y sus dependencias. Recomendamos _Python 3.7_ con _Miniconda_ o _pipenv_. Si su sistema operativo es _Windows_, siga las instrucciones en este [enlace](https://jupyterbook.org/advanced/advanced.html?highlight=windows#working-on-windows) para trabajar con _Jupyter Book_.
 
- * Jupyter Book ([Proyect Home](https://jupyterbook.org/intro.html)) ([PyPI Install](https://pypi.org/project/jupyter-book/))
- * Git ([Proyect Home](https://git-scm.com/)) ([Conda Install](https://anaconda.org/anaconda/git))
+ * Jupyter Book ([Proyecto](https://jupyterbook.org/intro.html)) (Sin paquete de Conda) ([PyPI](https://pypi.org/project/jupyter-book/))
+ * Git ([Proyecto](https://git-scm.com/)) ([Conda](https://anaconda.org/anaconda/git)) (Sin paquete de PyPI)
 
 Recomendamos también usar _GitHub Desktop_ para hacer el manejo de versiones de su _Fork_.
 
