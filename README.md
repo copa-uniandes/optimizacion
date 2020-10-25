@@ -28,8 +28,8 @@ Recomendamos también usar _GitHub Desktop_ para hacer el manejo de versiones de
  * Verifique que no se haya roto ningún aspecto de la página y que se vean reflejado sus cambios.
  * Si hay errores o tiene cambios pendientes, realice sus cambios y vuelva a construir la página para validarlos.
  * Haga _commit_ y _push_ de sus cambios a SU repositorio.
- * Tenga en cuenta que al hacer un _Fork_ está también creando una página de 'GitHub Pages' que se actualizará automáticamente según el contenido actualizado de la rama 'master'.
- * Ahora, desde esta página del proyecto, realice los _pull request_ de su _Fork_ para la rama 'master' desde la rama master de SU _Fork_. Comente en buen detalle y de forma concisa sus cambios.
+ * Tenga en cuenta que al hacer un _Fork_ está también creando una página de 'GitHub Pages' que se actualizará automáticamente según el contenido actualizado de su rama 'master'.
+ * Ahora, desde el hogar del proyecto en GitHub, realice los _pull request_ de su _Fork_ para la rama 'master' desde la rama 'master' de SU _Fork_. Comente en buen detalle y de forma concisa sus cambios.
 
 Algún dueño del proyecto evaluará su _PR_ y, según vea apropiado, aceptará, rechazará o sugerirá cambios.
 
