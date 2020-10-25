@@ -1,4 +1,4 @@
-## Repositorio de Principios de Optimización 
+# Repositorio de Principios de Optimización 
 
 Bienvenidos al repositorio de prácticas de formulación del curso IIND2103 Principios de Optimización. El objetivo de este repositorio es el de acompañar las clases del curso con ejercicios prácticos que los estudiantes puedan revisar como material complementario. Para resolver los ejercicios, usaremos _Python_ como lenguaje de programación y el paquete _PuLP_ para los modelos de optimización.
 
