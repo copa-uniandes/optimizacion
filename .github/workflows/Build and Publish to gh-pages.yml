@@ -25,7 +25,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        sudo apt-get install python3-pip
+        pip install git+git://github.com/executablebookproject/cli.git#egg=master
+        pip install ghp-import
+        PATH="${PATH}:${HOME}/.local/bin"
 
     # Build the book
     - name: Build the book
