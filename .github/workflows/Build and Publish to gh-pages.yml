@@ -30,11 +30,6 @@ jobs:
         pip install ghp-import
         PATH="${PATH}:${HOME}/.local/bin"
 
-    # Print Working Directory
-    - name: pwd
-      run: |
-        pwd
-
     # Build the book
     - name: Build the book
       run: |
