@@ -1,25 +1,25 @@
 - file: Intro.md
 - part: Prácticas de formulación
   chapters:
-  - file: Enunciados\Chocolatería Enunciado.ipynb
+  - file: Enunciados/Chocolatería Enunciado.ipynb
     sections:
-      - file: Soluciones\Chocolatería.ipynb
-  - file: Enunciados\PlaneacionMenus Enunciado.ipynb
+      - file: Soluciones/Chocolatería.ipynb
+  - file: Enunciados/PlaneacionMenus Enunciado.ipynb
     sections:
-      - file: Soluciones\PlaneacionMenus.ipynb
-  - file: Enunciados\OptiJuice Enunciado.ipynb
+      - file: Soluciones/PlaneacionMenus.ipynb
+  - file: Enunciados/OptiJuice Enunciado.ipynb
     sections:
-      - file: Soluciones\OptiJuice.ipynb
-  - file: Enunciados\Transporte Enunciado.ipynb
+      - file: Soluciones/OptiJuice.ipynb
+  - file: Enunciados/Transporte Enunciado.ipynb
     sections:
-      - file: Soluciones\Transporte.ipynb
-      - file: Soluciones\Transporte-vis.ipynb
-  - file: Enunciados\Inventarios Enunciado.ipynb
+      - file: Soluciones/Transporte.ipynb
+      - file: Soluciones/Transporte-vis.ipynb
+  - file: Enunciados/Inventarios Enunciado.ipynb
     sections:
-      - file: Soluciones\Inventarios.ipynb
-  - file: Enunciados\Asignación Enunciado.ipynb
+      - file: Soluciones/Inventarios.ipynb
+  - file: Enunciados/Asignación Enunciado.ipynb
     sections:
-      - file: Soluciones\Asignación.ipynb
-  - file: Enunciados\ExtraccionMinera Enunciado.ipynb
+      - file: Soluciones/Asignación.ipynb
+  - file: Enunciados/ExtraccionMinera Enunciado.ipynb
     sections:
-      - file: Soluciones\ExtraccionMinera.ipynb
+      - file: Soluciones/ExtraccionMinera.ipynb
