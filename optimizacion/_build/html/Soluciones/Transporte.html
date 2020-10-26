@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transporte de productos lácteos Solución &#8212; Repositorio Principios de Optimización</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transporte de productos lácteos Visualización" href="Transporte-vis.html" />
+    <link rel="prev" title="Transporte de productos lácteos" href="../Enunciados/Transporte Enunciado.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo-uniandes.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Chocolatería Enunciado.html">
+   Chocolatería
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/PlaneacionMenus Enunciado.html">
+   Planeación de menús
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/OptiJuice Enunciado.html">
+   Producción de jugos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../Enunciados/Transporte Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Transporte de productos lácteos Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Transporte-vis.html">
+     Transporte de productos lácteos Visualización
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Inventarios Enunciado.html">
+   Producción de cemento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/Asignación Enunciado.html">
+   Asignación de tareas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Enunciados/ExtraccionMinera Enunciado.html">
+   Extracción minera
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Soluciones/Transporte.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Soluciones/Transporte.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion">
+   Formulación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conjuntos">
+     Conjuntos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametros">
+     Parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-de-decision">
+     Variables de decisión
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restricciones">
+     Restricciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcion-objetivo">
+     Función Objetivo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion-matematica-completa">
+   Formulación matemática completa
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="transporte-de-productos-lacteos-solucion">
+<h1>Transporte de productos lácteos Solución<a class="headerlink" href="#transporte-de-productos-lacteos-solucion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
+<p>La Lechera Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1,500, 1,200, 1,400, y 1,000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor.</p>
+<p style="text-align: center;"><b>Tabla 1. Costos de distribución</b></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:right head"><p><strong>Dist. 1</strong></p></th>
+<th class="text-align:right head"><p>Dist. 2</p></th>
+<th class="text-align:right head"><p>Dist. 3</p></th>
+<th class="text-align:right head"><p>Dist. 4</p></th>
+<th class="text-align:right head"><p>Dist. 5</p></th>
+<th class="text-align:right head"><p>Dist. 6</p></th>
+<th class="text-align:right head"><p>Dist. 7</p></th>
+<th class="text-align:right head"><p>Dist. 8</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>Planta 1</strong></p></td>
+<td class="text-align:right"><p>650</p></td>
+<td class="text-align:right"><p>125</p></td>
+<td class="text-align:right"><p>1200</p></td>
+<td class="text-align:right"><p>340</p></td>
+<td class="text-align:right"><p>150</p></td>
+<td class="text-align:right"><p>260</p></td>
+<td class="text-align:right"><p>350</p></td>
+<td class="text-align:right"><p>800</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Planta 2</strong></p></td>
+<td class="text-align:right"><p>250</p></td>
+<td class="text-align:right"><p>200</p></td>
+<td class="text-align:right"><p>250</p></td>
+<td class="text-align:right"><p>600</p></td>
+<td class="text-align:right"><p>150</p></td>
+<td class="text-align:right"><p>950</p></td>
+<td class="text-align:right"><p>1050</p></td>
+<td class="text-align:right"><p>1000</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>Planta 3</strong></p></td>
+<td class="text-align:right"><p>600</p></td>
+<td class="text-align:right"><p>350</p></td>
+<td class="text-align:right"><p>400</p></td>
+<td class="text-align:right"><p>260</p></td>
+<td class="text-align:right"><p>150</p></td>
+<td class="text-align:right"><p>300</p></td>
+<td class="text-align:right"><p>450</p></td>
+<td class="text-align:right"><p>600</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Planta 4</strong></p></td>
+<td class="text-align:right"><p>450</p></td>
+<td class="text-align:right"><p>800</p></td>
+<td class="text-align:right"><p>650</p></td>
+<td class="text-align:right"><p>250</p></td>
+<td class="text-align:right"><p>340</p></td>
+<td class="text-align:right"><p>700</p></td>
+<td class="text-align:right"><p>600</p></td>
+<td class="text-align:right"><p>620</p></td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:justify">
+Formule un modelo general de optimización lineal que le permita a La Lechera Ramírez satisfacer la demanda de sus clientes, al menor costo posible. Para esto usted debe seguir los siguientes pasos: </div>
+<div class="section" id="formulacion">
+<h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
+<p><strong>1.</strong> Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.</p>
+<div class="section" id="conjuntos">
+<h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span>: Plantas</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span>: Distribuidores</p></li>
+</ul>
+</div>
+<div class="section" id="parametros">
+<h3>Parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(b_i\)</span>: oferta de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t_j\)</span>: demanda de leche del distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c_{ij}\)</span>: costo de envío de un litro de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="variables-de-decision">
+<h3>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{ij}\)</span>: cantidad (en litros) de leche que van de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="restricciones">
+<h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
+<p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a6a6720f-67ca-49c5-885e-67f328bbd218">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a6a6720f-67ca-49c5-885e-67f328bbd218" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
+\end{align}\]</div>
+<p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-53a941b6-e93b-483d-8ab2-75b94235f29f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-53a941b6-e93b-483d-8ab2-75b94235f29f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
+\end{align}\]</div>
+<p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0c27154c-e6ef-4517-a1c5-10adb368f885">
+<span class="eqno">(3)<a class="headerlink" href="#equation-0c27154c-e6ef-4517-a1c5-10adb368f885" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
+\end{align}\]</div>
+</div>
+<div class="section" id="funcion-objetivo">
+<h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
+<p><strong>5.</strong> Escriba la función objetivo.</p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in P}\sum_{j\in D}x_{ij}c_{ij}
+\]</div>
+</div>
+</div>
+<div class="section" id="formulacion-matematica-completa">
+<h2>Formulación matemática completa<a class="headerlink" href="#formulacion-matematica-completa" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conjuntos:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span>: Plantas</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span>: Distribuidores</p></li>
+</ul>
+<p><strong>Parámetros:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(b_i\)</span>: oferta de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t_j\)</span>: demanda de leche del distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c_{ij}\)</span>: costo de envío de un litro de leche de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+<p><strong>Variables de decisión:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{ij}\)</span>: cantidad (en litros) de leche que van de la planta <span class="math notranslate nohighlight">\(i\in P\)</span> al distribuidor <span class="math notranslate nohighlight">\(j\in D\)</span></p></li>
+</ul>
+<p><strong>Modelo:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\text{minimizar }  \sum_{i\in P}\sum_{j\in D}x_{ij}c_{ij} \text{ (1)} 
+\]</div>
+<p>Sujeto a,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P; &amp;(2)\\
+\sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D; &amp;(3)\\
+x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
+\end{align*}\]</div>
+<p>La función objetivo (1) minimiza los costos totales. Las restricción (2) describe que se debe respetar la oferta de las plantas. La restricción (3) describe que se debe satisfacer la demanda de los distribuidores. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ij}\)</span>.</p>
+</div>
+<div class="section" id="implementacion">
+<h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
+<p><strong>g.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+óptima del problema?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria de PulP</span>
+<span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Conjuntos</span>
+<span class="c1">#-----------------</span>
+<span class="c1">#Plantas</span>
+<span class="n">P</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 4&quot;</span><span class="p">]</span>
+
+<span class="c1">#Distribuidores</span>
+<span class="n">D</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">]</span>
+
+<span class="c1"># Conjunto con todas las duplas (planta, distribuidor)</span>
+<span class="n">P_x_D</span> <span class="o">=</span> <span class="p">[(</span><span class="n">planta</span><span class="p">,</span> <span class="n">distribuidor</span><span class="p">)</span> <span class="k">for</span> <span class="n">planta</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">distribuidor</span> <span class="ow">in</span> <span class="n">D</span><span class="p">]</span> 
+
+<span class="c1">#-----------------</span>
+<span class="c1"># Parámetros</span>
+<span class="c1">#-----------------</span>
+<span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="c1">#planta: oferta de la planta i</span>
+   <span class="s2">&quot;Planta 1&quot;</span><span class="p">:</span><span class="mi">1500</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 2&quot;</span><span class="p">:</span><span class="mi">1200</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 3&quot;</span><span class="p">:</span><span class="mi">1400</span><span class="p">,</span>
+   <span class="s2">&quot;Planta 4&quot;</span><span class="p">:</span><span class="mi">1000</span><span class="p">}</span> 
+
+<span class="n">t</span><span class="o">=</span><span class="p">{</span><span class="c1">#distribuidor: demanda del distribuidor j</span>
+   <span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">:</span><span class="mi">930</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">:</span><span class="mi">600</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">:</span><span class="mi">460</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">:</span><span class="mi">610</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">:</span><span class="mi">830</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">:</span><span class="mi">460</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">:</span><span class="mi">640</span><span class="p">,</span>
+   <span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">:</span><span class="mi">240</span><span class="p">}</span> 
+
+<span class="n">c</span><span class="o">=</span><span class="p">{</span><span class="c1">#(planta, distribuidor): costo de envio de un litro de leche desde la planta i al distribuidor j</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">650</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">125</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">1200</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">340</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">150</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">260</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">350</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 1&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">800</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">250</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">200</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">250</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">150</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">950</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">1050</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 2&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">1000</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">350</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">400</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">260</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">150</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">300</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">450</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 3&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 1&quot;</span><span class="p">):</span><span class="mi">450</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 2&quot;</span><span class="p">):</span><span class="mi">800</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 3&quot;</span><span class="p">):</span><span class="mi">650</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 4&quot;</span><span class="p">):</span><span class="mi">250</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 5&quot;</span><span class="p">):</span><span class="mi">340</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 6&quot;</span><span class="p">):</span><span class="mi">700</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 7&quot;</span><span class="p">):</span><span class="mi">600</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Planta 4&quot;</span><span class="p">,</span><span class="s2">&quot;Distribuidor 8&quot;</span><span class="p">):</span><span class="mi">620</span><span class="p">}</span> 
+
+<span class="c1">#-------------------------------------</span>
+<span class="c1"># Creación del objeto problema en PuLP</span>
+<span class="c1">#-------------------------------------</span>
+<span class="c1">#Crea el problema para cargarlo con la instancia </span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Transporte&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMinimize</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Variables de Decisión</span>
+<span class="c1">#-----------------------------</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">P_x_D</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Función objetivo</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Crea la expresión de minimizacion de costos</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">),</span> <span class="s2">&quot;Costos Totales&quot;</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Restricciones</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#sum(j in D)x_ij &lt;= b_i forall i in P</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;Oferta de la planta &quot;</span><span class="o">+</span><span class="n">i</span>   <span class="c1">#se respeta la oferta de cada planta </span>
+
+<span class="c1">#sum(i in P)x_ij &gt;= t_j forall j in D</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">:</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="s2">&quot;Demanda del distribuidor &quot;</span><span class="o">+</span><span class="n">j</span> <span class="c1">#se satisface la demanda de cada distribuidor </span>
+    
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Imprimir formato LP</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Escribe el problema en un archivo con formato LP </span>
+<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">&quot;Transporte.lp&quot;</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1"># Invocar el optimizador</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Optimizar el modelo con CBC (default de PuLP)</span>
+<span class="n">problema</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="c1">#-----------------------------</span>
+<span class="c1">#    Imprimir resultados</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Imprimir estado final del optimizador</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#Valor óptimo del plan de transporte  </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transporte - Costos totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1">#Imprimir variables de decisión</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables de decisión&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;              &quot;</span><span class="p">,</span><span class="s2">&quot;D1&quot;</span><span class="p">,</span><span class="s2">&quot;D2&quot;</span><span class="p">,</span><span class="s2">&quot;D3&quot;</span><span class="p">,</span><span class="s2">&quot;D4&quot;</span><span class="p">,</span><span class="s2">&quot;D5&quot;</span><span class="p">,</span><span class="s2">&quot;D6&quot;</span><span class="p">,</span><span class="s2">&quot;D7&quot;</span><span class="p">,</span><span class="s2">&quot;D8&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()),</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to the CBC MILP Solver 
+Version: 2.9.0 
+Build Date: Feb 12 2015 
+
+command line - c:\users\alfai\src\pulpa\pulp\apis\..\solverdir\cbc\win\64\cbc.exe C:\Users\alfai\AppData\Local\Temp\7e0399ba76e245c18c72ec3ad9b36e53-pulp.mps ratio None allow None threads None presolve on strong None gomory on knapsack on probing on branch printingOptions all solution C:\Users\alfai\AppData\Local\Temp\7e0399ba76e245c18c72ec3ad9b36e53-pulp.sol (default strategy 1)
+At line 2 NAME          MODEL
+At line 3 ROWS
+At line 17 COLUMNS
+At line 114 RHS
+At line 127 BOUNDS
+At line 128 ENDATA
+Problem MODEL has 12 rows, 32 columns and 64 elements
+Coin0008I MODEL read with 0 errors
+String of None is illegal for double parameter ratioGap value remains 0
+String of None is illegal for double parameter allowableGap value remains 0
+String of None is illegal for integer parameter threads value remains 0
+String of None is illegal for integer parameter strongBranching value remains 5
+Option for gomoryCuts changed from ifmove to on
+Option for knapsackCuts changed from ifmove to on
+Presolve 12 (0) rows, 32 (0) columns and 64 (0) elements
+0  Obj 0 Primal inf 4770 (8)
+13  Obj 1224800
+Optimal - objective value 1224800
+Optimal objective 1224800 - 13 iterations time 0.002
+Option for printingOptions changed from normal to all
+Total time (CPU seconds):       0.00   (Wallclock seconds):       0.00
+
+Estado (optimizador): Optimal
+
+Transporte - Costos totales = $ 1224800.0
+
+Variables de decisión
+              	D1	D2	D3	D4	D5	D6	D7	D8
+Planta 1	0	600	0	0	0	260	640	0	
+Planta 2	930	0	270	0	0	0	0	0	
+Planta 3	0	0	190	0	830	200	0	180	
+Planta 4	0	0	0	610	0	0	0	60	
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creditos">
+<h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
+<p>Equipo Principios de Optimización<br>
+Edición: Camilo Aguilar, Juan Felipe Rengifo M<br>
+Fecha: 20/09/2020</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Soluciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Enunciados/Transporte Enunciado.html" title="previous page">Transporte de productos lácteos</a>
+    <a class='right-next' id="next-link" href="Transporte-vis.html" title="next page">Transporte de productos lácteos Visualización</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Equipo Principios de Optimización<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
