@@ -33,7 +33,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build --all ./optimizacion
+        jupyter-book build ./optimizacion
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
