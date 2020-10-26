@@ -22,9 +22,9 @@ Recomendamos también usar _GitHub Desktop_ para hacer el manejo de versiones de
  * Una vez tenga en su cuenta de _GitHub_ el _Fork_ del proyecto, clonelo a su computador.
  * Edite los archivos que consideres prudentes (Tenga en cuenta la documentación de _Jupyter Book_)
  * Desde la terminal, active su ambiente virtual de _Python_ y dirijase al directorio donde clonó su proyecto (`$ cd path/to/../Github/optimizacion`).
- * El siguiente comanda construirá la página estática a partir de los archivos en el directorio:`jb build optimizacion` (si está en _Windows_, revise las instrucciones mencionadas anteriormente de la documentación).
+ * El siguiente comando construirá la página estática a partir de los archivos en el directorio:`jb build optimizacion` (si está en _Windows_, revise las instrucciones mencionadas anteriormente de la documentación).
  * Dirijase al directorio en '_build/html' dentro del proyecto y abra en su explorador web el archivo 'index.html'.
- * Verifique que no se haya roto ningún aspecto de la página y que se vean reflejado sus cambios.
+ * Verifique que no se haya roto ningún aspecto de la página y que se vean reflejados sus cambios.
  * Si hay errores o tiene cambios pendientes, realice sus cambios y vuelva a construir la página para validarlos.
  * Haga _commit_ y _push_ de sus cambios a SU repositorio.
  * Tenga en cuenta que al hacer un _Fork_ está también creando una página de 'GitHub Pages' que se actualizará automáticamente según el contenido actualizado de su rama 'master'.
