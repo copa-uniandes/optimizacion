@@ -407,18 +407,18 @@ Formule un modelo general de optimización lineal que le permita a La Lechera Ra
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9af061d4-e615-4fd8-a4cd-e79e6a651768">
-<span class="eqno">(4)<a class="headerlink" href="#equation-9af061d4-e615-4fd8-a4cd-e79e6a651768" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1683cfcd-cdcf-44c8-ba8c-9b4bc42ddcca">
+<span class="eqno">(4)<a class="headerlink" href="#equation-1683cfcd-cdcf-44c8-ba8c-9b4bc42ddcca" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
 \end{align}\]</div>
 <p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a0fa0ede-f546-4f7e-8219-07f423d290c1">
-<span class="eqno">(5)<a class="headerlink" href="#equation-a0fa0ede-f546-4f7e-8219-07f423d290c1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d078b361-cb40-4539-8aa7-dea199682f66">
+<span class="eqno">(5)<a class="headerlink" href="#equation-d078b361-cb40-4539-8aa7-dea199682f66" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
 \end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3373ff5f-f4d4-43e0-b695-f10b8a40083e">
-<span class="eqno">(6)<a class="headerlink" href="#equation-3373ff5f-f4d4-43e0-b695-f10b8a40083e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fd0cfaeb-8d30-49ab-abe3-3f14ef21fc2a">
+<span class="eqno">(6)<a class="headerlink" href="#equation-fd0cfaeb-8d30-49ab-abe3-3f14ef21fc2a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \end{align}\]</div>
 </div>
@@ -608,34 +608,7 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to the CBC MILP Solver 
-Version: 2.9.0 
-Build Date: Feb 12 2015 
-
-command line - c:\users\alfai\src\pulpa\pulp\apis\..\solverdir\cbc\win\64\cbc.exe C:\Users\alfai\AppData\Local\Temp\7e0399ba76e245c18c72ec3ad9b36e53-pulp.mps ratio None allow None threads None presolve on strong None gomory on knapsack on probing on branch printingOptions all solution C:\Users\alfai\AppData\Local\Temp\7e0399ba76e245c18c72ec3ad9b36e53-pulp.sol (default strategy 1)
-At line 2 NAME          MODEL
-At line 3 ROWS
-At line 17 COLUMNS
-At line 114 RHS
-At line 127 BOUNDS
-At line 128 ENDATA
-Problem MODEL has 12 rows, 32 columns and 64 elements
-Coin0008I MODEL read with 0 errors
-String of None is illegal for double parameter ratioGap value remains 0
-String of None is illegal for double parameter allowableGap value remains 0
-String of None is illegal for integer parameter threads value remains 0
-String of None is illegal for integer parameter strongBranching value remains 5
-Option for gomoryCuts changed from ifmove to on
-Option for knapsackCuts changed from ifmove to on
-Presolve 12 (0) rows, 32 (0) columns and 64 (0) elements
-0  Obj 0 Primal inf 4770 (8)
-13  Obj 1224800
-Optimal - objective value 1224800
-Optimal objective 1224800 - 13 iterations time 0.002
-Option for printingOptions changed from normal to all
-Total time (CPU seconds):       0.00   (Wallclock seconds):       0.00
-
-Estado (optimizador): Optimal
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
 
 Transporte - Costos totales = $ 1224800.0
 
