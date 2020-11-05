@@ -2,13 +2,14 @@
 
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
+# Controls when the action will run. Triggers the workflow on push (A push gets triggered also when a Pull Request is merged)
 # events but only for the master branch
 on:
   push:
     branches: [ master ]
+    paths: 'optimizacion/**'
 
-# This job installs dependencies, build the book, and pushes it to `gh-pages`
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
