@@ -1,3 +1,4 @@
 optimizacion/_build
 .DS_store
 **/.DS_store
+optimizacion/**/.ipynb_checkpoints
