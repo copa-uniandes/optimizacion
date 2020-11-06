@@ -1,4 +1,4 @@
-- file: _static/intro.md
+- file: intro.md
 - part: Prácticas de formulación
   chapters:
   - file: Enunciados/Chocolatería Enunciado.ipynb
