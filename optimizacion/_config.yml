@@ -1,14 +1,14 @@
 # Book settings
 title: Repositorio Principios de Optimización
 author: Equipo Principios de Optimización
-logo: logo-uniandes.png
+logo: _static/logo-uniandes.png
 
 latex:
   latex_documents:
     targetname: book.tex
 
 html:
-  favicon: icon.png
+  favicon: _static/icon.png
   home_page_in_navbar: false
 
 parse:
