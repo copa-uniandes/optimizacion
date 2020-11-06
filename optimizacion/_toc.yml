@@ -17,6 +17,7 @@
   - file: Enunciados/Inventarios Enunciado.ipynb
     sections:
       - file: Soluciones/Inventarios.ipynb
+      - file: Soluciones/Inventarios-vis.ipynb
   - file: Enunciados/Asignación Enunciado.ipynb
     sections:
       - file: Soluciones/Asignación.ipynb
