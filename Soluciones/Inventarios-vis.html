@@ -58,8 +58,8 @@
     <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Producción de cemento Solución" href="Inventarios-vis.html" />
-    <link rel="prev" title="Producción de cemento" href="../Enunciados/Inventarios%20Enunciado.html" />
+    <link rel="next" title="Asignación de tareas" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" />
+    <link rel="prev" title="Producción de cemento Solución" href="Inventarios.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -123,13 +123,13 @@
    Producción de cemento
   </a>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Inventarios.html">
      Producción de cemento Solución
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Inventarios-vis.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Producción de cemento Solución
     </a>
    </li>
@@ -187,7 +187,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Soluciones/Inventarios.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Soluciones/Inventarios-vis.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -212,7 +212,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Soluciones/Inventarios.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Soluciones/Inventarios-vis.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -285,6 +285,13 @@
   <a class="reference internal nav-link" href="#implementacion">
    Implementación
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizacion-de-resultados">
+     Visualización de resultados
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creditos">
@@ -626,11 +633,90 @@ Semana		Producción (ton)		Inventario (ton)
 </div>
 </div>
 </div>
+<div class="section" id="visualizacion-de-resultados">
+<h3>Visualización de resultados<a class="headerlink" href="#visualizacion-de-resultados" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importa la libreria que se utilizará para la visualización</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#se guarda en una lista los valores de producción, de inventario final e  inventario inicial de cada semana</span>
+<span class="n">Prod</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">]</span> <span class="c1">#producción de cada semana</span>
+<span class="n">Inv_F</span><span class="o">=</span><span class="p">[</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">]</span> <span class="c1">#inventario al final de cada semana</span>
+<span class="n">Inv_I</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#inventario al inicio de cada semana</span>
+<span class="n">Inv_I</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">I0</span><span class="p">)</span> <span class="c1">#se define el inventario inicial en el primer mes</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">:</span>
+        <span class="n">Inv_I</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">())</span> <span class="c1">#inventario al inicio de la semana i</span>
+
+
+<span class="c1">#------------------------------------------------------------------------</span>
+<span class="c1">#    Gráfica conjunta (producción + inventario inicial &amp; demanda)</span>
+<span class="c1">#------------------------------------------------------------------------</span>
+<span class="n">fig3</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span> <span class="c1">#se crea la gráfica donde se va a visualizar el plan de producción conjunto con la demanda y el inventario al inicio de cada semana</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Prod</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">)</span> <span class="c1">#se añaden las barras de producción a la gráfica</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Inv_I</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="n">Prod</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">)</span> <span class="c1">#se añaden las barras de inventario inicial a la gráfica (encima de las de producción)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span> <span class="c1">#se añaden una línea, que representa la demanda, a la gráfica que representa la demanda</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span> <span class="c1">#se rellena el área bajo la curva de demanda</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Plan de producción&#39;</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Toneladas de cemento&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">150000</span><span class="p">])</span> <span class="c1">#se establece el rango del eje y </span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="s1">&#39;Demanda&#39;</span><span class="p">,</span><span class="s1">&#39;Producción&#39;</span><span class="p">,</span> <span class="s1">&#39;Inventario Inicial&#39;</span><span class="p">))</span> <span class="c1">#se añaden los labels de cada componente de la gráfica </span>
+
+
+<span class="c1">#-----------------------------</span>
+<span class="c1">#    Plan de producción</span>
+<span class="c1">#-----------------------------</span>
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span> <span class="c1">#se crea la gráfica donde se va a visualizar el plan de producción</span>
+<span class="n">rects1</span><span class="o">=</span><span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Prod</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">)</span> <span class="c1">#se añaden las barras a la gráfica</span>
+
+<span class="c1">#se añaden los labels a cada barra con el número de toneladas de cemento producidas cada semana</span>
+<span class="k">for</span> <span class="n">rect</span> <span class="ow">in</span> <span class="n">rects1</span><span class="p">:</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">1.05</span><span class="o">*</span><span class="n">height</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Producción de cemento en cada semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Toneladas de cemento&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">150000</span><span class="p">])</span> <span class="c1">#se establece el rango del eje y </span>
+
+
+<span class="c1">#-----------------------------</span>
+<span class="c1">#    Inventario Final</span>
+<span class="c1">#-----------------------------</span>
+<span class="n">fig2</span><span class="p">,</span> <span class="n">ax3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span> <span class="c1">#se crea la gráfica donde se va a visualizar el inventario al final de cada semana</span>
+<span class="n">rects2</span><span class="o">=</span><span class="n">ax3</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Inv_F</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span> <span class="c1">#se añaden las barras a la gráfica</span>
+
+<span class="c1">#se añaden los labels a cada barra con el número de toneladas de cemento en inventario al final de cada semana</span>
+<span class="k">for</span> <span class="n">rect</span> <span class="ow">in</span> <span class="n">rects2</span><span class="p">:</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">1.05</span><span class="o">*</span><span class="n">height</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Inventario de cemento al final de cada semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Toneladas de cemento&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">150000</span><span class="p">])</span> <span class="c1">#se establece el rango del eje y </span>
+
+
+<span class="c1">#se muestran las gráficas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Inventarios-vis_15_0.png" src="../_images/Inventarios-vis_15_0.png" />
+<img alt="../_images/Inventarios-vis_15_1.png" src="../_images/Inventarios-vis_15_1.png" />
+<img alt="../_images/Inventarios-vis_15_2.png" src="../_images/Inventarios-vis_15_2.png" />
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="creditos">
 <h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
 <p>Equipo Principios de Optimización<br>
-Instancia: Camilo Aguilar León<br>
+Instancia: Camilo Aguilar León, Juan Felipe Rengifo<br>
 Fecha: 25/09/2020</p>
 </div>
 </div>
@@ -663,8 +749,8 @@ Fecha: 25/09/2020</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../Enunciados/Inventarios%20Enunciado.html" title="previous page">Producción de cemento</a>
-    <a class='right-next' id="next-link" href="Inventarios-vis.html" title="next page">Producción de cemento Solución</a>
+    <a class='left-prev' id="prev-link" href="Inventarios.html" title="previous page">Producción de cemento Solución</a>
+    <a class='right-next' id="next-link" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" title="next page">Asignación de tareas</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
