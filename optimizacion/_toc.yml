@@ -24,6 +24,3 @@
   - file: Enunciados/ExtraccionMinera Enunciado.ipynb
     sections:
       - file: Soluciones/ExtraccionMinera.ipynb
-- part: Guías
-  chapters:
-  - file: Guias/MS Office/MS Office.md
