@@ -23,7 +23,9 @@ Esta guía busca fijar convenciones para el desarrollo de informes con contenido
 Asegurese de tener instalado la suite de *MS Office*. El procedimiento para insertar ecuaciones es aplicable en la mayoría de los programas del paquete, pero nosotros nos enfocaremos en la composición de documentos con *Word*.
 
 Ejecute *Word* y dirijase a la pestaña del *Ribbon*, **Insertar**. Allí, coloque su cursor sobre el elemento **Ecuación**. Al tener el cursor sobre el botón, debería desplegarse una caja de texto explicando su uso. Verifique que *Word* le haya asignado un atajo de teclado (para el autor, el atajo es `Alt` + `=`).
+
 ![](./imagenes/Ecuaciones-TextBox.png)
+
 Si no tiene un atajo asignado, puede hacerlo dirijiendose a la pestaña del *Ribbon*, **Archivo** >> **Opciones** >> **Personalizar cinta de opciones** >> **Personalizar**. Al especificar un comando, seleccione la categoría *Todos los comandos* y en comandos, *InsertarEcuación*. Teclée un atajo y verifique que haya quedado asignado. Tener un atajo asignado es importante para tener un flujo de trabajo eficiente, ya que, en el proceso de desarrollar un informe, deberá insertar muchas expresiones matemáticas.
 
 ## Estructura de informe
