@@ -1,7 +1,4 @@
 - file: intro.md
-- part: Guías
-  chapters:
-  - file: Guias/MS Office/MS Office.md
 - part: Prácticas de formulación
   chapters:
   - file: Enunciados/Chocolatería Enunciado.ipynb
@@ -27,3 +24,6 @@
   - file: Enunciados/ExtraccionMinera Enunciado.ipynb
     sections:
       - file: Soluciones/ExtraccionMinera.ipynb
+- part: Guías
+  chapters:
+  - file: Guias/MS Office/MS Office.md
