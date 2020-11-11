@@ -463,19 +463,19 @@ Formule un modelo general de optimización lineal que le permita a La Lechera Ra
 </div>
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
-<p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba4744c8-9d5f-4e9e-8726-c5de147af6fe">
-<span class="eqno">(4)<a class="headerlink" href="#equation-ba4744c8-9d5f-4e9e-8726-c5de147af6fe" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe respetar la oferta de las plantas.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bff4317d-d3ff-44e3-8aa2-a548b5c0a62e">
+<span class="eqno">(4)<a class="headerlink" href="#equation-bff4317d-d3ff-44e3-8aa2-a548b5c0a62e" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
 \end{align}\]</div>
-<p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5c3cbf4b-f1c9-447e-99dc-94e1ff86a379">
-<span class="eqno">(5)<a class="headerlink" href="#equation-5c3cbf4b-f1c9-447e-99dc-94e1ff86a379" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe satisfacer la demanda de los distribuidores.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2f9a4603-5d3f-482d-a93f-2d9267ac9ec0">
+<span class="eqno">(5)<a class="headerlink" href="#equation-2f9a4603-5d3f-482d-a93f-2d9267ac9ec0" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
 \end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2686d785-298b-4d14-b645-680950a7c9cf">
-<span class="eqno">(6)<a class="headerlink" href="#equation-2686d785-298b-4d14-b645-680950a7c9cf" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1a4a7bd0-93ca-4153-aac7-a75cd7d7c845">
+<span class="eqno">(6)<a class="headerlink" href="#equation-1a4a7bd0-93ca-4153-aac7-a75cd7d7c845" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \end{align}\]</div>
 </div>
@@ -517,11 +517,11 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D; &amp;(3)\\
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 \end{align*}\]</div>
-<p>La función objetivo (1) minimiza los costos totales. Las restricción (2) describe que se debe respetar la oferta de las plantas. La restricción (3) describe que se debe satisfacer la demanda de los distribuidores. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ij}\)</span>.</p>
+<p>La función objetivo (1) minimiza los costos totales. Las restricciones (2) garantizan que se debe respetar la oferta de las plantas. Las restricciones (3) garantizan que se debe satisfacer la demanda de los distribuidores. Las restricciones (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ij}\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
 <h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
-<p><strong>g.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+<p><strong>6.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
 óptima del problema?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -681,7 +681,7 @@ Planta 4	0	0	0	610	0	0	0	60
 </div>
 <div class="section" id="visualizacion-de-resultados">
 <h3>Visualización de resultados<a class="headerlink" href="#visualizacion-de-resultados" title="Permalink to this headline">¶</a></h3>
-<p>En esta ocasión exploraremos una forma diferente de visualizar la solución. En los ejercicios anteriores hemos optado por imprimir los valores que toman las variables y acomodarlos en tablas. Ahora, revisaremos la forma de visualizar los datos para un mejor entendimiento de la solución. Para esto, tendremos la coordenadas de las plantas y los distribuidores guardadas en diccionarios. Importaremos el paquete de matplotlib y diseñaremos funciones que nos permitirán agregar elementos a los gráficos.</p>
+<p>En esta ocasión exploraremos una forma diferente de visualizar la solución. En los ejercicios anteriores hemos optado por imprimir los valores que toman las variables y acomodarlos en tablas. Ahora, revisaremos la forma de visualizar los datos para un mejor entendimiento de la solución. Para esto, tendremos la coordenadas de las plantas y los distribuidores guardadas en diccionarios. Importaremos los paquetes de Networkx y Matplotlib para generar gráficos.</p>
 <div class="section" id="networkx">
 <h4>NetworkX<a class="headerlink" href="#networkx" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">

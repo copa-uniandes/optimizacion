@@ -444,19 +444,19 @@ Formule un modelo general de optimización lineal que le permita a La Lechera Ra
 </div>
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
-<p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe respetar la oferta de las plantas.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c17d1e24-678c-4b8e-be0f-9e9da72f182f">
-<span class="eqno">(1)<a class="headerlink" href="#equation-c17d1e24-678c-4b8e-be0f-9e9da72f182f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe respetar la oferta de las plantas.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7a43f170-c26c-42b8-bdb1-f8652e324c94">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7a43f170-c26c-42b8-bdb1-f8652e324c94" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
 \end{align}\]</div>
-<p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-52c72c57-df62-411b-93f1-3d81c9b7e51e">
-<span class="eqno">(2)<a class="headerlink" href="#equation-52c72c57-df62-411b-93f1-3d81c9b7e51e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe satisfacer la demanda de los distribuidores.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1e856a86-5a28-4bec-86ef-4ca3ed904cc4">
+<span class="eqno">(2)<a class="headerlink" href="#equation-1e856a86-5a28-4bec-86ef-4ca3ed904cc4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
 \end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4587fb20-9685-4f2e-a0ec-0d96bb43a402">
-<span class="eqno">(3)<a class="headerlink" href="#equation-4587fb20-9685-4f2e-a0ec-0d96bb43a402" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-72879f7e-1f5c-4add-9017-541986a5d750">
+<span class="eqno">(3)<a class="headerlink" href="#equation-72879f7e-1f5c-4add-9017-541986a5d750" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \end{align}\]</div>
 </div>
@@ -498,11 +498,11 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D; &amp;(3)\\
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 \end{align*}\]</div>
-<p>La función objetivo (1) minimiza los costos totales. Las restricción (2) describe que se debe respetar la oferta de las plantas. La restricción (3) describe que se debe satisfacer la demanda de los distribuidores. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ij}\)</span>.</p>
+<p>La función objetivo (1) minimiza los costos totales. Las restricciones (2) garantizan que se debe respetar la oferta de las plantas. Las restricciones (3) garantizan que se debe satisfacer la demanda de los distribuidores. Las restricciones (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ij}\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
 <h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
-<p><strong>g.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+<p><strong>6.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
 óptima del problema?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -593,12 +593,13 @@ x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D. &amp;(4)
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Variables de Decisión</span>
 <span class="c1">#-----------------------------</span>
-<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">P_x_D</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de leche que van de la planta i al distribuidor j; aca se añade de una vez la naturaleza de las variables</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">P_x_D</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de leche que van de la planta i al distribuidor j;</span>
+                                                             <span class="c1">#aca se añade de una vez la naturaleza de las variables</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Función objetivo</span>
 <span class="c1">#-----------------------------</span>
-<span class="c1">#Crea la expresión de minimizacion de costos</span>
+<span class="c1">#Crea la expresión de minimización de costos</span>
 <span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">P</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">D</span><span class="p">),</span> <span class="s2">&quot;Costos Totales&quot;</span>
 
 <span class="c1">#-----------------------------</span>
