@@ -3,6 +3,9 @@ title: Repositorio Principios de Optimización
 author: Equipo Principios de Optimización
 logo: _static/logo-uniandes.png
 
+repository:
+  url: https://github.com/copa-uniandes/optimizacion
+
 latex:
   latex_documents:
     targetname: book.tex
@@ -10,6 +13,8 @@ latex:
 html:
   favicon: _static/icon.png
   home_page_in_navbar: false
+  use_repository_button: true
+  use_issues_button: true
 
 parse:
   myst_extended_syntax: true

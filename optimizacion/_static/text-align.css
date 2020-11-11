@@ -2,10 +2,10 @@ p {
   text-align: justify;
 }
 table {
-    display: table !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  display: table !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .table {
-    width: auto !important;
+  width: auto !important;
 }
