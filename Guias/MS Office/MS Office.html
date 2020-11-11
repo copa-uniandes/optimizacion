@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matemáticas en MS Office &#8212; Repositorio Principios de Optimización</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/text-align.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-uniandes.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
+   Chocolatería
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Chocolater%C3%ADa.html">
+     Chocolatería Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/PlaneacionMenus%20Enunciado.html">
+   Planeación de menús
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/PlaneacionMenus.html">
+     Planeación de menús Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/OptiJuice%20Enunciado.html">
+   Producción de jugos
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/OptiJuice.html">
+     Producción de jugos Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Transporte.html">
+     Transporte de productos lácteos Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Transporte-vis.html">
+     Transporte de productos lácteos Visualización
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Inventarios%20Enunciado.html">
+   Producción de cemento
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Inventarios.html">
+     Producción de cemento Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Inventarios-vis.html">
+     Producción de cemento Visualización
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Asignaci%C3%B3n.html">
+     Asignación de tareas Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/ExtraccionMinera%20Enunciado.html">
+   Extracción minera
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/ExtraccionMinera.html">
+     Extracción minera Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Guias/MS Office/MS Office.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/copa-uniandes/optimizacion"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FGuias/MS Office/MS Office.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivacion">
+   Motivación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primeros-pasos">
+   Primeros pasos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructura-de-informe">
+   Estructura de informe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#expresiones-matematicas">
+   Expresiones matemáticas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejemplo-family-knapsack">
+   Ejemplo: Family Knapsack
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#siguientes-pasos">
+   Siguientes pasos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="matematicas-en-ms-office">
+<h1>Matemáticas en <em>MS</em> <em>Office</em><a class="headerlink" href="#matematicas-en-ms-office" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="motivacion">
+<h2>Motivación<a class="headerlink" href="#motivacion" title="Permalink to this headline">¶</a></h2>
+<p>Por medio de herramientas de <em>Microsoft Office</em> como <em>Word</em> y <em>PowerPoint</em> podemos construir documentos convencionales como ensayos, cartas, contratos o presentaciones. ¿Qué hacemos cuando nuestro contenido a desarrollar debe incluir expresiones matemáticas elaboradas? Podriamos expresarlas de forma primitiva, sin prestar atención al estilo, como la siguiente formula cuadrática: x=(-b±√(b^2-4ac))/2a, pero por lo general esta forma es poco amistosa con el lector ya que es dificil de interpretar y con el autor ya que es dificil de identificar si está escrita de forma correcta. Preferiblemente, quisieramos expresar ecuaciones embebidas en el texto, como <span class="math notranslate nohighlight">\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)</span>, o en su propio renglón para dar énfasis:</p>
+<div class="math notranslate nohighlight">
+\[
+	x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\text{.}
+\]</div>
+<p>Mejor aún, esta forma tipográfica de expresiones matemáticas nos permite más flexibilidad en cuanto a los símbolos que podremos utilizar. Particularmente nos interesan las operaciones sobre conjuntos como la sumatoria,</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum_{i\in I}a_{i}x_{i}=b\text{,}
+\]</div>
+<p>que nos permiten plantear de forma generalizada hiperplanos, los cuales entendemos como restricciones o función objetivo en los modelos de programación lineal o lineal-entera.</p>
+<p>Esta guía busca fijar convenciones para el desarrollo de informes con contenido matemático para el curso, así como dar instrucciones para trabajar de forma eficiente y dominar la composición tipográfica con <em>MS Office</em>.</p>
+</div>
+<div class="section" id="primeros-pasos">
+<h2>Primeros pasos<a class="headerlink" href="#primeros-pasos" title="Permalink to this headline">¶</a></h2>
+<p>Asegurese de tener instalado la suite de <em>MS Office</em>. El procedimiento para insertar ecuaciones es aplicable en la mayoría de los programas del paquete, pero nosotros nos enfocaremos en la composición de documentos con <em>Word</em>.</p>
+<p>Ejecute <em>Word</em> y dirijase a la pestaña del <em>Ribbon</em>, <strong>Insertar</strong>. Allí, coloque su cursor sobre el elemento <strong>Ecuación</strong>. Al tener el cursor sobre el botón, debería desplegarse una caja de texto explicando su uso. Verifique que <em>Word</em> le haya asignado un atajo de teclado (para el autor, el atajo es <code class="docutils literal notranslate"><span class="pre">Alt</span></code> + <code class="docutils literal notranslate"><span class="pre">=</span></code>).</p>
+<p><img alt="" src="../../_images/Ecuaciones-TextBox.png" /></p>
+<p>Si no tiene un atajo asignado, puede hacerlo dirijiendose a la pestaña del <em>Ribbon</em>, <strong>Archivo</strong> &gt;&gt; <strong>Opciones</strong> &gt;&gt; <strong>Personalizar cinta de opciones</strong> &gt;&gt; <strong>Personalizar</strong>. Al especificar un comando, seleccione la categoría <em>Todos los comandos</em> y en comandos, <em>InsertarEcuación</em>. Teclée un atajo y verifique que haya quedado asignado. Tener un atajo asignado es importante para tener un flujo de trabajo eficiente, ya que, en el proceso de desarrollar un informe, deberá insertar muchas expresiones matemáticas.</p>
+</div>
+<div class="section" id="estructura-de-informe">
+<h2>Estructura de informe<a class="headerlink" href="#estructura-de-informe" title="Permalink to this headline">¶</a></h2>
+<p>Por lo general, las evaluaciones del curso consisten del planteamiento de un escenario a optimizar para el cual el estudiante debe plantear un modelo de programación matemática lineal o lineal-entero. Para plantear modelos generalizados, utilizamos conjuntos, símbolos representativos de parámetros, arreglos de variables y conjuntos de restricciones. Por conveniencia para la evaluación de su entrega, recomendamos enunciar cada uno de estos componentes explicitamente. A continuación, una vista de como debe quedar su documento.</p>
+<p>  <strong>Conjuntos</strong></p>
+<p>      <span class="math notranslate nohighlight">\(I\)</span>: primer conjunto del ejemplo.</p>
+<p>      <span class="math notranslate nohighlight">\(J\)</span>: segundo conjunto del ejemplo.</p>
+<p>  <strong>Parámetros</strong></p>
+<p>      <span class="math notranslate nohighlight">\(a_{ij}\)</span>: primer parámetro del ejemplo. Elemento <span class="math notranslate nohighlight">\(a\)</span> para todo <span class="math notranslate nohighlight">\(i\in I\)</span>,<span class="math notranslate nohighlight">\(j\in J\)</span>.</p>
+<p>      <span class="math notranslate nohighlight">\(b_{i}\)</span>: segundo parámetro del ejemplo. Elemento <span class="math notranslate nohighlight">\(b\)</span> para todo <span class="math notranslate nohighlight">\(i\in I\)</span>.</p>
+<p>      <span class="math notranslate nohighlight">\(c_{j}\)</span>: costos del ejemplo. Elemento <span class="math notranslate nohighlight">\(c\)</span> para todo <span class="math notranslate nohighlight">\(j\in J\)</span>.</p>
+<p>  <strong>Variables</strong></p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>Si <span class="math notranslate nohighlight">\(x_{j}\)</span> son variables binarias, podemos expresarlas con una función a trozos.</p>
+</div>
+<p><strong>Variables</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+	x_{j}=\begin{cases}
+					1 &amp; \text{se cumple un criterio} \\
+					0 &amp; \text{d.l.c.}
+   \end{cases}\text{.}
+\end{split}\]</div>
+</div>
+<p>      <span class="math notranslate nohighlight">\(x_{j}\)</span>: primeras variables del ejemplo. Decisión <span class="math notranslate nohighlight">\(x\)</span> para todo <span class="math notranslate nohighlight">\(j\in J\)</span>.</p>
+<p>  <strong>Naturaleza</strong></p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>NUNCA puede faltar una expresión explicita del dominio del problema (Naturaleza). Las variables pueden tomar valores en conjuntos predeterminados:</p>
+</div>
+<p>Algunas alternativas:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+	x_{j}\in\mathbb{R_{\geq 0}} &amp; \forall j \in J \\
+	x_{j}\in\mathbb{N} &amp; \forall j \in J \\
+	x_{j}\in\{0,1\} &amp; \forall j \in J
+\end{gather*}\]</div>
+</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+	x_{j}\in\mathbb{R} &amp; \forall j \in J
+\end{gather*}\]</div>
+<p>  <strong>Restricciones</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+		\sum_{j\in J}a_{ij}x_{j}=b_{i} &amp; \forall i\in I
+\end{gather*}\]</div>
+<blockquote>
+<div><p>Este conjunto de restricciones nos permite identificar la región factible del problema. Este parrafo, idealmente, contendría una breve descripción de lo que representa o logra su respectivo conjunto de restricciónes.</p>
+</div></blockquote>
+<p>  <strong>Función Objetivo</strong></p>
+<div class="math notranslate nohighlight">
+\[
+		\max\left\{ \sum_{j\in J}c_{j}x_{j}\right\}
+\]</div>
+<blockquote>
+<div><p>Esta sumatoria nos permite identificar los valores de las variables de decisión que maximizan el problema según el criterio escogido. Este parrafo, idealmente, contendría una breve descripción de lo que representa o logra su respectiva función objetivo.</p>
+</div></blockquote>
+</div>
+<div class="section" id="expresiones-matematicas">
+<h2>Expresiones matemáticas<a class="headerlink" href="#expresiones-matematicas" title="Permalink to this headline">¶</a></h2>
+<p>Veremos ahora, como escribir ecuaciones matemáticas en <em>Word</em>. En general, los símbolos tienen nombres y el programa tiene dos criterio para identificar cuando queremos insertarlos. Primero, debemos estar escribiendo dentro de un bloque de <strong>Ecuación</strong>; segundo, el nombre del símbolo debe indicarse con el caracter ‘<code class="docutils literal notranslate"><span class="pre">\</span></code>’. Por ejemplo, para insertar un simbolo <span class="math notranslate nohighlight">\(\alpha\)</span>, escribiriamos en el bloque de ecuación el código <code class="docutils literal notranslate"><span class="pre">\alpha</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>INCOMPLETE SECTION.</p>
+<p>TO-DO: Explain proper typesetting with commands. (common symbols, braces, matrices, piecewise functions and max)</p>
+</div>
+</div>
+<div class="section" id="ejemplo-family-knapsack">
+<h2>Ejemplo: Family Knapsack<a class="headerlink" href="#ejemplo-family-knapsack" title="Permalink to this headline">¶</a></h2>
+<p>En esta sección encontrará un posible formulación para el problema al que se habrán enfrentado en sus complementarias del knapsack familiar, donde una familia de excursionistas debe decidir qué objetos lleva cada integrante de la familia de acuerdo con ciertas restricciones adicionales. Lo importante de la siguiente formulación son los mensajes desplegables que contienen el texto tal y como se escribiría en <em>Word</em>. El texto en <code class="docutils literal notranslate"><span class="pre">esta</span> <span class="pre">forma</span></code>, se refiere al código que uno escribiría en los bloques de ecuación. Puede descargar este desarrollo en <em>Word</em> <a class="reference external" href="https://copa-uniandes.github.io/optimizacion/index.html">aquí (pending link)</a>.</p>
+<p>  <strong>Conjuntos</strong></p>
+<p>      <span class="math notranslate nohighlight">\(E\)</span>: conjunto de excursionistas.</p>
+<p>      <span class="math notranslate nohighlight">\(O\)</span>: conjunto de objetos.</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title"> ¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">E</span></code>: conjunto de excursionistas.</p>
+<p><code class="docutils literal notranslate"><span class="pre">O</span></code>: conjunto de objetos.</p>
+</div>
+<p>  <strong>Parámetros</strong></p>
+<p>      <span class="math notranslate nohighlight">\(b_{j}\)</span>: peso máximo que puede cargar el excursionista <span class="math notranslate nohighlight">\(j\in E\)</span></p>
+<p>      <span class="math notranslate nohighlight">\(p_{i}\)</span>: peso del objeto <span class="math notranslate nohighlight">\(i\in O\)</span></p>
+<p>      <span class="math notranslate nohighlight">\(q_{ij}\)</span>: preferencia sobre el objeto <span class="math notranslate nohighlight">\(i\in O\)</span> del excursionista <span class="math notranslate nohighlight">\(j\in E\)</span></p>
+<div class="dropdown tip admonition">
+<p class="admonition-title"> ¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">b_(j)</span></code>: peso máximo que puede cargar el excursionista <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">p_(i)</span></code>: peso del objeto <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">q_(ij)</span></code>: preferencia sobre el objeto <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code> del excursionista <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code></p>
+</div>
+<p>  <strong>Variables</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+	x_{ij}=\begin{cases}
+					1 &amp; \text{el objeto }i \in O\text{ es llevado por el excursionista } j\in E \\
+					0 &amp; \text{d.l.c.}
+   \end{cases}
+\end{split}\]</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title"> ¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">x_ij={■(1&amp;el</span> <span class="pre">objeto</span> <span class="pre">i∈O</span> <span class="pre">es</span> <span class="pre">llevado</span> <span class="pre">por</span> <span class="pre">el</span> <span class="pre">excursionista</span> <span class="pre">j∈E&#64;0&amp;d.l.c.)┤</span></code></p>
+</div>
+<p>  <strong>Naturaleza</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+	x_{ij}\in\{0,1\} &amp; \forall i \in O, j \in E
+\end{gather*}\]</div>
+<div class="dropdown tip admonition">
+<p class="admonition-title"> ¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">x_ij\in{0,1}\forall</span> <span class="pre">i\in</span> <span class="pre">E,</span> <span class="pre">j\in</span> <span class="pre">O</span></code></p>
+</div>
+<p>  <strong>Restricciones</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+		\sum_{i\in O}p_{ij}x_{ij}\leq b_{j} &amp; \forall j\in E
+\end{gather*}\]</div>
+<blockquote>
+<div><p>Estas restricciones evitan que los objetos cargados por cada excursionista, <span class="math notranslate nohighlight">\(j\in E\)</span>, excedan su peso máximo tolerable, <span class="math notranslate nohighlight">\(b_{j}\)</span>.</p>
+</div></blockquote>
+<div class="dropdown tip admonition">
+<p class="admonition-title"> ¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">\sum_(i\in</span> <span class="pre">O)p_(ij)</span> <span class="pre">x_(ij)</span> <span class="pre">&lt;=</span> <span class="pre">b_(j)</span> <span class="pre">\forall</span> <span class="pre">j\in</span> <span class="pre">E</span></code></p>
+<p>Estas restricciones evitan que los objetos cargados por cada excursionista, <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code>, excedan su peso máximo tolerable, <code class="docutils literal notranslate"><span class="pre">b_{j}</span></code>.</p>
+</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+		\sum_{j\in E}x_{ij}=1 &amp; \forall i\in O
+\end{gather*}\]</div>
+<blockquote>
+<div><p>Estas restricciones garantizan que cada objeto, <span class="math notranslate nohighlight">\(i\in O\)</span>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.</p>
+</div></blockquote>
+<div class="dropdown tip admonition">
+<p class="admonition-title"> ¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">\sum_(j\in</span> <span class="pre">E)</span> <span class="pre">x_(ij)</span> <span class="pre">=1\forall</span> <span class="pre">i\in</span> <span class="pre">O</span></code></p>
+<p>Estas restricciones garantizan que cada objeto, <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.</p>
+</div>
+<p>  <strong>Función Objetivo</strong></p>
+<div class="math notranslate nohighlight">
+\[
+		\max\left\{\sum_{i\in O}\sum_{j\in E}q_{ij}x_{ij}\right\}
+\]</div>
+<blockquote>
+<div><p>Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.</p>
+</div></blockquote>
+<div class="dropdown tip admonition">
+<p class="admonition-title"> ¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">{\sum_(i∈O)</span> <span class="pre">\sum_(j∈E)</span> <span class="pre">(q_ij</span> <span class="pre">x_ij</span> <span class="pre">)}</span> </code></p>
+<p>Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.</p>
+</div>
+</div>
+<div class="section" id="siguientes-pasos">
+<h2>Siguientes pasos<a class="headerlink" href="#siguientes-pasos" title="Permalink to this headline">¶</a></h2>
+<p>Aunque <em>Word</em> es una herramienta muy versatil para la composición de documentos, resulta poco efectiva para la tipografía matemática o en la composición de documentos de investigación más formales. Para quienes buscan mayor rigor matemático, flexibilidad en el diseño de sus documentos y están dispuestos a explorar las tecnologías con las que los académicos construyen sus articulos de investigación, recomendamos aprender <a class="reference external" href="https://www.overleaf.com/"><em>LaTeX</em></a>.</p>
+</div>
+<div class="section" id="creditos">
+<h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
+<p>Equipo Principios de Optimización<br>Desarrollo: Alejandro Mantilla<br>Fecha: 10/11/2020<br></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Guias/MS Office"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Equipo Principios de Optimización<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

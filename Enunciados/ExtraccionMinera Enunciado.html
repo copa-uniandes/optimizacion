@@ -255,6 +255,22 @@
 
         <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/copa-uniandes/optimizacion"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FEnunciados/ExtraccionMinera Enunciado.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -269,7 +285,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Enunciados/ExtraccionMinera Enunciado.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/Enunciados/ExtraccionMinera Enunciado.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -359,65 +375,28 @@
 <h3>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h3>
 <p>La minería de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracción de materiales como: arena, arcilla, cobre y carbón. Las directivas de una empresa de extracción minera desean explotar un conjunto de zonas (<span class="math notranslate nohighlight">\(M\)</span>), de las cuales se puede extraer un conjunto de diferentes tipos de carbón (<span class="math notranslate nohighlight">\(K\)</span>). Se sabe que de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> sólo puede extraerse el carbón tipo <span class="math notranslate nohighlight">\(j\in K\)</span>. Para ello, suponga que <span class="math notranslate nohighlight">\(a_{ij}\)</span> es un parámetro binario que toma el valor de 1 si en la zona <span class="math notranslate nohighlight">\(i\in M\)</span> se puede extraer carbón del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbón. Por ejemplo, para la zona uno se tiene que <span class="math notranslate nohighlight">\(a_{11}=0\)</span>, <span class="math notranslate nohighlight">\(a_{12}=1\)</span>, <span class="math notranslate nohighlight">\(a_{13}=0\)</span> y <span class="math notranslate nohighlight">\(a_{14}=0\)</span> ya que de la zona 1 sólo puede extraerse el tipo de carbón 2 (hulla).</p>
 <p><em>Figura 1:</em></p>
-<table>
-  <tr id="ROW1">
-	<td style="text-align:center; background-color: lightblue">1</td>
-	<td style="text-align:center; background-color: lightblue">2</td>
-	<td style="text-align:center; background-color: green">3</td>
-    <td style="text-align:center; background-color: green">4</td> 
-    <td style="text-align:center; background-color: lightblue">5</td>
-    <td style="text-align:center; background-color: green">6</td>
-  </tr>
-  <tr id="ROW2">
-	<td style="text-align:center; background-color: lightblue">7</td>
-	<td style="text-align:center; background-color: lightblue">8</td>
-	<td style="text-align:center; background-color: purple">9</td>
-    <td style="text-align:center; background-color: purple">10</td> 
-    <td style="text-align:center; background-color: lightblue">11</td>
-    <td style="text-align:center; background-color: green">12</td>
-  </tr>
-  <tr id="ROW3">
-	<td style="text-align:center; background-color: purple">13</td>
-	<td style="text-align:center; background-color: green">14</td>
-	<td style="text-align:center; background-color: green">15</td>
-    <td style="text-align:center; background-color: lightblue">16</td> 
-    <td style="text-align:center; background-color: lightblue">17</td>
-    <td style="text-align:center; background-color: green">18</td>
-  </tr>
-  <tr id="ROW4">
-	<td style="text-align:center; background-color: purple">19</td>
-	<td style="text-align:center; background-color: red">20</td>
-	<td style="text-align:center; background-color: green">21</td>
-    <td style="text-align:center; background-color: purple">22</td> 
-    <td style="text-align:center; background-color: purple">23</td>
-    <td style="text-align:center; background-color: purple">24</td>
-  </tr>
-  <tr id="ROW5">
-	<td style="text-align:center; background-color: purple">25</td>
-	<td style="text-align:center; background-color: green">26</td>
-	<td style="text-align:center; background-color: green">27</td>
-    <td style="text-align:center; background-color: red">28</td> 
-    <td style="text-align:center; background-color: red">29</td>
-    <td style="text-align:center; background-color: red">30</td>
-  </tr>
-  <tr id="ROW6">
-	<td style="text-align:center; background-color: lightblue">31</td>
-	<td style="text-align:center; background-color: green">32</td>
-	<td style="text-align:center; background-color: lightblue">33</td>
-    <td style="text-align:center; background-color: purple">34</td> 
-    <td style="text-align:center; background-color: red">35</td>
-    <td style="text-align:center; background-color: purple">36</td>
-  </tr>
-</table>
-<br>
-<table>
-  <tr id="ROW1">
-	<td style="text-align:center; background-color: purple">Antracita</td>
-	<td style="text-align:center; background-color: lightblue">Hulla</td>
-	<td style="text-align:center; background-color: green">Turba</td>
-    <td style="text-align:center; background-color: red">Lignito</td> 
-  </tr>
-</table><p>Cada tonelada de carbón extraída de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> le cuesta a la empresa <span class="math notranslate nohighlight">\(c_i\)</span> pesos.  Adicionalmente, cada zona tiene una capacidad máxima de extracción de carbón de <span class="math notranslate nohighlight">\(n_i\)</span> toneladas. La Tabla 1 muestra la información de capacidades máximas y costos para cada zona.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\bbox[5px, border:2px solid black]{
+\begin{array} {cccccc}
+    \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ 1\ } &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ 2\ } &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{\ 3\ } &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{\ 4\ } &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ 5\ } &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{\ 6\ } \\
+    \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ 7\ } &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ 8\ } &amp; \bbox[Plum, 5px, border:2px solid Plum]{\ 9\ } &amp; \bbox[Plum, 5px, border:2px solid Plum]{10} &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{11} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{12} \\
+    \bbox[Plum, 5px, border:2px solid Plum]{13} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{14} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{15} &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{16} &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{17} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{18} \\
+    \bbox[Plum, 5px, border:2px solid Plum]{19} &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{20} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{21} &amp; \bbox[Plum, 5px, border:2px solid Plum]{22} &amp; \bbox[Plum, 5px, border:2px solid Plum]{23} &amp; \bbox[Plum, 5px, border:2px solid Plum]{24} \\
+    \bbox[Plum, 5px, border:2px solid Plum]{25} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{26} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{27} &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{28} &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{29} &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{30} \\
+    \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{31} &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{32} &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{33} &amp; \bbox[Plum, 5px, border:2px solid Plum]{34} &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{35} &amp; \bbox[Plum, 5px, border:2px solid Plum]{36} \\
+\end{array}
+}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\bbox[5px, border:2px solid black]{
+\begin{array} {cccc}
+    \bbox[Plum, 5px, border:2px solid Plum]{\ \text{Antracita}\ } &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ \text{Hulla}\ } &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{\ \text{Turba}\ } &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{\ \text{Lignito}\ }
+\end{array}
+}
+\]</div>
+<p>Cada tonelada de carbón extraída de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> le cuesta a la empresa <span class="math notranslate nohighlight">\(c_i\)</span> pesos.  Adicionalmente, cada zona tiene una capacidad máxima de extracción de carbón de <span class="math notranslate nohighlight">\(n_i\)</span> toneladas. La Tabla 1 muestra la información de capacidades máximas y costos para cada zona.</p>
 <p style="text-align: center;"><b>Tabla 1. Información de extracción de cada zona</b></p>
 <table class="colwidths-auto table">
 <thead>
