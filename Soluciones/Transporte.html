@@ -372,6 +372,7 @@
                 
   <div class="section" id="transporte-de-productos-lacteos-solucion">
 <h1>Transporte de productos lácteos Solución<a class="headerlink" href="#transporte-de-productos-lacteos-solucion" title="Permalink to this headline">¶</a></h1>
+<p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Transporte</i></p>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>La Lechera Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1,500, 1,200, 1,400, y 1,000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor.</p>
@@ -461,18 +462,18 @@ Formule un modelo general de optimización lineal que le permita a La Lechera Ra
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe respetar la oferta de las plantas.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-58114b1f-2554-4df2-a6e4-193fc5ed28f8">
-<span class="eqno">(1)<a class="headerlink" href="#equation-58114b1f-2554-4df2-a6e4-193fc5ed28f8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cd8dcd13-c789-42e6-a904-0ac5d0f53622">
+<span class="eqno">(1)<a class="headerlink" href="#equation-cd8dcd13-c789-42e6-a904-0ac5d0f53622" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
 \end{align}\]</div>
 <p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44f2d68f-5061-482b-bc4c-5138e1bd5b4f">
-<span class="eqno">(2)<a class="headerlink" href="#equation-44f2d68f-5061-482b-bc4c-5138e1bd5b4f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3e74c348-7ab3-4ddf-aad6-01e1848c8cde">
+<span class="eqno">(2)<a class="headerlink" href="#equation-3e74c348-7ab3-4ddf-aad6-01e1848c8cde" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
 \end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d85c9931-f26a-422d-bf3a-164a10aa8316">
-<span class="eqno">(3)<a class="headerlink" href="#equation-d85c9931-f26a-422d-bf3a-164a10aa8316" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5967b5c0-f4d5-4bf0-a5f7-ba269f21ddbe">
+<span class="eqno">(3)<a class="headerlink" href="#equation-5967b5c0-f4d5-4bf0-a5f7-ba269f21ddbe" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \end{align}\]</div>
 </div>

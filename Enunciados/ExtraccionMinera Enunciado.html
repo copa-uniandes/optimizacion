@@ -308,26 +308,19 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#punto-1">
-   Punto 1
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enunciado">
-     Enunciado
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulacion">
-     Formulación
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementacion">
-     Implementación
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion">
+   Formulación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#punto-2">
@@ -369,10 +362,9 @@
                 
   <div class="section" id="extraccion-minera">
 <h1>Extracción minera<a class="headerlink" href="#extraccion-minera" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="punto-1">
-<h2>Punto 1<a class="headerlink" href="#punto-1" title="Permalink to this headline">¶</a></h2>
+<p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Parámetro binario, Variable binaria, Recurso, Activación binaria</i></p>
 <div class="section" id="enunciado">
-<h3>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h3>
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>La minería de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracción de materiales como: arena, arcilla, cobre y carbón. Las directivas de una empresa de extracción minera desean explotar un conjunto de zonas (<span class="math notranslate nohighlight">\(M\)</span>), de las cuales se puede extraer un conjunto de diferentes tipos de carbón (<span class="math notranslate nohighlight">\(K\)</span>). Se sabe que de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> sólo puede extraerse el carbón tipo <span class="math notranslate nohighlight">\(j\in K\)</span>. Para ello, suponga que <span class="math notranslate nohighlight">\(a_{ij}\)</span> es un parámetro binario que toma el valor de 1 si en la zona <span class="math notranslate nohighlight">\(i\in M\)</span> se puede extraer carbón del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbón. Por ejemplo, para la zona uno se tiene que <span class="math notranslate nohighlight">\(a_{11}=0\)</span>, <span class="math notranslate nohighlight">\(a_{12}=1\)</span>, <span class="math notranslate nohighlight">\(a_{13}=0\)</span> y <span class="math notranslate nohighlight">\(a_{14}=0\)</span> ya que de la zona 1 sólo puede extraerse el tipo de carbón 2 (hulla).</p>
 <p><em>Figura 1:</em></p>
 <div class="math notranslate nohighlight">
@@ -579,7 +571,7 @@
 <br> 
 Usted debe formular un programa lineal que le permita a la empresa decidir cuánto deben extraer en cada zona de manera que se cumplan los requerimientos a un mínimo costo. Para esto usted debe seguir los siguientes pasos: </div>
 <div class="section" id="formulacion">
-<h3>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h3>
+<h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
@@ -587,10 +579,9 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <p><strong>e.</strong> Escriba la función objetivo.</p>
 </div>
 <div class="section" id="implementacion">
-<h3>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h3>
+<h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
 <p><strong>g.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
 óptima del problema?</p>
-</div>
 </div>
 <div class="section" id="punto-2">
 <h2>Punto 2<a class="headerlink" href="#punto-2" title="Permalink to this headline">¶</a></h2>

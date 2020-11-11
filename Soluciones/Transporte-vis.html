@@ -391,6 +391,7 @@
                 
   <div class="section" id="transporte-de-productos-lacteos-visualizacion">
 <h1>Transporte de productos lácteos Visualización<a class="headerlink" href="#transporte-de-productos-lacteos-visualizacion" title="Permalink to this headline">¶</a></h1>
+<p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Transporte, Visualización, NetworkX, Matplotlib</i></p>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>La Lechera Ramírez S.A. es una empresa que produce productos lácteos y cuenta con cuatro plantas de producción en Colombia cuyas capacidades de producción mensuales de leche son 1,500, 1,200, 1,400, y 1,000 litros, respectivamente. Estas cuatro plantas suministran leche a los ocho clientes que actualmente tienen, los cuales son distribuidores minoristas de productos. Las demandas mensuales de leche de estos distribuidores son 930, 600, 460, 610, 830, 460, 640 y 240 litros, respectivamente. La Tabla 1 presenta el costo en el que incurre la compañía al enviar un litro de leche desde cada planta hacia cada distribuidor.</p>
@@ -480,18 +481,18 @@ Formule un modelo general de optimización lineal que le permita a La Lechera Ra
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe respetar la oferta de las plantas.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-55f667e2-2a19-4167-aae5-76361c92bece">
-<span class="eqno">(4)<a class="headerlink" href="#equation-55f667e2-2a19-4167-aae5-76361c92bece" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5e9c9d0-71f8-44ae-9b56-d446a3e122cd">
+<span class="eqno">(4)<a class="headerlink" href="#equation-a5e9c9d0-71f8-44ae-9b56-d446a3e122cd" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
 \end{align}\]</div>
 <p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-242cb45c-6b53-42ab-b4f2-7e5aa027efac">
-<span class="eqno">(5)<a class="headerlink" href="#equation-242cb45c-6b53-42ab-b4f2-7e5aa027efac" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7cbb0bb9-98b8-4721-8f33-48bb33699c1f">
+<span class="eqno">(5)<a class="headerlink" href="#equation-7cbb0bb9-98b8-4721-8f33-48bb33699c1f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
 \end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-861a996e-3852-44eb-b88f-27a2c00afccf">
-<span class="eqno">(6)<a class="headerlink" href="#equation-861a996e-3852-44eb-b88f-27a2c00afccf" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f9c979d7-0d87-400e-9bbc-c842eba9fb55">
+<span class="eqno">(6)<a class="headerlink" href="#equation-f9c979d7-0d87-400e-9bbc-c842eba9fb55" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \end{align}\]</div>
 </div>
@@ -764,7 +765,7 @@ Planta 4	0	0	0	610	0	0	0	60
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Transporte-vis_16_0.png" src="../_images/Transporte-vis_16_0.png" />
+<img alt="../_images/Transporte-vis_17_0.png" src="../_images/Transporte-vis_17_0.png" />
 </div>
 </div>
 </div>
@@ -846,7 +847,7 @@ Planta 4	0	0	0	610	0	0	0	60
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Transporte-vis_18_0.png" src="../_images/Transporte-vis_18_0.png" />
+<img alt="../_images/Transporte-vis_19_0.png" src="../_images/Transporte-vis_19_0.png" />
 </div>
 </div>
 </div>
