@@ -23,3 +23,20 @@ Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenci
 ## Disclaimer
 
 Este proyecto está en sus primeras etapas de desarrollo. Todos los errores son atribuibles a los autores. Apreciamos cualquier aporte para mejorar el contenido.
+
+## Agradecimientos y Reconocimientos
+
+Este proyecto existe gracias al arduo trabajo del Equipo de Optimización bajo el liderazgo de Alfaima Solano, instructora de la Universidad de los Andes.
+
+Monitores involucrados:
+ * Camilo Aguilar
+ * Alejandro Mantilla
+ * Juan Felipe Rengifo
+ 
+Agradecemos a los instructores Carlos Gomez y Andrés Medaglia por su realimentación a lo largo del desarrollo y a los respectivos autores de las prácticas de formulación, cuyo contenido está expuesto en la página.
+
+Además, agradecemos a los equipos detrás de las siguientes herramientas esenciales para el desarrollo de la página.
+ * [Jupyter-Book](https://jupyterbook.org/intro.html)
+ * [MySt Markdown](https://myst-parser.readthedocs.io/en/latest/)
+ * [Sphinx](https://www.sphinx-doc.org/en/master/)
+ * [PuLP](https://coin-or.github.io/pulp/)
