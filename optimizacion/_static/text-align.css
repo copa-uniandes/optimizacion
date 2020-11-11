@@ -1,6 +1,11 @@
 p {
   text-align: justify;
 }
+img {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 table {
   display: table !important;
   margin-left: auto !important;
