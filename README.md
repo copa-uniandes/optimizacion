@@ -13,7 +13,7 @@ Acceda a la página estática a través de este [enlace](https://copa-uniandes.g
 
 ## Contribuir
 
-Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenciar un _issue_ o en seguir las instrucciones del archivo '[CONTRIBUIR.md](https://copa-uniandes.github.io/optimizacion/blob/master/contributing.md)' para participar de forma activa.
+Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenciar un _issue_ o en seguir las instrucciones del archivo '[contributing.md](https://copa-uniandes.github.io/optimizacion/blob/master/contributing.md)' para participar de forma activa.
 
 ## Enlaces
  * [Universidad de los Andes](https://uniandes.edu.co/)
