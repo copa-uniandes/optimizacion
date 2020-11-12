@@ -185,7 +185,7 @@ Note que para insertar un subíndice o un superíndice (o potencia) debe primero
 
 Las matrices son los elementos más complicados de editar una vez insertados, por lo que recomendamos planear bien las dimensiones con anterioridad. Para insertar una matriz debe primero utilizar el comando `\matrix`, seguido de una combinación de `&`s y `@`s. Cada `&` implica una columna nueva y cada `@` una fila nueva.
 
-Si está insertando una matriz vacía para luego llenarla (recomendable), basta con insertar el la siguiente secuencia de comandos. `\matrix` $\rightarrow$ `■` $\rightarrow$ `■(&&@)`. Esto produciría una matriz 3x2, pero usted puede insertar cuantas filas y columnas desée. Adicionalmente, una vez haya insertado la matriz definitiva, puede hacer clic derecho sobre alguna celda de la matriz y agregar o remover filas o columnas.
+Si está insertando una matriz vacía para luego llenarla (recomendable), basta con insertar el la siguiente secuencia de comandos. `\matrix` $\rightarrow$ `■` $\rightarrow$ `■(&&@)`. Esto produciría una matriz 2x3, pero usted puede insertar cuantas filas y columnas desée. Adicionalmente, una vez haya insertado la matriz definitiva, puede hacer clic derecho sobre alguna celda de la matriz y agregar o remover filas o columnas.
 
 ![](./imagenes/matrices.gif)
 
