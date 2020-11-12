@@ -96,7 +96,7 @@ Algunas alternativas:
 &ensp;&ensp;**Función Objetivo**
 
 $$
-		\max\left\{ \sum_{j\in J}c_{j}x_{j}\right\}
+		\max{\sum_{j\in J}c_{j}x_{j}}
 $$
 
 > Esta sumatoria nos permite identificar los valores de las variables de decisión que maximizan el problema según el criterio escogido. Este parrafo, idealmente, contendría una breve descripción de lo que representa o logra su respectiva función objetivo.
