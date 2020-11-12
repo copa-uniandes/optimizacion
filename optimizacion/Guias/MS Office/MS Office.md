@@ -125,9 +125,9 @@ Los comandos son fáciles de memorizar ya que, por lo general, son el nombre del
 | :-: | :-: | :-: | :-: | :-: |
 | $\alpha$ | `\alpha` |  | $\mathbb{R}$ | `\doubleR` |
 | $\beta$ | `\beta` |  | $\mathbb{N}$ | `\doubleN` |
-| $\gamma$ | `\gamma` |  | $\Theta$ | `\Theta` |
-| $\theta$ | `\theta` |  | $\Gamma$ | `\Gamma` |
-| $\phi$ | `\phi` |  | $\Phi$ | `\Phi` |
+| $\gamma$ | `\gamma` |  | $\Gamma$ | `\Gamma` |
+| $\theta$ | `\theta` |  | $\sigma$ | `\sigma` |
+| $\phi$ | `\phi` |  | $\tau$ | `\tau` |
 | $\lambda$ | `\lambda` |  | $\Lambda$ | `\Lambda` |
 | $\mu$ | `\mu` |  | $\chi$ | `\chi` |
 | $\infty$ | `\infty` |  | $\varepsilon$ | `\varepsilon` |
