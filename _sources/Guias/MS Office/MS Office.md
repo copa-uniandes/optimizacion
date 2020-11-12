@@ -209,7 +209,7 @@ Los operadores generalizado siempre se insertan con una celda de ecuación a su 
 
 ## Ejemplo: Family Knapsack
 
-En esta sección encontrará un posible formulación para el problema al que se habrán enfrentado en sus complementarias del knapsack familiar, donde una familia de excursionistas debe decidir qué objetos lleva cada integrante de la familia de acuerdo con ciertas restricciones adicionales. Lo importante de la siguiente formulación son los mensajes desplegables que contienen el texto tal y como se escribiría en *Word*. El texto en `esta forma`, se refiere al código que uno escribiría en los bloques de ecuación. Puede descargar este desarrollo en *Word* [aquí (pending link)](https://copa-uniandes.github.io/optimizacion/index.html).
+En esta sección encontrará una posible formulación para el problema al que se habrá enfrentado en sus complementarias del knapsack familiar, donde una familia de excursionistas debe decidir qué objetos lleva cada integrante de la familia de acuerdo con ciertas restricciones adicionales. Lo importante de la siguiente formulación son los mensajes desplegables que contienen el texto tal y como se escribiría en *Word*. El texto en `esta forma`, se refiere al código que uno escribiría en los bloques de ecuación. Puede descargar este desarrollo en *Word* [aquí](https://github.com/copa-uniandes/optimizacion/raw/master/optimizacion/Guias/MS%20Office/samples/Ejemplo%20uso%20de%20ecuaciones%20y%20formato%20en%20MS%20Word.docx).
 
 &ensp;&ensp;**Conjuntos**
 
