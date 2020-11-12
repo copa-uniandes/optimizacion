@@ -115,7 +115,7 @@ Veremos ahora cómo escribir ecuaciones matemáticas en *Word*. En general, los 
 
 ### Símbolos comunes
 
-Especificamente para el curso, utilizamos símbolos representativos de conjuntos y operaciones sobre conjuntos. *Word* ofrece una paleta de símbolos extensa y podemos consultarla bajo la pestaña *Ecuación* que aparece una vez ubicamos el cursor de texto sobre un bloque de ecuación. Colocar nuestro cursor de mouse sobre alguno de los símbolos de la paleta, habilita un texto flotante con el nombre del comando que utilizaría uno para insertarlo.
+Especificamente para el curso, utilizamos símbolos representativos de conjuntos y operaciones sobre conjuntos. *Word* ofrece una paleta de símbolos extensa y podemos consultarla bajo la pestaña **Ecuación** que aparece una vez ubicamos el cursor de texto sobre un bloque de ecuación. Colocar nuestro cursor de mouse sobre alguno de los símbolos de la paleta, habilita un texto flotante con el nombre del comando que utilizaría uno para insertarlo.
 
 ![](./imagenes/Hover-Text.png)
 
