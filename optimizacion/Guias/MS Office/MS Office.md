@@ -2,7 +2,7 @@
 
 ## Motivación
 
-Por medio de herramientas de *Microsoft Office* como *Word* y *PowerPoint* podemos construir documentos convencionales como ensayos, cartas, contratos o presentaciones. ¿Qué hacemos cuando nuestro contenido a desarrollar debe incluir expresiones matemáticas elaboradas? Podriamos expresarlas de forma primitiva, sin prestar atención al estilo, como la siguiente formula cuadrática: x=(-b±√(b^2-4ac))/2a, pero por lo general esta forma es poco amistosa con el lector ya que es dificil de interpretar y con el autor ya que es dificil de identificar si está escrita de forma correcta. Preferiblemente, quisieramos expresar ecuaciones embebidas en el texto, como $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$, o en su propio renglón para dar énfasis:
+Por medio de herramientas de *Microsoft Office* como *Word* y *PowerPoint* podemos construir documentos convencionales como ensayos, cartas, contratos o presentaciones. ¿Qué hacemos cuando nuestro contenido a desarrollar debe incluir expresiones matemáticas elaboradas? Podriamos expresarlas de forma primitiva, sin prestar atención al estilo, como la siguiente formula cuadrática: x=(-b±√(b^2-4ac))/2a, pero, por lo general, esta forma es poco amistosa con el lector ya que es dificil de interpretar y con el autor ya que es dificil de identificar si está escrita de forma correcta. Preferiblemente, quisieramos expresar ecuaciones embebidas en el texto, como $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$, o en su propio renglón para dar énfasis:
 
 $$
 	x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\text{.}
@@ -30,7 +30,7 @@ Si no tiene un atajo asignado, puede hacerlo dirijiendose a la pestaña del *Rib
 
 ## Estructura de informe
 
-Por lo general, las evaluaciones del curso consisten del planteamiento de un escenario a optimizar para el cual el estudiante debe plantear un modelo de programación matemática lineal o lineal-entero. Para plantear modelos generalizados, utilizamos conjuntos, símbolos representativos de parámetros, arreglos de variables y conjuntos de restricciones. Por conveniencia para la evaluación de su entrega, recomendamos enunciar cada uno de estos componentes explicitamente. A continuación, una vista de como debe quedar su documento.
+Por lo general, las evaluaciones del curso consisten del planteamiento de un escenario a optimizar para el cual el estudiante debe construir un modelo de programación matemática lineal o lineal-entero. Para plantear modelos generalizados, utilizamos conjuntos, símbolos representativos de parámetros, arreglos de variables y conjuntos de restricciones. Por conveniencia para la evaluación de su entrega, recomendamos enunciar cada uno de estos componentes explicitamente. A continuación, una vista de como debe quedar su documento.
 
 &ensp;&ensp;**Conjuntos**
 
@@ -105,7 +105,7 @@ $$
 
 ````{margin}
 ```{admonition} Nota
-Las siguientes son tan solo sugerencias y convenciones para la composición tipográfica de matemáticas. Recomendamos adaptarlas a sus preferencias o a su mente creativa.
+Las siguientes son tan solo sugerencias y convenciones para la composición tipográfica de matemática. Recomendamos adaptarlas a sus preferencias o a su mente creativa.
 ```
 ````
 
@@ -119,7 +119,7 @@ Especificamente para el curso, utilizamos símbolos representativos de conjuntos
 
 ![](./imagenes/Hover-Text.png)
 
-Los comandos son fáciles de memorizar ya que por lo general son el nombre del símbolo o una abreviación. A continuación, un listado de los símbolos más comunes como referencia rápida.
+Los comandos son fáciles de memorizar ya que, por lo general, son el nombre del símbolo o una abreviación. A continuación, un listado de los símbolos más comunes como referencia rápida.
 
 | Símbolo | Comando |  | Símbolo | Comando |
 | :-: | :-: | :-: | :-: | :-: |
@@ -139,18 +139,18 @@ Los comandos son fáciles de memorizar ya que por lo general son el nombre del s
 | $\Rightarrow$ | `\Rightarrow` |  | $\Leftarrow$ | `\Leftarrow` |
 | $\cup$ | `\cup` |  | $\cap$ | `\cap` |
 
-Algunos símbolos (como $>$, $<$, $=$, $/$, $*$, etc.) pueden insertarse directamente desde el teclado y por lo tanto no tienen comando. Otros (como $\geq$ o $\leq$) son el resultado de la composición de los símbolos básicos. Por ejemplo, `...` produce $\ldots$, o `>` y `=` juntos producen $\geq$.
+Algunos símbolos (como $>$, $<$, $=$, $/$, $*$, etc.) pueden insertarse directamente desde el teclado y, por lo tanto, no tienen comando. Otros (como $\geq$ o $\leq$) son el resultado de la composición de los símbolos básicos. Por ejemplo, `...` produce $\ldots$, o `>` y `=` que juntos producen $\geq$.
 
 ### Paréntesis, corchetes, llaves y fracciones
 
-Aunque utilizar paréntesis, corchetes y llaves puede parecer trivial, en la composición de tipografía matemática es usual que estos se ajusten al tamaño de su contenido. Particularmente en *Word*, exite el componente de corchetes que contiene una o varias celdas sobre las que se pueden escribir ecuaciones. El comando `()` seguido de la tecla espacio inserta una celda de ecuación encerrada por paréntesis a ambos lados. La siguiente tabla muestra algunos comandos que insertan celdas de ecuaciones con propiedades peculiares, así como ejemplos de como estos signos de puntuación pueden combinarse.
+Aunque utilizar paréntesis, corchetes y llaves puede parecer trivial, en la composición de tipografía matemática es usual que estos se ajusten al tamaño de su contenido. Particularmente en *Word*, existe el componente de corchetes que contiene una o varias celdas sobre las que se pueden escribir ecuaciones. El comando `()` seguido de la tecla espacio inserta una celda de ecuación encerrada por paréntesis a ambos lados. La siguiente tabla muestra algunos comandos que insertan celdas de ecuaciones con propiedades peculiares, así como ejemplos de como estos signos de puntuación pueden combinarse.
 
 | Celdas | Comando |  | Celdas | Comando |
 | :-: | :-: | :-: | :-: | :-: |
 | ![](./imagenes/rdrd.png) | `()` |  | ![](./imagenes/sqrd.png) | `[)` |
 | ![](./imagenes/sqsq.png) | `[]` |  | ![](./imagenes/sq.png) | `[\close` $\rightarrow$ `[┤` |
 | ![](./imagenes/kyky.png) | `{}` |  | ![](./imagenes/abs.png) | `||` |
-| ![](./imagenes/frac.png) | `/` |  |  |  |
+| ![](./imagenes/sqflsq.png) | `[|]` |  | ![](./imagenes/frac.png) | `/` |
 
 Note que para cerrar los paréntesis sin el símbolo de la derecha, debe insertar el símbolo del comando `\close`, '┤'.
 
@@ -183,9 +183,9 @@ Note que para insertar un subíndice o un superíndice (o potencia) debe primero
 
 ### Matrices
 
-Las matrices son los elementos más complicados de editar una vez insertados, por lo que recomendamos planear bien las dimensiones con anterioridad. Para insertar una matriz debe primero utilizar el comando `\matrix`, seguido de una combinación de `&`s y `@`s. Cada `&` implica una columna nueva y cada `@` una fila nueva.
+Las matrices son los elementos más complicados de editar una vez insertadas y pobldas, por lo que recomendamos planear bien las dimensiones con anterioridad. Para insertar una matriz debe primero utilizar el comando `\matrix`, seguido de una combinación de `&`s y `@`s. Cada `&` implica una columna nueva y cada `@` una fila nueva.
 
-Si está insertando una matriz vacía para luego llenarla (recomendable), basta con insertar el la siguiente secuencia de comandos. `\matrix` $\rightarrow$ `■` $\rightarrow$ `■(&&@)`. Esto produciría una matriz 2x3, pero usted puede insertar cuantas filas y columnas desée. Adicionalmente, una vez haya insertado la matriz definitiva, puede hacer clic derecho sobre alguna celda de la matriz y agregar o remover filas o columnas.
+Si está insertando una matriz vacía para luego llenarla (recomendable), basta con insertar la siguiente secuencia de comandos. `\matrix` $\rightarrow$ `■` $\rightarrow$ `■(&&@)`. Esto produciría una matriz 2x3, pero usted puede insertar cuantas filas y columnas desée. Adicionalmente, una vez haya insertado la matriz definitiva, puede hacer clic derecho sobre alguna celda de la matriz y agregar o remover filas o columnas.
 
 ![](./imagenes/matrices.gif)
 
