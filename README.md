@@ -18,6 +18,7 @@ Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenci
  * [Universidad de los Andes](https://uniandes.edu.co/)
  * [Facultad de Ingeniería](https://ingenieria.uniandes.edu.co/)
  * [Departamento de Ingeniería Industrial](https://industrial.uniandes.edu.co/)
+ * [COPA Uniandes](https://copa.uniandes.edu.co/)
 
 ## Disclaimer
 
