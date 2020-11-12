@@ -103,13 +103,109 @@ $$
 
 ## Expresiones matemáticas
 
-Veremos ahora, como escribir ecuaciones matemáticas en *Word*. En general, los símbolos tienen nombres y el programa tiene dos criterio para identificar cuando queremos insertarlos. Primero, debemos estar escribiendo dentro de un bloque de **Ecuación**; segundo, el nombre del símbolo debe indicarse con el caracter '`\`'. Por ejemplo, para insertar un simbolo $\alpha$, escribiriamos en el bloque de ecuación el código `\alpha`.
-
-```{Warning}
-INCOMPLETE SECTION.
-
-TO-DO: Explain proper typesetting with commands. (common symbols, braces, matrices, piecewise functions and max)
+````{margin}
+```{admonition} Nota
+Las siguientes son tan solo sugerencias y convenciones para la composición tipográfica de matemáticas. Recomendamos adaptarlas a sus preferencias o a su mente creativa.
 ```
+````
+
+Veremos ahora cómo escribir ecuaciones matemáticas en *Word*. En general, los símbolos tienen nombres y el programa tiene tres criterios para identificar cuando queremos insertarlos. Primero, debemos estar escribiendo dentro de un bloque de **Ecuación**; segundo, el nombre del símbolo debe indicarse con el caracter '`\`'; tercero, debemos insertar un espacio despues del comando referente a la expresión matemática deseada (por ejemplo, para insertar un simbolo $\alpha$, escribiriamos en el bloque de ecuación el código `\alpha` e insertariamos un espacio para producir el símbolo).
+
+![](./imagenes/alpha+beta=gamma.gif)
+
+### Símbolos comunes
+
+Especificamente para el curso, utilizamos símbolos representativos de conjuntos y operaciones sobre conjuntos. *Word* ofrece una paleta de símbolos extensa y podemos consultarla bajo la pestaña *Ecuación* que aparece una vez ubicamos el cursor de texto sobre un bloque de ecuación. Colocar nuestro cursor de mouse sobre alguno de los símbolos de la paleta, habilita un texto flotante con el nombre del comando que utilizaría uno para insertarlo.
+
+![](./imagenes/Hover-Text.png)
+
+Los comandos son fáciles de memorizar ya que por lo general son el nombre del símbolo o una abreviación. A continuación, un listado de los símbolos más comunes como referencia rápida.
+
+| Símbolo | Comando |  | Símbolo | Comando |
+| :-: | :-: | :-: | :-: | :-: |
+| $\alpha$ | `\alpha` |  | $\mathbb{R}$ | `\doubleR` |
+| $\beta$ | `\beta` |  | $\mathbb{N}$ | `\doubleN` |
+| $\gamma$ | `\gamma` |  | $\Theta$ | `\Theta` |
+| $\theta$ | `\theta` |  | $\Gamma$ | `\Gamma` |
+| $\phi$ | `\phi` |  | $\Phi$ | `\Phi` |
+| $\lambda$ | `\lambda` |  | $\Lambda$ | `\Lambda` |
+| $\mu$ | `\mu` |  | $\chi$ | `\chi` |
+| $\infty$ | `\infty` |  | $\varepsilon$ | `\varepsilon` |
+| $\forall$ | `\forall` |  | $\in$ | `\in` |
+| $\cdots$ | `\cdots` |  | $\times$ | `\times` |
+| $\cdot$ | `\cdot` |  | $\pm$ | `\pm` |
+| $\neq$ | `\neq` |  | $\approx$ | `\approx` |
+| $\rightarrow$ | `\rightarrow` |  | $\leftarrow$ | `\leftarrow` |
+| $\Rightarrow$ | `\Rightarrow` |  | $\Leftarrow$ | `\Leftarrow` |
+| $\cup$ | `\cup` |  | $\cap$ | `\cap` |
+
+Algunos símbolos (como $>$, $<$, $=$, $/$, $*$, etc.) pueden insertarse directamente desde el teclado y por lo tanto no tienen comando. Otros (como $\geq$ o $\leq$) son el resultado de la composición de los símbolos básicos. Por ejemplo, `...` produce $\ldots$, o `>` y `=` juntos producen $\geq$.
+
+### Paréntesis, corchetes, llaves y fracciones
+
+Aunque utilizar paréntesis, corchetes y llaves puede parecer trivial, en la composición de tipografía matemática es usual que estos se ajusten al tamaño de su contenido. Particularmente en *Word*, exite el componente de corchetes que contiene una o varias celdas sobre las que se pueden escribir ecuaciones. El comando `()` seguido de la tecla espacio inserta una celda de ecuación encerrada por paréntesis a ambos lados. La siguiente tabla muestra algunos comandos que insertan celdas de ecuaciones con propiedades peculiares, así como ejemplos de como estos signos de puntuación pueden combinarse.
+
+| Celdas | Comando |  | Celdas | Comando |
+| :-: | :-: | :-: | :-: | :-: |
+| ![](./imagenes/rdrd.png) | `()` |  | ![](./imagenes/sqrd.png) | `[)` |
+| ![](./imagenes/sqsq.png) | `[]` |  | ![](./imagenes/sq.png) | `[\close` $\rightarrow$ `[┤` |
+| ![](./imagenes/kyky.png) | `{}` |  | ![](./imagenes/abs.png) | `||` |
+| ![](./imagenes/frac.png) | `/` |  |  |  |
+
+Note que para cerrar los paréntesis sin el símbolo de la derecha, debe insertar el símbolo del comando `\close`, '┤'.
+
+### Acentos e índices 
+
+De forma similar a los paréntesis y las fracciones, los acentos pueden producir celdas de ecuación en las cuales escribiremos el contenido que deben cubrir. Debemos ser cuidadosos al insertar acentos, ya que, si seguimos escribiendo dentro de sus respectivas casillas, podemos terminar cubriendo toda una expresión matemática en un acento.
+
+| Mal | Bien |
+| :-: | :-: |
+| $\overline{X=\frac{\sum_{i=1}^{n}x_i}{n}}$ | $\bar{X}=\frac{\sum_{i=1}^{n}x_i}{n}$ |
+
+````{margin}
+```{admonition} Nota
+Las casillas de los acentos aparecen luego de oprimir dos veces la tecla espacio.
+
+El primer tecleo inserta el acento y el segundo se lo pone al caracter que tenga detrás. Si no hay caracter alguno, se inserta la celda vacía.
+```
+````
+
+A continuación, unos acentos de uso frecuentes y unos ejemplos de como usar subindices y superindices (comandos `_` y `^` respectivamente).
+
+| Celdas | Comando |  | Celdas | Comando |
+| :-: | :-: | :-: | :-: | :-: |
+| ![](./imagenes/bar.png) | `\bar` |  | ![](./imagenes/dot.png) | `\dot` |
+| ![](./imagenes/hat.png) | `\hat` |  | ![](./imagenes/sup.png) | `^` |
+| ![](./imagenes/vec.png) | `\vec` |  | ![](./imagenes/sub.png) | `_` |
+
+
+Note que para insertar un subíndice o un superíndice (o potencia) debe primero insertar una caracter cualquiera sobre el cual actua el índice (por ejemplo `a^` o `a_`). Este caracter puede editarlo luego.
+
+### Matrices
+
+Las matrices son los elementos más complicados de editar una vez insertados, por lo que recomendamos planear bien las dimensiones con anterioridad. Para insertar una matriz debe primero utilizar el comando `\matrix`, seguido de una combinación de `&`s y `@`s. Cada `&` implica una columna nueva y cada `@` una fila nueva.
+
+Si está insertando una matriz vacía para luego llenarla (recomendable), basta con insertar el la siguiente secuencia de comandos. `\matrix` $\rightarrow$ `■` $\rightarrow$ `■(&&@)`. Esto produciría una matriz 3x2, pero usted puede insertar cuantas filas y columnas desée. Adicionalmente, una vez haya insertado la matriz definitiva, puede hacer clic derecho sobre alguna celda de la matriz y agregar o remover filas o columnas.
+
+![](./imagenes/matrices.gif)
+
+Note que, como cualquier otra expresión matemática en *Word*, las matrices pueden insertarse en celdas de ecuación de otras expresiones, lo que nos permite encerrarlas en paréntesis, darles acentos y asignarles índices y potencias como a cualquier otro eleménto matemático.
+
+### Operadores generalizados
+
+Tenemos también operaciones sobre conjuntos que podemos insertar según su hogar en el catálogo de la pestaña **Ecuación**, o por comandos si los conocemos. Identifique en la siguiente tabla algunos comandos importantes.
+
+| Operación | Comando | Con índices | Composición |
+| :-: | :-: | :-: | :-: |
+| $\sum$ | `\sum` | $\sum_{i=1}^{n}$ | `\sum_(i=1)^(n)` |
+| $\bigcup$ | `\bigcup` | $\bigcup_{i=1}^{n}$ | `\bigcup_(i=1)^(n)` |
+| $\int$ | `\int` | $\int_{0}^{\infty}$ | `\int_(0)^(\infty)` |
+| $\iint$ | `\iint` | $\iint_{D}$ | `\int_(D)` |
+| $\prod$ | `\prod` | $\prod_{i\in I}$ | `\prod_(i\in I)` |
+
+Los operadores generalizado siempre se insertan con una celda de ecuación a su derecha para que se le asigne los elementos sobre los que actúa. Esto quiere decir que podemos anidarlos indefinidamente y así obtener expresiones como a las que estamos acostumbrados para funciones objetivo o restricciones on en los modelos de programación matemática. Vea el siguiente ejemplo de como componer una doble sumatoria representativa de una restricción general. Preste atención a como se anidan las expresiones y como la desigualdad se inserta en la celda exterior.
+
+![](./imagenes/doblesum.gif)
 
 ## Ejemplo: Family Knapsack
 
@@ -154,6 +250,8 @@ $$
 
 :::{admonition,dropdown,tip} ¡Click acá!
 `x_ij={■(1&el objeto i∈O es llevado por el excursionista j∈E@0&d.l.c.)┤`
+
+Note que para esta función a trozos, el contenido de la llave es una matriz.
 :::
 
 &ensp;&ensp;**Naturaleza**
