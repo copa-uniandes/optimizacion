@@ -203,7 +203,7 @@ Tenemos también operaciones sobre conjuntos que podemos insertar según su hoga
 | $\iint$ | `\iint` | $\iint_{D}$ | `\iint_(D)` |
 | $\prod$ | `\prod` | $\prod_{i\in I}$ | `\prod_(i\in I)` |
 
-Los operadores generalizado siempre se insertan con una celda de ecuación a su derecha para que se le asigne los elementos sobre los que actúa. Esto quiere decir que podemos anidarlos indefinidamente y así obtener expresiones como a las que estamos acostumbrados para funciones objetivo o restricciones on en los modelos de programación matemática. Vea el siguiente ejemplo de como componer una doble sumatoria representativa de una restricción general. Preste atención a como se anidan las expresiones y como la desigualdad se inserta en la celda exterior.
+Los operadores generalizados siempre se insertan con una celda de ecuación a su derecha para que se les asignen los elementos sobre los que actúan. Esto quiere decir que podemos anidarlos indefinidamente y así obtener expresiones como a las que estamos acostumbrados para funciones objetivo o restricciones en los modelos de programación matemática. Vea el siguiente ejemplo de como componer una doble sumatoria representativa de una restricción general. Preste atención a como se anidan las expresiones y como la desigualdad se inserta en la celda exterior.
 
 ![](./imagenes/doblesum.gif)
 
