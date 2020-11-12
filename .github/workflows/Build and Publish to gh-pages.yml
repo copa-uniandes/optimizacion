@@ -7,7 +7,9 @@ name: CI
 on:
   push:
     branches: [ master ]
-    paths: 'optimizacion/**'
+    paths:
+    - 'optimizacion/**'
+    - '!optimizacion/Guias/**/samples/**'
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
