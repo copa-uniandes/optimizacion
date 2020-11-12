@@ -8,12 +8,11 @@ Acceda a la página estática a través de este [enlace](https://copa-uniandes.g
 
 ## Licencia
 
-
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-## Contribuir
+## Contribuir y Código de Conducta
 
-Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenciar un _issue_ o en seguir las instrucciones del archivo '[contributing.md](https://github.com/copa-uniandes/optimizacion/blob/master/contributing.md)' para participar de forma activa.
+Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenciar un _issue_ o en seguir las instrucciones del archivo '[CONTRIBUTING.md](https://github.com/copa-uniandes/optimizacion/blob/master/CONTRIBUTING.md)' para participar de forma activa. Tenemos también un [código de conducta](https://github.com/copa-uniandes/optimizacion/blob/master/CODE_OF_CONDUCT.md).
 
 ## Enlaces
  * [Universidad de los Andes](https://uniandes.edu.co/)
