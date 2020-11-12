@@ -387,12 +387,12 @@
                 
   <div class="section" id="extraccion-minera">
 <h1>Extracción minera<a class="headerlink" href="#extraccion-minera" title="Permalink to this headline">¶</a></h1>
-<p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Parámetro binario, Variable binaria, Recurso, Activación binaria</i></p>
+<p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Parámetro binario, Mezcla, Recurso</i></p>
 <div class="section" id="punto-1">
 <h2>Punto 1<a class="headerlink" href="#punto-1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="enunciado">
 <h3>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h3>
-<p>La minería de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracción de materiales como: arena, arcilla, cobre y carbón. Las directivas de una empresa de extracción minera desean explotar un conjunto de zonas (<span class="math notranslate nohighlight">\(M\)</span>), de las cuales se puede extraer un conjunto de diferentes tipos de carbón (<span class="math notranslate nohighlight">\(K\)</span>). Se sabe que de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> sólo puede extraerse el carbón tipo <span class="math notranslate nohighlight">\(j\in K\)</span>. Para ello, suponga que <span class="math notranslate nohighlight">\(a_{ij}\)</span> es un parámetro binario que toma el valor de 1 si en la zona <span class="math notranslate nohighlight">\(i\in M\)</span> se puede extraer carbón del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbón. Por ejemplo, para la zona uno se tiene que <span class="math notranslate nohighlight">\(a_{11}=0\)</span>, <span class="math notranslate nohighlight">\(a_{12}=1\)</span>, <span class="math notranslate nohighlight">\(a_{13}=0\)</span> y <span class="math notranslate nohighlight">\(a_{14}=0\)</span> ya que de la zona 1 sólo puede extraerse el tipo de carbón 2 (hulla).</p>
+<p>La minería de cielo abierto es una actividad industrial que consiste en remover grandes cantidades de suelo para extraer el mineral deseado. Este tipo de minas son comunes en la extracción de materiales como: arena, arcilla, cobre y carbón. Las directivas de una empresa de extracción minera desean explotar un conjunto de zonas (<span class="math notranslate nohighlight">\(M\)</span>), de las cuales se puede extraer un conjunto de diferentes tipos de carbón (<span class="math notranslate nohighlight">\(K:\{1\)</span>: Antracita, <span class="math notranslate nohighlight">\(2\)</span>: Hulla, <span class="math notranslate nohighlight">\(3\)</span>: Turba, <span class="math notranslate nohighlight">\(4\)</span>: Lignito<span class="math notranslate nohighlight">\(\})\)</span>. Se sabe que de la zona <span class="math notranslate nohighlight">\(i\in M\)</span> sólo puede extraerse el carbón tipo <span class="math notranslate nohighlight">\(j\in K\)</span>. Para ello, suponga que <span class="math notranslate nohighlight">\(a_{ij}\)</span> es un parámetro binario que toma el valor de 1 si en la zona <span class="math notranslate nohighlight">\(i\in M\)</span> se puede extraer carbón del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> y 0 en el caso contrario. La Figura 1 presenta un ejemplo en el cual hay 36 zonas y 4 tipos de carbón. Por ejemplo, para la zona uno se tiene que <span class="math notranslate nohighlight">\(a_{11}=0\)</span>, <span class="math notranslate nohighlight">\(a_{12}=1\)</span>, <span class="math notranslate nohighlight">\(a_{13}=0\)</span> y <span class="math notranslate nohighlight">\(a_{14}=0\)</span> ya que de la zona 1 sólo puede extraerse el tipo de carbón 2 (hulla).</p>
 <p><em>Figura 1:</em></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -411,7 +411,7 @@
 \[
 \bbox[5px, border:2px solid black]{
 \begin{array} {cccc}
-    \bbox[Plum, 5px, border:2px solid Plum]{\ \text{Antracita}\ } &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ \text{Hulla}\ } &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{\ \text{Turba}\ } &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{\ \text{Lignito}\ }
+    \bbox[Plum, 5px, border:2px solid Plum]{\ \text{1: Antracita}\ } &amp; \bbox[SkyBlue, 5px, border:2px solid SkyBlue]{\ \text{2: Hulla}\ } &amp; \bbox[PaleGreen, 5px, border:2px solid PaleGreen]{\ \text{3: Turba}\ } &amp; \bbox[LightGoldenRodYellow, 5px, border:2px solid LightGoldenRodYellow]{\ \text{4: Lignito}\ }
 \end{array}
 }
 \]</div>
@@ -600,8 +600,8 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="formulacion">
 <h3>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h3>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
-<p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
+<p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
+<p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
 <p><strong>e.</strong> Escriba la función objetivo.</p>
 </div>
@@ -613,6 +613,7 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 </div>
 <div class="section" id="punto-2">
 <h2>Punto 2<a class="headerlink" href="#punto-2" title="Permalink to this headline">¶</a></h2>
+<p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Parámetro binario, Variable binaria, Mezcla, Recurso, Activación binaria</i></p>
 <div class="section" id="id1">
 <h3>Enunciado<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Ahora considere el escenario en que la empresa incurre en un costo fijo de <span class="math notranslate nohighlight">\(q_i\)</span> pesos cuando decide extraer carbón de la zona <span class="math notranslate nohighlight">\(i\in M\)</span>. Por lo tanto, si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero si no se decide explotar, la extracción de carbón en esa zona debe ser igual a cero (0). La Tabla 3 presenta la información sobre los costos fijos de extraer cada zona.
@@ -740,8 +741,8 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="id2">
 <h3>Formulación<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión adicional(es) que utilizará en el modelo.</p>
-<p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
-<p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
+<p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
+<p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).</p>
 <p><strong>e.</strong> Escriba la función objetivo.</p>
 </div>
@@ -754,6 +755,7 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="creditos">
 <h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
 <p>Equipo Principios de Optimización<br>
+Edición: Alfaima Solano<br>
 Fecha: 30/09/2020</p>
 <div class="toctree-wrapper compound">
 </div>
