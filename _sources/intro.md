@@ -7,3 +7,5 @@ En la parte izquierda te encontrarás con algunas secciones que corresponden a p
 Las prácticas están organizadas por temas, empezando desde las más sencillas e incrementando poco a poco el nivel de complejidad. Si no estás seguro de cuáles son las prácticas que puedes resolver hasta el momento puedes consultarle a un asistente o instructor del curso al respecto.
 
 Sin más, ¡a optimizar!
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
