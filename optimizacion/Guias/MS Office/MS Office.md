@@ -105,7 +105,7 @@ $$
 
 ````{margin}
 ```{admonition} Nota
-Las siguientes son tan solo sugerencias y convenciones para la composición tipográfica de matemática. Recomendamos adaptarlas a sus preferencias o a su mente creativa.
+Las siguientes son tan solo sugerencias y convenciones para la composición tipográfica de matemática. Recomendamos adaptarlas a sus preferencias.
 ```
 ````
 
@@ -115,7 +115,7 @@ Veremos ahora cómo escribir ecuaciones matemáticas en *Word*. En general, los 
 
 ### Símbolos comunes
 
-Especificamente para el curso, utilizamos símbolos representativos de conjuntos y operaciones sobre conjuntos. *Word* ofrece una paleta de símbolos extensa y podemos consultarla bajo la pestaña **Ecuación** que aparece una vez ubicamos el cursor de texto sobre un bloque de ecuación. Colocar nuestro cursor de mouse sobre alguno de los símbolos de la paleta, habilita un texto flotante con el nombre del comando que utilizaría uno para insertarlo.
+Especificamente para el curso, utilizamos símbolos representativos de conjuntos y operaciones sobre conjuntos. *Word* ofrece una paleta de símbolos extensa y podemos consultarla bajo la pestaña **Ecuación** que aparece una vez ubicamos el cursor sobre un bloque de ecuación. Colocar nuestro cursor de mouse sobre alguno de los símbolos de la paleta, habilita un texto flotante con el nombre del comando que utilizaría uno para insertarlo. Por ejemplo, en la imagen a continuación se puede observar que al ubicar el cursor sobre el símbolo de infinito, nos muestra un texto flotante con el comando `\infty`.
 
 ![](./imagenes/Hover-Text.png)
 
@@ -158,9 +158,9 @@ Note que para cerrar los paréntesis sin el símbolo de la derecha, debe inserta
 
 De forma similar a los paréntesis y las fracciones, los acentos pueden producir celdas de ecuación en las cuales escribiremos el contenido que deben cubrir. Debemos ser cuidadosos al insertar acentos, ya que, si seguimos escribiendo dentro de sus respectivas casillas, podemos terminar cubriendo toda una expresión matemática en un acento.
 
-| Mal | Bien |
+| Bien | Mal |
 | :-: | :-: |
-| $\overline{X=\frac{\sum_{i=1}^{n}x_i}{n}}$ | $\bar{X}=\frac{\sum_{i=1}^{n}x_i}{n}$ |
+| $\bar{X}=\frac{\sum_{i=1}^{n}x_i}{n}$ | $\overline{X=\frac{\sum_{i=1}^{n}x_i}{n}}$ | 
 
 ````{margin}
 ```{admonition} Nota
@@ -293,20 +293,20 @@ Estas restricciones garantizan que cada objeto, `i\in O`, se lleve exactamente u
 &ensp;&ensp;**Función Objetivo**
 
 $$
-		\max\left\{\sum_{i\in O}\sum_{j\in E}q_{ij}x_{ij}\right\}
+		\max{\sum_{i\in O}\sum_{j\in E}q_{ij}x_{ij}}
 $$
 
 > Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.
 
 :::{admonition,dropdown,tip} ¡Click acá!
-`max {\sum_(i∈O) \sum_(j∈E) (q_ij x_ij )} `
+`max \sum_(i∈O) \sum_(j∈E) (q_ij x_ij ) `
 
 Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.
 :::
 
 ## Siguientes pasos
 
-Aunque *Word* es una herramienta muy versatil para la composición de documentos, resulta poco efectiva para la tipografía matemática o en la composición de documentos de investigación más formales. Para quienes buscan mayor rigor matemático, flexibilidad en el diseño de sus documentos y están dispuestos a explorar las tecnologías con las que los académicos construyen sus articulos de investigación, recomendamos aprender [*LaTeX*](https://www.overleaf.com/).
+Aunque *Word* es una herramienta muy versatil para la composición de documentos, puede tener limitaciones para la tipografía matemática o en la composición de documentos de investigación más formales. Para quienes buscan mayor rigor matemático, flexibilidad en el diseño de sus documentos y están dispuestos a explorar las tecnologías con las que los académicos construyen sus articulos de investigación, recomendamos aprender [*LaTeX*](https://www.overleaf.com/).
 
 ## Créditos
-Equipo Principios de Optimización<br>Desarrollo: Alejandro Mantilla<br>Fecha: 10/11/2020<br>
+Equipo Principios de Optimización<br>Desarrollo: Alejandro Mantilla<br>Edición: Alfaima Solano<br>Fecha: 10/11/2020<br>
