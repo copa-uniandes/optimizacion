@@ -51,9 +51,9 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="../_static/icon.png"/>
@@ -303,7 +303,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/Soluciones/Transporte.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/./optimizacion/Soluciones/Transporte.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -311,6 +311,9 @@
         
         
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -480,18 +483,18 @@ Formule un modelo general de optimización lineal que le permita a La Lechera Ra
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>2.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe respetar la oferta de las plantas.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-61df3bfd-b80b-4046-acf5-8d37d34b504a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-61df3bfd-b80b-4046-acf5-8d37d34b504a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3c26a02e-2014-4504-8c5e-9a4202dd8841">
+<span class="eqno">(1)<a class="headerlink" href="#equation-3c26a02e-2014-4504-8c5e-9a4202dd8841" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{j\in D}x_{ij} &amp;\le b_i, &amp;&amp;\forall i\in P.
 \end{align}\]</div>
 <p><strong>3.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que se debe satisfacer la demanda de los distribuidores.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3eb2ed56-5e4e-4f83-be98-87611c805a73">
-<span class="eqno">(2)<a class="headerlink" href="#equation-3eb2ed56-5e4e-4f83-be98-87611c805a73" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a720f3c-8b87-4d51-ba5c-2ba6e6a3ac31">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2a720f3c-8b87-4d51-ba5c-2ba6e6a3ac31" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in P}x_{ij} &amp;\ge t_j, &amp;&amp;\forall j\in D.
 \end{align}\]</div>
 <p><strong>4.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2e355908-241c-4428-a208-7575326d477e">
-<span class="eqno">(3)<a class="headerlink" href="#equation-2e355908-241c-4428-a208-7575326d477e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f03921e2-b23d-4d3c-9d37-e6543629eb53">
+<span class="eqno">(3)<a class="headerlink" href="#equation-f03921e2-b23d-4d3c-9d37-e6543629eb53" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_{ij} &amp; \ge 0, &amp;&amp;\forall i\in P,j\in D.
 \end{align}\]</div>
 </div>
@@ -709,7 +712,7 @@ Fecha: 20/09/2020</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "copa-uniandes/optimizacion",
             ref: "master",
         },
         codeMirrorConfig: {

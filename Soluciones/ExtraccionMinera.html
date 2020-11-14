@@ -51,9 +51,9 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="../_static/icon.png"/>
@@ -303,7 +303,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/Soluciones/ExtraccionMinera.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/./optimizacion/Soluciones/ExtraccionMinera.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -311,6 +311,9 @@
         
         
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -655,8 +658,8 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="variables-de-decision">
 <h4>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h4>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1e547e8-b257-46a0-b95a-0b4c32ca046d">
-<span class="eqno">(7)<a class="headerlink" href="#equation-f1e547e8-b257-46a0-b95a-0b4c32ca046d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d0911d73-fe8c-46da-9d00-84a0ec69646f">
+<span class="eqno">(7)<a class="headerlink" href="#equation-d0911d73-fe8c-46da-9d00-84a0ec69646f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
 \end{align}\]</div>
 </div>
@@ -664,26 +667,26 @@ x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
 <h4>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
 <p><em>Opción 1:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-70ab0c5c-4b5a-4cf4-9c17-98799e91ff8a">
-<span class="eqno">(8)<a class="headerlink" href="#equation-70ab0c5c-4b5a-4cf4-9c17-98799e91ff8a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0e186ebd-bdb0-4e28-ad45-04e6bc54ec68">
+<span class="eqno">(8)<a class="headerlink" href="#equation-0e186ebd-bdb0-4e28-ad45-04e6bc54ec68" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
 \end{align}\]</div>
 <p><em>Opción 2:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b30c6691-3168-4c36-b183-970f7531043d">
-<span class="eqno">(9)<a class="headerlink" href="#equation-b30c6691-3168-4c36-b183-970f7531043d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-97d08081-4552-4218-84d1-cd0fe521a253">
+<span class="eqno">(9)<a class="headerlink" href="#equation-97d08081-4552-4218-84d1-cd0fe521a253" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
 \end{align}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b3629d4-32f7-4d7a-82d9-21574a7823ce">
-<span class="eqno">(10)<a class="headerlink" href="#equation-8b3629d4-32f7-4d7a-82d9-21574a7823ce" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f438e131-6c7b-42dc-b032-8a9ff49f1a39">
+<span class="eqno">(10)<a class="headerlink" href="#equation-f438e131-6c7b-42dc-b032-8a9ff49f1a39" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_i, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h4>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-649077f7-af8e-43b0-92af-e4960de89873">
-<span class="eqno">(11)<a class="headerlink" href="#equation-649077f7-af8e-43b0-92af-e4960de89873" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1dc8ef9c-2c14-4f4b-bc7d-60adf427aa12">
+<span class="eqno">(11)<a class="headerlink" href="#equation-1dc8ef9c-2c14-4f4b-bc7d-60adf427aa12" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
@@ -1183,21 +1186,21 @@ y_i:\begin{cases}1\text{,}&amp;\text{ si se decide explotar la zona }i\in M \\ 0
 <div class="section" id="id4">
 <h4>Restricciones<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-810aba46-fd4a-46d3-bf70-679017592979">
-<span class="eqno">(12)<a class="headerlink" href="#equation-810aba46-fd4a-46d3-bf70-679017592979" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6b041424-c972-47be-9421-1c9f521af9ad">
+<span class="eqno">(12)<a class="headerlink" href="#equation-6b041424-c972-47be-9421-1c9f521af9ad" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.
 \end{align}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa427847-6827-41e6-96df-42712cc32416">
-<span class="eqno">(13)<a class="headerlink" href="#equation-aa427847-6827-41e6-96df-42712cc32416" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6637620f-3cdc-45c3-912f-60e26b3db869">
+<span class="eqno">(13)<a class="headerlink" href="#equation-6637620f-3cdc-45c3-912f-60e26b3db869" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
 <div class="section" id="id5">
 <h4>Naturaleza de las variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8c74fa56-f097-4add-9e08-a02722d2e869">
-<span class="eqno">(14)<a class="headerlink" href="#equation-8c74fa56-f097-4add-9e08-a02722d2e869" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cbc66726-598e-4a76-b942-8b55cced598d">
+<span class="eqno">(14)<a class="headerlink" href="#equation-cbc66726-598e-4a76-b942-8b55cced598d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
@@ -1572,7 +1575,7 @@ Fecha: 12/09/2020</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "copa-uniandes/optimizacion",
             ref: "master",
         },
         codeMirrorConfig: {
