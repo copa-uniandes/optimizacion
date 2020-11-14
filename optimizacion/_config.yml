@@ -5,6 +5,13 @@ logo: _static/logo-uniandes.png
 
 repository:
   url: https://github.com/copa-uniandes/optimizacion
+  path_to_book: ./optimizacion/
+  branch: master
+
+launch_buttons:
+  notebook_interface: "classic"
+  binderhub_url: "https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master"
+  thebe: true
 
 latex:
   latex_documents:

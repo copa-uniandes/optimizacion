@@ -1,0 +1,19 @@
+name: principios-optimizacion-environment
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - numpy
+  - psutil
+  - toolz
+  - matplotlib
+  - dill
+  - pandas
+  - partd
+  - bokeh
+  - dask
+  - networkx
+  - pulp
+  - openpyxl
+  - seaborn
+  - jupytext>=0.16
