@@ -6,9 +6,9 @@ El proyecto consiste en contar con una página de ejercicios para ilustrar casos
 
 Acceda a la página estática a través de este [enlace](https://copa-uniandes.github.io/optimizacion/).
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master)
+Acceda a un ambiente interactivo de Jupyter a través de [*Binder*](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master).
 
-Acceda a un ambiente interactivo de Jupyter a través de *Binder*.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master)
 
 ## Licencia
 
@@ -44,3 +44,4 @@ Además, agradecemos a los equipos detrás de las siguientes herramientas esenci
  * [MySt Markdown](https://myst-parser.readthedocs.io/en/latest/)
  * [Sphinx](https://www.sphinx-doc.org/en/master/)
  * [PuLP](https://coin-or.github.io/pulp/)
+ * [Binder](https://mybinder.org/)
