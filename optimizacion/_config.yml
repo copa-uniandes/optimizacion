@@ -10,7 +10,7 @@ repository:
 
 launch_buttons:
   notebook_interface: "classic"
-  binderhub_url: "https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master"
+  binderhub_url: "https://mybinder.org"
   thebe: true
 
 latex:
