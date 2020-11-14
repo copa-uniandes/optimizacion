@@ -303,7 +303,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/./optimizacion/Soluciones/ExtraccionMinera.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Soluciones/ExtraccionMinera.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -658,8 +658,8 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="variables-de-decision">
 <h4>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h4>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac960e04-d184-4032-a3ac-ec11dd48eb65">
-<span class="eqno">(7)<a class="headerlink" href="#equation-ac960e04-d184-4032-a3ac-ec11dd48eb65" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6f9171c0-dd94-47a5-bad1-65cc66d0c718">
+<span class="eqno">(7)<a class="headerlink" href="#equation-6f9171c0-dd94-47a5-bad1-65cc66d0c718" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
 \end{align}\]</div>
 </div>
@@ -667,26 +667,26 @@ x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
 <h4>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
 <p><em>Opción 1:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-484249f1-afb0-4890-8ec8-52c44b9ca4ec">
-<span class="eqno">(8)<a class="headerlink" href="#equation-484249f1-afb0-4890-8ec8-52c44b9ca4ec" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d557dd41-2f29-4643-b625-1e7b366a1546">
+<span class="eqno">(8)<a class="headerlink" href="#equation-d557dd41-2f29-4643-b625-1e7b366a1546" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
 \end{align}\]</div>
 <p><em>Opción 2:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-5f62a3c6-6d9f-4b1f-a3eb-493ac719ff89">
-<span class="eqno">(9)<a class="headerlink" href="#equation-5f62a3c6-6d9f-4b1f-a3eb-493ac719ff89" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-32245493-2882-4289-b513-69754bc468d1">
+<span class="eqno">(9)<a class="headerlink" href="#equation-32245493-2882-4289-b513-69754bc468d1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
 \end{align}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb997079-4f0b-4fed-b536-42878c186580">
-<span class="eqno">(10)<a class="headerlink" href="#equation-fb997079-4f0b-4fed-b536-42878c186580" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bb03e230-5eb7-48fa-8181-fee4a664f67a">
+<span class="eqno">(10)<a class="headerlink" href="#equation-bb03e230-5eb7-48fa-8181-fee4a664f67a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_i, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h4>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e39a323d-5473-4751-a656-07f1c31e07ad">
-<span class="eqno">(11)<a class="headerlink" href="#equation-e39a323d-5473-4751-a656-07f1c31e07ad" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2100bad8-45d9-4f93-ba26-083755690595">
+<span class="eqno">(11)<a class="headerlink" href="#equation-2100bad8-45d9-4f93-ba26-083755690595" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
@@ -1186,21 +1186,21 @@ y_i:\begin{cases}1\text{,}&amp;\text{ si se decide explotar la zona }i\in M \\ 0
 <div class="section" id="id4">
 <h4>Restricciones<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-61efb7a0-65bf-4314-a144-06027224ff42">
-<span class="eqno">(12)<a class="headerlink" href="#equation-61efb7a0-65bf-4314-a144-06027224ff42" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ba525739-852a-4dfe-8dbb-e8132f35212a">
+<span class="eqno">(12)<a class="headerlink" href="#equation-ba525739-852a-4dfe-8dbb-e8132f35212a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.
 \end{align}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f12a587d-9439-4a39-a108-cebc0256583f">
-<span class="eqno">(13)<a class="headerlink" href="#equation-f12a587d-9439-4a39-a108-cebc0256583f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c8640399-19ee-4d19-bd9a-978e4c9536c6">
+<span class="eqno">(13)<a class="headerlink" href="#equation-c8640399-19ee-4d19-bd9a-978e4c9536c6" title="Permalink to this equation">¶</a></span>\[\begin{align}
 x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
 <div class="section" id="id5">
 <h4>Naturaleza de las variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b1466e4b-e6f1-48dc-948e-ba2f87965d3a">
-<span class="eqno">(14)<a class="headerlink" href="#equation-b1466e4b-e6f1-48dc-948e-ba2f87965d3a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-be7931b6-e12d-445c-94fd-ed06e720f8a1">
+<span class="eqno">(14)<a class="headerlink" href="#equation-be7931b6-e12d-445c-94fd-ed06e720f8a1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
 \end{align}\]</div>
 </div>
