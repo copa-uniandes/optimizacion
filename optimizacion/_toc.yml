@@ -26,4 +26,4 @@
       - file: Soluciones/ExtraccionMinera.ipynb
 - part: Guías
   chapters:
-  - file: Guias/MS Office/MS Office.md
+  - file: Guias/MS Office/MS Office.ipynb
