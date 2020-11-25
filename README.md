@@ -1,5 +1,7 @@
 # RpF - Equipo de Principios de Optimización
 
+![CI](https://github.com/copa-uniandes/optimizacion/workflows/CI/badge.svg)
+
 El repositorio de formulaciones (RpF) es un proyecto piloto de desarrollo de páginas estáticas para el contenido de cursos del Departamento de Ingeniería Industrial de la Universidad de los Andes, liderado por la instructora Alfaima Solano para el curso Principios de Optimización (IIND-2103). 
 
 El proyecto consiste en contar con una página de ejercicios para ilustrar casos de modelos de programación matemática lineal o lineal-entera. Cada ejercicio cuenta con un enunciado y su solución implementada en _Python_ haciendo uso de la librería _PuLP_.
