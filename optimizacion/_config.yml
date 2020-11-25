@@ -26,3 +26,6 @@ html:
 
 parse:
   myst_extended_syntax: true
+
+execute:
+  execute_notebooks: 'off'
