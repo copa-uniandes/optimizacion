@@ -10,7 +10,9 @@ Acceda a un ambiente interactivo de Jupyter a través de [*Binder*](https://mybi
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master)
 
-## Licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+## Licencia
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
@@ -37,7 +39,7 @@ Monitores involucrados:
  * Alejandro Mantilla
  * Juan Felipe Rengifo
  
-Agradecemos a los instructores Carlos Gomez y Andrés Medaglia por su realimentación a lo largo del desarrollo y a los respectivos autores de las prácticas de formulación, cuyo contenido está expuesto en la página.
+Agradecemos a los profesores Carlos Gomez y Andrés Medaglia por su realimentación a lo largo del desarrollo y a los respectivos autores de las prácticas de formulación, cuyo contenido está expuesto en la página.
 
 Además, agradecemos a los equipos detrás de las siguientes herramientas esenciales para el desarrollo de la página.
  * [Jupyter-Book](https://jupyterbook.org/intro.html)
