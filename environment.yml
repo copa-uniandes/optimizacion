@@ -8,6 +8,6 @@ dependencies:
   - pandas
   - networkx
   - pulp
-  #- openpyxl
+  - openpyxl
   #- seaborn
   - jupytext>=0.16
