@@ -428,13 +428,6 @@
 </div>
 <div class="section" id="parametros">
 <h2>Parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h2>
-<p>Con lo anterior, se procede a guardar los parámetros en diccionarios. Para cada parámetro se debe seguir el siguiente procedimiento:</p>
-<ol class="simple">
-<li><p>Crear el diccionario donde se guardará su información.</p></li>
-<li><p>Realizar uno o dos recorridos para pasar por los valores de cada uno de los índices del parámetro.</p></li>
-<li><p>Dentro del recorrido se guarda cada índice del parámetro en una variable.</p></li>
-<li><p>Dentro del recorrido se guarda el valor del índice en el diccionario donde los índices seran las llaves.</p></li>
-</ol>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="dropdown admonition">
@@ -449,6 +442,13 @@
 <p>Cada recorrido se definirá según dónde se encuentre la información en el archivo de excel.</p>
 </div>
 </div>
+<p>Con lo anterior, se procede a guardar los parámetros en diccionarios. Para cada parámetro se debe seguir el siguiente procedimiento:</p>
+<ol class="simple">
+<li><p>Crear el diccionario donde se guardará su información.</p></li>
+<li><p>Realizar uno o dos recorridos para pasar por los valores de cada uno de los índices del parámetro.</p></li>
+<li><p>Dentro del recorrido se guarda cada índice del parámetro en una variable.</p></li>
+<li><p>Dentro del recorrido se guarda el valor del índice en el diccionario donde los índices seran las llaves.</p></li>
+</ol>
 <p>En la primera hoja se encuentra el parámetro <span class="math notranslate nohighlight">\(p_i\)</span> que hace referencia al peso de cada uno de los objetos.</p>
 <p><img alt="" src="../../_images/foto-p_i.png" /></p>
 <p>Como este parámetro esta indexado únicamente en el conjunto de objetos, solo se debe realizar un recorrido. Este recorrido se definirá entre 3 y 6, pues estas son las filas donde se encuentran los valores de este parámetro para cada uno de los objetos. Para extraer el valor de una celda de Excel se utilizará el comando <em>.value</em>.</p>
