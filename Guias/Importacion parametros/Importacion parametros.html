@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Importación de parámetros desde MS Excel &#8212; Repositorio Principios de Optimización</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/text-align.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Matemáticas en MS Office" href="../MS%20Office/MS%20Office.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-uniandes.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
+   Chocolatería
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Chocolater%C3%ADa.html">
+     Chocolatería Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/PlaneacionMenus%20Enunciado.html">
+   Planeación de menús
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/PlaneacionMenus.html">
+     Planeación de menús Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/OptiJuice%20Enunciado.html">
+   Producción de jugos
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/OptiJuice.html">
+     Producción de jugos Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Transporte.html">
+     Transporte de productos lácteos Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Transporte-vis.html">
+     Transporte de productos lácteos Visualización
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Inventarios%20Enunciado.html">
+   Producción de cemento
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Inventarios.html">
+     Producción de cemento Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Inventarios-vis.html">
+     Producción de cemento Visualización
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Asignaci%C3%B3n.html">
+     Asignación de tareas Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/ExtraccionMinera%20Enunciado.html">
+   Extracción minera
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/ExtraccionMinera.html">
+     Extracción minera Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Guías
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../MS%20Office/MS%20Office.html">
+   Matemáticas en
+   <em>
+    MS Office
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Importación de parámetros desde MS Excel
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Guias/Importacion parametros/Importacion parametros.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/copa-uniandes/optimizacion"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FGuias/Importacion parametros/Importacion parametros.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Guias/Importacion parametros/Importacion parametros.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="importacion-de-parametros-desde-ms-excel">
+<h1>Importación de parámetros desde MS Excel<a class="headerlink" href="#importacion-de-parametros-desde-ms-excel" title="Permalink to this headline">¶</a></h1>
+<p>Para empezar, la guía se realizará en base al problema de Family Knapsack que se introdujo como ejemplo en la guía <em>Matemáticas en MS Office</em>. El primer paso es importar la libreria <strong>openpyxl</strong> con la siguiente línea de código:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span><span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Nota</p>
+<p>De forma que la línea de código funcione en cualquier computador sin tener que actualizarla, se recomienda guardar el archivo con los parámetros en una carpeta en la que también se encuentre el archivo con la implementación del problema. Al realizar esto, la ruta se escribe con un punto seguido de un slash y el nombre del archivo con los parámetros. De esta manera, el punto hace automaticamente la referencia a la misma carpeta donde se encuentra el archivo en el que se esta realizando la implementación.</p>
+</div>
+</div>
+<p>Luego, es necesario importar el libro de MS Excel donde se encuentran los parámetros del problema de optimización a resolver. En este caso el libro se llama <em>parametros.xlsx</em>. Esto se hace mediante la función <em>load_wokbook()</em> que recibe como parámetro la ruta donde se encuentra el archivo. Además, para poder realizar operaciones con el libro más adelante, se guardara el archivo en una nueva variable que se llamará <em>book</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s2">&quot;./parametros.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora, se debe guardar cada una de las hojas que tiene el libro de Excel con la función <em>get_sheet_by_name()</em> que recibe como parámetro el nombre de la hoja. En el ejemplo que estamos usando, el libro con los parámetros tiene tres hojas.</p>
+<p><img alt="" src="../../_images/fotoHojasLibro.png" /></p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>En caso de que solo exista una hoja se puede utilizar únicamente la siguiente línea de código:</p>
+<p>sheet = book.active</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sheet1</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">get_sheet_by_name</span><span class="p">(</span><span class="s2">&quot;pesoObjetos&quot;</span><span class="p">)</span>
+<span class="n">sheet2</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">get_sheet_by_name</span><span class="p">(</span><span class="s2">&quot;pesoMaxExcursionistas&quot;</span><span class="p">)</span>
+<span class="n">sheet3</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">get_sheet_by_name</span><span class="p">(</span><span class="s2">&quot;preferencias&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/juanfeliperengifo/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: DeprecationWarning: Call to deprecated function get_sheet_by_name (Use wb[sheetname]).
+  &quot;&quot;&quot;Entry point for launching an IPython kernel.
+/Users/juanfeliperengifo/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:2: DeprecationWarning: Call to deprecated function get_sheet_by_name (Use wb[sheetname]).
+  
+/Users/juanfeliperengifo/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:3: DeprecationWarning: Call to deprecated function get_sheet_by_name (Use wb[sheetname]).
+  This is separate from the ipykernel package so we can avoid doing imports until
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con lo anterior, se procede a guardar los parámetros en diccionarios. Para cada parámetro se debe seguir el siguiente procedimiento:</p>
+<ol class="simple">
+<li><p>Crear el diccionario donde se guardará su información.</p></li>
+<li><p>Realizar uno o dos recorridos para pasar por los valores de cada uno de los índices del parámetro.</p></li>
+</ol>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>El número de recorridos depende del número de conjuntos en los que esta indexado el parámetro en cuestión. En caso de que este indexado en tres o más conjuntos, se deberan construir varias tablas con ciertos índices fijos y se tendrán máximo dos recorridos (filas y columnas).</p>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>Cada recorrido se definirá según dónde se encuentre la información en el archivo de excel.</p>
+</div>
+</div>
+<ol class="simple">
+<li><p>Dentro del recorrido se guarda cada índice del parámetro en una variable.</p></li>
+<li><p>Dentro del recorrido se guarda el valor del índice en el diccionario donde los índices seran las llaves.</p></li>
+</ol>
+<p>En la primera hoja se encuentra el parámetro <span class="math notranslate nohighlight">\(p_i\)</span> que hace referencia al peso de cada uno de los objetos.</p>
+<p><img alt="" src="../../_images/foto-p_i.png" /></p>
+<p>Como este parámetro esta indexado únicamente en el conjunto de objetos, solo se debe realizar un recorrido. Este recorrido se definirá entre 3 y 6, pues estas son las filas donde se encuentran los valores de este parámetro para cada uno de los objetos. Para extraer el valor de una celda de Excel se utilizará el comando <em>.value</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{margin}
+```{admonition} Nota
+  
+Es importante recordar que la función *range(i,j)* define una serie de números desde i hasta j-1. Es por esto que, en este caso, se utiliza el número 7 como j.
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{margin}
+```{admonition} Nota
+  
+Es importante recordar que en la función *cell(i,j)*, i hace referencia a la fila y j a la columna. En este caso, como los índices (nombre de cada objeto) se encuentran en la segunda columna, se utiliza el número 2 como j para todas las iteraciones.
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Se crea el diccionario para guardar la información del parámetro</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># 2. Se realiza el recorrido para guardar todos los valores necesarios</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+    <span class="n">objeto</span> <span class="o">=</span> <span class="n">sheet1</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>       <span class="c1"># 3. Se guarda cada índice para luego utilizarlo como llave en el diccionario</span>
+    <span class="n">b</span><span class="p">[</span><span class="n">objeto</span><span class="p">]</span> <span class="o">=</span> <span class="n">sheet1</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>    <span class="c1"># 4. Se guarda el valor del índice correspondiente a la iteración</span>
+
+<span class="c1"># Se imprime el diccionario para verificar que se hayan importado correctamente los datos</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Papá&#39;: 12, &#39;Mamá&#39;: 12, &#39;Hijo&#39;: 6, &#39;Hija&#39;: 6}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "copa-uniandes/optimizacion",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Guias/Importacion parametros"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../MS%20Office/MS%20Office.html" title="previous page">Matemáticas en <em>MS Office</em></a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Equipo Principios de Optimización<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
