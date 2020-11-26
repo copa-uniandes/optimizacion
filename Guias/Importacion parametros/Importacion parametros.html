@@ -396,8 +396,9 @@
 </div>
 </div>
 </div>
-<p>Ahora, se debe guardar cada una de las hojas que tiene el libro de Excel con la función <em>get_sheet_by_name()</em> que recibe como parámetro el nombre de la hoja. En el ejemplo que estamos usando, el libro con los parámetros tiene tres hojas.</p>
+<p>Ahora, se debe guardar cada una de las hojas que tiene el libro de Excel. En el ejemplo que estamos usando, el libro con los parámetros tiene tres hojas.</p>
 <p><img alt="" src="../../_images/fotoHojasLibro.png" /></p>
+<p>A continuación se ilustra como guardar cada hoja.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="dropdown admonition">
@@ -408,19 +409,9 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sheet1</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">get_sheet_by_name</span><span class="p">(</span><span class="s2">&quot;pesoObjetos&quot;</span><span class="p">)</span>
-<span class="n">sheet2</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">get_sheet_by_name</span><span class="p">(</span><span class="s2">&quot;pesoMaxExcursionistas&quot;</span><span class="p">)</span>
-<span class="n">sheet3</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">get_sheet_by_name</span><span class="p">(</span><span class="s2">&quot;preferencias&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/juanfeliperengifo/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: DeprecationWarning: Call to deprecated function get_sheet_by_name (Use wb[sheetname]).
-  &quot;&quot;&quot;Entry point for launching an IPython kernel.
-/Users/juanfeliperengifo/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:2: DeprecationWarning: Call to deprecated function get_sheet_by_name (Use wb[sheetname]).
-  
-/Users/juanfeliperengifo/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:3: DeprecationWarning: Call to deprecated function get_sheet_by_name (Use wb[sheetname]).
-  This is separate from the ipykernel package so we can avoid doing imports until
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sheet1</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s2">&quot;pesoObjetos&quot;</span><span class="p">]</span>
+<span class="n">sheet2</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s2">&quot;pesoMaxExcursionistas&quot;</span><span class="p">]</span>
+<span class="n">sheet3</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s2">&quot;preferencias&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -460,13 +451,12 @@ Es importante recordar que la función range(i,j) define una serie de números d
 
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{margin}
-```{admonition} Nota
-:class: dropdown
-  
-Es importante recordar que en la función cell(i,j), i hace referencia a la fila y j a la columna. En este caso, como los índices (nombre de cada objeto) se encuentran en la segunda columna, se utiliza el número 2 como j para todas las iteraciones.
-
-</pre></div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Nota</p>
+<p>Es importante recordar que en la función cell(i,j), i hace referencia a la fila y j a la columna. En este caso, como los índices (nombre de cada objeto) se encuentran en la segunda columna, se utiliza el número 2 como j para todas las iteraciones.</p>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
