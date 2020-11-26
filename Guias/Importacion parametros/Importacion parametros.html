@@ -380,6 +380,10 @@
 </div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
+<div class="dropdown admonition important">
+<p class="admonition-title">Important</p>
+<p>De forma que la línea de código funcione en cualquier computador sin tener que actualizarla, se recomienda guardar el archivo con los parámetros en una carpeta en la que también se encuentre el archivo con la implementación del problema. Al realizar esto, la ruta se escribe con un punto seguido de un slash y el nombre del archivo con los parámetros. De esta manera, el punto hace automaticamente la referencia a la misma carpeta donde se encuentra el archivo en el que se esta realizando la implementación.</p>
+</div>
 </div>
 </div>
 <div class="section" id="libro-de-ms-excel-y-hojas">
@@ -396,6 +400,11 @@
 <p><img alt="" src="../../_images/fotoHojasLibro.png" /></p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Nota</p>
+<p>En caso de que solo exista una hoja se puede utilizar únicamente la siguiente línea de código:</p>
+<p>sheet = book.active</p>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -428,22 +437,32 @@
 </ol>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Nota</p>
+<p>El número de recorridos depende del número de conjuntos en los que esta indexado el parámetro en cuestión. En caso de que este indexado en tres o más conjuntos, se deberan construir varias tablas con ciertos índices fijos y se tendrán máximo dos recorridos (filas y columnas).</p>
+</div>
 </div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Nota</p>
+<p>Cada recorrido se definirá según dónde se encuentre la información en el archivo de excel.</p>
+</div>
 </div>
 <p>En la primera hoja se encuentra el parámetro <span class="math notranslate nohighlight">\(p_i\)</span> que hace referencia al peso de cada uno de los objetos.</p>
 <p><img alt="" src="../../_images/foto-p_i.png" /></p>
 <p>Como este parámetro esta indexado únicamente en el conjunto de objetos, solo se debe realizar un recorrido. Este recorrido se definirá entre 3 y 6, pues estas son las filas donde se encuentran los valores de este parámetro para cada uno de los objetos. Para extraer el valor de una celda de Excel se utilizará el comando <em>.value</em>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{margin}
-```{admonition,dropdown} Nota
+```{admonition} Nota
+:class: dropdown
   
 Es importante recordar que la función *range(i,j)* define una serie de números desde i hasta j-1. Es por esto que, en este caso, se utiliza el número 15 como j.
 
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{margin}
-```{admonition,dropdown} Nota
+```{admonition} Nota
+:class: dropdown
   
 Es importante recordar que en la función *cell(i,j)*, i hace referencia a la fila y j a la columna. En este caso, como los índices (nombre de cada objeto) se encuentran en la segunda columna, se utiliza el número 2 como j para todas las iteraciones.
 
