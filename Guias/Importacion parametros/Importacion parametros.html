@@ -320,6 +320,45 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libreria">
+   Librería
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libro-de-ms-excel-y-hojas">
+   Libro de MS Excel y hojas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parametros">
+   Parámetros
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conjuntos">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#siguiente-paso">
+   Siguiente paso
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -329,6 +368,8 @@
                 
   <div class="section" id="importacion-de-parametros-desde-ms-excel">
 <h1>Importación de parámetros desde MS Excel<a class="headerlink" href="#importacion-de-parametros-desde-ms-excel" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="libreria">
+<h2>Librería<a class="headerlink" href="#libreria" title="Permalink to this headline">¶</a></h2>
 <p>Para empezar, la guía se realizará en base al problema de Family Knapsack que se introdujo como ejemplo en la guía <em>Matemáticas en MS Office</em>. El primer paso es importar la libreria <strong>openpyxl</strong> con la siguiente línea de código:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -339,12 +380,10 @@
 </div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Nota</p>
-<p>De forma que la línea de código funcione en cualquier computador sin tener que actualizarla, se recomienda guardar el archivo con los parámetros en una carpeta en la que también se encuentre el archivo con la implementación del problema. Al realizar esto, la ruta se escribe con un punto seguido de un slash y el nombre del archivo con los parámetros. De esta manera, el punto hace automaticamente la referencia a la misma carpeta donde se encuentra el archivo en el que se esta realizando la implementación.</p>
 </div>
 </div>
+<div class="section" id="libro-de-ms-excel-y-hojas">
+<h2>Libro de MS Excel y hojas<a class="headerlink" href="#libro-de-ms-excel-y-hojas" title="Permalink to this headline">¶</a></h2>
 <p>Luego, es necesario importar el libro de MS Excel donde se encuentran los parámetros del problema de optimización a resolver. En este caso el libro se llama <em>parametros.xlsx</em>. Esto se hace mediante la función <em>load_wokbook()</em> que recibe como parámetro la ruta donde se encuentra el archivo. Además, para poder realizar operaciones con el libro más adelante, se guardara el archivo en una nueva variable que se llamará <em>book</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -357,11 +396,6 @@
 <p><img alt="" src="../../_images/fotoHojasLibro.png" /></p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
-<div class="admonition-nota admonition">
-<p class="admonition-title">Nota</p>
-<p>En caso de que solo exista una hoja se puede utilizar únicamente la siguiente línea de código:</p>
-<p>sheet = book.active</p>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -382,41 +416,34 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="parametros">
+<h2>Parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h2>
 <p>Con lo anterior, se procede a guardar los parámetros en diccionarios. Para cada parámetro se debe seguir el siguiente procedimiento:</p>
 <ol class="simple">
 <li><p>Crear el diccionario donde se guardará su información.</p></li>
 <li><p>Realizar uno o dos recorridos para pasar por los valores de cada uno de los índices del parámetro.</p></li>
-</ol>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="admonition-nota admonition">
-<p class="admonition-title">Nota</p>
-<p>El número de recorridos depende del número de conjuntos en los que esta indexado el parámetro en cuestión. En caso de que este indexado en tres o más conjuntos, se deberan construir varias tablas con ciertos índices fijos y se tendrán máximo dos recorridos (filas y columnas).</p>
-</div>
-</div>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="admonition-nota admonition">
-<p class="admonition-title">Nota</p>
-<p>Cada recorrido se definirá según dónde se encuentre la información en el archivo de excel.</p>
-</div>
-</div>
-<ol class="simple">
 <li><p>Dentro del recorrido se guarda cada índice del parámetro en una variable.</p></li>
 <li><p>Dentro del recorrido se guarda el valor del índice en el diccionario donde los índices seran las llaves.</p></li>
 </ol>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+</div>
 <p>En la primera hoja se encuentra el parámetro <span class="math notranslate nohighlight">\(p_i\)</span> que hace referencia al peso de cada uno de los objetos.</p>
 <p><img alt="" src="../../_images/foto-p_i.png" /></p>
 <p>Como este parámetro esta indexado únicamente en el conjunto de objetos, solo se debe realizar un recorrido. Este recorrido se definirá entre 3 y 6, pues estas son las filas donde se encuentran los valores de este parámetro para cada uno de los objetos. Para extraer el valor de una celda de Excel se utilizará el comando <em>.value</em>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{margin}
-```{admonition} Nota
+```{admonition,dropdown} Nota
   
-Es importante recordar que la función *range(i,j)* define una serie de números desde i hasta j-1. Es por esto que, en este caso, se utiliza el número 7 como j.
+Es importante recordar que la función *range(i,j)* define una serie de números desde i hasta j-1. Es por esto que, en este caso, se utiliza el número 15 como j.
 
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{margin}
-```{admonition} Nota
+```{admonition,dropdown} Nota
   
 Es importante recordar que en la función *cell(i,j)*, i hace referencia a la fila y j a la columna. En este caso, como los índices (nombre de cada objeto) se encuentran en la segunda columna, se utiliza el número 2 como j para todas las iteraciones.
 
@@ -425,23 +452,109 @@ Es importante recordar que en la función *cell(i,j)*, i hace referencia a la fi
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Se crea el diccionario para guardar la información del parámetro</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># 2. Se realiza el recorrido para guardar todos los valores necesarios</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
     <span class="n">objeto</span> <span class="o">=</span> <span class="n">sheet1</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>       <span class="c1"># 3. Se guarda cada índice para luego utilizarlo como llave en el diccionario</span>
-    <span class="n">b</span><span class="p">[</span><span class="n">objeto</span><span class="p">]</span> <span class="o">=</span> <span class="n">sheet1</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>    <span class="c1"># 4. Se guarda el valor del índice correspondiente a la iteración</span>
+    <span class="n">p</span><span class="p">[</span><span class="n">objeto</span><span class="p">]</span> <span class="o">=</span> <span class="n">sheet1</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>    <span class="c1"># 4. Se guarda el valor del índice correspondiente a la iteración</span>
 
 <span class="c1"># Se imprime el diccionario para verificar que se hayan importado correctamente los datos</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Papá&#39;: 12, &#39;Mamá&#39;: 12, &#39;Hijo&#39;: 6, &#39;Hija&#39;: 6}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Botella de agua&#39;: 2, &#39;Carpa&#39;: 8, &#39;Lata de atún&#39;: 2, &#39;Botiquín&#39;: 2, &#39;Protector solar&#39;: 1, &#39;Lata de salchichas&#39;: 2, &#39;Bolsa de dormir&#39;: 4, &#39;Linterna&#39;: 3, &#39;Repelente&#39;: 2, &#39;Brújula&#39;: 1, &#39;Cobija&#39;: 6, &#39;Balón&#39;: 3}
 </pre></div>
 </div>
 </div>
+</div>
+<p>Los siguientes parámetros se encuentra en la segunda y tercera hoja. En la segunda hoja está el parámetro <span class="math notranslate nohighlight">\(b_j\)</span> que hace referencia al peso máximo que puede cargar cada excursionista.</p>
+<p><img alt="" src="../../_images/foto-b_j.png" /></p>
+<p>En la tercera hoja está el parámetro <span class="math notranslate nohighlight">\(q_{ij}\)</span> que hace referencia a la preferencia que tiene cada excursionista sobre cada objeto.</p>
+<p><img alt="" src="../../_images/foto-q_ij.png" /></p>
+<p>Para cargar estos parámetro se realiza lo mismo que para <span class="math notranslate nohighlight">\(p_i\)</span> teniendo en cuenta el cambio de rango donde esta la información. Además, como <span class="math notranslate nohighlight">\(q_{ij}\)</span> esta indexado en dos conjuntos, se deben realizar dos recorridos y las llaves del diccionario serán tuplas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+    <span class="n">excursionista</span> <span class="o">=</span> <span class="n">sheet2</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>       
+    <span class="n">b</span><span class="p">[</span><span class="n">excursionista</span><span class="p">]</span> <span class="o">=</span> <span class="n">sheet2</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>    
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+
+<span class="n">q</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+        <span class="n">objeto</span> <span class="o">=</span> <span class="n">sheet3</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">excursionista</span> <span class="o">=</span> <span class="n">sheet3</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">q</span><span class="p">[(</span><span class="n">objeto</span><span class="p">,</span><span class="n">excursionista</span><span class="p">)]</span><span class="o">=</span><span class="n">sheet3</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;q:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b:
+{&#39;Papá&#39;: 12, &#39;Mamá&#39;: 12, &#39;Hijo&#39;: 6, &#39;Hija&#39;: 6}
+
+q:
+{(&#39;Botella de agua&#39;, &#39;Papá&#39;): 8, (&#39;Botella de agua&#39;, &#39;Mamá&#39;): 2, (&#39;Botella de agua&#39;, &#39;Hijo&#39;): 11, (&#39;Botella de agua&#39;, &#39;Hija&#39;): 8, (&#39;Carpa&#39;, &#39;Papá&#39;): 2, (&#39;Carpa&#39;, &#39;Mamá&#39;): 9, (&#39;Carpa&#39;, &#39;Hijo&#39;): 5, (&#39;Carpa&#39;, &#39;Hija&#39;): 4, (&#39;Lata de atún&#39;, &#39;Papá&#39;): 6, (&#39;Lata de atún&#39;, &#39;Mamá&#39;): 12, (&#39;Lata de atún&#39;, &#39;Hijo&#39;): 7, (&#39;Lata de atún&#39;, &#39;Hija&#39;): 3, (&#39;Botiquín&#39;, &#39;Papá&#39;): 12, (&#39;Botiquín&#39;, &#39;Mamá&#39;): 4, (&#39;Botiquín&#39;, &#39;Hijo&#39;): 6, (&#39;Botiquín&#39;, &#39;Hija&#39;): 12, (&#39;Protector solar&#39;, &#39;Papá&#39;): 11, (&#39;Protector solar&#39;, &#39;Mamá&#39;): 1, (&#39;Protector solar&#39;, &#39;Hijo&#39;): 12, (&#39;Protector solar&#39;, &#39;Hija&#39;): 7, (&#39;Lata de salchichas&#39;, &#39;Papá&#39;): 7, (&#39;Lata de salchichas&#39;, &#39;Mamá&#39;): 10, (&#39;Lata de salchichas&#39;, &#39;Hijo&#39;): 10, (&#39;Lata de salchichas&#39;, &#39;Hija&#39;): 6, (&#39;Bolsa de dormir&#39;, &#39;Papá&#39;): 3, (&#39;Bolsa de dormir&#39;, &#39;Mamá&#39;): 7, (&#39;Bolsa de dormir&#39;, &#39;Hijo&#39;): 3, (&#39;Bolsa de dormir&#39;, &#39;Hija&#39;): 10, (&#39;Linterna&#39;, &#39;Papá&#39;): 10, (&#39;Linterna&#39;, &#39;Mamá&#39;): 8, (&#39;Linterna&#39;, &#39;Hijo&#39;): 2, (&#39;Linterna&#39;, &#39;Hija&#39;): 2, (&#39;Repelente&#39;, &#39;Papá&#39;): 9, (&#39;Repelente&#39;, &#39;Mamá&#39;): 3, (&#39;Repelente&#39;, &#39;Hijo&#39;): 9, (&#39;Repelente&#39;, &#39;Hija&#39;): 9, (&#39;Brújula&#39;, &#39;Papá&#39;): 5, (&#39;Brújula&#39;, &#39;Mamá&#39;): 5, (&#39;Brújula&#39;, &#39;Hijo&#39;): 1, (&#39;Brújula&#39;, &#39;Hija&#39;): 1, (&#39;Cobija&#39;, &#39;Papá&#39;): 4, (&#39;Cobija&#39;, &#39;Mamá&#39;): 11, (&#39;Cobija&#39;, &#39;Hijo&#39;): 4, (&#39;Cobija&#39;, &#39;Hija&#39;): 11, (&#39;Balón&#39;, &#39;Papá&#39;): 1, (&#39;Balón&#39;, &#39;Mamá&#39;): 6, (&#39;Balón&#39;, &#39;Hijo&#39;): 8, (&#39;Balón&#39;, &#39;Hija&#39;): 5}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conjuntos">
+<h2>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h2>
+<p>Finalmente, se construyen los conjuntos a partir de las llaves de los diccionarios que ya se crearon para los parámetros. Como el parametro <span class="math notranslate nohighlight">\(p_i\)</span> esta indexado en el conjunto de objetos, éste tiene como llaves a todos los objetos. Por lo tanto, el conjunto de objetos, que se declarará como una lista, se construye con la siguiente línea de código:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">O</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+<span class="c1"># Se imprime la lista para verificar que se haya construido correctamente el conjunto</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">O</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Botella de agua&#39;, &#39;Carpa&#39;, &#39;Lata de atún&#39;, &#39;Botiquín&#39;, &#39;Protector solar&#39;, &#39;Lata de salchichas&#39;, &#39;Bolsa de dormir&#39;, &#39;Linterna&#39;, &#39;Repelente&#39;, &#39;Brújula&#39;, &#39;Cobija&#39;, &#39;Balón&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo mismo se realiza para construir el conjunto de excursionistas, pero en este caso a partir del parametro <span class="math notranslate nohighlight">\(b_j\)</span> ya que éste esta indexado en el conjunto deseado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Papá&#39;, &#39;Mamá&#39;, &#39;Hijo&#39;, &#39;Hija&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="siguiente-paso">
+<h2>Siguiente paso<a class="headerlink" href="#siguiente-paso" title="Permalink to this headline">¶</a></h2>
+<p>Con los parámetros importados y los conjuntos construidos se puede proceder a la implementación y solución del problema de optimización.</p>
+</div>
+<div class="section" id="creditos">
+<h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
+<p>Equipo Principios de Optimización<br>
+Desarrollo: Daniel Yamin, Juan F. Rengifo<br>
+Fecha: 25/11/2020<br></p>
 </div>
 </div>
 
