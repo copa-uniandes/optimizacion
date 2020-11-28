@@ -380,15 +380,15 @@
 </div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
-<div class="dropdown admonition important">
-<p class="admonition-title">Important</p>
-<p>De forma que la línea de código funcione en cualquier computador sin tener que actualizarla, se recomienda guardar el archivo con los parámetros en una carpeta en la que también se encuentre el archivo con la implementación del problema. Al realizar esto, la ruta se escribe con un punto seguido de un slash y el nombre del archivo con los parámetros. De esta manera, el punto hace automaticamente la referencia a la misma carpeta donde se encuentra el archivo en el que se esta realizando la implementación.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Nota</p>
+<p>De forma que la línea de código funcione en cualquier computador sin tener que actualizarla, se recomienda guardar el archivo con los parámetros en la misma carpeta en la que se encuentra el archivo de la implementación del problema. Para lograr esto, la ruta se escribe con un punto seguido de un slash <em>./</em> y el nombre del archivo con los parámetros. El punto hace automaticamente la referencia a la misma carpeta donde se encuentra el archivo en el que se esta realizando la implementación.</p>
 </div>
 </div>
 </div>
 <div class="section" id="libro-de-ms-excel-y-hojas">
 <h2>Libro de MS Excel y hojas<a class="headerlink" href="#libro-de-ms-excel-y-hojas" title="Permalink to this headline">¶</a></h2>
-<p>Luego, es necesario importar el libro de MS Excel donde se encuentran los parámetros del problema de optimización a resolver. En este caso el libro se llama <em>parametros.xlsx</em>. Esto se hace mediante la función <em>load_wokbook()</em> que recibe como parámetro la ruta donde se encuentra el archivo. Además, para poder realizar operaciones con el libro más adelante, se guardara el archivo en una nueva variable que se llamará <em>book</em>.</p>
+<p>Luego, es necesario importar el libro de MS Excel donde se encuentran los parámetros del problema de optimización a resolver. En este caso, el libro de parámetros se llama <em>parametros.xlsx</em>. El archivo se importa con la función <em>load_wokbook()</em> que recibe como parámetro la ruta donde se encuentra el archivo. Además, para poder realizar operaciones con el libro más adelante, se guardará el archivo en una nueva variable que se llamará <em>book</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s2">&quot;./parametros.xlsx&quot;</span><span class="p">)</span>
@@ -442,7 +442,7 @@
 </ol>
 <p>En la primera hoja se encuentra el parámetro <span class="math notranslate nohighlight">\(p_i\)</span> que hace referencia al peso de cada uno de los objetos.</p>
 <p><img alt="" src="../../_images/foto-p_i.png" /></p>
-<p>Como este parámetro esta indexado únicamente en el conjunto de objetos, solo se debe realizar un recorrido. Este recorrido se definirá entre 3 y 6, pues estas son las filas donde se encuentran los valores de este parámetro para cada uno de los objetos. Para extraer el valor de una celda de Excel se utilizará el comando <em>.value</em>.</p>
+<p>Como este parámetro esta indexado únicamente en el conjunto de objetos, solo se debe realizar un recorrido. Este recorrido se definirá entre 3 y 14, pues estas son las filas donde se encuentran los valores de este parámetro para cada uno de los objetos. Para extraer el valor de una celda de Excel se utilizará el comando <em>.value</em>.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="dropdown admonition">
@@ -460,7 +460,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Se crea el diccionario para guardar la información del parámetro</span>
-<span class="n">p</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1">#Peso de los objetos</span>
 
 <span class="c1"># 2. Se realiza el recorrido para guardar todos los valores necesarios</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
@@ -485,7 +485,7 @@
 <p>Para cargar estos parámetro se realiza lo mismo que para <span class="math notranslate nohighlight">\(p_i\)</span> teniendo en cuenta el cambio de rango donde esta la información. Además, como <span class="math notranslate nohighlight">\(q_{ij}\)</span> esta indexado en dos conjuntos, se deben realizar dos recorridos y las llaves del diccionario serán tuplas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#Peso máximo por excursionista</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
     <span class="n">excursionista</span> <span class="o">=</span> <span class="n">sheet2</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>       
@@ -495,7 +495,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 
 
-<span class="n">q</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">q</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#Preferencia por cada excursionista de cada objeto</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
@@ -543,6 +543,7 @@ q:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
+<span class="c1"># Se imprime la lista para verificar que se haya construido correctamente el conjunto</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
 </pre></div>
 </div>
