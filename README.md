@@ -41,7 +41,7 @@ Monitores involucrados:
  * Alejandro Mantilla
  * Juan Felipe Rengifo
  
-Agradecemos a los profesores Carlos Gomez y Andrés Medaglia por su realimentación a lo largo del desarrollo y a los respectivos autores de las prácticas de formulación, cuyo contenido está expuesto en la página.
+Agradecemos a los profesores Camilo Gomez y Andrés Medaglia por su realimentación a lo largo del desarrollo y a los respectivos autores de las prácticas de formulación, cuyo contenido está expuesto en la página.
 
 Además, agradecemos a los equipos detrás de las siguientes herramientas esenciales para el desarrollo de la página.
  * [Jupyter-Book](https://jupyterbook.org/intro.html)
