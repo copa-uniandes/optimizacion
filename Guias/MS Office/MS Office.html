@@ -1,418 +1,208 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Importación de parámetros desde MS Excel" href="../Importacion%20parametros/Importacion%20parametros.html" /><link rel="prev" title="Extracción minera Solución" href="../../Soluciones/ExtraccionMinera.html" />
 
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matemáticas en MS Office &#8212; Repositorio Principios de Optimización</title>
+    <link rel="shortcut icon" href="../../_static/icon.png"/><meta name="generator" content="sphinx-3.3.1, furo 2020.11.27.beta19"/>
+        <title>Matemáticas en MS Office - Repositorio Principios de Optimización</title>
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=4d4607a28768ea509d1701e6fba1bca6c595da19">
+    <link rel="stylesheet" href="../../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+<style>
+  :root {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
 
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/text-align.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/text-align.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
-
+    <link rel="stylesheet" href="../../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
+    <script defer src="../../_static/jquery.js"></script>
+    <script defer src="../../_static/underscore.js"></script>
+    <script defer src="../../_static/doctools.js"></script>
+    <script defer src="../../_static/language_data.js"></script>
+    <script defer src="../../_static/togglebutton.js"></script>
+    <script defer src="../../_static/clipboard.min.js"></script>
+    <script defer src="../../_static/copybutton.js"></script>
+    <script defer >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script defer src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script defer async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script defer type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script defer async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script defer >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../_static/icon.png"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Importación de parámetros desde MS Excel" href="../Importacion%20parametros/Importacion%20parametros.html" />
-    <link rel="prev" title="Extracción minera Solución" href="../../Soluciones/ExtraccionMinera.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
-  </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    <script defer async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script defer src="../../_static/scripts/main.js?digest=1e13a99a5b478789393b59468e7cadf60869ce3f"></script></head>
+  <body dir="">
     
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../intro.html"><div class="brand">Repositorio Principios de Optimización</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../intro.html">
   
-  <img src="../../_static/logo-uniandes.png" class="logo" alt="logo">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/logo_uniandes.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/logo_uniandes_dark_mode.png" alt="Dark Logo"/>
+  </div>
   
+  <span class="sidebar-brand-text">Repositorio Principios de Optimización</span>
   
-  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
-  
-</a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent">
- <span class="caption-text">
-  Prácticas de formulación
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
-   Chocolatería
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/Chocolater%C3%ADa.html">
-     Chocolatería Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../Enunciados/PlaneacionMenus%20Enunciado.html">
-   Planeación de menús
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/PlaneacionMenus.html">
-     Planeación de menús Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../Enunciados/OptiJuice%20Enunciado.html">
-   Producción de jugos
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/OptiJuice.html">
-     Producción de jugos Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../Enunciados/Transporte%20Enunciado.html">
-   Transporte de productos lácteos
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/Transporte.html">
-     Transporte de productos lácteos Solución
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/Transporte-vis.html">
-     Transporte de productos lácteos Visualización
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../Enunciados/Inventarios%20Enunciado.html">
-   Producción de cemento
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/Inventarios.html">
-     Producción de cemento Solución
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/Inventarios-vis.html">
-     Producción de cemento Visualización
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
-   Asignación de tareas
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/Asignaci%C3%B3n.html">
-     Asignación de tareas Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../Enunciados/ExtraccionMinera%20Enunciado.html">
-   Extracción minera
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Soluciones/ExtraccionMinera.html">
-     Extracción minera Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
+</a><form class="sidebar-search-container" method="get" action="../../search.html">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption"><span class="caption-text">Prácticas de formulación</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Enunciados/Chocolater%C3%ADa%20Enunciado.html">Chocolatería</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/Chocolater%C3%ADa.html">Chocolatería Solución</a></li>
 </ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Guías
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Matemáticas en
-   <em>
-    MS Office
-   </em>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Importacion%20parametros/Importacion%20parametros.html">
-   Importación de parámetros desde MS Excel
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Enunciados/PlaneacionMenus%20Enunciado.html">Planeación de menús</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/PlaneacionMenus.html">Planeación de menús Solución</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Enunciados/OptiJuice%20Enunciado.html">Producción de jugos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/OptiJuice.html">Producción de jugos Solución</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Enunciados/Transporte%20Enunciado.html">Transporte de productos lácteos</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/Transporte.html">Transporte de productos lácteos Solución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/Transporte-vis.html">Transporte de productos lácteos Visualización</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Enunciados/Inventarios%20Enunciado.html">Producción de cemento</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/Inventarios.html">Producción de cemento Solución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/Inventarios-vis.html">Producción de cemento Visualización</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Enunciados/Asignaci%C3%B3n%20Enunciado.html">Asignación de tareas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/Asignaci%C3%B3n.html">Asignación de tareas Solución</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Enunciados/ExtraccionMinera%20Enunciado.html">Extracción minera</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Soluciones/ExtraccionMinera.html">Extracción minera Solución</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Guías</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Matemáticas en <em>MS Office</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Importacion%20parametros/Importacion%20parametros.html">Importación de parámetros desde MS Excel</a></li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
-
 </div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Guias/MS Office/MS Office.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
 </div>
-
-        <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/copa-uniandes/optimizacion"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FGuias/MS Office/MS Office.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
+      </div>
+      
     </div>
-</div>
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Guias/MS Office/MS Office.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivacion">
-   Motivación
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#primeros-pasos">
-   Primeros pasos
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#estructura-de-informe">
-   Estructura de informe
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expresiones-matematicas">
-   Expresiones matemáticas
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#simbolos-comunes">
-     Símbolos comunes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parentesis-corchetes-llaves-y-fracciones">
-     Paréntesis, corchetes, llaves y fracciones
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acentos-e-indices">
-     Acentos e índices
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#matrices">
-     Matrices
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadores-generalizados">
-     Operadores generalizados
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ejemplo-family-knapsack">
-   Ejemplo: Family Knapsack
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#siguientes-pasos">
-   Siguientes pasos
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creditos">
-   Créditos
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
-    </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="section" id="matematicas-en-ms-office">
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="matematicas-en-ms-office">
 <h1>Matemáticas en <em>MS Office</em><a class="headerlink" href="#matematicas-en-ms-office" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="motivacion">
 <h2>Motivación<a class="headerlink" href="#motivacion" title="Permalink to this headline">¶</a></h2>
 <p>Por medio de herramientas de <em>Microsoft Office</em> como <em>Word</em> y <em>PowerPoint</em> podemos construir documentos convencionales como ensayos, cartas, contratos o presentaciones. ¿Qué hacemos cuando nuestro contenido a desarrollar debe incluir expresiones matemáticas elaboradas? Podriamos expresarlas de forma primitiva, sin prestar atención al estilo, como la siguiente formula cuadrática: x=(-b±√(b^2-4ac))/2a, pero, por lo general, esta forma es poco amistosa con el lector ya que es dificil de interpretar y con el autor ya que es dificil de identificar si está escrita de forma correcta. Preferiblemente, quisieramos expresar ecuaciones embebidas en el texto, como <span class="math notranslate nohighlight">\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)</span>, o en su propio renglón para dar énfasis:</p>
-<div class="math notranslate nohighlight">
+<div class="math-wrapper"><div class="math notranslate nohighlight">
 \[
 	x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\text{.}
-\]</div>
+\]</div></div>
 <p>Mejor aún, esta forma tipográfica de expresiones matemáticas nos permite más flexibilidad en cuanto a los símbolos que podremos utilizar. Particularmente nos interesan las operaciones sobre conjuntos como la sumatoria,</p>
-<div class="math notranslate nohighlight">
+<div class="math-wrapper"><div class="math notranslate nohighlight">
 \[
 	\sum_{i\in I}a_{i}x_{i}=b\text{,}
-\]</div>
+\]</div></div>
 <p>que nos permiten plantear de forma generalizada hiperplanos, los cuales entendemos como restricciones o función objetivo en los modelos de programación lineal o lineal-entera.</p>
 <p>Esta guía busca fijar convenciones para el desarrollo de informes con contenido matemático para el curso, así como dar instrucciones para trabajar de forma eficiente y dominar la composición tipográfica con <em>MS Office</em>.</p>
 </div>
@@ -420,7 +210,7 @@
 <h2>Primeros pasos<a class="headerlink" href="#primeros-pasos" title="Permalink to this headline">¶</a></h2>
 <p>Asegurese de tener instalado la suite de <em>MS Office</em>. El procedimiento para insertar ecuaciones es aplicable en la mayoría de los programas del paquete, pero nosotros nos enfocaremos en la composición de documentos con <em>Word</em>.</p>
 <p>Ejecute <em>Word</em> y dirijase a la pestaña del <em>Ribbon</em>, <strong>Insertar</strong>. Allí, coloque su cursor sobre el elemento <strong>Ecuación</strong>. Al tener el cursor sobre el botón, debería desplegarse una caja de texto explicando su uso. Verifique que <em>Word</em> le haya asignado un atajo de teclado (para el autor, el atajo es <code class="docutils literal notranslate"><span class="pre">Alt</span></code> + <code class="docutils literal notranslate"><span class="pre">=</span></code>).</p>
-<p><img alt="" src="../../_images/Ecuaciones-TextBox.png" /></p>
+<p><img alt="" src="../../_images/Ecuaciones-TextBox.png"/></p>
 <p>Si no tiene un atajo asignado, puede hacerlo dirijiendose a la pestaña del <em>Ribbon</em>, <strong>Archivo</strong> &gt;&gt; <strong>Opciones</strong> &gt;&gt; <strong>Personalizar cinta de opciones</strong> &gt;&gt; <strong>Personalizar</strong>. Al especificar un comando, seleccione la categoría <em>Todos los comandos</em> y en comandos, <em>InsertarEcuación</em>. Teclée un atajo y verifique que haya quedado asignado. Tener un atajo asignado es importante para tener un flujo de trabajo eficiente, ya que, en el proceso de desarrollar un informe, deberá insertar muchas expresiones matemáticas.</p>
 </div>
 <div class="section" id="estructura-de-informe">
@@ -441,13 +231,13 @@
 <p>Si <span class="math notranslate nohighlight">\(x_{j}\)</span> son variables binarias, podemos expresarlas con una función a trozos.</p>
 </div>
 <p><strong>Variables</strong></p>
-<div class="math notranslate nohighlight">
+<div class="math-wrapper"><div class="math notranslate nohighlight">
 \[\begin{split}
 	x_{j}=\begin{cases}
 					1 &amp; \text{se cumple un criterio} \\
 					0 &amp; \text{d.l.c.}
    \end{cases}\text{.}
-\end{split}\]</div>
+\end{split}\]</div></div>
 </div>
 <p>      <span class="math notranslate nohighlight">\(x_{j}\)</span>: primeras variables del ejemplo. Decisión <span class="math notranslate nohighlight">\(x\)</span> para todo <span class="math notranslate nohighlight">\(j\in J\)</span>.</p>
 <p>  <strong>Naturaleza</strong></p>
@@ -458,30 +248,30 @@
 <p>NUNCA puede faltar una expresión explicita del dominio del problema (Naturaleza). Las variables pueden tomar valores en conjuntos predeterminados:</p>
 </div>
 <p>Algunas alternativas:</p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{gather*}
 	x_{j}\in\mathbb{R_{\geq 0}} &amp; \forall j \in J \\
 	x_{j}\in\mathbb{N} &amp; \forall j \in J \\
 	x_{j}\in\{0,1\} &amp; \forall j \in J
-\end{gather*}\]</div>
+\end{gather*}\]</div></div>
 </div>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{gather*}
 	x_{j}\in\mathbb{R} &amp; \forall j \in J
-\end{gather*}\]</div>
+\end{gather*}\]</div></div>
 <p>  <strong>Restricciones</strong></p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{gather*}
 		\sum_{j\in J}a_{ij}x_{j}=b_{i} &amp; \forall i\in I
-\end{gather*}\]</div>
+\end{gather*}\]</div></div>
 <blockquote>
 <div><p>Este conjunto de restricciones nos permite identificar la región factible del problema. Este parrafo, idealmente, contendría una breve descripción de lo que representa o logra su respectivo conjunto de restricciónes.</p>
 </div></blockquote>
 <p>  <strong>Función Objetivo</strong></p>
-<div class="math notranslate nohighlight">
+<div class="math-wrapper"><div class="math notranslate nohighlight">
 \[
 		\max{\sum_{j\in J}c_{j}x_{j}}
-\]</div>
+\]</div></div>
 <blockquote>
 <div><p>Esta sumatoria nos permite identificar los valores de las variables de decisión que maximizan el problema según el criterio escogido. Este parrafo, idealmente, contendría una breve descripción de lo que representa o logra su respectiva función objetivo.</p>
 </div></blockquote>
@@ -496,13 +286,13 @@
 </div>
 </div>
 <p>Veremos ahora cómo escribir ecuaciones matemáticas en <em>Word</em>. En general, los símbolos tienen nombres y el programa tiene tres criterios para identificar cuando queremos insertarlos. Primero, debemos estar escribiendo dentro de un bloque de <strong>Ecuación</strong>; segundo, el nombre del símbolo debe indicarse con el caracter ‘<code class="docutils literal notranslate"><span class="pre">\</span></code>’; tercero, debemos insertar un espacio despues del comando referente a la expresión matemática deseada (por ejemplo, para insertar un simbolo <span class="math notranslate nohighlight">\(\alpha\)</span>, escribiriamos en el bloque de ecuación el código <code class="docutils literal notranslate"><span class="pre">\alpha</span></code> e insertariamos un espacio para producir el símbolo).</p>
-<p><img alt="" src="../../_images/alpha+beta=gamma.gif" /></p>
+<p><img alt="" src="../../_images/alpha+beta=gamma.gif"/></p>
 <div class="section" id="simbolos-comunes">
 <h3>Símbolos comunes<a class="headerlink" href="#simbolos-comunes" title="Permalink to this headline">¶</a></h3>
 <p>Especificamente para el curso, utilizamos símbolos representativos de conjuntos y operaciones sobre conjuntos. <em>Word</em> ofrece una paleta de símbolos extensa y podemos consultarla bajo la pestaña <strong>Ecuación</strong> que aparece una vez ubicamos el cursor sobre un bloque de ecuación. Colocar nuestro cursor de mouse sobre alguno de los símbolos de la paleta, habilita un texto flotante con el nombre del comando que utilizaría uno para insertarlo. Por ejemplo, en la imagen a continuación se puede observar que al ubicar el cursor sobre el símbolo de infinito, nos muestra un texto flotante con el comando <code class="docutils literal notranslate"><span class="pre">\infty</span></code>.</p>
-<p><img alt="" src="../../_images/Hover-Text.png" /></p>
+<p><img alt="" src="../../_images/Hover-Text.png"/></p>
 <p>Los comandos son fáciles de memorizar ya que, por lo general, son el nombre del símbolo o una abreviación. A continuación, un listado de los símbolos más comunes como referencia rápida.</p>
-<table class="colwidths-auto table">
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Símbolo</p></th>
 <th class="text-align:center head"><p>Comando</p></th>
@@ -603,13 +393,13 @@
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\cap</span></code></p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Algunos símbolos (como <span class="math notranslate nohighlight">\(&gt;\)</span>, <span class="math notranslate nohighlight">\(&lt;\)</span>, <span class="math notranslate nohighlight">\(=\)</span>, <span class="math notranslate nohighlight">\(/\)</span>, <span class="math notranslate nohighlight">\(*\)</span>, etc.) pueden insertarse directamente desde el teclado y, por lo tanto, no tienen comando. Otros (como <span class="math notranslate nohighlight">\(\geq\)</span> o <span class="math notranslate nohighlight">\(\leq\)</span>) son el resultado de la composición de los símbolos básicos. Por ejemplo, <code class="docutils literal notranslate"><span class="pre">...</span></code> produce <span class="math notranslate nohighlight">\(\ldots\)</span>, o <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> y <code class="docutils literal notranslate"><span class="pre">=</span></code> que juntos producen <span class="math notranslate nohighlight">\(\geq\)</span>.</p>
 </div>
 <div class="section" id="parentesis-corchetes-llaves-y-fracciones">
 <h3>Paréntesis, corchetes, llaves y fracciones<a class="headerlink" href="#parentesis-corchetes-llaves-y-fracciones" title="Permalink to this headline">¶</a></h3>
 <p>Aunque utilizar paréntesis, corchetes y llaves puede parecer trivial, en la composición de tipografía matemática es usual que estos se ajusten al tamaño de su contenido. Particularmente en <em>Word</em>, existe el componente de corchetes que contiene una o varias celdas sobre las que se pueden escribir ecuaciones. El comando <code class="docutils literal notranslate"><span class="pre">()</span></code> seguido de la tecla espacio inserta una celda de ecuación encerrada por paréntesis a ambos lados. La siguiente tabla muestra algunos comandos que insertan celdas de ecuaciones con propiedades peculiares, así como ejemplos de como estos signos de puntuación pueden combinarse.</p>
-<table class="colwidths-auto table">
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Celdas</p></th>
 <th class="text-align:center head"><p>Comando</p></th>
@@ -619,38 +409,38 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/rdrd.png" /></p></td>
+<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/rdrd.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">()</span></code></p></td>
 <td class="text-align:center"><p></p></td>
-<td class="text-align:center"><p><img alt="" src="../../_images/sqrd.png" /></p></td>
+<td class="text-align:center"><p><img alt="" src="../../_images/sqrd.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[)</span></code></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p><img alt="" src="../../_images/sqsq.png" /></p></td>
+<tr class="row-odd"><td class="text-align:center"><p><img alt="" src="../../_images/sqsq.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[]</span></code></p></td>
 <td class="text-align:center"><p></p></td>
-<td class="text-align:center"><p><img alt="" src="../../_images/sq.png" /></p></td>
+<td class="text-align:center"><p><img alt="" src="../../_images/sq.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[\close</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">[┤</span></code></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/kyky.png" /></p></td>
+<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/kyky.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">{}</span></code></p></td>
 <td class="text-align:center"><p></p></td>
-<td class="text-align:center"><p><img alt="" src="../../_images/abs.png" /></p></td>
+<td class="text-align:center"><p><img alt="" src="../../_images/abs.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">||</span></code></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p><img alt="" src="../../_images/sqflsq.png" /></p></td>
+<tr class="row-odd"><td class="text-align:center"><p><img alt="" src="../../_images/sqflsq.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[|]</span></code></p></td>
 <td class="text-align:center"><p></p></td>
-<td class="text-align:center"><p><img alt="" src="../../_images/frac.png" /></p></td>
+<td class="text-align:center"><p><img alt="" src="../../_images/frac.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note que para cerrar los paréntesis sin el símbolo de la derecha, debe insertar el símbolo del comando <code class="docutils literal notranslate"><span class="pre">\close</span></code>, ‘┤’.</p>
 </div>
 <div class="section" id="acentos-e-indices">
 <h3>Acentos e índices<a class="headerlink" href="#acentos-e-indices" title="Permalink to this headline">¶</a></h3>
 <p>De forma similar a los paréntesis y las fracciones, los acentos pueden producir celdas de ecuación en las cuales escribiremos el contenido que deben cubrir. Debemos ser cuidadosos al insertar acentos, ya que, si seguimos escribiendo dentro de sus respectivas casillas, podemos terminar cubriendo toda una expresión matemática en un acento.</p>
-<table class="colwidths-auto table">
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Bien</p></th>
 <th class="text-align:center head"><p>Mal</p></th>
@@ -661,7 +451,7 @@
 <td class="text-align:center"><p><span class="math notranslate nohighlight">\(\overline{X=\frac{\sum_{i=1}^{n}x_i}{n}}\)</span></p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition-nota admonition">
@@ -671,7 +461,7 @@
 </div>
 </div>
 <p>A continuación, unos acentos de uso frecuentes y unos ejemplos de como usar subindices y superindices (comandos <code class="docutils literal notranslate"><span class="pre">_</span></code> y <code class="docutils literal notranslate"><span class="pre">^</span></code> respectivamente).</p>
-<table class="colwidths-auto table">
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Celdas</p></th>
 <th class="text-align:center head"><p>Comando</p></th>
@@ -681,39 +471,39 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/bar.png" /></p></td>
+<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/bar.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\bar</span></code></p></td>
 <td class="text-align:center"><p></p></td>
-<td class="text-align:center"><p><img alt="" src="../../_images/dot.png" /></p></td>
+<td class="text-align:center"><p><img alt="" src="../../_images/dot.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\dot</span></code></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p><img alt="" src="../../_images/hat.png" /></p></td>
+<tr class="row-odd"><td class="text-align:center"><p><img alt="" src="../../_images/hat.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\hat</span></code></p></td>
 <td class="text-align:center"><p></p></td>
-<td class="text-align:center"><p><img alt="" src="../../_images/sup.png" /></p></td>
+<td class="text-align:center"><p><img alt="" src="../../_images/sup.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">^</span></code></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/vec.png" /></p></td>
+<tr class="row-even"><td class="text-align:center"><p><img alt="" src="../../_images/vec.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\vec</span></code></p></td>
 <td class="text-align:center"><p></p></td>
-<td class="text-align:center"><p><img alt="" src="../../_images/sub.png" /></p></td>
+<td class="text-align:center"><p><img alt="" src="../../_images/sub.png"/></p></td>
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">_</span></code></p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note que para insertar un subíndice o un superíndice (o potencia) debe primero insertar una caracter cualquiera sobre el cual actua el índice (por ejemplo <code class="docutils literal notranslate"><span class="pre">a^</span></code> o <code class="docutils literal notranslate"><span class="pre">a_</span></code>). Este caracter puede editarlo luego.</p>
 </div>
 <div class="section" id="matrices">
 <h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h3>
-<p>Las matrices son los elementos más complicados de editar una vez insertadas y pobldas, por lo que recomendamos planear bien las dimensiones con anterioridad. Para insertar una matriz debe primero utilizar el comando <code class="docutils literal notranslate"><span class="pre">\matrix</span></code>, seguido de una combinación de <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>s y <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>s. Cada <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> implica una columna nueva y cada <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> una fila nueva.</p>
-<p>Si está insertando una matriz vacía para luego llenarla (recomendable), basta con insertar la siguiente secuencia de comandos. <code class="docutils literal notranslate"><span class="pre">\matrix</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">■</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">■(&amp;&amp;&#64;)</span></code>. Esto produciría una matriz 2x3, pero usted puede insertar cuantas filas y columnas desée. Adicionalmente, una vez haya insertado la matriz definitiva, puede hacer clic derecho sobre alguna celda de la matriz y agregar o remover filas o columnas.</p>
-<p><img alt="" src="../../_images/matrices.gif" /></p>
+<p>Las matrices son los elementos más complicados de editar una vez insertadas y pobldas, por lo que recomendamos planear bien las dimensiones con anterioridad. Para insertar una matriz debe primero utilizar el comando <code class="docutils literal notranslate"><span class="pre">\matrix</span></code>, seguido de una combinación de <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>s y <code class="docutils literal notranslate"><span class="pre">@</span></code>s. Cada <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> implica una columna nueva y cada <code class="docutils literal notranslate"><span class="pre">@</span></code> una fila nueva.</p>
+<p>Si está insertando una matriz vacía para luego llenarla (recomendable), basta con insertar la siguiente secuencia de comandos. <code class="docutils literal notranslate"><span class="pre">\matrix</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">■</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">■(&amp;&amp;@)</span></code>. Esto produciría una matriz 2x3, pero usted puede insertar cuantas filas y columnas desée. Adicionalmente, una vez haya insertado la matriz definitiva, puede hacer clic derecho sobre alguna celda de la matriz y agregar o remover filas o columnas.</p>
+<p><img alt="" src="../../_images/matrices.gif"/></p>
 <p>Note que, como cualquier otra expresión matemática en <em>Word</em>, las matrices pueden insertarse en celdas de ecuación de otras expresiones, lo que nos permite encerrarlas en paréntesis, darles acentos y asignarles índices y potencias como a cualquier otro eleménto matemático.</p>
 </div>
 <div class="section" id="operadores-generalizados">
 <h3>Operadores generalizados<a class="headerlink" href="#operadores-generalizados" title="Permalink to this headline">¶</a></h3>
 <p>Tenemos también operaciones sobre conjuntos que podemos insertar según su hogar en el catálogo de la pestaña <strong>Ecuación</strong>, o por comandos si los conocemos. Identifique en la siguiente tabla algunos comandos importantes.</p>
-<table class="colwidths-auto table">
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Operación</p></th>
 <th class="text-align:center head"><p>Comando</p></th>
@@ -748,9 +538,9 @@
 <td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\prod_(i\in</span> <span class="pre">I)</span></code></p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Los operadores generalizados siempre se insertan con una celda de ecuación a su derecha para que se les asignen los elementos sobre los que actúan. Esto quiere decir que podemos anidarlos indefinidamente y así obtener expresiones como a las que estamos acostumbrados para funciones objetivo o restricciones en los modelos de programación matemática. Vea el siguiente ejemplo de como componer una doble sumatoria representativa de una restricción general. Preste atención a como se anidan las expresiones y como la desigualdad se inserta en la celda exterior.</p>
-<p><img alt="" src="../../_images/doblesum.gif" /></p>
+<p><img alt="" src="../../_images/doblesum.gif"/></p>
 </div>
 </div>
 <div class="section" id="ejemplo-family-knapsack">
@@ -775,32 +565,32 @@
 <p><code class="docutils literal notranslate"><span class="pre">q_(ij)</span></code>: preferencia sobre el objeto <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code> del excursionista <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code></p>
 </div>
 <p>  <strong>Variables</strong></p>
-<div class="math notranslate nohighlight">
+<div class="math-wrapper"><div class="math notranslate nohighlight">
 \[\begin{split}
 	x_{ij}=\begin{cases}
 					1 &amp; \text{el objeto }i \in O\text{ es llevado por el excursionista } j\in E \\
 					0 &amp; \text{d.l.c.}
    \end{cases}
-\end{split}\]</div>
+\end{split}\]</div></div>
 <div class="dropdown tip admonition">
 <p class="admonition-title"> ¡Click acá!</p>
-<p><code class="docutils literal notranslate"><span class="pre">x_ij={■(1&amp;el</span> <span class="pre">objeto</span> <span class="pre">i∈O</span> <span class="pre">es</span> <span class="pre">llevado</span> <span class="pre">por</span> <span class="pre">el</span> <span class="pre">excursionista</span> <span class="pre">j∈E&#64;0&amp;d.l.c.)┤</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">x_ij={■(1&amp;el</span> <span class="pre">objeto</span> <span class="pre">i∈O</span> <span class="pre">es</span> <span class="pre">llevado</span> <span class="pre">por</span> <span class="pre">el</span> <span class="pre">excursionista</span> <span class="pre">j∈E@0&amp;d.l.c.)┤</span></code></p>
 <p>Note que para esta función a trozos, el contenido de la llave es una matriz.</p>
 </div>
 <p>  <strong>Naturaleza</strong></p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{gather*}
 	x_{ij}\in\{0,1\} &amp; \forall i \in O, j \in E
-\end{gather*}\]</div>
+\end{gather*}\]</div></div>
 <div class="dropdown tip admonition">
 <p class="admonition-title"> ¡Click acá!</p>
 <p><code class="docutils literal notranslate"><span class="pre">x_ij\in{0,1}\forall</span> <span class="pre">i\in</span> <span class="pre">E,</span> <span class="pre">j\in</span> <span class="pre">O</span></code></p>
 </div>
 <p>  <strong>Restricciones</strong></p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{gather*}
 		\sum_{i\in O}p_{ij}x_{ij}\leq b_{j} &amp; \forall j\in E
-\end{gather*}\]</div>
+\end{gather*}\]</div></div>
 <blockquote>
 <div><p>Estas restricciones evitan que los objetos cargados por cada excursionista, <span class="math notranslate nohighlight">\(j\in E\)</span>, excedan su peso máximo tolerable, <span class="math notranslate nohighlight">\(b_{j}\)</span>.</p>
 </div></blockquote>
@@ -809,10 +599,10 @@
 <p><code class="docutils literal notranslate"><span class="pre">\sum_(i\in</span> <span class="pre">O)p_(ij)</span> <span class="pre">x_(ij)</span> <span class="pre">&lt;=</span> <span class="pre">b_(j)</span> <span class="pre">\forall</span> <span class="pre">j\in</span> <span class="pre">E</span></code></p>
 <p>Estas restricciones evitan que los objetos cargados por cada excursionista, <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code>, excedan su peso máximo tolerable, <code class="docutils literal notranslate"><span class="pre">b_{j}</span></code>.</p>
 </div>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{gather*}
 		\sum_{j\in E}x_{ij}=1 &amp; \forall i\in O
-\end{gather*}\]</div>
+\end{gather*}\]</div></div>
 <blockquote>
 <div><p>Estas restricciones garantizan que cada objeto, <span class="math notranslate nohighlight">\(i\in O\)</span>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.</p>
 </div></blockquote>
@@ -822,10 +612,10 @@
 <p>Estas restricciones garantizan que cada objeto, <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.</p>
 </div>
 <p>  <strong>Función Objetivo</strong></p>
-<div class="math notranslate nohighlight">
+<div class="math-wrapper"><div class="math notranslate nohighlight">
 \[
 		\max{\sum_{i\in O}\sum_{j\in E}q_{ij}x_{ij}}
-\]</div>
+\]</div></div>
 <blockquote>
 <div><p>Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.</p>
 </div></blockquote>
@@ -841,15 +631,14 @@
 </div>
 <div class="section" id="creditos">
 <h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
-<p>Equipo Principios de Optimización<br>Desarrollo: Alejandro Mantilla<br>Edición: Alfaima Solano<br>Fecha: 10/11/2020<br></p>
+<p>Equipo Principios de Optimización<br/>Desarrollo: Alejandro Mantilla<br/>Edición: Alfaima Solano<br/>Fecha: 10/11/2020<br/></p>
 </div>
 </div>
-
-    <script type="text/x-thebe-config">
+<script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "copa-uniandes/optimizacion",
+            repo: "binder-examples/jupyter-stacks-datascience",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -863,40 +652,87 @@
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
-
+<script>kernelName = 'python3'</script>
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../Importacion%20parametros/Importacion%20parametros.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Importación de parámetros desde MS Excel</div>
               </div>
-              
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../../Soluciones/ExtraccionMinera.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Extracción minera Solución</div>
+                
+              </div>
+            </a>
         </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="../../Soluciones/ExtraccionMinera.html" title="previous page">Extracción minera Solución</a>
-    <a class='right-next' id="next-link" href="../Importacion%20parametros/Importacion%20parametros.html" title="next page">Importación de parámetros desde MS Excel</a>
 
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
+        <div class="related-information">
+              Copyright &#169; 2020
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../../_sources/Guias/MS Office/MS Office.ipynb"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
         
-          By Equipo Principios de Optimización<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
+      </footer>
     </div>
-  </footer>
-</main>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Matemáticas en <em>MS Office</em></a><ul>
+<li><a class="reference internal" href="#motivacion">Motivación</a></li>
+<li><a class="reference internal" href="#primeros-pasos">Primeros pasos</a></li>
+<li><a class="reference internal" href="#estructura-de-informe">Estructura de informe</a></li>
+<li><a class="reference internal" href="#expresiones-matematicas">Expresiones matemáticas</a><ul>
+<li><a class="reference internal" href="#simbolos-comunes">Símbolos comunes</a></li>
+<li><a class="reference internal" href="#parentesis-corchetes-llaves-y-fracciones">Paréntesis, corchetes, llaves y fracciones</a></li>
+<li><a class="reference internal" href="#acentos-e-indices">Acentos e índices</a></li>
+<li><a class="reference internal" href="#matrices">Matrices</a></li>
+<li><a class="reference internal" href="#operadores-generalizados">Operadores generalizados</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ejemplo-family-knapsack">Ejemplo: Family Knapsack</a></li>
+<li><a class="reference internal" href="#siguientes-pasos">Siguientes pasos</a></li>
+<li><a class="reference internal" href="#creditos">Créditos</a></li>
+</ul>
+</li>
+</ul>
 
-
+          </div>
+        </div>
       </div>
-    </div>
-
-    
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
+      
+      
+    </aside>
+  </main>
+</div>
   </body>
 </html>

@@ -1,413 +1,201 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Asignación de tareas" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" /><link rel="prev" title="Producción de cemento Solución" href="Inventarios.html" />
 
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Producción de cemento Visualización &#8212; Repositorio Principios de Optimización</title>
+    <link rel="shortcut icon" href="../_static/icon.png"/><meta name="generator" content="sphinx-3.3.1, furo 2020.11.27.beta19"/>
+        <title>Producción de cemento Visualización - Repositorio Principios de Optimización</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=4d4607a28768ea509d1701e6fba1bca6c595da19">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+<style>
+  :root {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
 
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/text-align.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/text-align.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
-
+    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
+    <script defer src="../_static/jquery.js"></script>
+    <script defer src="../_static/underscore.js"></script>
+    <script defer src="../_static/doctools.js"></script>
+    <script defer src="../_static/language_data.js"></script>
+    <script defer src="../_static/togglebutton.js"></script>
+    <script defer src="../_static/clipboard.min.js"></script>
+    <script defer src="../_static/copybutton.js"></script>
+    <script defer >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script defer src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script defer async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script defer type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script defer async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script defer >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../_static/icon.png"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Asignación de tareas" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" />
-    <link rel="prev" title="Producción de cemento Solución" href="Inventarios.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
-  </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    <script defer async="async" src="../_static/sphinx-thebe.js"></script>
+    <script defer src="../_static/scripts/main.js?digest=1e13a99a5b478789393b59468e7cadf60869ce3f"></script></head>
+  <body dir="">
     
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../intro.html"><div class="brand">Repositorio Principios de Optimización</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../intro.html">
   
-  <img src="../_static/logo-uniandes.png" class="logo" alt="logo">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/logo_uniandes.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/logo_uniandes_dark_mode.png" alt="Dark Logo"/>
+  </div>
   
+  <span class="sidebar-brand-text">Repositorio Principios de Optimización</span>
   
-  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
-  
-</a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent">
- <span class="caption-text">
-  Prácticas de formulación
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
-   Chocolatería
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Chocolater%C3%ADa.html">
-     Chocolatería Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">
-   Planeación de menús
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="PlaneacionMenus.html">
-     Planeación de menús Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">
-   Producción de jugos
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="OptiJuice.html">
-     Producción de jugos Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
-   Transporte de productos lácteos
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Transporte.html">
-     Transporte de productos lácteos Solución
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Transporte-vis.html">
-     Transporte de productos lácteos Visualización
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">
-   Producción de cemento
-  </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Inventarios.html">
-     Producción de cemento Solución
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Producción de cemento Visualización
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
-   Asignación de tareas
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Asignaci%C3%B3n.html">
-     Asignación de tareas Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">
-   Extracción minera
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="ExtraccionMinera.html">
-     Extracción minera Solución
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption"><span class="caption-text">Prácticas de formulación</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">Chocolatería</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chocolater%C3%ADa.html">Chocolatería Solución</a></li>
 </ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Guías
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Guias/MS%20Office/MS%20Office.html">
-   Matemáticas en
-   <em>
-    MS Office
-   </em>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Guias/Importacion%20parametros/Importacion%20parametros.html">
-   Importación de parámetros desde MS Excel
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">Planeación de menús</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlaneacionMenus.html">Planeación de menús Solución</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">Producción de jugos</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="OptiJuice.html">Producción de jugos Solución</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">Transporte de productos lácteos</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Transporte.html">Transporte de productos lácteos Solución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Transporte-vis.html">Transporte de productos lácteos Visualización</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">Producción de cemento</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Inventarios.html">Producción de cemento Solución</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Producción de cemento Visualización</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">Asignación de tareas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Asignaci%C3%B3n.html">Asignación de tareas Solución</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">Extracción minera</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ExtraccionMinera.html">Extracción minera Solución</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Guías</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Guias/MS%20Office/MS%20Office.html">Matemáticas en <em>MS Office</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Guias/Importacion%20parametros/Importacion%20parametros.html">Importación de parámetros desde MS Excel</a></li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
-
 </div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Soluciones/Inventarios-vis.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
 </div>
-
-        <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/copa-uniandes/optimizacion"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FSoluciones/Inventarios-vis.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
+      </div>
+      
     </div>
-</div>
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Soluciones/Inventarios-vis.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#enunciado">
-   Enunciado
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formulacion">
-   Formulación
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conjuntos">
-     Conjuntos
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parametros">
-     Parámetros
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variables-de-decision">
-     Variables de decisión
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#restricciones">
-     Restricciones
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#naturaleza-de-las-variables">
-     Naturaleza de las variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#funcion-objetivo">
-     Función Objetivo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formulacion-matematica-completa">
-   Formulación matemática completa
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementacion">
-   Implementación
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#visualizacion-de-resultados">
-     Visualización de resultados
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creditos">
-   Créditos
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
-    </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="section" id="produccion-de-cemento-visualizacion">
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="produccion-de-cemento-visualizacion">
 <h1>Producción de cemento Visualización<a class="headerlink" href="#produccion-de-cemento-visualizacion" title="Permalink to this headline">¶</a></h1>
 <p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Inventario, Visualización, Matplotlib</i></p>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>Artos S.A. es una empresa dedicada a la producción de cemento que cuenta con una única planta en la ciudad de Barranquilla. La empresa debe determinar la cantidad de toneladas de cemento a producir en cada una de las siguientes 12 semanas. Los costos de producción, costos de almacenamiento, así como la demanda y el precio por tonelada de cemento, varían semana a semana y se presentan en la siguiente tabla.</p>
-<table class="colwidths-auto table">
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Semana</p></th>
 <th class="text-align:center head"><p>Costo de producción [Miles de COP/ton]</p></th>
@@ -490,12 +278,12 @@
 <td class="text-align:center"><p>537.1</p></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Tenga en cuenta que, al inicio de la planeación, se cuenta con 12,000 toneladas de cemento y que, por especificaciones de la maquinaria, no se puede producir más de 110,000 toneladas ni menos de 85,000 toneladas en una semana cualquiera.</p>
 </div>
 <div class="section" id="formulacion">
 <h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
-<p><strong>1.</strong> Formule el problema de optimización lineal con el fin de determinar la producción semanal de Artos y lograr la mayor utilidad posible. Para esto usted debe seguir los siguientes pasos: <br></p>
+<p><strong>1.</strong> Formule el problema de optimización lineal con el fin de determinar la producción semanal de Artos y lograr la mayor utilidad posible. Para esto usted debe seguir los siguientes pasos: <br/></p>
 <p><strong>a.</strong> Escriba lo(s) conjunto(s), parámetro(s) y variable(s) de decisión que utilizará en el modelo.</p>
 <div class="section" id="conjuntos">
 <h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
@@ -523,34 +311,34 @@
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se deben respetar los límites de producción</p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 x_i&amp;\leq 110000, &amp;&amp;\forall i \in S\\
 x_i&amp;\geq 85000, &amp;&amp;\forall i \in S\\
-\end{align*}\]</div>
+\end{align*}\]</div></div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que contabiliza(n) el inventario de cada semana</p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 I_1&amp;=I_0+x_1-d_1\\
 I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1
-\end{align*}\]</div>
+\end{align*}\]</div></div>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h3>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h3>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo</p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 x_i&amp;\geq 0,&amp;&amp;\forall i \in S\\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S
-\end{align*}\]</div>
+\end{align*}\]</div></div>
 </div>
 <div class="section" id="funcion-objetivo">
 <h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
 <p><strong>e.</strong> Escriba la función objetivo</p>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
     max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
-\end{equation*}\]</div>
+\end{equation*}\]</div></div>
 </div>
 </div>
 <div class="section" id="formulacion-matematica-completa">
@@ -572,11 +360,11 @@ I_i&amp;\geq 0,&amp;&amp;\forall i \in S
 <li><p><span class="math notranslate nohighlight">\(x_{i}\)</span>: toneladas de cemento a producir en la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(I_i\)</span>: toneladas de cemento que se tienen en inventario al final de la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
     max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i\text{ (1)}
-\end{equation*}\]</div>
-<div class="amsmath math notranslate nohighlight">
+\end{equation*}\]</div></div>
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 x_i&amp;\leq 110000, &amp;&amp;\forall i \in S; &amp;(2)\\
 x_i&amp;\geq 85000, &amp;&amp;\forall i \in S; &amp;(3)\\
@@ -584,7 +372,7 @@ I_1&amp;=I_0+x_1-d_1,&amp;&amp; &amp;(4)\\
 I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1;  &amp;(5)\\
 x_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(6)\\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
-\end{align*}\]</div>
+\end{align*}\]</div></div>
 <p>La función objetivo (1) maximiza las utilidades totales. Las restricciones (2) y (3) garantizan que para cada semana <span class="math notranslate nohighlight">\(i\in S\)</span> la producción <span class="math notranslate nohighlight">\(x_i\)</span> respete los límites de producción. Las restricciones (4) y (5) contabilizan los inventarios para cada semana <span class="math notranslate nohighlight">\(i \in S\)</span>. Las restricciones (6) y (7) describen la naturaleza de las variables <span class="math notranslate nohighlight">\(x_i\)</span> y <span class="math notranslate nohighlight">\(I_i\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -641,34 +429,34 @@ I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
 <span class="c1"># Creación del objeto problema en PuLP</span>
 <span class="c1">#-------------------------------------</span>
 <span class="c1">#Crea el problema para cargarlo con la instancia </span>
-<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;Inventarios&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMaximize</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">"Inventarios"</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMaximize</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Variables de Decisión</span>
 <span class="c1">#-----------------------------</span>
-<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#toneladas de cemento a producir en cada semana</span>
-<span class="n">I</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#toneladas de cemento en inventario en cada semana</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">'Continuous'</span><span class="p">)</span> <span class="c1">#toneladas de cemento a producir en cada semana</span>
+<span class="n">I</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">'I'</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">'Continuous'</span><span class="p">)</span> <span class="c1">#toneladas de cemento en inventario en cada semana</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Función objetivo</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Crea la expresión de maximización de utilidades</span>
-<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">),</span> <span class="s2">&quot;Utilidades Totales&quot;</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">),</span> <span class="s2">"Utilidades Totales"</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Restricciones</span>
 <span class="c1">#-----------------------------</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
     <span class="c1">#Se garantiza que se respeten los limites de producción</span>
-    <span class="n">problema</span><span class="o">+=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">110000</span><span class="p">,</span> <span class="s2">&quot;Límite superior de producción en la semana &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">problema</span><span class="o">+=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85000</span><span class="p">,</span> <span class="s2">&quot;Límite inferior de producción en la semana &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">problema</span><span class="o">+=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">110000</span><span class="p">,</span> <span class="s2">"Límite superior de producción en la semana "</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">problema</span><span class="o">+=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85000</span><span class="p">,</span> <span class="s2">"Límite inferior de producción en la semana "</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     
     
 <span class="c1">#Contabilizar los inventarios de cada semana  </span>
-<span class="n">problema</span><span class="o">+=</span><span class="n">I</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">I0</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;Inventario en la semana 1&quot;</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">I</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">I0</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"Inventario en la semana 1"</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">problema</span><span class="o">+=</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;Inventario en la semana &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">problema</span><span class="o">+=</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">"Inventario en la semana "</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
         
 <span class="c1">#-----------------------------</span>
@@ -682,24 +470,24 @@ I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
 <span class="c1"># Imprimir formato LP</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Escribe el problema en un archivo con formato LP </span>
-<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">&quot;Inventarios.lp&quot;</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">"Inventarios.lp"</span><span class="p">)</span>
 
 
 <span class="c1">#-----------------------------</span>
 <span class="c1">#    Imprimir resultados</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Imprimir estado final del optimizador</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Estado (optimizador):"</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="c1">#Valor óptimo del portafolio de Petroco    </span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Inventarios - Utilidades totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Inventarios - Utilidades totales = $"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="c1">#Imprimir variables de decisión</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables de decisión&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Semana&quot;</span><span class="p">,</span><span class="s2">&quot;Producción (ton)&quot;</span><span class="p">,</span> <span class="s2">&quot;Inventario (ton)&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Variables de decisión"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Semana"</span><span class="p">,</span><span class="s2">"Producción (ton)"</span><span class="p">,</span> <span class="s2">"Inventario (ton)"</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t\t</span><span class="s1">'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span> <span class="s2">&quot; </span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span> <span class="s2">" </span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t\t</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -749,14 +537,14 @@ Semana		Producción (ton)		Inventario (ton)
 <span class="n">fig3</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span> <span class="c1">#se crea la gráfica donde se va a visualizar el plan de producción conjunto con la demanda y el inventario al inicio de cada semana</span>
 <span class="n">p1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Prod</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">)</span> <span class="c1">#se añaden las barras de producción a la gráfica</span>
 <span class="n">p2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Inv_I</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="n">Prod</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">)</span> <span class="c1">#se añaden las barras de inventario inicial a la gráfica (encima de las de producción)</span>
-<span class="n">l1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span> <span class="c1">#se añaden una línea, que representa la demanda, a la gráfica que representa la demanda</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">#se rellena el área bajo la curva de demanda</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span> <span class="c1">#se añaden una línea, que representa la demanda, a la gráfica que representa la demanda</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span><span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">#se rellena el área bajo la curva de demanda</span>
 
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Plan de producción&#39;</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Toneladas de cemento&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Plan de producción'</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Semana'</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Toneladas de cemento'</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">150000</span><span class="p">])</span> <span class="c1">#se establece el rango del eje y </span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="s1">&#39;Demanda&#39;</span><span class="p">,</span><span class="s1">&#39;Producción&#39;</span><span class="p">,</span> <span class="s1">&#39;Inventario Inicial&#39;</span><span class="p">))</span> <span class="c1">#se añaden los labels de cada componente de la gráfica </span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="s1">'Demanda'</span><span class="p">,</span><span class="s1">'Producción'</span><span class="p">,</span> <span class="s1">'Inventario Inicial'</span><span class="p">))</span> <span class="c1">#se añaden los labels de cada componente de la gráfica </span>
 
 
 <span class="c1">#-----------------------------</span>
@@ -768,11 +556,11 @@ Semana		Producción (ton)		Inventario (ton)
 <span class="c1">#se añaden los labels a cada barra con el número de toneladas de cemento producidas cada semana</span>
 <span class="k">for</span> <span class="n">rect</span> <span class="ow">in</span> <span class="n">rects1</span><span class="p">:</span>
     <span class="n">height</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
-    <span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">1.05</span><span class="o">*</span><span class="n">height</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">1.05</span><span class="o">*</span><span class="n">height</span><span class="p">,</span><span class="s1">'</span><span class="si">%d</span><span class="s1">'</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">'bottom'</span><span class="p">)</span>
 
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Producción de cemento en cada semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Toneladas de cemento&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Producción de cemento en cada semana'</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Semana'</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Toneladas de cemento'</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">150000</span><span class="p">])</span> <span class="c1">#se establece el rango del eje y </span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span> <span class="c1">#se eliminan los números del eje y</span>
 
@@ -780,16 +568,16 @@ Semana		Producción (ton)		Inventario (ton)
 <span class="c1">#    Inventario Final</span>
 <span class="c1">#-----------------------------</span>
 <span class="n">fig2</span><span class="p">,</span> <span class="n">ax3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span> <span class="c1">#se crea la gráfica donde se va a visualizar el inventario al final de cada semana</span>
-<span class="n">rects2</span><span class="o">=</span><span class="n">ax3</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Inv_F</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span> <span class="c1">#se añaden las barras a la gráfica</span>
+<span class="n">rects2</span><span class="o">=</span><span class="n">ax3</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">Inv_F</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">S</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"orange"</span><span class="p">)</span> <span class="c1">#se añaden las barras a la gráfica</span>
 
 <span class="c1">#se añaden los labels a cada barra con el número de toneladas de cemento en inventario al final de cada semana</span>
 <span class="k">for</span> <span class="n">rect</span> <span class="ow">in</span> <span class="n">rects2</span><span class="p">:</span>
     <span class="n">height</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
-    <span class="n">ax3</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">1.05</span><span class="o">*</span><span class="n">height</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">1.05</span><span class="o">*</span><span class="n">height</span><span class="p">,</span><span class="s1">'</span><span class="si">%d</span><span class="s1">'</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">'bottom'</span><span class="p">)</span>
 
-<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Inventario de cemento al final de cada semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Semana&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Toneladas de cemento&#39;</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Inventario de cemento al final de cada semana'</span><span class="p">)</span> <span class="c1">#se añade el titulo de la gráfica</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Semana'</span><span class="p">)</span> <span class="c1">#se añade el label del eje x</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Toneladas de cemento'</span><span class="p">)</span> <span class="c1">#se añade el label del eje y</span>
 <span class="n">ax3</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">150000</span><span class="p">])</span> <span class="c1">#se establece el rango del eje y </span>
 <span class="n">ax3</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span> <span class="c1">#se eliminan los números del eje y</span>
 
@@ -799,26 +587,25 @@ Semana		Producción (ton)		Inventario (ton)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Inventarios-vis_16_0.png" src="../_images/Inventarios-vis_16_0.png" />
-<img alt="../_images/Inventarios-vis_16_1.png" src="../_images/Inventarios-vis_16_1.png" />
-<img alt="../_images/Inventarios-vis_16_2.png" src="../_images/Inventarios-vis_16_2.png" />
+<img alt="../_images/Inventarios-vis_16_0.png" src="../_images/Inventarios-vis_16_0.png"/>
+<img alt="../_images/Inventarios-vis_16_1.png" src="../_images/Inventarios-vis_16_1.png"/>
+<img alt="../_images/Inventarios-vis_16_2.png" src="../_images/Inventarios-vis_16_2.png"/>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="creditos">
 <h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
-<p>Equipo Principios de Optimización<br>
-Instancia: Camilo Aguilar León, Juan Felipe Rengifo<br>
+<p>Equipo Principios de Optimización<br/>
+Instancia: Camilo Aguilar León, Juan Felipe Rengifo<br/>
 Fecha: 25/09/2020</p>
 </div>
 </div>
-
-    <script type="text/x-thebe-config">
+<script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "copa-uniandes/optimizacion",
+            repo: "binder-examples/jupyter-stacks-datascience",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -832,40 +619,89 @@ Fecha: 25/09/2020</p>
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
-
+<script>kernelName = 'python3'</script>
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Asignación de tareas</div>
               </div>
-              
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="Inventarios.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Producción de cemento Solución</div>
+                
+              </div>
+            </a>
         </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="Inventarios.html" title="previous page">Producción de cemento Solución</a>
-    <a class='right-next' id="next-link" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html" title="next page">Asignación de tareas</a>
 
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
+        <div class="related-information">
+              Copyright &#169; 2020
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/Soluciones/Inventarios-vis.ipynb"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
         
-          By Equipo Principios de Optimización<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
+      </footer>
     </div>
-  </footer>
-</main>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Producción de cemento Visualización</a><ul>
+<li><a class="reference internal" href="#enunciado">Enunciado</a></li>
+<li><a class="reference internal" href="#formulacion">Formulación</a><ul>
+<li><a class="reference internal" href="#conjuntos">Conjuntos</a></li>
+<li><a class="reference internal" href="#parametros">Parámetros</a></li>
+<li><a class="reference internal" href="#variables-de-decision">Variables de decisión</a></li>
+<li><a class="reference internal" href="#restricciones">Restricciones</a></li>
+<li><a class="reference internal" href="#naturaleza-de-las-variables">Naturaleza de las variables</a></li>
+<li><a class="reference internal" href="#funcion-objetivo">Función Objetivo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#formulacion-matematica-completa">Formulación matemática completa</a></li>
+<li><a class="reference internal" href="#implementacion">Implementación</a><ul>
+<li><a class="reference internal" href="#visualizacion-de-resultados">Visualización de resultados</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creditos">Créditos</a></li>
+</ul>
+</li>
+</ul>
 
-
+          </div>
+        </div>
       </div>
-    </div>
-
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
+      
+      
+    </aside>
+  </main>
+</div>
   </body>
 </html>
