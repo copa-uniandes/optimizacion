@@ -14,12 +14,9 @@ table {
 .table {
   width: auto !important;
 }
-
-/* This code is dependent on whether the latest pip release of jupyterbook */
 .prev-next-bottom {
   width: 100% !important;
 }
 .prev-next-bottom > a{
   color: rgba(0,0,0,.65) !important;
 }
-*/

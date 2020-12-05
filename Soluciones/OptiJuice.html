@@ -1,428 +1,623 @@
-<!doctype html>
-<html class="no-js">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Transporte de productos lácteos" href="../Enunciados/Transporte%20Enunciado.html" /><link rel="prev" title="Producción de jugos" href="../Enunciados/OptiJuice%20Enunciado.html" />
 
-    <link rel="shortcut icon" href="../_static/icon.png"/><meta name="generator" content="sphinx-3.3.1, furo 2020.11.27.beta19"/>
-        <title>Producción de jugos Solución - Repositorio Principios de Optimización</title>
-      <link rel="stylesheet" href="../_static/styles/furo.css?digest=4d4607a28768ea509d1701e6fba1bca6c595da19">
-    <link rel="stylesheet" href="../_static/pygments.css">
-    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Producción de jugos Solución &#8212; Repositorio Principios de Optimización</title>
     
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-<style>
-  :root {
-    --color-code-background: #eeffcc;
-  --color-code-foreground: black;
-  
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-  }
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
-  /* For allowing end-user-specific overrides */
-  .override-light {
-    --color-code-background: #eeffcc;
-  --color-code-foreground: black;
-  
-  }
-  .override-dark {
-    --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-  }
-</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css" />
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/text-align.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/text-align.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script defer src="../_static/jquery.js"></script>
-    <script defer src="../_static/underscore.js"></script>
-    <script defer src="../_static/doctools.js"></script>
-    <script defer src="../_static/language_data.js"></script>
-    <script defer src="../_static/togglebutton.js"></script>
-    <script defer src="../_static/clipboard.min.js"></script>
-    <script defer src="../_static/copybutton.js"></script>
-    <script defer >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script defer src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script defer async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script defer type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script defer async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script defer >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script defer async="async" src="../_static/sphinx-thebe.js"></script>
-    <script defer src="../_static/scripts/main.js?digest=1e13a99a5b478789393b59468e7cadf60869ce3f"></script></head>
-  <body dir="">
     
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z"/>
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      class="feather feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      class="feather feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-</svg>
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation"></label>
-<label class="overlay toc-overlay" for="__toc"></label>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transporte de productos lácteos" href="../Enunciados/Transporte%20Enunciado.html" />
+    <link rel="prev" title="Producción de jugos" href="../Enunciados/OptiJuice%20Enunciado.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="../intro.html"><div class="brand">Repositorio Principios de Optimización</div></a>
-    </div>
-    <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../intro.html">
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
   
-  <div class="sidebar-logo-container">
-    <img class="sidebar-logo only-light" src="../_static/logo_uniandes.png" alt="Light Logo"/>
-    <img class="sidebar-logo only-dark" src="../_static/logo_uniandes_dark_mode.png" alt="Dark Logo"/>
-  </div>
+  <img src="../_static/logo-uniandes.png" class="logo" alt="logo">
   
-  <span class="sidebar-brand-text">Repositorio Principios de Optimización</span>
   
-</a><form class="sidebar-search-container" method="get" action="../search.html">
-  <input class="sidebar-search" placeholder="Search" name="q">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption"><span class="caption-text">Prácticas de formulación</span></p>
-<ul class="current">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">Chocolatería</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chocolater%C3%ADa.html">Chocolatería Solución</a></li>
+  <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
+   Chocolatería
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chocolater%C3%ADa.html">
+     Chocolatería Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">
+   Planeación de menús
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="PlaneacionMenus.html">
+     Planeación de menús Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">
+   Producción de jugos
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Producción de jugos Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Transporte.html">
+     Transporte de productos lácteos Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Transporte-vis.html">
+     Transporte de productos lácteos Visualización
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">
+   Producción de cemento
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Inventarios.html">
+     Producción de cemento Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Inventarios-vis.html">
+     Producción de cemento Visualización
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Asignaci%C3%B3n.html">
+     Asignación de tareas Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">
+   Extracción minera
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ExtraccionMinera.html">
+     Extracción minera Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">Planeación de menús</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="PlaneacionMenus.html">Planeación de menús Solución</a></li>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Guías
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Guias/MS%20Office/MS%20Office.html">
+   Matemáticas en
+   <em>
+    MS Office
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Guias/Importacion%20parametros/Importacion%20parametros.html">
+   Importación de parámetros desde MS Excel
+  </a>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">Producción de jugos</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Producción de jugos Solución</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">Transporte de productos lácteos</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Transporte.html">Transporte de productos lácteos Solución</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transporte-vis.html">Transporte de productos lácteos Visualización</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">Producción de cemento</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Inventarios.html">Producción de cemento Solución</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inventarios-vis.html">Producción de cemento Visualización</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">Asignación de tareas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Asignaci%C3%B3n.html">Asignación de tareas Solución</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">Extracción minera</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ExtraccionMinera.html">Extracción minera Solución</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Guías</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Guias/MS%20Office/MS%20Office.html">Matemáticas en <em>MS Office</em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Guias/Importacion%20parametros/Importacion%20parametros.html">Importación de parámetros desde MS Excel</a></li>
-</ul>
+
+</nav> <!-- To handle the deprecated key -->
 
 </div>
-</div>
-      </div>
-      
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
     </div>
-  </aside>
-  <main class="main">
-    <div class="content">
-      <article role="main">
-        <label class="toc-overlay-icon toc-content-icon" for="__toc">
-          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-        </label>
-        <div class="section" id="produccion-de-jugos-solucion">
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Soluciones/OptiJuice.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/copa-uniandes/optimizacion"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FSoluciones/OptiJuice.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Soluciones/OptiJuice.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion">
+   Formulación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-de-decision">
+     Variables de Decisión
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restricciones">
+     Restricciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naturaleza-de-las-variables">
+     Naturaleza de las Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcion-objetivo">
+     Función Objetivo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion-matematica">
+   Formulación matemática
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="produccion-de-jugos-solucion">
 <h1>Producción de jugos Solución<a class="headerlink" href="#produccion-de-jugos-solucion" title="Permalink to this headline">¶</a></h1>
 <p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Mezcla, Recurso</i></p>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>OptiJuice es una empresa que produce jugos. Ellos han decidido producir un nuevo conjunto de jugos autóctonos (<span class="math notranslate nohighlight">\(K\)</span>). Los jugos son una mezcla de diferentes frutas tropicales (<span class="math notranslate nohighlight">\(R\)</span>) dentro de las que se encuentran la piña, la guayaba, el níspero y el zapote. Cada uno de los tipos de jugo se diferencia de los demás en la cantidad de litros de zumo que tiene de las distintas frutas. Es por esto que, para garantizar la calidad de los jugos es necesario que el jugo del tipo <span class="math notranslate nohighlight">\(k \in K\)</span> contenga entre un <span class="math notranslate nohighlight">\(l_{ki}\)</span>% y un <span class="math notranslate nohighlight">\(u_{ki}\)</span>% de litros de zumo de la fruta <span class="math notranslate nohighlight">\(i \in R\)</span>. Para la producción de jugos, OptiJuice tiene disponibles <span class="math notranslate nohighlight">\(b_i\)</span> litros de zumo de la fruta <span class="math notranslate nohighlight">\(i \in R\)</span>. La compañía espera una demanda mínima de <span class="math notranslate nohighlight">\(d_k\)</span> litros y desea vender cada litro de jugo del tipo <span class="math notranslate nohighlight">\(k \in K\)</span> a <span class="math notranslate nohighlight">\(p_k\)</span> pesos. La información mencionada se presenta en las Tablas 1 a 4.</p>
 <p style="text-align: left;"><b>Tabla 1. Mínimo porcentaje de las frutas en los jugos</b></p>
-<div class="table-wrapper"><table class="egt">
-<tr>
-<th>Mínimo porcentaje</th>
-<th style="text-align:center"></th>
-<th style="text-align:center">Frutas</th>
-<th style="text-align:center"></th>
-<th style="text-align:center"></th>
-</tr>
-<tr>
-<th style="text-align:center">Jugos</th>
-<td style="text-align:center"><i>Piña (%)</i></td>
-<td style="text-align:center"><i>Guayaba (%)</i></td>
-<td style="text-align:center"><i>Nispero (%)</i></td>
-<td style="text-align:center"><i>Zapote (%)</i></td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Saludable</i></td>
-<td style="text-align:center">32</td>
-<td style="text-align:center">27</td>
-<td style="text-align:center">12</td>
-<td style="text-align:center">13</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Tropical</i></td>
-<td style="text-align:center">18</td>
-<td style="text-align:center">30</td>
-<td style="text-align:center">31</td>
-<td style="text-align:center">34</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Mañanero</i></td>
-<td style="text-align:center">7</td>
-<td style="text-align:center">31</td>
-<td style="text-align:center">28</td>
-<td style="text-align:center">22</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Colombiano</i></td>
-<td style="text-align:center">11</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">15</td>
-<td style="text-align:center">18</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Refrescante</i></td>
-<td style="text-align:center">46</td>
-<td style="text-align:center">50</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">43</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Light</i></td>
-<td style="text-align:center">36</td>
-<td style="text-align:center">19</td>
-<td style="text-align:center">14</td>
-<td style="text-align:center">40</td>
-</tr>
-</table></div>
-<br/>
+<table class="egt">
+  <tr>  
+    <th>Mínimo porcentaje</th> 
+    <th style="text-align:center"></th>
+    <th style="text-align:center">Frutas</th>
+    <th style="text-align:center"></th>
+    <th style="text-align:center"></th>
+  </tr>
+  <tr>
+    <th style="text-align:center">Jugos</th>
+    <td style="text-align:center"><i>Piña (%)</i></td>
+    <td style="text-align:center"><i>Guayaba (%)</i></td>
+    <td style="text-align:center"><i>Nispero (%)</i></td>
+    <td style="text-align:center"><i>Zapote (%)</i></td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Saludable</i></td>
+    <td style="text-align:center">32</td>
+    <td style="text-align:center">27</td>
+    <td style="text-align:center">12</td>
+    <td style="text-align:center">13</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Tropical</i></td>
+    <td style="text-align:center">18</td>
+    <td style="text-align:center">30</td>
+    <td style="text-align:center">31</td>
+    <td style="text-align:center">34</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Mañanero</i></td>
+    <td style="text-align:center">7</td>
+    <td style="text-align:center">31</td>
+    <td style="text-align:center">28</td>
+    <td style="text-align:center">22</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Colombiano</i></td>
+    <td style="text-align:center">11</td>
+    <td style="text-align:center">5</td>
+    <td style="text-align:center">15</td>
+    <td style="text-align:center">18</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Refrescante</i></td>
+    <td style="text-align:center">46</td>
+    <td style="text-align:center">50</td>
+    <td style="text-align:center">2</td>
+    <td style="text-align:center">43</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Light</i></td>
+    <td style="text-align:center">36</td>
+    <td style="text-align:center">19</td>
+    <td style="text-align:center">14</td>
+    <td style="text-align:center">40</td>
+  </tr>
+</table>
+<br>
 <p style="text-align: left;"><b>Tabla 2. Máximo porcentaje de las frutas en los jugos</b></p>
-<div class="table-wrapper"><table class="egt">
-<tr>
-<th>Máximo porcentaje</th>
-<th style="text-align:center"></th>
-<th style="text-align:center">Frutas</th>
-<th style="text-align:center"></th>
-<th style="text-align:center"></th>
-</tr>
-<tr>
-<th style="text-align:center">Jugos</th>
-<td style="text-align:center"><i>Piña (%)</i></td>
-<td style="text-align:center"><i>Guayaba (%)</i></td>
-<td style="text-align:center"><i>Nispero (%)</i></td>
-<td style="text-align:center"><i>Zapote (%)</i></td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Saludable</i></td>
-<td style="text-align:center">95</td>
-<td style="text-align:center">83</td>
-<td style="text-align:center">66</td>
-<td style="text-align:center">87</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Tropical</i></td>
-<td style="text-align:center">92</td>
-<td style="text-align:center">76</td>
-<td style="text-align:center">69</td>
-<td style="text-align:center">56</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Mañanero</i></td>
-<td style="text-align:center">81</td>
-<td style="text-align:center">61</td>
-<td style="text-align:center">28</td>
-<td style="text-align:center">94</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Colombiano</i></td>
-<td style="text-align:center">82</td>
-<td style="text-align:center">88</td>
-<td style="text-align:center">63</td>
-<td style="text-align:center">98</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Refrescante</i></td>
-<td style="text-align:center">60</td>
-<td style="text-align:center">85</td>
-<td style="text-align:center">73</td>
-<td style="text-align:center">78</td>
-</tr>
-<tr>
-<td style="text-align:left"><i>Light</i></td>
-<td style="text-align:center">50</td>
-<td style="text-align:center">55</td>
-<td style="text-align:center">82</td>
-<td style="text-align:center">91</td>
-</tr>
-</table></div>
-<br/>
+<table class="egt">
+  <tr>  
+    <th>Máximo porcentaje</th> 
+    <th style="text-align:center"></th>
+    <th style="text-align:center">Frutas</th>
+    <th style="text-align:center"></th>
+    <th style="text-align:center"></th>
+  </tr>
+  <tr>
+    <th style="text-align:center">Jugos</th>
+    <td style="text-align:center"><i>Piña (%)</i></td>
+    <td style="text-align:center"><i>Guayaba (%)</i></td>
+    <td style="text-align:center"><i>Nispero (%)</i></td>
+    <td style="text-align:center"><i>Zapote (%)</i></td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Saludable</i></td>
+    <td style="text-align:center">95</td>
+    <td style="text-align:center">83</td>
+    <td style="text-align:center">66</td>
+    <td style="text-align:center">87</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Tropical</i></td>
+    <td style="text-align:center">92</td>
+    <td style="text-align:center">76</td>
+    <td style="text-align:center">69</td>
+    <td style="text-align:center">56</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Mañanero</i></td>
+    <td style="text-align:center">81</td>
+    <td style="text-align:center">61</td>
+    <td style="text-align:center">28</td>
+    <td style="text-align:center">94</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Colombiano</i></td>
+    <td style="text-align:center">82</td>
+    <td style="text-align:center">88</td>
+    <td style="text-align:center">63</td>
+    <td style="text-align:center">98</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Refrescante</i></td>
+    <td style="text-align:center">60</td>
+    <td style="text-align:center">85</td>
+    <td style="text-align:center">73</td>
+    <td style="text-align:center">78</td>
+  </tr>
+  <tr>
+    <td style="text-align:left"><i>Light</i></td>
+    <td style="text-align:center">50</td>
+    <td style="text-align:center">55</td>
+    <td style="text-align:center">82</td>
+    <td style="text-align:center">91</td>
+  </tr>
+</table>
+<br>
 <p style="text-align: left;"><b>Tabla 3. Litros disponibles de cada fruta</b></p>
-<div class="table-wrapper"><table class="egt">
-<tr>
-<th style="text-align:center">Frutas</th>
-<th style="text-align:center">Litros disponibles</th>
-</tr>
-<tr>
-<td style="text-align:center"><i>Piña</i></td>
-<td style="text-align:center">4,318</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Guayaba</i></td>
-<td style="text-align:center">1,902</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Nispero</i></td>
-<td style="text-align:center">2,683</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Zapote</i></td>
-<td style="text-align:center">1,111</td>
-</tr>
-</table></div>
-<br/>
+<table class="egt">
+  <tr>  
+    <th style="text-align:center">Frutas</th> 
+    <th style="text-align:center">Litros disponibles</th>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Piña</i></td>
+    <td style="text-align:center">4,318</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Guayaba</i></td>
+    <td style="text-align:center">1,902</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Nispero</i></td>
+    <td style="text-align:center">2,683</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Zapote</i></td>
+    <td style="text-align:center">1,111</td>
+  </tr>
+</table>
+<br>
 <p style="text-align: left;"><b>Tabla 4. Demanda mínima y precio de cada jugo</b></p>
-<div class="table-wrapper"><table class="egt">
-<tr>
-<th style="text-align:center">Jugos</th>
-<th style="text-align:center">Demanda mínima</th>
-<th style="text-align:center">Precio</th>
-</tr>
-<tr>
-<td style="text-align:center"><i>Saludable</i></td>
-<td style="text-align:center">1,200</td>
-<td style="text-align:center">9,000</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Tropical</i></td>
-<td style="text-align:center">925</td>
-<td style="text-align:center">5,000</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Mañanero</i></td>
-<td style="text-align:center">1,865</td>
-<td style="text-align:center">6,000</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Colombiano</i></td>
-<td style="text-align:center">1,035</td>
-<td style="text-align:center">10,000</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Refrescante</i></td>
-<td style="text-align:center">2,231</td>
-<td style="text-align:center">7,000</td>
-</tr>
-<tr>
-<td style="text-align:center"><i>Light</i></td>
-<td style="text-align:center">1,353</td>
-<td style="text-align:center">8,000</td>
-</tr>
-</table></div>
-<br/><p>Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: ¿Cuántos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?</p>
+<table class="egt">
+  <tr>  
+    <th style="text-align:center">Jugos</th> 
+    <th style="text-align:center">Demanda mínima</th>
+    <th style="text-align:center">Precio</th>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Saludable</i></td>
+    <td style="text-align:center">1,200</td>
+    <td style="text-align:center">9,000</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Tropical</i></td>
+    <td style="text-align:center">925</td>
+    <td style="text-align:center">5,000</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Mañanero</i></td>
+    <td style="text-align:center">1,865</td>
+    <td style="text-align:center">6,000</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Colombiano</i></td>
+    <td style="text-align:center">1,035</td>
+    <td style="text-align:center">10,000</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Refrescante</i></td>
+    <td style="text-align:center">2,231</td>
+    <td style="text-align:center">7,000</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><i>Light</i></td>
+    <td style="text-align:center">1,353</td>
+    <td style="text-align:center">8,000</td>
+  </tr>
+</table>
+<br><p>Usted debe formular un programa lineal que le permita OptiJuice responder la siguiente pregunta: ¿Cuántos litros de zumo de cada fruta se deben mezclar para producir cada uno de los tipos de jugos, de manera que se cumplan las condiciones previamente expuestas y se maximicen los ingresos totales?</p>
 </div>
 <div class="section" id="formulacion">
 <h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="variables-de-decision">
 <h3>Variables de Decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+<div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 x_{ki}: \text{cantidad (en litros) del zumo de la fruta $i\in R$ destinados a la producción del jugo de tipo $k\in K$}
-\end{align*}\]</div></div>
+\end{align*}\]</div>
 </div>
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que el jugo del tipo <span class="math notranslate nohighlight">\(k\in K\)</span> debe contener entre un <span class="math notranslate nohighlight">\(l_{ki}\)</span>% y un <span class="math notranslate nohighlight">\(u_{ki}\)</span>% de litros de zumo de la fruta <span class="math notranslate nohighlight">\(i\in R\)</span>.</p>
-<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+<div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 x_{ki} &amp;\ge l_{ki}\%\sum_{j\in R} x_{kj}, &amp;&amp;\forall k\in K,i\in R;\\
 x_{ki} &amp;\le u_{ki}\%\sum_{j\in R} x_{kj}, &amp;&amp;\forall k\in K,i\in R.
-\end{align*}\]</div></div>
+\end{align*}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) que describe(n) que OptiJuice puede utilizar máximo <span class="math notranslate nohighlight">\(b_i\)</span> litros de zumo de la fruta <span class="math notranslate nohighlight">\(i\in R\)</span>.</p>
-<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+<div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \sum_{k\in K} x_{ki} &amp;\le b_i, &amp;&amp;\forall i\in R.
-\end{align*}\]</div></div>
+\end{align*}\]</div>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) que OptiJuice desea cumplir con la demanda mínima de <span class="math notranslate nohighlight">\(d_k\)</span> litros jugo del tipo <span class="math notranslate nohighlight">\(k\in K\)</span>.</p>
-<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+<div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \sum_{i\in R} x_{ki} &amp;\ge d_k, &amp;&amp;\forall k\in K.
-\end{align*}\]</div></div>
+\end{align*}\]</div>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h3>Naturaleza de las Variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h3>
 <p><strong>e.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
-<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+<div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R.
-\end{align*}\]</div></div>
+\end{align*}\]</div>
 </div>
 <div class="section" id="funcion-objetivo">
 <h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
 <p><strong>f.</strong> Escriba la función objetivo que maximiza los ingresos totales.</p>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[
 \text{maximizar }  \sum_{k\in K}\sum_{i\in R}p_kx_{ki}
-\]</div></div>
+\]</div>
 </div>
 </div>
 <div class="section" id="formulacion-matematica">
@@ -445,19 +640,19 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R.
 <li><p><span class="math notranslate nohighlight">\(x_{ki}\)</span>: cantidad (en litros) del zumo de la fruta <span class="math notranslate nohighlight">\(i\in R\)</span> destinados a la producción del jugo de tipo <span class="math notranslate nohighlight">\(k\in K\)</span></p></li>
 </ul>
 <p><strong>Modelo:</strong></p>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[
 \text{maximizar }  \sum_{k\in K}\sum_{i\in R}p_kx_{ki} \text{ (1)} 
-\]</div></div>
+\]</div>
 <p>Sujeto a,</p>
-<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+<div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 x_{ki} &amp;\ge l_{ki}\%\sum_{j\in R} x_{kj}, &amp;&amp;\forall k\in K,i\in R; &amp;(2)\\
 x_{ki} &amp;\le u_{ki}\%\sum_{j\in R} x_{kj}, &amp;&amp;\forall k\in K,i\in R; &amp;(3)\\
 \sum_{k\in K} x_{ki} &amp;\le b_i, &amp;&amp;\forall i\in R; &amp;(4)\\
 \sum_{i\in R} x_{ki} &amp;\ge d_k, &amp;&amp;\forall k\in K; &amp;(5)\\
 x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
-\end{align*}\]</div></div>
+\end{align*}\]</div>
 <p>La función objetivo (1) maximiza los ingresos totales. Las restricciones (2) y (3) describen que el jugo del tipo <span class="math notranslate nohighlight">\(k\in K\)</span> debe contener entre un <span class="math notranslate nohighlight">\(l_{ki}\)</span>% y un <span class="math notranslate nohighlight">\(u_{ki}\)</span>% de litros de zumo de la fruta <span class="math notranslate nohighlight">\(i\in R\)</span>. La restricción (4) describe que OptiJuice puede utilizar máximo <span class="math notranslate nohighlight">\(b_i\)</span> litros de zumo de la fruta <span class="math notranslate nohighlight">\(i\in R\)</span>. La restricción (5) describe que OptiJuice desea cumplir con la demanda mínima de <span class="math notranslate nohighlight">\(d_k\)</span> litros jugo del tipo <span class="math notranslate nohighlight">\(k\in K\)</span>. La restricción (6) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ki}\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -473,18 +668,18 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <span class="c1"># Conjuntos</span>
 <span class="c1">#-----------------</span>
 <span class="c1">#Jugos</span>
-<span class="n">K</span><span class="o">=</span><span class="p">[</span><span class="s2">"Saludable"</span><span class="p">,</span> 
-   <span class="s2">"Tropical"</span><span class="p">,</span> 
-   <span class="s2">"Mañanero"</span><span class="p">,</span> 
-   <span class="s2">"Colombiano"</span><span class="p">,</span> 
-   <span class="s2">"Refrescante"</span><span class="p">,</span> 
-   <span class="s2">"Light"</span><span class="p">]</span>
+<span class="n">K</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Light&quot;</span><span class="p">]</span>
 
 <span class="c1">#Frutas</span>
-<span class="n">R</span><span class="o">=</span><span class="p">[</span><span class="s2">"Piña"</span><span class="p">,</span> 
-   <span class="s2">"Guayaba"</span><span class="p">,</span> 
-   <span class="s2">"Níspero"</span><span class="p">,</span> 
-   <span class="s2">"Zapote"</span><span class="p">]</span>
+<span class="n">R</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Piña&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Guayaba&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Níspero&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;Zapote&quot;</span><span class="p">]</span>
 
 <span class="c1"># Conjunto con todas las duplas (pozo,tiempo)</span>
 <span class="n">K_x_R</span> <span class="o">=</span> <span class="p">[(</span><span class="n">jugo</span><span class="p">,</span> <span class="n">fruta</span><span class="p">)</span> <span class="k">for</span> <span class="n">jugo</span> <span class="ow">in</span> <span class="n">K</span> <span class="k">for</span> <span class="n">fruta</span> <span class="ow">in</span> <span class="n">R</span><span class="p">]</span> 
@@ -493,95 +688,95 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <span class="c1"># Parámetros</span>
 <span class="c1">#-----------------</span>
 <span class="n">l</span><span class="o">=</span><span class="p">{</span><span class="c1">#(jugo, fruta): porcentaje mínimo de litros de la fruta i en el jugo k</span>
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.32</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.27</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.12</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.13</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.18</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.30</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.31</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.34</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.07</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.31</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.28</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.22</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.11</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.05</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.15</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.18</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.46</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.50</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.02</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.43</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.36</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.19</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.14</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.40</span><span class="p">}</span> 
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.32</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.27</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.12</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.13</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.18</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.30</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.31</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.34</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.07</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.31</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.28</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.22</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.11</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.05</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.15</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.18</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.46</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.50</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.02</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.43</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.36</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.19</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.14</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.40</span><span class="p">}</span> 
 
 <span class="n">u</span><span class="o">=</span><span class="p">{</span><span class="c1">#(jugo, fruta): porcentaje máximo de litros de la fruta i en el jugo k</span>
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.95</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.83</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.66</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Saludable"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.87</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.92</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.76</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.69</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Tropical"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.56</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.81</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.61</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.28</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Mañanero"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.94</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.82</span><span class="p">,</span> 
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.88</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.63</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Colombiano"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.98</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.60</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.85</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.73</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Refrescante"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.78</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Piña"</span><span class="p">):</span><span class="mf">0.50</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">):</span><span class="mf">0.55</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">):</span><span class="mf">0.82</span><span class="p">,</span>
-   <span class="p">(</span><span class="s2">"Light"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">):</span><span class="mf">0.91</span><span class="p">}</span> 
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.95</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.83</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.66</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Saludable&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.87</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.92</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.76</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.69</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Tropical&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.56</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.81</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.61</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.28</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Mañanero&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.94</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.82</span><span class="p">,</span> 
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.88</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.63</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Colombiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.98</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.60</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.85</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.73</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Refrescante&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.78</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Piña&quot;</span><span class="p">):</span><span class="mf">0.50</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">):</span><span class="mf">0.55</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">):</span><span class="mf">0.82</span><span class="p">,</span>
+   <span class="p">(</span><span class="s2">&quot;Light&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">):</span><span class="mf">0.91</span><span class="p">}</span> 
 
 <span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="c1">#fruta: litros disponibles de la fruta i</span>
-   <span class="s2">"Piña"</span><span class="p">:</span><span class="mi">4318</span><span class="p">,</span> 
-   <span class="s2">"Guayaba"</span><span class="p">:</span><span class="mi">1902</span><span class="p">,</span> 
-   <span class="s2">"Níspero"</span><span class="p">:</span><span class="mi">2683</span><span class="p">,</span> 
-   <span class="s2">"Zapote"</span><span class="p">:</span><span class="mi">1111</span><span class="p">}</span>  
+   <span class="s2">&quot;Piña&quot;</span><span class="p">:</span><span class="mi">4318</span><span class="p">,</span> 
+   <span class="s2">&quot;Guayaba&quot;</span><span class="p">:</span><span class="mi">1902</span><span class="p">,</span> 
+   <span class="s2">&quot;Níspero&quot;</span><span class="p">:</span><span class="mi">2683</span><span class="p">,</span> 
+   <span class="s2">&quot;Zapote&quot;</span><span class="p">:</span><span class="mi">1111</span><span class="p">}</span>  
 
 <span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="c1">#jugo: demanda del jugo k</span>
-   <span class="s2">"Saludable"</span><span class="p">:</span><span class="mi">1200</span><span class="p">,</span> 
-   <span class="s2">"Tropical"</span><span class="p">:</span><span class="mi">925</span><span class="p">,</span> 
-   <span class="s2">"Mañanero"</span><span class="p">:</span><span class="mi">1865</span><span class="p">,</span> 
-   <span class="s2">"Colombiano"</span><span class="p">:</span><span class="mi">1035</span><span class="p">,</span> 
-   <span class="s2">"Refrescante"</span><span class="p">:</span><span class="mi">2231</span><span class="p">,</span> 
-   <span class="s2">"Light"</span><span class="p">:</span><span class="mi">1353</span><span class="p">}</span> 
+   <span class="s2">&quot;Saludable&quot;</span><span class="p">:</span><span class="mi">1200</span><span class="p">,</span> 
+   <span class="s2">&quot;Tropical&quot;</span><span class="p">:</span><span class="mi">925</span><span class="p">,</span> 
+   <span class="s2">&quot;Mañanero&quot;</span><span class="p">:</span><span class="mi">1865</span><span class="p">,</span> 
+   <span class="s2">&quot;Colombiano&quot;</span><span class="p">:</span><span class="mi">1035</span><span class="p">,</span> 
+   <span class="s2">&quot;Refrescante&quot;</span><span class="p">:</span><span class="mi">2231</span><span class="p">,</span> 
+   <span class="s2">&quot;Light&quot;</span><span class="p">:</span><span class="mi">1353</span><span class="p">}</span> 
 
 <span class="n">p</span><span class="o">=</span><span class="p">{</span><span class="c1">#jugo: precio del jugo k</span>
-   <span class="s2">"Saludable"</span><span class="p">:</span><span class="mi">9000</span><span class="p">,</span> 
-   <span class="s2">"Tropical"</span><span class="p">:</span><span class="mi">5000</span><span class="p">,</span> 
-   <span class="s2">"Mañanero"</span><span class="p">:</span><span class="mi">6000</span><span class="p">,</span> 
-   <span class="s2">"Colombiano"</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span> 
-   <span class="s2">"Refrescante"</span><span class="p">:</span><span class="mi">7000</span><span class="p">,</span> 
-   <span class="s2">"Light"</span><span class="p">:</span><span class="mi">8000</span><span class="p">}</span> 
+   <span class="s2">&quot;Saludable&quot;</span><span class="p">:</span><span class="mi">9000</span><span class="p">,</span> 
+   <span class="s2">&quot;Tropical&quot;</span><span class="p">:</span><span class="mi">5000</span><span class="p">,</span> 
+   <span class="s2">&quot;Mañanero&quot;</span><span class="p">:</span><span class="mi">6000</span><span class="p">,</span> 
+   <span class="s2">&quot;Colombiano&quot;</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span> 
+   <span class="s2">&quot;Refrescante&quot;</span><span class="p">:</span><span class="mi">7000</span><span class="p">,</span> 
+   <span class="s2">&quot;Light&quot;</span><span class="p">:</span><span class="mi">8000</span><span class="p">}</span> 
 
 <span class="c1">#-------------------------------------</span>
 <span class="c1"># Creación del objeto problema en PuLP</span>
 <span class="c1">#-------------------------------------</span>
 <span class="c1">#Crea el problema para cargarlo con la instancia </span>
-<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">"OptiJuice"</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMaximize</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;OptiJuice&quot;</span><span class="p">,</span><span class="n">lp</span><span class="o">.</span><span class="n">LpMaximize</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Variables de Decisión</span>
 <span class="c1">#-----------------------------</span>
-<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span><span class="n">K_x_R</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">'Continuous'</span><span class="p">)</span> <span class="c1">#litros de la fruta i para producir el jugo k, aca se añade de una vez la naturaleza de las variables</span>
+<span class="n">x</span><span class="o">=</span><span class="n">lp</span><span class="o">.</span><span class="n">LpVariable</span><span class="o">.</span><span class="n">dicts</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">K_x_R</span><span class="p">,</span><span class="n">lowBound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;Continuous&#39;</span><span class="p">)</span> <span class="c1">#litros de la fruta i para producir el jugo k, aca se añade de una vez la naturaleza de las variables</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Función objetivo</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Crea la expresión de maximización de ingresos</span>
-<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">"Ingresos Totales"</span>
+<span class="n">problema</span><span class="o">+=</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Ingresos Totales&quot;</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Restricciones</span>
@@ -589,24 +784,24 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">:</span>
         <span class="c1">#x_ki &gt;= l_ki*sum(j in R)x_kj forall k in K, i in R</span>
-        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">"Mínimo fruta "</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">" -jugo "</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el mínimo de fruta i en el jugo k</span>
+        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Mínimo fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">&quot; -jugo &quot;</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el mínimo de fruta i en el jugo k</span>
         
         <span class="c1">#x_ki &lt;= u_ki*sum(j in R)x_kj forall k in K, i in R</span>
-        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">u</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">"Máximo fruta "</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">" -jugo "</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el máximo de fruta i en el jugo k</span>
+        <span class="n">problema</span><span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">u</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">R</span><span class="p">),</span> <span class="s2">&quot;Máximo fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span><span class="s2">&quot; -jugo &quot;</span><span class="o">+</span><span class="n">k</span>  <span class="c1">#se garantiza el máximo de fruta i en el jugo k</span>
 
 <span class="c1">#sum(k in K)x_ki &lt;= b_i forall i in R</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">"límite fruta "</span><span class="o">+</span><span class="n">i</span> <span class="c1">#se garantiza que no se utilice más fruta de la que hay disponible</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;límite fruta &quot;</span><span class="o">+</span><span class="n">i</span> <span class="c1">#se garantiza que no se utilice más fruta de la que hay disponible</span>
 
 <span class="c1">#sum(i in R)x_ki &lt;= d_k forall k in K</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
-    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="s2">"Demanda mínima jugo "</span><span class="o">+</span><span class="n">k</span> <span class="c1">#se satisface la demanda</span>
+    <span class="n">problema</span><span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">R</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="s2">&quot;Demanda mínima jugo &quot;</span><span class="o">+</span><span class="n">k</span> <span class="c1">#se satisface la demanda</span>
     
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Imprimir formato LP</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Escribe el problema en un archivo con formato LP </span>
-<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">"OptiJuice.lp"</span><span class="p">)</span>
+<span class="n">problema</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">&quot;OptiJuice.lp&quot;</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Invocar el optimizador</span>
@@ -618,17 +813,17 @@ x_{ki} &amp; \ge 0, &amp;&amp;\forall k\in K,i\in R. &amp;(6)
 <span class="c1">#    Imprimir resultados</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Imprimir estado final del optimizador</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Estado (optimizador):"</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estado (optimizador):&quot;</span><span class="p">,</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">problema</span><span class="o">.</span><span class="n">status</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="c1">#Valor óptimo de la función objetivo   </span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">OptiJuice - Ingresos totales = $"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">OptiJuice - Ingresos totales = $&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">problema</span><span class="o">.</span><span class="n">objective</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="c1">#Imprimir variables de decisión</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Variables de decisión"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"              "</span><span class="p">,</span><span class="s2">"Piña"</span><span class="p">,</span> <span class="s2">"Guayaba"</span><span class="p">,</span> <span class="s2">"Níspero"</span><span class="p">,</span> <span class="s2">"Zapote"</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables de decisión&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;              &quot;</span><span class="p">,</span><span class="s2">&quot;Piña&quot;</span><span class="p">,</span> <span class="s2">&quot;Guayaba&quot;</span><span class="p">,</span> <span class="s2">&quot;Níspero&quot;</span><span class="p">,</span> <span class="s2">&quot;Zapote&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">"Piña"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">"Guayaba"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">"Níspero"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">"Zapote"</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;Piña&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;Guayaba&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;Níspero&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;Zapote&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -652,16 +847,17 @@ Light	0.0	0.0	0.0	0.0
 </div>
 <div class="section" id="creditos">
 <h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
-<p>Equipo Principios de Optimización<br/>
-Instancia: Juan Felipe Rengifo<br/>
+<p>Equipo Principios de Optimización<br>
+Instancia: Juan Felipe Rengifo<br>
 Fecha: 05/09/2020</p>
 </div>
 </div>
-<script type="text/x-thebe-config">
+
+    <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "copa-uniandes/optimizacion",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -675,84 +871,40 @@ Fecha: 05/09/2020</p>
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'python3'</script>
-      </article>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="../Enunciados/Transporte%20Enunciado.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Transporte de productos lácteos</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../Enunciados/OptiJuice%20Enunciado.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Producción de jugos</div>
-                
-              </div>
-            </a>
-        </div>
+    <script>kernelName = 'python3'</script>
 
-        <div class="related-information">
-              Copyright &#169; 2020
-            |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            |
-            <a class="muted-link" href="../_sources/Soluciones/OptiJuice.ipynb"
-               rel="nofollow">
-              Show Source
-            </a>
+              </div>
+              
         </div>
-        
-      </footer>
     </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Producción de jugos Solución</a><ul>
-<li><a class="reference internal" href="#enunciado">Enunciado</a></li>
-<li><a class="reference internal" href="#formulacion">Formulación</a><ul>
-<li><a class="reference internal" href="#variables-de-decision">Variables de Decisión</a></li>
-<li><a class="reference internal" href="#restricciones">Restricciones</a></li>
-<li><a class="reference internal" href="#naturaleza-de-las-variables">Naturaleza de las Variables</a></li>
-<li><a class="reference internal" href="#funcion-objetivo">Función Objetivo</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#formulacion-matematica">Formulación matemática</a></li>
-<li><a class="reference internal" href="#implementacion">Implementación</a></li>
-<li><a class="reference internal" href="#creditos">Créditos</a></li>
-</ul>
-</li>
-</ul>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Enunciados/OptiJuice%20Enunciado.html" title="previous page">Producción de jugos</a>
+    <a class='right-next' id="next-link" href="../Enunciados/Transporte%20Enunciado.html" title="next page">Transporte de productos lácteos</a>
 
-          </div>
-        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Equipo Principios de Optimización<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
       </div>
-      
-      
-    </aside>
-  </main>
-</div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
   </body>
 </html>
