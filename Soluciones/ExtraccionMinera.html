@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extracción minera Solución &#8212; Repositorio Principios de Optimización</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -35,20 +35,17 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -56,6 +53,8 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -237,21 +236,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -269,7 +268,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -288,13 +287,13 @@
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -316,11 +315,11 @@
     </div>
 </div>
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -433,6 +432,7 @@
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -656,37 +656,32 @@ Usted debe formular un programa lineal que le permita a la empresa decidir cuán
 <div class="section" id="variables-de-decision">
 <h4>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h4>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7c8224f-ef0a-456f-b0cd-3e580c137213">
-<span class="eqno">(7)<a class="headerlink" href="#equation-d7c8224f-ef0a-456f-b0cd-3e580c137213" title="Permalink to this equation">¶</a></span>\[\begin{align}
-x_i: \text{cantidad de carbón extraído en la zona $i\in M$ (en toneladas)}\\
-\end{align}\]</div>
+<p>\begin{align}
+x_i: \text{cantidad de carbón extraído en la zona <span class="math notranslate nohighlight">\(i\in M\)</span> (en toneladas)}\
+\end{align}</p>
 </div>
 <div class="section" id="restricciones">
 <h4>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
-<p><em>Opción 1:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-897c6d84-1bfb-4d73-9301-042633b7d93c">
-<span class="eqno">(8)<a class="headerlink" href="#equation-897c6d84-1bfb-4d73-9301-042633b7d93c" title="Permalink to this equation">¶</a></span>\[\begin{align}
-\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
-\end{align}\]</div>
-<p><em>Opción 2:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-79eddb56-c16c-450c-90f9-e22e4d69d6c2">
-<span class="eqno">(9)<a class="headerlink" href="#equation-79eddb56-c16c-450c-90f9-e22e4d69d6c2" title="Permalink to this equation">¶</a></span>\[\begin{align}
-\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\\
-\end{align}\]</div>
+<p><em>Opción 1:</em>
+\begin{align}
+\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\
+\end{align}</p>
+<p><em>Opción 2:</em>
+\begin{align}
+\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.\
+\end{align}</p>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5198aadc-f56f-4bcf-a0c4-9745bbe0cdbb">
-<span class="eqno">(10)<a class="headerlink" href="#equation-5198aadc-f56f-4bcf-a0c4-9745bbe0cdbb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p>\begin{align}
 x_i &amp;\le n_i, &amp;&amp;\forall i\in M.
-\end{align}\]</div>
+\end{align}</p>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h4>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d0769924-a864-44ad-9786-e123f59f1d01">
-<span class="eqno">(11)<a class="headerlink" href="#equation-d0769924-a864-44ad-9786-e123f59f1d01" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p>\begin{align}
 x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
-\end{align}\]</div>
+\end{align}</p>
 </div>
 <div class="section" id="funcion-objetivo">
 <h4>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h4>
@@ -720,13 +715,12 @@ x_i &amp;\ge 0, &amp;&amp;\forall i\in M.
 \[
 \text{minimizar }  \sum_{i\in M}x_ic_i \text{ (1)} 
 \]</div>
-<p>Sujeto a,</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\\
-x_i &amp;\le n_i, &amp;&amp;\forall i\in M; &amp;(3)\\
+<p>Sujeto a,
+\begin{align*}
+\sum_{i\in M}a_{ij}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\
+x_i &amp;\le n_i, &amp;&amp;\forall i\in M; &amp;(3)\
 x_i &amp;\ge 0, &amp;&amp;\forall i\in M. &amp;(4)
-\end{align*}\]</div>
+\end{align*}</p>
 <p>La función objetivo (1) minimiza los costos totales. Las restricciones (2) garantiza(n) que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe ser mínimo <span class="math notranslate nohighlight">\(b_j\)</span> toneladas. Las restricciones (3) garantiza(n) que no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón en la zona <span class="math notranslate nohighlight">\(i\in M\)</span>. Las restricciones (4) describe(n) la naturaleza de la variable <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -1176,31 +1170,27 @@ Extracción Minera - <span class=" -Color -Color-Bold"> Costos totales </span> =
 <div class="section" id="id3">
 <h4>Variables de decisión<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p><strong>a.</strong> Describa la(s) variable(s) de decisión adicional(es) que utilizará en el modelo.</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-y_i:\begin{cases}1\text{,}&amp;\text{ si se decide explotar la zona }i\in M \\ 0\text{,}&amp; \text{ d.l.c}  \end{cases}
-\end{align*}\]</div>
+<p>\begin{align*}
+y_i:\begin{cases}1\text{,}&amp;\text{ si se decide explotar la zona }i\in M \ 0\text{,}&amp; \text{ d.l.c}  \end{cases}
+\end{align*}</p>
 </div>
 <div class="section" id="id4">
 <h4>Restricciones<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span>, debe como mínimo <span class="math notranslate nohighlight">\(b_j\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-24cea490-5c83-4bee-9f97-4145e3b1dffd">
-<span class="eqno">(12)<a class="headerlink" href="#equation-24cea490-5c83-4bee-9f97-4145e3b1dffd" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p>\begin{align}
 \sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K.
-\end{align}\]</div>
+\end{align}</p>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón. Pero que, si no se decide explotar, la extracción de carbón debe ser igual a cero.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c8e476e5-af34-4958-ab65-0c622ff2e012">
-<span class="eqno">(13)<a class="headerlink" href="#equation-c8e476e5-af34-4958-ab65-0c622ff2e012" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p>\begin{align}
 x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M.
-\end{align}\]</div>
+\end{align}</p>
 </div>
 <div class="section" id="id5">
 <h4>Naturaleza de las variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) adicional(es).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-12f8dfaa-4e0e-42a2-b576-d55a393d3c68">
-<span class="eqno">(14)<a class="headerlink" href="#equation-12f8dfaa-4e0e-42a2-b576-d55a393d3c68" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p>\begin{align}
 y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
-\end{align}\]</div>
+\end{align}</p>
 </div>
 <div class="section" id="id6">
 <h4>Función Objetivo<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
@@ -1236,14 +1226,13 @@ y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M.
 \[
 \text{minimizar }  \sum_{i\in M}y_iq_i+\sum_{i\in M}x_ic_i \text{ (1)} 
 \]</div>
-<p>Sujeto a,</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\\
-x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M; &amp;(3)\\
-x_i &amp;\ge 0, &amp;&amp;\forall i\in M; &amp;(4)\\
+<p>Sujeto a,
+\begin{align*}
+\sum_{i\in M|a_{ij}=1}x_i &amp;\ge b_j, &amp;&amp;\forall j\in K; &amp;(2)\
+x_i &amp;\le n_iy_i, &amp;&amp;\forall i\in M; &amp;(3)\
+x_i &amp;\ge 0, &amp;&amp;\forall i\in M; &amp;(4)\
 y_i &amp;\in \text{{0,1}}, &amp;&amp;\forall i\in M. &amp;(5)
-\end{align*}\]</div>
+\end{align*}</p>
 <p>La función objetivo (1) minimiza los costos totales. Las restricciones (2) garantizan que la cantidad de carbón extraído del tipo <span class="math notranslate nohighlight">\(j\in K\)</span> debe ser mínimo <span class="math notranslate nohighlight">\(b_j\)</span> toneladas. La restricciones (3) garantizan que si se decide explotar la mina <span class="math notranslate nohighlight">\(i\in M\)</span>, no se pueden extraer más de (<span class="math notranslate nohighlight">\(n_i\)</span>) toneladas de carbón, pero que si no se decide explotar, la extracción de carbón debe ser igual a cero. Las restricciones (4) y (5) describen la naturaleza de las variables <span class="math notranslate nohighlight">\(x_i\)</span> y <span class="math notranslate nohighlight">\(y_i\)</span>.</p>
 </div>
 <div class="section" id="id8">
@@ -1591,15 +1580,15 @@ Fecha: 12/09/2020</p>
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="../Enunciados/ExtraccionMinera%20Enunciado.html" title="previous page">Extracción minera</a>
     <a class='right-next' id="next-link" href="../Guias/MS%20Office/MS%20Office.html" title="next page">Matemáticas en <em>MS Office</em></a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -1618,7 +1607,7 @@ Fecha: 12/09/2020</p>
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

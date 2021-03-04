@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Producción de cemento Solución &#8212; Repositorio Principios de Optimización</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -35,20 +35,17 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -56,6 +53,8 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -237,21 +236,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -269,7 +268,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -288,13 +287,13 @@
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -316,11 +315,11 @@
     </div>
 </div>
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -387,6 +386,7 @@
 
         </nav>
         
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -516,34 +516,30 @@
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se deben respetar los límites de producción</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x_i&amp;\leq 110000, &amp;&amp;\forall i \in S\\
-x_i&amp;\geq 85000, &amp;&amp;\forall i \in S\\
-\end{align*}\]</div>
+<p>\begin{align*}
+x_i&amp;\leq 110000, &amp;&amp;\forall i \in S\
+x_i&amp;\geq 85000, &amp;&amp;\forall i \in S\
+\end{align*}</p>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que contabiliza(n) el inventario de cada semana</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-I_1&amp;=I_0+x_1-d_1\\
+<p>\begin{align*}
+I_1&amp;=I_0+x_1-d_1\
 I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1
-\end{align*}\]</div>
+\end{align*}</p>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h3>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h3>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x_i&amp;\geq 0,&amp;&amp;\forall i \in S\\
+<p>\begin{align*}
+x_i&amp;\geq 0,&amp;&amp;\forall i \in S\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S
-\end{align*}\]</div>
+\end{align*}</p>
 </div>
 <div class="section" id="funcion-objetivo">
 <h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
 <p><strong>e.</strong> Escriba la función objetivo</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
-\end{equation*}\]</div>
+<p>\begin{equation*}
+max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
+\end{equation*}</p>
 </div>
 </div>
 <div class="section" id="formulacion-matematica-completa">
@@ -565,19 +561,17 @@ I_i&amp;\geq 0,&amp;&amp;\forall i \in S
 <li><p><span class="math notranslate nohighlight">\(x_{i}\)</span>: toneladas de cemento a producir en la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(I_i\)</span>: toneladas de cemento que se tienen en inventario al final de la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i\text{ (1)}
-\end{equation*}\]</div>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x_i&amp;\leq 110000, &amp;&amp;\forall i \in S; &amp;(2)\\
-x_i&amp;\geq 85000, &amp;&amp;\forall i \in S; &amp;(3)\\
-I_1&amp;=I_0+x_1-d_1,&amp;&amp; &amp;(4)\\
-I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1;  &amp;(5)\\
-x_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(6)\\
+<p>\begin{equation*}
+max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i\text{ (1)}
+\end{equation*}</p>
+<p>\begin{align*}
+x_i&amp;\leq 110000, &amp;&amp;\forall i \in S; &amp;(2)\
+x_i&amp;\geq 85000, &amp;&amp;\forall i \in S; &amp;(3)\
+I_1&amp;=I_0+x_1-d_1,&amp;&amp; &amp;(4)\
+I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1;  &amp;(5)\
+x_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(6)\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
-\end{align*}\]</div>
+\end{align*}</p>
 <p>La función objetivo (1) maximiza las utilidades totales. Las restricciones (2) y (3) garantizan que para cada semana <span class="math notranslate nohighlight">\(i\in S\)</span> la producción <span class="math notranslate nohighlight">\(x_i\)</span> respete los límites de producción. Las restricciones (4) y (5) contabilizan los inventarios para cada semana <span class="math notranslate nohighlight">\(i \in S\)</span>. Las restricciones (6) y (7) describen la naturaleza de las variables <span class="math notranslate nohighlight">\(x_i\)</span> y <span class="math notranslate nohighlight">\(I_i\)</span>.</p>
 </div>
 <div class="section" id="implementacion">
@@ -750,15 +744,15 @@ Fecha: 25/09/2020</p>
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="../Enunciados/Inventarios%20Enunciado.html" title="previous page">Producción de cemento</a>
     <a class='right-next' id="next-link" href="Inventarios-vis.html" title="next page">Producción de cemento Visualización</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -777,7 +771,7 @@ Fecha: 25/09/2020</p>
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     
