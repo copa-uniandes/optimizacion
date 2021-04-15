@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from math import sin, cos, pi
 import matplotlib.pyplot as plt
-from MetodoGrafico import *
+from optimizacion.Soluciones.MetodoGrafico import *
 from typing import Tuple
 
 def miRadar(x, d, n = 8):
