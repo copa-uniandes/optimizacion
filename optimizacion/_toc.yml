@@ -24,6 +24,12 @@
   - file: Enunciados/ExtraccionMinera Enunciado.ipynb
     sections:
       - file: Soluciones/ExtraccionMinera.ipynb
+  - file: Enunciados/Salsa al Parque.ipynb
+    sections:
+      - file: Soluciones/Salsa al Parque Solucion.ipynb
+  - file: Enunciados/Busqueda Local Enunciado.ipynb
+    sections:
+      - file: Soluciones/Busqueda Local Solución.ipynb
 - part: Guías
   chapters:
   - file: Guias/MS Office/MS Office.ipynb

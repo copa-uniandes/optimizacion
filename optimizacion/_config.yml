@@ -24,8 +24,17 @@ html:
   use_issues_button: true
   extra_navbar: "" #Removes 'Powered by Jupyter Book' from left navbar.
 
-parse:
-  myst_extended_syntax: true
+myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
 
 execute:
   execute_notebooks: 'off'
