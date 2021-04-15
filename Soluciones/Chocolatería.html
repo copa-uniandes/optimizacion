@@ -203,6 +203,34 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Salsa%20al%20Parque.html">
+   Salsa al Parque
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Salsa%20al%20Parque%20Solucion.html">
+     Salsa al Parque
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Busqueda%20Local%20Enunciado.html">
+   Búsqueda Local
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Busqueda%20Local%20Soluci%C3%B3n.html">
+     Búsqueda Local
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
@@ -375,25 +403,37 @@
 <div class="section" id="formulacion">
 <h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
 <p><strong>a.</strong> Escriba término a término la(s) variable(s) de decisión que utilizará en el modelo.</p>
-<p>\begin{align*}
-x_1: \text{unidades de chocolate oscuro producidos cada semana} \
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+x_1: \text{unidades de chocolate oscuro producidos cada semana} \\
 x_2: \text{unidades de chocolate blanco producidos cada semana}
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p><strong>b.</strong> Escriba término a término la(s) restricción(es) lineal(es) y descríbala(s)</p>
 <p>Restricciones asociadas a la disponibilidad de recursos:</p>
-<p>\begin{align*}
-6x_1 + 22x_2 \leq 12,000\
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+6x_1 + 22x_2 \leq 12,000\\
 21x_1 + 18x_2 \leq 20,000
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p>Restricciones asociadas a la demanda de productos:</p>
-<p>\begin{align*}
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
 x_2 \leq 315
-\end{align*}</p>
+\end{align*}
+\]</div>
 <p>Restricciones asociadas a tipo de variables:</p>
-<p>\begin{align*}
-x_1 \geq 0\
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+x_1 \geq 0\\
 x_2 \geq 0
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p><strong>c.</strong> Escriba término a término la función objetivo que maximiza la utilidad.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -412,14 +452,17 @@ x_2 \geq 0
 \[
 \text{maximizar }  \$3,500x_1 + \$4,000x_2 \text{ (1)} 
 \]</div>
-<p>Sujeto a,
+<p>Sujeto a,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align*}
-6x_1 + 22x_2 &amp;\leq 12,000; &amp;(2)\
-21x_1 + 18x_2 &amp;\leq 20,000; &amp;(3)\
-x_2 &amp;\leq 315; &amp;(4)\
-x_1 &amp;\geq 0; &amp;(5)\
+6x_1 + 22x_2 &amp;\leq 12,000; &amp;(2)\\
+21x_1 + 18x_2 &amp;\leq 20,000; &amp;(3)\\
+x_2 &amp;\leq 315; &amp;(4)\\
+x_1 &amp;\geq 0; &amp;(5)\\
 x_2 &amp; \geq 0. &amp;(6)
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p>La función objetivo (1) maximiza las utilidades. Las restricciones (2) y (3) describen que se debe respetar la disponibilidad de manteca de cacao y azúcar, respectivamente. La restricción (4) garantiza no se sobrepase la demanda máxima de chocolate blanco. La restricciones (5) y (6) describen la naturaleza de la variables <span class="math notranslate nohighlight">\(x_1\)</span> y <span class="math notranslate nohighlight">\(x_2\)</span>, respectivamente.</p>
 </div>
 <div class="section" id="implementacion">

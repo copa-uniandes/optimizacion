@@ -203,6 +203,34 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Salsa%20al%20Parque.html">
+   Salsa al Parque
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Salsa%20al%20Parque%20Solucion.html">
+     Salsa al Parque
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Busqueda%20Local%20Enunciado.html">
+   Búsqueda Local
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Busqueda%20Local%20Soluci%C3%B3n.html">
+     Búsqueda Local
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
@@ -669,12 +697,15 @@ El equipo de Principios de Optimización le ha pedido a usted que plantee y resu
 <p><strong>Modelo:</strong></p>
 <div class="math notranslate nohighlight">
 \[\text{maximizar}  \sum_{i\in I}\sum_{r\in R}p_{ir}\cdot x_{ir}\]</div>
-<p>Sujeto a,
+<p>Sujeto a,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align*}
-\sum_{i\in I}x_{ir}&amp;=1, &amp;&amp;\forall r\in R; &amp;(2)\
-\sum_{r\in R}t_{ir}x_{ir} &amp;\le d_i, &amp;&amp;\forall i\in I; &amp;(3)\
-x_{ir}&amp;\in{0,1},&amp;&amp;\forall i\in I, r\in R. &amp;(4)
-\end{align*}</p>
+\sum_{i\in I}x_{ir}&amp;=1, &amp;&amp;\forall r\in R; &amp;(2)\\
+\sum_{r\in R}t_{ir}x_{ir} &amp;\le d_i, &amp;&amp;\forall i\in I; &amp;(3)\\
+x_{ir}&amp;\in\{0,1\},&amp;&amp;\forall i\in I, r\in R. &amp;(4)
+\end{align*}
+\end{split}\]</div>
 <p>La función objetivo (1) maximiza la satisfacción total. La restricción (2) describe que cada responsabilidad se debe asignar a una persona. La restricción (3) describe que se debe respetar la limitación de tiempo de cada integrante. La restricción (4) describe la naturaleza de la variable <span class="math notranslate nohighlight">\(x_{ir}\)</span>.</p>
 </div>
 <div class="section" id="implementacion">

@@ -203,6 +203,34 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Salsa%20al%20Parque.html">
+   Salsa al Parque
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Salsa%20al%20Parque%20Solucion.html">
+     Salsa al Parque
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Enunciados/Busqueda%20Local%20Enunciado.html">
+   Búsqueda Local
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Busqueda%20Local%20Soluci%C3%B3n.html">
+     Búsqueda Local
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
@@ -524,30 +552,42 @@
 <div class="section" id="restricciones">
 <h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que describe(n) que se deben respetar los límites de producción</p>
-<p>\begin{align*}
-x_i&amp;\leq 110000, &amp;&amp;\forall i \in S\
-x_i&amp;\geq 85000, &amp;&amp;\forall i \in S\
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+x_i&amp;\leq 110000, &amp;&amp;\forall i \in S\\
+x_i&amp;\geq 85000, &amp;&amp;\forall i \in S\\
+\end{align*}
+\end{split}\]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que contabiliza(n) el inventario de cada semana</p>
-<p>\begin{align*}
-I_1&amp;=I_0+x_1-d_1\
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+I_1&amp;=I_0+x_1-d_1\\
 I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 </div>
 <div class="section" id="naturaleza-de-las-variables">
 <h3>Naturaleza de las variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h3>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo</p>
-<p>\begin{align*}
-x_i&amp;\geq 0,&amp;&amp;\forall i \in S\
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+x_i&amp;\geq 0,&amp;&amp;\forall i \in S\\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 </div>
 <div class="section" id="funcion-objetivo">
 <h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
 <p><strong>e.</strong> Escriba la función objetivo</p>
-<p>\begin{equation*}
-max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
-\end{equation*}</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+    max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
+\end{equation*}
+\]</div>
 </div>
 </div>
 <div class="section" id="formulacion-matematica-completa">
@@ -569,17 +609,24 @@ max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i
 <li><p><span class="math notranslate nohighlight">\(x_{i}\)</span>: toneladas de cemento a producir en la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(I_i\)</span>: toneladas de cemento que se tienen en inventario al final de la semana <span class="math notranslate nohighlight">\(i\in S\)</span></p></li>
 </ul>
-<p>\begin{equation*}
-max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i\text{ (1)}
-\end{equation*}</p>
-<p>\begin{align*}
-x_i&amp;\leq 110000, &amp;&amp;\forall i \in S; &amp;(2)\
-x_i&amp;\geq 85000, &amp;&amp;\forall i \in S; &amp;(3)\
-I_1&amp;=I_0+x_1-d_1,&amp;&amp; &amp;(4)\
-I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1;  &amp;(5)\
-x_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(6)\
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+    max \sum_{i\in S}d_ip_i-x_ic_i-I_ih_i\text{ (1)}
+\end{equation*}
+\]</div>
+<p>Sujeto a,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+x_i&amp;\leq 110000, &amp;&amp;\forall i \in S; &amp;(2)\\
+x_i&amp;\geq 85000, &amp;&amp;\forall i \in S; &amp;(3)\\
+I_1&amp;=I_0+x_1-d_1,&amp;&amp; &amp;(4)\\
+I_i&amp;=I_{i-1}+x_i-d_i,  &amp;&amp;\forall i \in S|i\ge 1;  &amp;(5)\\
+x_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(6)\\
 I_i&amp;\geq 0,&amp;&amp;\forall i \in S; &amp;(7)
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p>La función objetivo (1) maximiza las utilidades totales. Las restricciones (2) y (3) garantizan que para cada semana <span class="math notranslate nohighlight">\(i\in S\)</span> la producción <span class="math notranslate nohighlight">\(x_i\)</span> respete los límites de producción. Las restricciones (4) y (5) contabilizan los inventarios para cada semana <span class="math notranslate nohighlight">\(i \in S\)</span>. Las restricciones (6) y (7) describen la naturaleza de las variables <span class="math notranslate nohighlight">\(x_i\)</span> y <span class="math notranslate nohighlight">\(I_i\)</span>.</p>
 </div>
 <div class="section" id="implementacion">

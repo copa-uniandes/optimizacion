@@ -59,7 +59,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Importación de parámetros desde MS Excel" href="../Importacion%20parametros/Importacion%20parametros.html" />
-    <link rel="prev" title="Extracción minera Solución" href="../../Soluciones/ExtraccionMinera.html" />
+    <link rel="prev" title="Búsqueda Local" href="../../Soluciones/Busqueda%20Local%20Soluci%C3%B3n.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -197,6 +197,34 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../Soluciones/ExtraccionMinera.html">
      Extracción minera Solución
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Salsa%20al%20Parque.html">
+   Salsa al Parque
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Salsa%20al%20Parque%20Solucion.html">
+     Salsa al Parque
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Enunciados/Busqueda%20Local%20Enunciado.html">
+   Búsqueda Local
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Soluciones/Busqueda%20Local%20Soluci%C3%B3n.html">
+     Búsqueda Local
     </a>
    </li>
   </ul>
@@ -757,19 +785,21 @@ x_{j}\in\mathbb{R} &amp; \forall j \in J
 <p>  <strong>Conjuntos</strong></p>
 <p>      <span class="math notranslate nohighlight">\(E\)</span>: conjunto de excursionistas.</p>
 <p>      <span class="math notranslate nohighlight">\(O\)</span>: conjunto de objetos.</p>
-<p>:::{admonition,dropdown,tip} ¡Click acá!
-<code class="docutils literal notranslate"><span class="pre">E</span></code>: conjunto de excursionistas.</p>
-<p><code class="docutils literal notranslate"><span class="pre">O</span></code>: conjunto de objetos.
-:::</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">E</span></code>: conjunto de excursionistas.</p>
+<p><code class="docutils literal notranslate"><span class="pre">O</span></code>: conjunto de objetos.</p>
+</div>
 <p>  <strong>Parámetros</strong></p>
 <p>      <span class="math notranslate nohighlight">\(b_{j}\)</span>: peso máximo que puede cargar el excursionista <span class="math notranslate nohighlight">\(j\in E\)</span></p>
 <p>      <span class="math notranslate nohighlight">\(p_{i}\)</span>: peso del objeto <span class="math notranslate nohighlight">\(i\in O\)</span></p>
 <p>      <span class="math notranslate nohighlight">\(q_{ij}\)</span>: preferencia sobre el objeto <span class="math notranslate nohighlight">\(i\in O\)</span> del excursionista <span class="math notranslate nohighlight">\(j\in E\)</span></p>
-<p>:::{admonition,dropdown,tip} ¡Click acá!
-<code class="docutils literal notranslate"><span class="pre">b_(j)</span></code>: peso máximo que puede cargar el excursionista <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code></p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">b_(j)</span></code>: peso máximo que puede cargar el excursionista <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">p_(i)</span></code>: peso del objeto <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">q_(ij)</span></code>: preferencia sobre el objeto <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code> del excursionista <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code>
-:::</p>
+<p><code class="docutils literal notranslate"><span class="pre">q_(ij)</span></code>: preferencia sobre el objeto <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code> del excursionista <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code></p>
+</div>
 <p>  <strong>Variables</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -778,17 +808,19 @@ x_{j}\in\mathbb{R} &amp; \forall j \in J
 					0 &amp; \text{d.l.c.}
    \end{cases}
 \end{split}\]</div>
-<p>:::{admonition,dropdown,tip} ¡Click acá!
-<code class="docutils literal notranslate"><span class="pre">x_ij={■(1&amp;el</span> <span class="pre">objeto</span> <span class="pre">i∈O</span> <span class="pre">es</span> <span class="pre">llevado</span> <span class="pre">por</span> <span class="pre">el</span> <span class="pre">excursionista</span> <span class="pre">j∈E&#64;0&amp;d.l.c.)┤</span></code></p>
-<p>Note que para esta función a trozos, el contenido de la llave es una matriz.
-:::</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">x_ij={■(1&amp;el</span> <span class="pre">objeto</span> <span class="pre">i∈O</span> <span class="pre">es</span> <span class="pre">llevado</span> <span class="pre">por</span> <span class="pre">el</span> <span class="pre">excursionista</span> <span class="pre">j∈E&#64;0&amp;d.l.c.)┤</span></code></p>
+<p>Note que para esta función a trozos, el contenido de la llave es una matriz.</p>
+</div>
 <p>  <strong>Naturaleza</strong></p>
 <p>\begin{gather*}
 x_{ij}\in{0,1} &amp; \forall i \in O, j \in E
 \end{gather*}</p>
-<p>:::{admonition,dropdown,tip} ¡Click acá!
-<code class="docutils literal notranslate"><span class="pre">x_ij\in{0,1}\forall</span> <span class="pre">i\in</span> <span class="pre">E,</span> <span class="pre">j\in</span> <span class="pre">O</span></code>
-:::</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">x_ij\in{0,1}\forall</span> <span class="pre">i\in</span> <span class="pre">E,</span> <span class="pre">j\in</span> <span class="pre">O</span></code></p>
+</div>
 <p>  <strong>Restricciones</strong></p>
 <p>\begin{gather*}
 \sum_{i\in O}p_{ij}x_{ij}\leq b_{j} &amp; \forall j\in E
@@ -796,20 +828,22 @@ x_{ij}\in{0,1} &amp; \forall i \in O, j \in E
 <blockquote>
 <div><p>Estas restricciones evitan que los objetos cargados por cada excursionista, <span class="math notranslate nohighlight">\(j\in E\)</span>, excedan su peso máximo tolerable, <span class="math notranslate nohighlight">\(b_{j}\)</span>.</p>
 </div></blockquote>
-<p>:::{admonition,dropdown,tip} ¡Click acá!
-<code class="docutils literal notranslate"><span class="pre">\sum_(i\in</span> <span class="pre">O)p_(ij)</span> <span class="pre">x_(ij)</span> <span class="pre">&lt;=</span> <span class="pre">b_(j)</span> <span class="pre">\forall</span> <span class="pre">j\in</span> <span class="pre">E</span></code></p>
-<p>Estas restricciones evitan que los objetos cargados por cada excursionista, <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code>, excedan su peso máximo tolerable, <code class="docutils literal notranslate"><span class="pre">b_{j}</span></code>.
-:::</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">\sum_(i\in</span> <span class="pre">O)p_(ij)</span> <span class="pre">x_(ij)</span> <span class="pre">&lt;=</span> <span class="pre">b_(j)</span> <span class="pre">\forall</span> <span class="pre">j\in</span> <span class="pre">E</span></code></p>
+<p>Estas restricciones evitan que los objetos cargados por cada excursionista, <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code>, excedan su peso máximo tolerable, <code class="docutils literal notranslate"><span class="pre">b_{j}</span></code>.</p>
+</div>
 <p>\begin{gather*}
 \sum_{j\in E}x_{ij}=1 &amp; \forall i\in O
 \end{gather*}</p>
 <blockquote>
 <div><p>Estas restricciones garantizan que cada objeto, <span class="math notranslate nohighlight">\(i\in O\)</span>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.</p>
 </div></blockquote>
-<p>:::{admonition,dropdown,tip} ¡Click acá!
-<code class="docutils literal notranslate"><span class="pre">\sum_(j\in</span> <span class="pre">E)</span> <span class="pre">x_(ij)</span> <span class="pre">=1\forall</span> <span class="pre">i\in</span> <span class="pre">O</span></code></p>
-<p>Estas restricciones garantizan que cada objeto, <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.
-:::</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">\sum_(j\in</span> <span class="pre">E)</span> <span class="pre">x_(ij)</span> <span class="pre">=1\forall</span> <span class="pre">i\in</span> <span class="pre">O</span></code></p>
+<p>Estas restricciones garantizan que cada objeto, <code class="docutils literal notranslate"><span class="pre">i\in</span> <span class="pre">O</span></code>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.</p>
+</div>
 <p>  <strong>Función Objetivo</strong></p>
 <div class="math notranslate nohighlight">
 \[
@@ -818,10 +852,11 @@ x_{ij}\in{0,1} &amp; \forall i \in O, j \in E
 <blockquote>
 <div><p>Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.</p>
 </div></blockquote>
-<p>:::{admonition,dropdown,tip} ¡Click acá!
-<code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">\sum_(i∈O)</span> <span class="pre">\sum_(j∈E)</span> <span class="pre">(q_ij</span> <span class="pre">x_ij</span> <span class="pre">)</span> </code></p>
-<p>Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.
-:::</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">¡Click acá!</p>
+<p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">\sum_(i∈O)</span> <span class="pre">\sum_(j∈E)</span> <span class="pre">(q_ij</span> <span class="pre">x_ij</span> <span class="pre">)</span> </code></p>
+<p>Esta función objetivo nos permite identificar la satisfacción total alcanzada por la familia por los objetos respectivos de cada integrante. Al maximizar la expresión, obtenemos la política óptima en cuanto a satisfacción total.</p>
+</div>
 </div>
 <div class="section" id="siguientes-pasos">
 <h2>Siguientes pasos<a class="headerlink" href="#siguientes-pasos" title="Permalink to this headline">¶</a></h2>
@@ -858,7 +893,7 @@ x_{ij}\in{0,1} &amp; \forall i \in O, j \in E
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../../Soluciones/ExtraccionMinera.html" title="previous page">Extracción minera Solución</a>
+    <a class='left-prev' id="prev-link" href="../../Soluciones/Busqueda%20Local%20Soluci%C3%B3n.html" title="previous page">Búsqueda Local</a>
     <a class='right-next' id="next-link" href="../Importacion%20parametros/Importacion%20parametros.html" title="next page">Importación de parámetros desde MS Excel</a>
 
         </div>
