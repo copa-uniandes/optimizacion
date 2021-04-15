@@ -667,10 +667,31 @@
 \end{align*}
 \]</div>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que cada artista <span class="math notranslate nohighlight">\(i \in A\)</span> se presenta en horas consecutivas y que no presente durante horas previas a la hora de inicio.</p>
+<ul class="simple">
+<li><p>El artista <span class="math notranslate nohighlight">\(i \in A\)</span> se presenta en horas consecutivas desde el inicio de su presentación:</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[
 \begin{align*}
-    \sum_{j = t}^{t+d_{i}-1}y_{i,j} &amp; \geq d_{i}x_{i,t}, \forall i \in A, t \in H | t + d(i) - 1 \leq |H|
+    \sum_{j = t}^{t+d_{i}-1}y_{i,j} &amp; \geq d_{i}x_{i,t}, \forall i \in A, t \in H \ |\  t + d(i) - 1 \leq |H|
+\end{align*}
+\]</div>
+<ul class="simple">
+<li><p>El artista <span class="math notranslate nohighlight">\(i \in A\)</span> se presenta exactamente las horas que dura su presentación:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{t \in H}y_{i,t} &amp; = d_{i}, \forall i \in A
+\end{align*}
+\]</div>
+<ul class="simple">
+<li><p>El artista <span class="math notranslate nohighlight">\(i \in A\)</span> no puede iniciar su presentación si el tiempo restante es insuficiente:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    x_{i,t} &amp; = 0, \forall i \in A, t \in H \ | \ t + d_{i} - 1 &gt; |H|
 \end{align*}
 \]</div>
 <p><strong>d.</strong> Escriba la(s) restricción(es) que describe(n) la naturaleza de la(s) variable(s) incluida(s) en el modelo.</p>
@@ -742,7 +763,7 @@
 <span class="c1"># Función objetivo</span>
 <span class="c1">#-----------------------------</span>
 <span class="c1">#Crea la expresión de maximización de audiencias</span>
-<span class="n">problema</span> <span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">a</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">)]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">H</span><span class="p">),</span> <span class="s2">&quot;Audiencia_total&quot;</span>
+<span class="n">problema</span> <span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">a</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">)]</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">H</span><span class="p">),</span> <span class="s2">&quot;Audiencia_total&quot;</span>
 
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Restricciones</span>
@@ -760,6 +781,16 @@
         <span class="k">if</span> <span class="n">t</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
             <span class="c1">#cada artista i en A se presenta en horas consecutivas y no presenta durante horas previas a la hora de inicio.</span>
             <span class="n">problema</span> <span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">y</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="o">&gt;=</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">)]</span>
+            
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
+    <span class="c1">#cada artista i en A debe presentarse por exactamente la cantidad de horas que le corresponden</span>
+    <span class="n">problema</span> <span class="o">+=</span> <span class="n">lp</span><span class="o">.</span><span class="n">lpSum</span><span class="p">(</span><span class="n">y</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">t</span><span class="p">)]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">H</span><span class="p">)</span> <span class="o">==</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">H</span><span class="p">:</span>
+        <span class="c1">#cada artista no puede iniciar su presentación si el tiempo es insuficiente para terminar</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
+            <span class="n">problema</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">t</span><span class="p">)]</span> <span class="o">==</span> <span class="mi">0</span>
         
 <span class="c1">#-----------------------------</span>
 <span class="c1"># Invocar el optimizador</span>
@@ -794,7 +825,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estado (optimizador): Optimal
-Audiencia Total: 14239000.0
+Audiencia Total: 30024000.0
 
 Variables de decisión
 	1	2	3	4	5	6	7	8	9	10	11	12	
