@@ -355,48 +355,41 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#punto-1">
-   Punto 1
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notacion">
+   Notación:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enunciado">
-     Enunciado
+    <a class="reference internal nav-link" href="#conjuntos">
+     Conjuntos
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notacion">
-     Notación:
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conjuntos">
-       Conjuntos
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parametros">
-       Parámetros
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#variables">
-       Variables
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulacion">
-     Formulación
+    <a class="reference internal nav-link" href="#parametros">
+     Parámetros
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementacion">
-     Implementación
+    <a class="reference internal nav-link" href="#variables">
+     Variables
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion">
+   Formulación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creditos">
@@ -418,11 +411,9 @@
   <div class="section" id="salsa-al-parque">
 <h1>Salsa al Parque<a class="headerlink" href="#salsa-al-parque" title="Permalink to this headline">¶</a></h1>
 <p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Parámetro binario, Variable Binaria, Scheduling</i></p>
-<div class="section" id="punto-1">
-<h2>Punto 1<a class="headerlink" href="#punto-1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="enunciado">
-<h3>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h3>
-<p>El comité organizador del festival <em>Salsa al Parque</em> lo ha contratado a usted para definir el horario en el  que se presentará cada uno de los cinco artistas principales. El comité le ha indicado que los artistas deben ser asignados a lo largo de una franja de 12 horas. En particular, hay un conjunto <span class="math notranslate nohighlight">\(A\)</span> de artistas y un conjunto <span class="math notranslate nohighlight">\(H\)</span> de horas. Salsa al Parque ha pronosticado la audiencia <span class="math notranslate nohighlight">\(a_{it}\)</span> que tendría cada uno de los  artistas <span class="math notranslate nohighlight">\(i\in A\)</span> en caso de presentarse en cada hora <span class="math notranslate nohighlight">\(t \in T\)</span>. Además, el comité estableció la duración <span class="math notranslate nohighlight">\(d_{i}\)</span> (horas) que debe tener la presentación de cada uno de estos artistas <span class="math notranslate nohighlight">\(i\in A\)</span>. Para generar la planeación se definió la variable binaria <span class="math notranslate nohighlight">\(x_{it}\)</span> la cual toma el valor de uno si el artista <span class="math notranslate nohighlight">\(i \in A\)</span> inicia la presentación en la hora <span class="math notranslate nohighlight">\(t \in H\)</span> y cero de lo contrario. También, se decidió sobre la variable <span class="math notranslate nohighlight">\(y_{it}\)</span>, la cual toma el valor de uno si el artista <span class="math notranslate nohighlight">\(i \in A\)</span> se presenta durante la hora <span class="math notranslate nohighlight">\(t \in H\)</span> y cero de lo contrario. Debido a la importancia de cada uno de estos artistas, el comité enfatizó que todos los artistas se deben presentar una sola vez y que en cada hora se pueden presentar máximo dos artistas en simultaneo. Con el fin de profucio presentaciones de calidad, el comité organizador le solicitó que garantice que cada artista realiza su presentación completa en horas consecutivas. El comité le ha pedido a usted definir las horas en las que se  presentará cada artista tal que se maximice la audiencia total.  La Tabla 1 presenta la duración de la presentación y la audiencia esperada en cada hora para cada uno de los artistas.</p>
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
+<p>El comité organizador del festival <em>Salsa al Parque</em> lo ha contratado a usted para definir el horario en el  que se presentará cada uno de los cinco artistas principales. El comité le ha indicado que los artistas deben ser asignados a lo largo de una franja de 12 horas. En particular, hay un conjunto <span class="math notranslate nohighlight">\(A\)</span> de artistas y un conjunto <span class="math notranslate nohighlight">\(H\)</span> de horas. Salsa al Parque ha pronosticado la audiencia <span class="math notranslate nohighlight">\(a_{it}\)</span> que tendría cada uno de los  artistas <span class="math notranslate nohighlight">\(i\in A\)</span> en caso de presentarse en cada hora <span class="math notranslate nohighlight">\(t \in T\)</span>. Además, el comité estableció la duración <span class="math notranslate nohighlight">\(d_{i}\)</span> (horas) que debe tener la presentación de cada uno de estos artistas <span class="math notranslate nohighlight">\(i\in A\)</span>. Para generar la planeación se definió la variable binaria <span class="math notranslate nohighlight">\(x_{it}\)</span> la cual toma el valor de uno si el artista <span class="math notranslate nohighlight">\(i \in A\)</span> inicia la presentación en la hora <span class="math notranslate nohighlight">\(t \in H\)</span> y cero de lo contrario. También, se decidió sobre la variable <span class="math notranslate nohighlight">\(y_{it}\)</span>, la cual toma el valor de uno si el artista <span class="math notranslate nohighlight">\(i \in A\)</span> se presenta durante la hora <span class="math notranslate nohighlight">\(t \in H\)</span> y cero de lo contrario. Debido a la importancia de cada uno de estos artistas, el comité enfatizó que todos los artistas se deben presentar una sola vez y que en cada hora se pueden presentar máximo dos artistas en simultaneo. Con el fin de propiciar presentaciones de calidad, el comité organizador le solicitó que garantice que cada artista realiza su presentación completa en horas consecutivas. El comité le ha pedido a usted definir las horas en las que se  presentará cada artista tal que se maximice la audiencia total.  La Tabla 1 presenta la duración de la presentación y la audiencia esperada en cada hora para cada uno de los artistas.</p>
 <p><em>Tabla 1:</em></p>
 <table class="colwidths-auto table">
 <thead>
@@ -635,16 +626,16 @@
 </tbody>
 </table></div>
 <div class="section" id="notacion">
-<h3>Notación:<a class="headerlink" href="#notacion" title="Permalink to this headline">¶</a></h3>
+<h2>Notación:<a class="headerlink" href="#notacion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="conjuntos">
-<h4>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h4>
+<h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(A\)</span>: artistas</p></li>
 <li><p><span class="math notranslate nohighlight">\(H\)</span>: horas</p></li>
 </ul>
 </div>
 <div class="section" id="parametros">
-<h4>Parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h4>
+<h3>Parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(d_{i}\)</span>: duración de la presentación del artista <span class="math notranslate nohighlight">\(i\in A\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(a_{it}\)</span>: audiencia del artista <span class="math notranslate nohighlight">\(i\in A\)</span> durante la hora <span class="math notranslate nohighlight">\(t\in H\)</span></p></li>
@@ -652,15 +643,15 @@
 </ul>
 </div>
 <div class="section" id="variables">
-<h4>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h4>
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x_{it}:\begin{cases}1\text{,}&amp;\text{ si el arttista }i\in T\text{ inicia su presentación en la hora }t\in H \\ 0\text{,}&amp; \text{ d.l.c.}  \end{cases}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(y_{it}:\begin{cases}1\text{,}&amp;\text{ si el arttista }i\in T\text{ se presenta durante la hora }t\in H \\ 0\text{,}&amp; \text{ d.l.c.}  \end{cases}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{it}:\begin{cases}1\text{,}&amp;\text{ si el arttista }i\in A\text{ inicia su presentación en la hora }t\in H \\ 0\text{,}&amp; \text{ d.l.c.}  \end{cases}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y_{it}:\begin{cases}1\text{,}&amp;\text{ si el arttista }i\in A\text{ se presenta durante la hora }t\in H \\ 0\text{,}&amp; \text{ d.l.c.}  \end{cases}\)</span></p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="formulacion">
-<h3>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h3>
+<h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
 <p><strong>a.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que la cantidad de artistas presentandose en simultaneo a cada hora <span class="math notranslate nohighlight">\(h \in H\)</span> sea menor o igual a <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <p><strong>b.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que cada artista <span class="math notranslate nohighlight">\(i \in A\)</span> inicia su presentación.</p>
 <p><strong>c.</strong> Escriba la(s) restricción(es) lineal(es) que garantiza(n) que cada artista <span class="math notranslate nohighlight">\(i \in A\)</span> se presenta en horas consecutivas y que no presente durante horas previas a la hora de inicio.</p>
@@ -668,9 +659,15 @@
 <p><strong>e.</strong> Escriba la función objetivo.</p>
 </div>
 <div class="section" id="implementacion">
-<h3>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h3>
+<h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
 <p><strong>f.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
 óptima del problema?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba aquí el código en python de su formulación.</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="creditos">
