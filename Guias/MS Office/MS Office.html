@@ -487,19 +487,28 @@
 <p>NUNCA puede faltar una expresión explicita del dominio del problema (Naturaleza). Las variables pueden tomar valores en conjuntos predeterminados:</p>
 </div>
 <p>Algunas alternativas:</p>
-<p>\begin{gather*}
-x_{j}\in\mathbb{R_{\geq 0}} &amp; \forall j \in J \
-x_{j}\in\mathbb{N} &amp; \forall j \in J \
-x_{j}\in{0,1} &amp; \forall j \in J
-\end{gather*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gather*}
+	x_{j}\in\mathbb{R_{\geq 0}} &amp; \forall j \in J \\
+	x_{j}\in\mathbb{N} &amp; \forall j \in J \\
+	x_{j}\in\{0,1\} &amp; \forall j \in J
+\end{gather*}
+\end{split}\]</div>
 </div>
-<p>\begin{gather*}
-x_{j}\in\mathbb{R} &amp; \forall j \in J
-\end{gather*}</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{gather*}
+	x_{j}\in\mathbb{R} &amp; \forall j \in J
+\end{gather*}
+\]</div>
 <p>  <strong>Restricciones</strong></p>
-<p>\begin{gather*}
-\sum_{j\in J}a_{ij}x_{j}=b_{i} &amp; \forall i\in I
-\end{gather*}</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{gather*}
+		\sum_{j\in J}a_{ij}x_{j}=b_{i} &amp; \forall i\in I
+\end{gather*}
+\]</div>
 <blockquote>
 <div><p>Este conjunto de restricciones nos permite identificar la región factible del problema. Este parrafo, idealmente, contendría una breve descripción de lo que representa o logra su respectivo conjunto de restricciónes.</p>
 </div></blockquote>
@@ -814,17 +823,23 @@ x_{j}\in\mathbb{R} &amp; \forall j \in J
 <p>Note que para esta función a trozos, el contenido de la llave es una matriz.</p>
 </div>
 <p>  <strong>Naturaleza</strong></p>
-<p>\begin{gather*}
-x_{ij}\in{0,1} &amp; \forall i \in O, j \in E
-\end{gather*}</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{gather*}
+	x_{ij}\in\{0,1\} &amp; \forall i \in O, j \in E
+\end{gather*}
+\]</div>
 <div class="dropdown tip admonition">
 <p class="admonition-title">¡Click acá!</p>
 <p><code class="docutils literal notranslate"><span class="pre">x_ij\in{0,1}\forall</span> <span class="pre">i\in</span> <span class="pre">E,</span> <span class="pre">j\in</span> <span class="pre">O</span></code></p>
 </div>
 <p>  <strong>Restricciones</strong></p>
-<p>\begin{gather*}
-\sum_{i\in O}p_{ij}x_{ij}\leq b_{j} &amp; \forall j\in E
-\end{gather*}</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{gather*}
+		\sum_{i\in O}p_{ij}x_{ij}\leq b_{j} &amp; \forall j\in E
+\end{gather*}
+\]</div>
 <blockquote>
 <div><p>Estas restricciones evitan que los objetos cargados por cada excursionista, <span class="math notranslate nohighlight">\(j\in E\)</span>, excedan su peso máximo tolerable, <span class="math notranslate nohighlight">\(b_{j}\)</span>.</p>
 </div></blockquote>
@@ -833,9 +848,12 @@ x_{ij}\in{0,1} &amp; \forall i \in O, j \in E
 <p><code class="docutils literal notranslate"><span class="pre">\sum_(i\in</span> <span class="pre">O)p_(ij)</span> <span class="pre">x_(ij)</span> <span class="pre">&lt;=</span> <span class="pre">b_(j)</span> <span class="pre">\forall</span> <span class="pre">j\in</span> <span class="pre">E</span></code></p>
 <p>Estas restricciones evitan que los objetos cargados por cada excursionista, <code class="docutils literal notranslate"><span class="pre">j\in</span> <span class="pre">E</span></code>, excedan su peso máximo tolerable, <code class="docutils literal notranslate"><span class="pre">b_{j}</span></code>.</p>
 </div>
-<p>\begin{gather*}
-\sum_{j\in E}x_{ij}=1 &amp; \forall i\in O
-\end{gather*}</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{gather*}
+		\sum_{j\in E}x_{ij}=1 &amp; \forall i\in O
+\end{gather*}
+\]</div>
 <blockquote>
 <div><p>Estas restricciones garantizan que cada objeto, <span class="math notranslate nohighlight">\(i\in O\)</span>, se lleve exactamente una vez entre los excursionistas. Evita objetos repetidos o que falte algún objeto.</p>
 </div></blockquote>
