@@ -27,6 +27,7 @@
   - file: Enunciados/Salsa al Parque.ipynb
     sections:
       - file: Soluciones/Salsa al Parque Solucion.ipynb
+      - file: Soluciones/Salsa al Parque Visualizacion.ipynb
   - file: Enunciados/Busqueda Local Enunciado.ipynb
     sections:
       - file: Soluciones/Busqueda Local Solución.ipynb
