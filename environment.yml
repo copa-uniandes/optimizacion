@@ -9,5 +9,7 @@ dependencies:
   - networkx
   - pulp
   - openpyxl
+  - lxml
+  - requests
   #- seaborn
   - jupytext>=0.16
