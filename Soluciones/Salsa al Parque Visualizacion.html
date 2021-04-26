@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salsa al Parque Solución &#8212; Repositorio Principios de Optimización</title>
+    <title>Salsa al Parque Visualización &#8212; Repositorio Principios de Optimización</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,6 @@
     <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Búsqueda Local" href="../Enunciados/Busqueda%20Local%20Enunciado.html" />
-    <link rel="prev" title="Salsa al Parque" href="../Enunciados/Salsa%20al%20Parque.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,7 +89,7 @@
   Prácticas de formulación
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
    Chocolatería
@@ -221,18 +219,18 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Enunciados/Salsa%20al%20Parque.html">
    Salsa al Parque
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Salsa%20al%20Parque%20Solucion.html">
      Salsa al Parque Solución
     </a>
    </li>
@@ -312,7 +310,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Soluciones/Salsa al Parque Solucion.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Soluciones/Salsa al Parque Visualizacion.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -332,7 +330,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FSoluciones/Salsa al Parque Solucion.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FSoluciones/Salsa al Parque Visualizacion.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -353,7 +351,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Soluciones/Salsa al Parque Solucion.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Soluciones/Salsa al Parque Visualizacion.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -433,8 +431,8 @@
         
               <div>
                 
-  <div class="section" id="salsa-al-parque-solucion">
-<h1>Salsa al Parque Solución<a class="headerlink" href="#salsa-al-parque-solucion" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="salsa-al-parque-visualizacion">
+<h1>Salsa al Parque Visualización<a class="headerlink" href="#salsa-al-parque-visualizacion" title="Permalink to this headline">¶</a></h1>
 <p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Parámetro binario, Variable Binaria, Scheduling</i></p>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
@@ -740,6 +738,8 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Se importa la libreria PulP</span>
 <span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">lp</span>
+<span class="c1">#Se importa la librería de gráficos Matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1">#-----------------</span>
 <span class="c1"># Conjuntos</span>
@@ -843,6 +843,23 @@
     <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">H</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">y</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span> <span class="mi">0</span><span class="p">)),</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
+    
+<span class="c1">#-----------------------------</span>
+<span class="c1">#    Graficar resultados</span>
+<span class="c1">#-----------------------------</span>
+<span class="c1">#Guardamos en listas las horas de inicio y fin de cada artista</span>
+<span class="n">comienzo</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">H</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]</span>
+<span class="n">fin</span> <span class="o">=</span> <span class="p">[</span><span class="n">comienzo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))]</span>
+
+<span class="c1">#Graficamos la solución por medio de la referencia plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">comienzo</span><span class="p">,</span> <span class="n">fin</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">35</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Hora&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Artista&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Itinerario de Presentaciones&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">13.1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">H</span> <span class="o">+</span> <span class="p">[</span><span class="mi">13</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -859,6 +876,7 @@ Variables de decisión
 5	0	0	1	1	0	0	0	0	0	0	0	0	
 </pre></div>
 </div>
+<img alt="../_images/Salsa al Parque Visualizacion_14_1.png" src="../_images/Salsa al Parque Visualizacion_14_1.png" />
 </div>
 </div>
 </div>
@@ -896,8 +914,6 @@ Fecha: 30/09/2020</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../Enunciados/Salsa%20al%20Parque.html" title="previous page">Salsa al Parque</a>
-    <a class='right-next' id="next-link" href="../Enunciados/Busqueda%20Local%20Enunciado.html" title="next page">Búsqueda Local</a>
 
         </div>
         
