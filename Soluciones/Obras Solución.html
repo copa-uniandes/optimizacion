@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selección de proyectos civiles - Solución &#8212; Repositorio Principios de Optimización</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/text-align.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo-uniandes.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Repositorio Principios de Optimización</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Prácticas de formulación
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/Chocolater%C3%ADa%20Enunciado.html">
+   Chocolatería
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chocolater%C3%ADa.html">
+     Chocolatería Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/PlaneacionMenus%20Enunciado.html">
+   Planeación de menús
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="PlaneacionMenus.html">
+     Planeación de menús Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/OptiJuice%20Enunciado.html">
+   Producción de jugos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OptiJuice.html">
+     Producción de jugos Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/Transporte%20Enunciado.html">
+   Transporte de productos lácteos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Transporte.html">
+     Transporte de productos lácteos Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Transporte-vis.html">
+     Transporte de productos lácteos Visualización
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/Inventarios%20Enunciado.html">
+   Producción de cemento
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Inventarios.html">
+     Producción de cemento Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Inventarios-vis.html">
+     Producción de cemento Visualización
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/Asignaci%C3%B3n%20Enunciado.html">
+   Asignación de tareas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Asignaci%C3%B3n.html">
+     Asignación de tareas Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/ExtraccionMinera%20Enunciado.html">
+   Extracción minera
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ExtraccionMinera.html">
+     Extracción minera Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/Salsa%20al%20Parque.html">
+   Salsa al Parque
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Salsa%20al%20Parque%20Solucion.html">
+     Salsa al Parque Solución
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Salsa%20al%20Parque%20Visualizacion.html">
+     Salsa al Parque Visualización
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Enunciados/Busqueda%20Local%20Enunciado.html">
+   Búsqueda Local
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Busqueda%20Local%20Soluci%C3%B3n.html">
+     Búsqueda Local Solución
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Guías
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Guias/MS%20Office/MS%20Office.html">
+   Matemáticas en
+   <em>
+    MS Office
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Guias/Importacion%20parametros/Importacion%20parametros.html">
+   Importación de parámetros desde MS Excel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Guias/Importacion%20parametros/Importacion%20parametros%20web.html">
+   Importación de Parámetros Web
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Soluciones/Obras Solución.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/copa-uniandes/optimizacion"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/copa-uniandes/optimizacion/issues/new?title=Issue%20on%20page%20%2FSoluciones/Obras Solución.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master?urlpath=tree/optimizacion/Soluciones/Obras Solución.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion">
+   Formulación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-de-decision">
+     Variables de Decisión
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restricciones">
+     Restricciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naturaleza-de-las-variables">
+     Naturaleza de las Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcion-objetivo">
+     Función Objetivo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion-matematica">
+   Formulación matemática
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementacion">
+   Implementación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creditos">
+   Créditos
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="seleccion-de-proyectos-civiles-solucion">
+<h1>Selección de proyectos civiles - Solución<a class="headerlink" href="#seleccion-de-proyectos-civiles-solucion" title="Permalink to this headline">¶</a></h1>
+<p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">Subconjuntos, Variable Binaria, Mezcla, Cota</i></p>
+<div class="section" id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
+<p>La empresa KPCG es una constructora que opera a lo largo del territorio nacional en diferentes proyectos de obra civil. Actualmente KPCG tiene un conjunto de proyectos de obra civil (<span class="math notranslate nohighlight">\(O\)</span>) localizados en diferentes zonas del país (<span class="math notranslate nohighlight">\(Z\)</span> = {norte, sur, oriente, occidente}) que puede decidir si ejecutar o no. Cada zona es disyunta de las otras, es decir, que cada proyecto sólo pertenece a una zona. En cada zona, <span class="math notranslate nohighlight">\(O_{k}\)</span> representa el subconjunto de proyectos (<span class="math notranslate nohighlight">\(O_{k} ⊆ O\)</span>) que pertenecen a la zona <span class="math notranslate nohighlight">\(k \in Z\)</span>. Dada la magnitud del contrato y su impacto para el país, KPCG quiere planear el manejo de sus insumos para ejecutar sin contratiempos los proyectos del contrato.</p>
+<p>Cada proyecto tiene un ingreso esperado (<span class="math notranslate nohighlight">\(b_{i}\)</span>), y para su ejecución es necesario utilizar una serie de insumos (<span class="math notranslate nohighlight">\(R\)</span>). Todos los insumos se encuentran almacenados en Bogotá y se envían a las diferentes zonas en donde se ejecuten proyectos. El costo unitario de envió depende del tipo de insumo <span class="math notranslate nohighlight">\(j \in R\)</span> y de la zona <span class="math notranslate nohighlight">\(k \in Z\)</span> a la que se envía (<span class="math notranslate nohighlight">\(c_{ij}\)</span>). Para cada proyecto <span class="math notranslate nohighlight">\(i \in O\)</span>, se conoce la cantidad de cada insumo <span class="math notranslate nohighlight">\(j \in R\)</span> que se requiere para su ejecución (<span class="math notranslate nohighlight">\(r_{ij}\)</span>). Asimismo, la disponibilidad de cada insumo <span class="math notranslate nohighlight">\(j \in R\)</span> en la bodega de Bogotá es conocida (<span class="math notranslate nohighlight">\(d_{j}\)</span>).</p>
+<p>Teniendo en cuenta la limitada flota de camiones para transportar los insumos, KPCG calculó que estos sólo pueden atender máximo 3 de las 4 zonas del país. En este orden de ideas, si una zona no es atendida por la flota de vehículos, los proyectos de la misma no se pueden ejecutar. No obstante, en las zonas que se pueda atender, KPCG debe asegurar que se ejecute un mínimo de <span class="math notranslate nohighlight">\(e_{k}\)</span>% de los proyectos de la zona.</p>
+<p>Finalmente, es necesario considerar la alta dependencia que existe entre los proyectos. El subconjunto <span class="math notranslate nohighlight">\(N_{i}\)</span> (<span class="math notranslate nohighlight">\(N_{i} ⊆ O\)</span>) contiene los proyectos que tienen una alta dependencia con el proyecto <span class="math notranslate nohighlight">\(i \in O\)</span>. En este sentido, si el proyecto <span class="math notranslate nohighlight">\(i \in O\)</span> se ejecuta, todos los proyectos que pertenecen <span class="math notranslate nohighlight">\(N_{i}\)</span> se deben ejecutar. En caso contrario (el proyecto <span class="math notranslate nohighlight">\(i \in O\)</span> no se ejecuta) se podrían ejecutar a lo sumo el 50% de los proyectos que pertenecen al subconjunto <span class="math notranslate nohighlight">\(N_{i}\)</span>.</p>
+<p>Usted debe ayudar a KPCG a decidir el manejo de los insumos según los proyectos que se ejecuten con el objetivo de maximizar la utilidad del negocio. La utilidad de KPCG es la diferencia entre los ingresos de cada proyecto ejecutado y el costo de transporte de los insumos. Para esto, usted debe proponer un modelo de optimización lineal que cumpla todas las condiciones anteriormente especificadas.</p>
+</div>
+<div class="section" id="formulacion">
+<h2>Formulación<a class="headerlink" href="#formulacion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="variables-de-decision">
+<h3>Variables de Decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
+<p><strong>a.</strong> Describa la(s) variable(s) de decisión que utilizará en el modelo.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z_{k}: \begin{cases}1\text{,}&amp;\text{ si la zona }i\in O\text{ es atendida}\text{;}\\ 0\text{,} &amp; \text{ d.l.c.}  \end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y_{i}: \begin{cases}1\text{,}&amp;\text{ si la obra }i\in O\text{ se ejecuta}\text{;}\\ 0\text{,} &amp; \text{ d.l.c.}  \end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+x_{jk}: \text{unidades del insumo $j\in R$ que se envían a la zona $k\in Z$}\\
+\end{align}
+\end{split}\]</div>
+</div>
+<div class="section" id="restricciones">
+<h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
+<p><strong>b.</strong> Escriba la(s) restricción(es) que garantiza(n) que los proyectos ejecutados respeten la disponibilidad de recursos por zona.</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{i \in O_k}r_{ij}y_{i} &amp; \leq x_{jk}, \forall j \in R, k \in Z
+\end{align*}
+\]</div>
+<p><strong>c.</strong> Escriba la(s) restricción(es) que garantiza(n) que la disponibilidad de recursos que se envía a cada zona respeta la disponibilidad en la bodega de Bogotá.</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{k \in Z}x_{jk} &amp; \leq d_{j}, \forall j \in R
+\end{align*}
+\]</div>
+<p><strong>d.</strong> Escriba la(s) restricción(es) que garantiza(n) que la flota de vehículos solo puede atender máximo 3 de las 4 zonas del país.</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{k \in Z}z_{k} &amp; \leq 3
+\end{align*}
+\]</div>
+<p><strong>e.</strong> Escriba la(s) restricción(es) que describe(n) que si una zona no es atendida por la flota de camiones, no se puede realizar ninguno de los proyectos de la misma, y que si ésta es atendida, se deben realizar mínimo <span class="math notranslate nohighlight">\(e_{k}\)</span>% de los proyectos ubicados allí (en la zona).</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{i \in O_k}y_{i} &amp; \leq |O_k|z_k, \forall k \in Z
+\end{align*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{i \in O_k}y_{i} &amp; \geq e_k|O_k|z_k, \forall k \in Z
+\end{align*}
+\]</div>
+<p><strong>f.</strong> Escriba la(s) restricción(es) que describe(n) que si un proyecto se realiza, todos los proyectos relacionados (<span class="math notranslate nohighlight">\(N_i\)</span>) se deben realizar, pero en caso contrario, a lo sumo el 50% de los proyectos relacionados (<span class="math notranslate nohighlight">\(N_i\)</span>) se pueden realizar.</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{n \in N_i}y_n &amp; \geq |N_i|y_i, \forall i \in O
+\end{align*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+    \sum_{n \in N_i}y_n &amp; \leq 0.5|N_i|(1-y_i)+My_i, \forall i \in O
+\end{align*}
+\]</div>
+</div>
+<div class="section" id="naturaleza-de-las-variables">
+<h3>Naturaleza de las Variables<a class="headerlink" href="#naturaleza-de-las-variables" title="Permalink to this headline">¶</a></h3>
+<p><strong>g.</strong> Escriba la(s) restricción(es) que describe(n) matemáticamente el tipo de variable(s) que está utilizando dentro del modelo.</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+z_{k}\in\{0,1\},\forall k\in Z
+\end{align}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+y_{i}\in\{0,1\},\forall i\in O
+\end{align}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+x_{ij} &amp;\geq 0,\forall i\in O, j \in R
+\end{align}
+\]</div>
+</div>
+<div class="section" id="funcion-objetivo">
+<h3>Función Objetivo<a class="headerlink" href="#funcion-objetivo" title="Permalink to this headline">¶</a></h3>
+<p><strong>h.</strong> Escriba la función objetivo.</p>
+</div>
+</div>
+<div class="section" id="formulacion-matematica">
+<h2>Formulación matemática<a class="headerlink" href="#formulacion-matematica" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="implementacion">
+<h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
+<p><strong>i.</strong> Resuelva el modelo planteado utilizando la librería de PulP en Python. ¿Cuál es la solución
+óptima del problema?</p>
+</div>
+<div class="section" id="creditos">
+<h2>Créditos<a class="headerlink" href="#creditos" title="Permalink to this headline">¶</a></h2>
+<p>Equipo Principios de Optimización<br>
+Instancia: Juan Felipe Rengifo<br>
+Fecha: 05/05/2021</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "copa-uniandes/optimizacion",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Soluciones"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Equipo Principios de Optimización<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
