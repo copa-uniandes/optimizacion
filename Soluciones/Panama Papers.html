@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panama papers - Solución &#8212; Repositorio Principios de Optimización</title>
+    <title>Lista ordenada, panama papers - Solución &#8212; Repositorio Principios de Optimización</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -403,27 +403,27 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conjuntos">
-     Conjuntos
+     Conjuntos:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#subconjuntos">
-     Subconjuntos
+     Subconjuntos:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#parametros">
-     Parámetros
+     Parámetros:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variables-de-decision">
-     Variables de decisión
+     Variables de decisión:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#restricciones">
-     Restricciones
+     Restricciones:
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -439,6 +439,11 @@
     </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulacion-matematica-completa">
+   Formulación matemática completa
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementacion">
@@ -461,15 +466,15 @@
         
               <div>
                 
-  <div class="section" id="panama-papers-solucion">
-<h1>Panama papers - Solución<a class="headerlink" href="#panama-papers-solucion" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lista-ordenada-panama-papers-solucion">
+<h1>Lista ordenada, panama papers - Solución<a class="headerlink" href="#lista-ordenada-panama-papers-solucion" title="Permalink to this headline">¶</a></h1>
 <p><b><i style="font-size:13px">Tags: </i></b><i style="font-size:11px">TO DO…</i></p>
 <div class="section" id="enunciado">
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <p>Recientemente la firma de abogados Mossack Fonseca fue hackeada, dejando una fuga de 11.5 millones de transacciones bancarias relacionas con empresas offshore en Panamá. El escándalo conocido como “The Panama Papers” ha revelado cientos de nombres de multimillonarios alrededor del mundo que al parecer utilizaban dichas empresas para evadir impuestos. Actualmente, la firma <em>International Consortium of Investigative Journalists</em> (ICIJ) es quien está adelantando las primeras investigaciones, no obstante, procesar ese volumen de información requiere de una organización y planeación importante. En particular, ICIJ quiere construir una lista <strong>ordenada</strong> de 100 personas que se encuentren involucrados en estos documentos de tal forma que las agencias oficiales las investiguen primero.</p>
 <p>En la base de datos se ha identificado una serie de personas involucradas (<span class="math notranslate nohighlight">\(I\)</span>), así como una lista de empresas offshore (<span class="math notranslate nohighlight">\(O\)</span>).
-Además, ICIJ ha categorizado a las empresas en los subconjuntos <span class="math notranslate nohighlight">\(E_{i}\)</span>, que representan las empresas que están relacionadas con cada persona <span class="math notranslate nohighlight">\(i\in I\)</span>. De cada empresa <span class="math notranslate nohighlight">\(j\in O\)</span> en la base de datos, se conoce el valor de sus activos financieros en cada año desde su creación hasta el 2021 (<span class="math notranslate nohighlight">\(a_{j,t}\)</span>) y el año en el que fue creada (<span class="math notranslate nohighlight">\(c_{j}\)</span>). De igual forma, de cada persona se conoce su país de procedencia (<span class="math notranslate nohighlight">\(p_{i}\)</span>).</p>
-<p>Con la información anterior, se debe construir una lista <strong>ordenada</strong> que cumpla con una serie de condiciones. Dado que la lista deseada es de tamaño 100, no todas las personas estarán en la lista (es decir, <span class="math notranslate nohighlight">\(|I|&gt;100\)</span>). Por otro lado, algunos países (conjunto <span class="math notranslate nohighlight">\(P\)</span>) son más eficientes en el proceso de enjuiciamiento de sus criminales. En este sentido, se quiere garantizar que al menos el 80% de la lista esté compuesta por personas oriundas de dichos países. Además, se sabe que muchas de las personas involucradas son familia entre sí, haciendo necesario entonces que si una persona se agrega a la lista, entonces todos sus familiares deben estar en la lista. El parámetro <span class="math notranslate nohighlight">\(f_{i,k}\)</span> es un indicador binario que toma el valor de 1 si la persona <span class="math notranslate nohighlight">\(i\in I\)</span> es familiar de la persona <span class="math notranslate nohighlight">\(k\in I\)</span>.</p>
+Además, ICIJ ha categorizado a las empresas en los subconjuntos <span class="math notranslate nohighlight">\(E_{i}\)</span>, que representan las empresas que están relacionadas con cada persona <span class="math notranslate nohighlight">\(i\in I\)</span>. De cada empresa <span class="math notranslate nohighlight">\(j\in O\)</span> en la base de datos, se conoce el valor de sus activos financieros en cada año desde su creación hasta el 2021 (<span class="math notranslate nohighlight">\(a_{j\ t}\)</span>) y el año en el que fue creada (<span class="math notranslate nohighlight">\(c_{j}\)</span>). De igual forma, de cada persona se conoce su país de procedencia (<span class="math notranslate nohighlight">\(p_{i}\)</span>).</p>
+<p>Con la información anterior, se debe construir una lista <strong>ordenada</strong> que cumpla con una serie de condiciones. Dado que la lista deseada es de tamaño 100, no todas las personas estarán en la lista (es decir, <span class="math notranslate nohighlight">\(|I|&gt;100\)</span>). Por otro lado, algunos países (conjunto <span class="math notranslate nohighlight">\(P\)</span>) son más eficientes en el proceso de enjuiciamiento de sus criminales. En este sentido, se quiere garantizar que al menos el 80% de la lista esté compuesta por personas oriundas de dichos países. Además, se sabe que muchas de las personas involucradas son familia entre sí, haciendo necesario entonces que si una persona se agrega a la lista, entonces todos sus familiares deben estar en la lista. El parámetro <span class="math notranslate nohighlight">\(f_{i\ k}\)</span> es un indicador binario que toma el valor de 1 si la persona <span class="math notranslate nohighlight">\(i\in I\)</span> es familiar de la persona <span class="math notranslate nohighlight">\(k\in I\)</span>.</p>
 <p>En cuanto al <strong>orden</strong> de la lista de personas, se requiere que sea <strong>ascendiente</strong> con respecto al año de la compañía más antigua con la cual estén relacionados. Para romper posibles empates, el <strong>orden</strong> de la lista debe ser <strong>descendiente</strong> de acuerdo al promedio sobre los años de los activos de cada persona. El promedio sobre los años de los activos de cada persona corresponde a la suma del promedio anual de los activos de cada empresa que con la que esté relacionada. Asuma que se ignora el valor del dinero en el tiempo.</p>
 <p>Usted es el nuevo consultor de ICIJ experto en optimización y le han pedido que formule un modelo de optimización lineal para encontrar dicha lista ordenada que respete el primer criterio de ordenamiento y que busque mediante la función ojetivo romper posibles empates del primer criterio.</p>
 </div>
@@ -494,7 +499,7 @@ Además, ICIJ ha categorizado a las empresas en los subconjuntos <span class="ma
 <div class="section" id="formulacion-matematica">
 <h2>Formulación matemática<a class="headerlink" href="#formulacion-matematica" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="conjuntos">
-<h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
+<h3>Conjuntos:<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -507,7 +512,7 @@ Además, ICIJ ha categorizado a las empresas en los subconjuntos <span class="ma
 \end{split}\]</div>
 </div>
 <div class="section" id="subconjuntos">
-<h3>Subconjuntos<a class="headerlink" href="#subconjuntos" title="Permalink to this headline">¶</a></h3>
+<h3>Subconjuntos:<a class="headerlink" href="#subconjuntos" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -516,62 +521,62 @@ Además, ICIJ ha categorizado a las empresas en los subconjuntos <span class="ma
 \end{split}\]</div>
 </div>
 <div class="section" id="parametros">
-<h3>Parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h3>
+<h3>Parámetros:<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
     c_{j}:&amp; \text{ año de creación de la empresa } j\in O.\\
-    a_{j,t}:&amp; \text{ activos financieros en cada año } t\in T \text{ de la empresa } j \in E \text{ tal que }t\geq c_{j}.\\
+    a_{j\ t}:&amp; \text{ activos financieros en cada año } t\in T \text{ de la empresa } j \in E \text{ tal que }t\geq c_{j}.\\
     p_{i}:&amp; \text{ país de procedencia de la persona } i\in I.\\
-    f_{i,k}:&amp; \text{ indicador binario de valor 1 si la persona } i\in I \text{ es familiar de la persona } k\in I\text{. 0 de lo contrario.}\\
+    f_{i\ k}:&amp; \text{ indicador binario de valor 1 si la persona } i\in I \text{ es familiar de la persona } k\in I\text{. 0 de lo contrario.}\\
     por:&amp; \text{ porcentaje de personas en la lista cuyo país de origen pertenece al conjunto }P.
 \end{align}
 \end{split}\]</div>
 </div>
 <div class="section" id="variables-de-decision">
-<h3>Variables de decisión<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
+<h3>Variables de decisión:<a class="headerlink" href="#variables-de-decision" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-x_{i,l}:&amp;\begin{cases}1\text{,}&amp;\text{ si se asigna a la persona }i\in I\text{ a la posición de la lista}l\in L .\\ 0\text{,}&amp; \text{ d.l.c.}  \end{cases}
+x_{i\ l}:&amp;\begin{cases}1\text{,}&amp;\text{ si se asigna a la persona }i\in I\text{ a la posición de la lista}l\in L .\\ 0\text{,}&amp; \text{ d.l.c.}  \end{cases}
 \end{align}
 \end{split}\]</div>
 </div>
 <div class="section" id="restricciones">
-<h3>Restricciones<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
+<h3>Restricciones:<a class="headerlink" href="#restricciones" title="Permalink to this headline">¶</a></h3>
 <p>Cada posición en la lista solo puede tener una persona asignada.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-    \sum_{i\in I}x_{i,l} &amp;= 1, &amp;\forall l\in L.
+    \sum_{i\in I}x_{i\ l} &amp;= 1, &amp;\forall l\in L.
 \end{align}
 \]</div>
 <p>Cada persona puede tener a lo sumo una posición en la lista.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-    \sum_{l\in L}x_{i,l} &amp;\leq 1, &amp;\forall i\in I.
+    \sum_{l\in L}x_{i\ l} &amp;\leq 1, &amp;\forall i\in I.
 \end{align}
 \]</div>
 <p>El porcentaje de personas oriundas de paises pertenecientes a <span class="math notranslate nohighlight">\(P\)</span> asignadas a la lista debe ser mayor al 80%.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-    \sum_{i\in I|p_{i}\in P}\sum_{l\in L}x_{i,l} &amp;\geq por\% \cdot \sum_{i\in I}\sum_{l\in L}x_{i,l}.
+    \sum_{i\in I|p_{i}\in P}\sum_{l\in L}x_{i\ l} &amp;\geq por\% \cdot \sum_{i\in I}\sum_{l\in L}x_{i\ l}.
 \end{align}
 \]</div>
 <p>Si una persona se agrega a la lista, entonces todos sus familiares deben estar en la lista.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-    \sum_{k\in I}f_{i,k} \cdot \sum_{l\in L}x_{i,l} &amp;\leq \sum_{k\in I}\sum_{l\in L}f_{i,k}\cdot x_{k,l} , &amp;\forall i\in I.
+    \sum_{k\in I}f_{i\ k} \cdot \sum_{l\in L}x_{i\ l} &amp;\leq \sum_{k\in I}\sum_{l\in L}f_{i\ k} x_{k\ l} , &amp;\forall i\in I.
 \end{align}
 \]</div>
 <p>El orden de la lista debe ser ascendiente según el año en que se creó la compañía más antigua relacionada con la persona asignada.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-    \sum_{i\in I}\min_{j\in E_{i}}\{ c_{j} \}\cdot x_{i,l} &amp;\leq \sum_{i\in I}\min_{j\in E_{i}}\{ c_{j} \}\cdot x_{i,l+1} , &amp;\forall l\in L | l &lt; |L|.
+    \sum_{i\in I}\min_{j\in E_{i}}\{ c_{j} \}\cdot x_{i\ l} &amp;\leq \sum_{i\in I}\min_{j\in E_{i}}\{ c_{j} \}\cdot x_{i\ l+1} , &amp;\forall l\in L | l &lt; |L|.
 \end{align}
 \]</div>
 <div class="section" id="naturaleza-de-las-variables">
@@ -580,7 +585,7 @@ x_{i,l}:&amp;\begin{cases}1\text{,}&amp;\text{ si se asigna a la persona }i\in I
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-    x_{i,l} &amp;\in \{0,1\}, &amp;\forall i\in I,\ l\in L.
+    x_{i\ l} &amp;\in \{0,1\}, &amp;\forall i\in I,\ l\in L.
 \end{align}
 \]</div>
 </div>
@@ -589,15 +594,18 @@ x_{i,l}:&amp;\begin{cases}1\text{,}&amp;\text{ si se asigna a la persona }i\in I
 <p>El orden de la lista es descendiente según el promedio sobre los años de los activos de la persona asignada.</p>
 <div class="math notranslate nohighlight">
 \[
-      \min \sum_{i\in I}\sum_{l\in L}\left(l \cdot x_{i,l} \cdot \sum_{j\in E_{i}}\frac{\sum_{t\in T|t\geq c_{j}}a_{j,t}}{2021 - c_{j}}\right ).
+      \min \sum_{i\in I}\sum_{l\in L}\left(l \cdot x_{i\ l} \cdot \sum_{j\in E_{i}}\frac{\sum_{t\in T|t\geq c_{j}}a_{j\ t}}{2021 - c_{j}}\right ).
 \]</div>
 <p>Alternativamente, puede plantearse la siguiene función objetivo:</p>
 <div class="math notranslate nohighlight">
 \[
-    \min \sum_{l\in L|l&lt;|L|}\left(\sum_{i\in I}x_{i,l+1} \cdot \sum_{j\in E_{i}}\frac{\sum_{t\in T|t\geq c_{j}}a_{j,t}}{2021 - c_{j}} - \sum_{i\in I}x_{i,l} \cdot \sum_{j\in E_{i}}\frac{\sum_{t\in T|t\geq c_{j}}a_{j,t}}{2021 - c_{j}}\right ).
+    \min \sum_{l\in L|l&lt;|L|}\left(\sum_{i\in I}x_{i\ l+1} \cdot \sum_{j\in E_{i}}\frac{\sum_{t\in T|t\geq c_{j}}a_{j\ t}}{2021 - c_{j}} - \sum_{i\in I}x_{i\ l} \cdot \sum_{j\in E_{i}}\frac{\sum_{t\in T|t\geq c_{j}}a_{j\ t}}{2021 - c_{j}}\right ).
 \]</div>
 </div>
 </div>
+</div>
+<div class="section" id="formulacion-matematica-completa">
+<h2>Formulación matemática completa<a class="headerlink" href="#formulacion-matematica-completa" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="implementacion">
 <h2>Implementación<a class="headerlink" href="#implementacion" title="Permalink to this headline">¶</a></h2>
@@ -612,16 +620,16 @@ x_{i,l}:&amp;\begin{cases}1\text{,}&amp;\text{ si se asigna a la persona }i\in I
 <span class="c1"># Conjuntos</span>
 <span class="c1">#-----------------</span>
 <span class="c1"># Personas involucradas</span>
-<span class="n">I</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">I</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
 
 <span class="c1"># Empresas Offshore</span>
-<span class="n">O</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">O</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
 
 <span class="c1"># Paises eficientes</span>
-<span class="n">P</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">P</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
 
 <span class="c1"># Años desde la creación de la empresa más antigua</span>
-<span class="n">T</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">T</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
 
 <span class="c1"># Posiciones en la lista</span>
 <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">)]</span>
@@ -636,10 +644,10 @@ x_{i,l}:&amp;\begin{cases}1\text{,}&amp;\text{ si se asigna a la persona }i\in I
 <span class="c1"># Parámetros</span>
 <span class="c1">#-----------------</span>
 <span class="c1"># Año de creación de la empresa j en O</span>
-<span class="n">c</span> <span class="o">=</span> <span class="p">{</span><span class="n">j</span><span class="p">:</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">O</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">{</span><span class="n">j</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">O</span><span class="p">}</span>
 
 <span class="c1"># Activos de la empresa j en O para el año t en T tal que t &gt;= c_j</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">{(</span><span class="n">j</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">O</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">T</span> <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="n">c</span><span class="p">[</span><span class="n">j</span><span class="p">]}</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">{(</span><span class="n">j</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">O</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">T</span> <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="n">c</span><span class="p">[</span><span class="n">j</span><span class="p">]}</span>
 
 <span class="c1"># Pais de origen de la persona i en I</span>
 <span class="n">p</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="s2">&quot;&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">I</span><span class="p">}</span>
