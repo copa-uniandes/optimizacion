@@ -1,37 +1,39 @@
-- file: intro.md
-- part: Prácticas de formulación
+format: jb-book
+root: intro.md
+parts:
+- caption: "Pr\xE1cticas de formulaci\xF3n"
   chapters:
-  - file: Enunciados/Chocolatería Enunciado.ipynb
+  - file: "Enunciados/Chocolater\xEDa Enunciado.ipynb"
     sections:
-      - file: Soluciones/Chocolatería.ipynb
+    - file: "Soluciones/Chocolater\xEDa.ipynb"
   - file: Enunciados/PlaneacionMenus Enunciado.ipynb
     sections:
-      - file: Soluciones/PlaneacionMenus.ipynb
+    - file: Soluciones/PlaneacionMenus.ipynb
   - file: Enunciados/OptiJuice Enunciado.ipynb
     sections:
-      - file: Soluciones/OptiJuice.ipynb
+    - file: Soluciones/OptiJuice.ipynb
   - file: Enunciados/Transporte Enunciado.ipynb
     sections:
-      - file: Soluciones/Transporte.ipynb
-      - file: Soluciones/Transporte-vis.ipynb
+    - file: Soluciones/Transporte.ipynb
+    - file: Soluciones/Transporte-vis.ipynb
   - file: Enunciados/Inventarios Enunciado.ipynb
     sections:
-      - file: Soluciones/Inventarios.ipynb
-      - file: Soluciones/Inventarios-vis.ipynb
-  - file: Enunciados/Asignación Enunciado.ipynb
+    - file: Soluciones/Inventarios.ipynb
+    - file: Soluciones/Inventarios-vis.ipynb
+  - file: "Enunciados/Asignaci\xF3n Enunciado.ipynb"
     sections:
-      - file: Soluciones/Asignación.ipynb
+    - file: "Soluciones/Asignaci\xF3n.ipynb"
   - file: Enunciados/ExtraccionMinera Enunciado.ipynb
     sections:
-      - file: Soluciones/ExtraccionMinera.ipynb
+    - file: Soluciones/ExtraccionMinera.ipynb
   - file: Enunciados/Salsa al Parque.ipynb
     sections:
-      - file: Soluciones/Salsa al Parque Solucion.ipynb
-      - file: Soluciones/Salsa al Parque Visualizacion.ipynb
+    - file: Soluciones/Salsa al Parque Solucion.ipynb
+    - file: Soluciones/Salsa al Parque Visualizacion.ipynb
   - file: Enunciados/Busqueda Local Enunciado.ipynb
     sections:
-      - file: Soluciones/Busqueda Local Solución.ipynb
-- part: Guías
+    - file: "Soluciones/Busqueda Local Soluci\xF3n.ipynb"
+- caption: "Gu\xEDas"
   chapters:
   - file: Guias/MS Office/MS Office.ipynb
   - file: Guias/Importacion parametros/Importacion parametros.ipynb
