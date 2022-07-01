@@ -40,7 +40,6 @@ Monitores involucrados:
  * Camilo Aguilar
  * Alejandro Mantilla
  * Juan Felipe Rengifo
- * Sofía Castro
  
 Agradecemos a los profesores Camilo Gomez y Andrés Medaglia por su realimentación a lo largo del desarrollo y a los respectivos autores de las prácticas de formulación, cuyo contenido está expuesto en la página.
 
