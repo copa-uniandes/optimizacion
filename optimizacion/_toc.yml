@@ -1,40 +1,39 @@
 format: jb-book
 root: intro.md
 parts:
-- caption: "Pr\xE1cticas de formulaci\xF3n"
+- caption: "Prácticas de formulación"
   chapters:
-  - file: "Enunciados/Chocolater\xEDa Enunciado.ipynb"
+  - file: "Formulaciones/1. Chocolateria/Chocolateria - Enunciado.ipynb"
     sections:
-    - file: "Soluciones/Chocolater\xEDa.ipynb"
-  - file: Enunciados/PlaneacionMenus Enunciado.ipynb
+    - file: "Formulaciones/1. Chocolateria/Chocolateria - Solucion.ipynb"
+  - file: "Formulaciones/2. Planeacion de menus/Planeacion Menus - Enunciado.ipynb"
     sections:
-    - file: Soluciones/PlaneacionMenus.ipynb
-  - file: Enunciados/OptiJuice Enunciado.ipynb
+    - file: "Formulaciones/2. Planeacion de menus/Planeacion Menus - Solucion.ipynb"
+  - file: "Formulaciones/3. Produccion de jugos/OptiJuice - Enunciado.ipynb"
     sections:
-    - file: Soluciones/OptiJuice.ipynb
-  - file: Enunciados/Transporte Enunciado.ipynb
+    - file: "Formulaciones/3. Produccion de jugos/OptiJuice - Solucion.ipynb"
+  - file: "Formulaciones/4. Transporte de productos lacteos/Transporte - Enunciado.ipynb"
     sections:
-    - file: Soluciones/Transporte.ipynb
-    - file: Soluciones/Transporte-vis.ipynb
-  - file: Enunciados/Inventarios Enunciado.ipynb
+    - file: "Formulaciones/4. Transporte de productos lacteos/Transporte - Solucion.ipynb"
+  - file: "Formulaciones/5. Produccion de cemento/Cementos - Enunciado.ipynb"
     sections:
-    - file: Soluciones/Inventarios.ipynb
-    - file: Soluciones/Inventarios-vis.ipynb
-  - file: "Enunciados/Asignaci\xF3n Enunciado.ipynb"
+    - file: "Formulaciones/5. Produccion de cemento/Cementos - Solucion.ipynb"
+  - file: "Formulaciones/6. Asignacion de tareas/Asignacion - Enunciado.ipynb"
     sections:
-    - file: "Soluciones/Asignaci\xF3n.ipynb"
-  - file: Enunciados/ExtraccionMinera Enunciado.ipynb
+    - file: "Formulaciones/6. Asignacion de tareas/Asignacion - Solucion.ipynb"
+  - file: "Formulaciones/7. Extraccion minera/Extraccion Minera - Enunciado.ipynb"
     sections:
-    - file: Soluciones/ExtraccionMinera.ipynb
-  - file: Enunciados/Salsa al Parque.ipynb
+    - file: "Formulaciones/7. Extraccion minera/Extraccion Minera - Solucion.ipynb"
+  - file: "Formulaciones/8. Salsa al parque/Salsa al Parque - Enunciado.ipynb"
     sections:
-    - file: Soluciones/Salsa al Parque Solucion.ipynb
-    - file: Soluciones/Salsa al Parque Visualizacion.ipynb
-  - file: Enunciados/Busqueda Local Enunciado.ipynb
+    - file: "Formulaciones/8. Salsa al parque/Salsa al Parque - Solucion.ipynb"
+  - file: "Formulaciones/9. Busqueda local/Busqueda Local - Enunciado.ipynb"
     sections:
-    - file: "Soluciones/Busqueda Local Soluci\xF3n.ipynb"
-- caption: "Gu\xEDas"
+    - file: "Formulaciones/9. Busqueda local/Busqueda Local - Solucion.ipynb"
+  # - file: "Formulaciones/10. Obras civiles/Obras - Solucion.ipynb"
+  # - file: "Formulaciones/11. Panama papers/Panama Papers - Solucion.ipynb"
+- caption: "Guías"
   chapters:
-  - file: Guias/MS Office/MS Office.ipynb
-  - file: Guias/Importacion parametros/Importacion parametros.ipynb
-  - file: Guias/Importacion parametros/Importacion parametros web.ipynb
+  - file: Guias/Notacion matematica/Matematica en word.ipynb
+  - file: Guias/Importar parametros/Importar Parametros.ipynb
+  - file: Guias/Importar parametros web/Importar Parametros Web.ipynb

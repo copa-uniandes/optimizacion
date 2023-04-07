@@ -6,7 +6,7 @@ logo: _static/logo-uniandes.png
 repository:
   url: https://github.com/copa-uniandes/optimizacion
   path_to_book: optimizacion
-  branch: master
+  branch: main
 
 launch_buttons:
   notebook_interface: "classic"
@@ -37,4 +37,7 @@ myst_enable_extensions:
     - substitution
 
 execute:
-  execute_notebooks: 'off'
+  execute_notebooks: 'force'
+  allow_errors: true
+
+
