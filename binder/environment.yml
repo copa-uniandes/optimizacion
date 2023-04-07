@@ -1,0 +1,21 @@
+name: opti-environment
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - pandas
+  - networkx
+  - openpyxl
+  - xlrd
+  - lxml
+  - requests
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - plotly
+  - panel
+  - ipywidgets
+  - pyspark
+  - jupytext>=0.16
+  - openjdk
+  - pulp
