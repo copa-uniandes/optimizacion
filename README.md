@@ -8,9 +8,9 @@ El proyecto consiste en contar con una página de ejercicios para ilustrar casos
 
 Acceda a la página estática a través de este [enlace](https://copa-uniandes.github.io/optimizacion/).
 
-Acceda a un ambiente interactivo de Jupyter a través de [*Binder*](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master).
+Acceda a un ambiente interactivo de Jupyter a través de [*Binder*](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/main).
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/copa-uniandes/optimizacion/main)
 
 ## Licencia
 
@@ -20,7 +20,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## Contribuir y Código de Conducta
 
-Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenciar un _issue_ o en seguir las instrucciones del archivo '[CONTRIBUTING.md](https://github.com/copa-uniandes/optimizacion/blob/master/CONTRIBUTING.md)' para participar de forma activa. Tenemos también un [código de conducta](https://github.com/copa-uniandes/optimizacion/blob/master/CODE_OF_CONDUCT.md).
+Si tienes ideas o te gustaría ver cambios en el proyecto, no dudes en diligenciar un _issue_ o en seguir las instrucciones del archivo '[CONTRIBUTING.md](https://github.com/copa-uniandes/optimizacion/blob/main/CONTRIBUTING.md)' para participar de forma activa. Tenemos también un [código de conducta](https://github.com/copa-uniandes/optimizacion/blob/main/CODE_OF_CONDUCT.md).
 
 ## Enlaces
  * [Universidad de los Andes](https://uniandes.edu.co/)
@@ -37,10 +37,9 @@ Este proyecto está en sus primeras etapas de desarrollo. Todos los errores son 
 Este proyecto existe gracias al arduo trabajo del Equipo de Optimización bajo el liderazgo de Alfaima Solano, instructora de la Universidad de los Andes.
 
 Monitores involucrados:
- * Camilo Aguilar
  * Alejandro Mantilla
+ * Camilo Aguilar
  * Juan Felipe Rengifo
- * Gabriela Cepeda
 
 Agradecemos a los profesores Camilo Gomez y Andrés Medaglia por su realimentación a lo largo del desarrollo y a los respectivos autores de las prácticas de formulación, cuyo contenido está expuesto en la página.
 

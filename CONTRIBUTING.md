@@ -1,6 +1,6 @@
 # Contribuir
 
-Si gustaría contribuir al proyecto, realice un _Fork_ y haga sus cambios sugeridos. Una vez esté satisfecho con el resultado, vuelva a la página del proyecto en GitHub y redacte un _Pull Request_ de su _Fork_ para la rama 'master'. Tenga en cuenta el siguiente procedimiento.
+Si gustaría contribuir al proyecto, realice un _Fork_ y haga sus cambios sugeridos. Una vez esté satisfecho con el resultado, vuelva a la página del proyecto en GitHub y redacte un _Pull Request_ de su _Fork_ para la rama 'main'. Tenga en cuenta el siguiente procedimiento.
 
 En su computador debe tener un ambiente virtual de _Python_ con los siguientes paquetes y sus dependencias. Recomendamos _Python 3.7_ con _Miniconda_ o _pipenv_. Si su sistema operativo es _Windows_, siga las instrucciones en este [enlace](https://jupyterbook.org/advanced/advanced.html?highlight=windows#working-on-windows) para trabajar con _Jupyter Book_.
 
@@ -17,8 +17,8 @@ Recomendamos también usar _GitHub Desktop_ para hacer el manejo de versiones de
  * Verifique que no se haya roto ningún aspecto del libro y que se vean reflejados sus cambios.
  * Si hay errores o tiene cambios pendientes, realice sus cambios y vuelva a construir el libro para validarlos.
  * Haga _commit_ y _push_ de sus cambios a su repositorio.
- * Tenga en cuenta que, al hacer un _Fork_, puede también crear una página propia de 'GitHub Pages' que podrá actualizar automáticamente según el contenido actualizado de su rama 'master' (Vea '.github/workflows').
- * Ahora, desde el repositorio origen del proyecto en GitHub, realice el _pull request_ de su _Fork_ a la rama 'master' del repositorio origen, desde la rama de SU _Fork_ con los últimos cambios. Comente en buen detalle y de forma concisa sus cambios.
+ * Tenga en cuenta que, al hacer un _Fork_, puede también crear una página propia de 'GitHub Pages' que podrá actualizar automáticamente según el contenido actualizado de su rama 'main' (Vea '.github/workflows').
+ * Ahora, desde el repositorio origen del proyecto en GitHub, realice el _pull request_ de su _Fork_ a la rama 'main' del repositorio origen, desde la rama de SU _Fork_ con los últimos cambios. Comente en buen detalle y de forma concisa sus cambios.
  * Es responsabilidad de cada quien aliviar los conflictos de su _PR_.
 
 Algún dueño del proyecto evaluará su _PR_ y, según vea apropiado, aceptará, rechazará o sugerirá cambios.
