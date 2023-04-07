@@ -16,6 +16,9 @@ metastore_db/
 # prevent notebooks in root folder. They should only exist in their respective weeks.
 /*.ipynb
 
+# prevent lp files in all folders.
+**/*.lp
+
 # C extensions
 *.so
 
