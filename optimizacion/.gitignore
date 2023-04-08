@@ -1,6 +1,7 @@
 **/_build
 **/.DS_store
 **/.ipynb_checkpoints
+../.ipynb_checkpoints
 
 __pycache__/
 *.py[cod]
