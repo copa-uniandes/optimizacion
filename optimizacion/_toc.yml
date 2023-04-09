@@ -27,13 +27,15 @@ parts:
   - file: "Formulaciones/8. Salsa al parque/Salsa al Parque - Enunciado.ipynb"
     sections:
     - file: "Formulaciones/8. Salsa al parque/Salsa al Parque - Solucion.ipynb"
-  - file: "Formulaciones/9. Busqueda local/Busqueda Local - Enunciado.ipynb"
+  # - file: "Formulaciones/9. Obras civiles/Obras - Solucion.ipynb"
+  # - file: "Formulaciones/10. Panama papers/Panama Papers - Solucion.ipynb"
+- caption: "Algoritmos"
+  chapters:
+  - file: "Algoritmos/1. Busqueda local/Busqueda Local - Enunciado.ipynb"
     sections:
-    - file: "Formulaciones/9. Busqueda local/Busqueda Local - Solucion.ipynb"
-  # - file: "Formulaciones/10. Obras civiles/Obras - Solucion.ipynb"
-  # - file: "Formulaciones/11. Panama papers/Panama Papers - Solucion.ipynb"
+    - file: "Algoritmos/1. Busqueda local/Busqueda Local - Solucion.ipynb"
 - caption: "Guías"
   chapters:
-  - file: Guias/Notacion matematica/Matematica en word.ipynb
-  - file: Guias/Importar parametros/Importar Parametros.ipynb
-  - file: Guias/Importar parametros web/Importar Parametros Web.ipynb
+  - file: Guias/1. Notacion matematica/Matematica en word.ipynb
+  - file: Guias/2. Importar parametros/Importar Parametros.ipynb
+  - file: Guias/3. Importar parametros web/Importar Parametros Web.ipynb
