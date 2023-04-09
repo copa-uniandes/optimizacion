@@ -25,19 +25,19 @@ html:
   extra_navbar: "" #Removes 'Powered by Jupyter Book' from left navbar.
 
 myst_enable_extensions:
-    - amsmath
-    - colon_fence
-    # - deflist
-    - dollarmath
-    # - html_admonition
-    # - html_image
-    - linkify
-    # - replacements
-    # - smartquotes
-    - substitution
+  - amsmath
+  - colon_fence
+  # - deflist
+  - dollarmath
+  # - html_admonition
+  # - html_image
+  - linkify
+  # - replacements
+  # - smartquotes
+  - substitution
 
 execute:
   execute_notebooks: 'force'
   allow_errors: true
 
-
+exclude_patterns: ['Formatos/*']
